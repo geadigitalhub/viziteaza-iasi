@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Opera Națională Română Iași · Spectacole, balet & bilete</title>
+<meta name="description" content="Opera Națională Română din Iași — operă, operetă și balet, în clădirea istorică a Teatrului Național. Bilete, program de spectacole și informații. RO/EN.">
+<meta name="keywords" content="Opera Națională Română Iași, operă, balet, spectacole Iași, bilete operă">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#141d33;--gold:#C9A24B;--gold-2:#E3C778;--cream:#F4ECD8;--cream-2:#EFE4C9;--paper:#FBF6EA;--accent:#5b3a6b;--accent-2:#7d5590;--teal:#3E7C8C;--ink:#1a2033;--muted:#6b7794;--line:rgba(201,162,75,.28);--line-soft:rgba(20,29,51,.1);--r:16px;--maxw:1080px}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:'Jost',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.7;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.1}
+a{color:inherit;text-decoration:none}.wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px}
+.gold-text{color:var(--gold)}.script{font-style:italic;font-weight:500}
+.lang-en{display:none}body.en .lang-ro{display:none}body.en .lang-en{display:inline}
+.overline{font-family:'Jost';font-weight:600;letter-spacing:.32em;text-transform:uppercase;font-size:.7rem}
+header.nav{position:sticky;top:0;z-index:60;background:rgba(20,29,51,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{display:flex;flex-direction:column;line-height:1}
+.logo b{font-family:'Cormorant Garamond';font-size:1.32rem;color:var(--cream);font-weight:700;letter-spacing:.5px}
+.logo small{letter-spacing:.3em;text-transform:uppercase;font-size:.54rem;color:var(--gold);margin-top:3px}
+.nav-links{display:flex;gap:26px}
+.nav-links a{font-weight:500;font-size:.8rem;letter-spacing:.05em;color:var(--cream);opacity:.8;text-transform:uppercase;transition:.2s}
+.nav-links a:hover{opacity:1;color:var(--gold-2)}
+.langsw{display:flex;border:1px solid var(--line);border-radius:30px;padding:3px}
+.langsw button{border:0;background:transparent;padding:5px 11px;border-radius:24px;cursor:pointer;color:var(--cream);font-family:'Jost';font-weight:600;font-size:.72rem;letter-spacing:.08em;transition:.2s}
+.langsw button.active{background:var(--gold);color:var(--navy)}
+@media(max-width:820px){.nav-links{display:none}}
+.hero{position:relative;background:var(--navy);color:var(--cream);padding:70px 0 64px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(680px 420px at 82% 0%,rgba(91,58,107,.65),transparent 62%)}
+.hero::after{content:"";position:absolute;inset:0;opacity:.4;background-image:radial-gradient(rgba(201,162,75,.14) 1px,transparent 1px);background-size:24px 24px;-webkit-mask-image:linear-gradient(180deg,#000,transparent);mask-image:linear-gradient(180deg,#000,transparent)}
+.hero .wrap{position:relative;z-index:2}
+.crumb{font-size:.78rem;color:rgba(244,236,216,.6);margin-bottom:20px}.crumb a:hover{color:var(--gold-2)}
+.hero .overline{color:var(--gold-2);display:inline-block;margin-bottom:16px}
+.hero h1{font-size:clamp(2.3rem,5.2vw,3.8rem);color:var(--cream)}.hero h1 .script{color:var(--gold-2)}
+.hero p{color:rgba(244,236,216,.78);font-weight:300;font-size:1.1rem;max-width:58ch;margin:20px 0 26px}
+.badges{display:flex;gap:10px;flex-wrap:wrap}
+.badge{border:1px solid var(--line);border-radius:30px;padding:8px 16px;font-size:.76rem;color:var(--cream);display:flex;align-items:center;gap:8px}
+.badge .d{width:7px;height:7px;border-radius:50%;background:var(--accent-2)}
+.quickbar{background:linear-gradient(120deg,var(--accent),var(--accent-2));color:#fff}
+.quickbar .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px;padding:20px 26px}
+.qi{display:flex;gap:12px;align-items:center}.qi .em{font-size:1.4rem}
+.qi b{display:block;font-size:.92rem;font-weight:600}.qi small{font-size:.74rem;opacity:.86}
+section{padding:62px 0}.sec-head{margin-bottom:32px}
+.sec-head .overline{color:var(--gold);display:block;margin-bottom:10px}
+.sec-head h2{font-size:clamp(1.9rem,3.6vw,2.6rem);color:var(--navy)}
+.sec-head p{color:var(--muted);font-weight:300;margin-top:8px;max-width:62ch}.alt{background:var(--cream-2)}
+.about-grid{display:grid;grid-template-columns:1.3fr .9fr;gap:34px;align-items:center}
+.about-grid p{color:var(--ink);font-weight:300;margin-bottom:14px}
+.facts{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px 26px}
+.facts .f{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px solid var(--line-soft);font-size:.92rem}
+.facts .f:last-child{border-bottom:0}.facts .f span{color:var(--muted)}
+.facts .f b{color:var(--navy);font-family:'Cormorant Garamond';font-size:1.12rem;text-align:right}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.lbox{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px 28px}
+.lbox h3{font-size:1.35rem;color:var(--navy);margin-bottom:14px}.lbox ul{list-style:none}
+.lbox ul li{position:relative;padding:8px 0 8px 26px;font-size:.9rem;border-bottom:1px solid var(--line-soft);font-weight:300}
+.lbox ul li:last-child{border-bottom:0}.lbox ul li::before{content:"✦";position:absolute;left:0;color:var(--gold);font-size:.8rem;top:9px}
+.freebar{background:#fff;border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:var(--r);padding:22px 26px;display:flex;gap:16px;align-items:center;margin-bottom:20px}
+.freebar .em{font-size:1.8rem}.freebar b{color:var(--navy);font-family:'Cormorant Garamond';font-size:1.3rem}
+.freebar small{color:var(--muted);font-weight:300;display:block;font-size:.9rem}
+#contact{background:var(--navy);color:var(--cream)}
+#contact .sec-head h2{color:var(--cream)}#contact .sec-head p{color:rgba(244,236,216,.7)}
+.cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.cc{border:1px solid var(--line);border-radius:var(--r);padding:24px 26px}
+.cc .overline{color:var(--gold-2);display:block;margin-bottom:12px}
+.cc b{color:var(--cream);font-size:1.02rem;display:block;font-weight:500}
+.cc small{color:rgba(244,236,216,.68);font-weight:300;font-size:.86rem;display:block;margin-top:4px}.cc a{color:var(--gold-2)}
+.cta-row{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:'Jost';font-weight:600;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;padding:14px 26px;border-radius:2px;cursor:pointer;border:0;transition:.3s}
+.btn-gold{background:linear-gradient(120deg,var(--gold),var(--gold-2));color:var(--navy)}.btn-gold:hover{transform:translateY(-2px)}
+.btn-outline{background:transparent;border:1px solid var(--gold);color:var(--gold-2)}.btn-outline:hover{background:var(--gold);color:var(--navy)}
+footer{background:#0f1728;color:rgba(244,236,216,.6);padding:30px 0;text-align:center;font-size:.82rem;font-weight:300}footer a{color:var(--gold-2)}
+.disclaimer{font-size:.78rem;color:var(--muted);font-style:italic;text-align:center;margin-top:24px;font-weight:300}
+@media(max-width:820px){.about-grid,.cgrid,.two{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="viziteaza-romania-iasi.html" class="logo"><b>România <span class="gold-text">·</span> Iași</b><small class="lang-ro">Ghid de călătorie</small><small class="lang-en">Travel guide</small></a>
+    <div class="nav-links"><a href="#despre"><span class="lang-ro">Despre</span><span class="lang-en">About</span></a><a href="#vizita"><span class="lang-ro">Bilete</span><span class="lang-en">Tickets</span></a><a href="teatrul-national.html"><span class="lang-ro">Teatrul</span><span class="lang-en">Theatre</span></a><a href="iasi.html">Iași</a></div>
+    <div class="langsw"><button data-lang="ro" class="active" onclick="setLang('ro')">RO</button><button data-lang="en" onclick="setLang('en')">EN</button></div>
+  </div>
+</header>
+<section class="hero"><div class="wrap">
+  <div class="crumb"><a href="viziteaza-romania-iasi.html">România · Iași</a> &nbsp;›&nbsp; <a href="iasi.html">Iași</a> &nbsp;›&nbsp; <span class="gold-text">Opera Națională Română</span></div>
+  <span class="overline">🎼 <span class="lang-ro">Operă & balet · din 1956</span><span class="lang-en">Opera & ballet · since 1956</span></span>
+  <h1><span class="lang-ro">Opera Națională</span><span class="lang-en">The Romanian</span> <span class="script"><span class="lang-ro">Română Iași</span><span class="lang-en">National Opera</span></span></h1>
+  <p class="lang-ro">Operă, operetă și balet într-o sală de o eleganță aparte — aceeași clădire Fellner & Helmer pe care o împarte cu Teatrul Național.</p>
+  <p class="lang-en">Opera, operetta and ballet in a hall of singular elegance — the same Fellner & Helmer building it shares with the National Theatre.</p>
+  <div class="badges">
+    <span class="badge"><span class="d"></span><span class="lang-ro">Fondată 1956</span><span class="lang-en">Founded 1956</span></span>
+    <span class="badge"><span class="d"></span><span class="lang-ro">Operă · Balet</span><span class="lang-en">Opera · Ballet</span></span>
+    <span class="badge"><span class="d"></span><span class="lang-ro">Clădire Fellner & Helmer</span><span class="lang-en">Fellner & Helmer building</span></span>
+    <span class="badge"><span class="d"></span>operaiasi.ro</span>
+  </div>
+</div></section>
+<div class="quickbar"><div class="wrap">
+  <div class="qi"><span class="em">🎼</span><div><b class="lang-ro">Spectacole</b><b class="lang-en">Performances</b><small class="lang-ro">Operă, operetă, balet</small><small class="lang-en">Opera, operetta, ballet</small></div></div>
+  <div class="qi"><span class="em">🎟️</span><div><b class="lang-ro">Bilete</b><b class="lang-en">Tickets</b><small class="lang-ro">Casa de bilete & online</small><small class="lang-en">Box office & online</small></div></div>
+  <div class="qi"><span class="em">🏛️</span><div><b class="lang-ro">Clădire istorică</b><b class="lang-en">Historic building</b><small class="lang-ro">Comună cu Teatrul Național</small><small class="lang-en">Shared with the National Theatre</small></div></div>
+  <div class="qi"><span class="em">📍</span><div><b class="lang-ro">Str. Agatha Bârsescu 18</b><b class="lang-en">18 Agatha Bârsescu St.</b><small>Iași</small></div></div>
+</div></div>
+<section id="despre"><div class="wrap">
+  <div class="sec-head"><span class="overline"><span class="lang-ro">Despre</span><span class="lang-en">About</span></span><h2><span class="lang-ro">Magie, eleganță și muzică</span><span class="lang-en">Magic, elegance and music</span></h2></div>
+  <div class="about-grid">
+    <div>
+      <p class="lang-ro">Opera Națională Română din Iași, înființată în 1956, este una dintre marile instituții lirice ale țării. Repertoriul cuprinde operă, operetă și balet, cu producții care aduc pe scenă mari titluri ale muzicii clasice.</p>
+      <p class="lang-ro">Spectacolele se desfășoară în sala de circa 1000 de locuri a clădirii istorice proiectate de Fellner & Helmer — bogat decorată, cu candelabre aurite și acustică excelentă, o atmosferă de magie și intimitate.</p>
+      <p class="lang-en">The Romanian National Opera in Iași, founded in 1956, is one of the country's great lyric institutions. Its repertoire spans opera, operetta and ballet, staging major titles of classical music.</p>
+      <p class="lang-en">Performances take place in the roughly 1,000-seat hall of the historic Fellner & Helmer building — richly decorated, with gilded chandeliers and excellent acoustics, an atmosphere of magic and intimacy.</p>
+    </div>
+    <div class="facts">
+      <div class="f"><span class="lang-ro">Fondată</span><span class="lang-en">Founded</span><b>1956</b></div>
+      <div class="f"><span class="lang-ro">Gen</span><span class="lang-en">Genre</span><b class="lang-ro">Operă · Balet</b><b class="lang-en">Opera · Ballet</b></div>
+      <div class="f"><span class="lang-ro">Sala</span><span class="lang-en">Hall</span><b>~1000 <span class="lang-ro">locuri</span><span class="lang-en">seats</span></b></div>
+      <div class="f"><span class="lang-ro">Clădire</span><span class="lang-en">Building</span><b>Fellner & Helmer</b></div>
+    </div>
+  </div>
+</div></section>
+<section id="vizita" class="alt"><div class="wrap">
+  <div class="sec-head"><span class="overline"><span class="lang-ro">Cum se vizitează</span><span class="lang-en">How to visit</span></span><h2><span class="lang-ro">Bilete & acces</span><span class="lang-en">Tickets & access</span></h2></div>
+  <div class="freebar"><span class="em">🎼</span><div><b class="lang-ro">Se vizitează la spectacole</b><b class="lang-en">Visited during performances</b><small class="lang-ro">Prețurile variază în funcție de spectacol. Repertoriul și biletele sunt pe site-ul oficial.</small><small class="lang-en">Prices vary by performance. Repertoire and tickets are on the official site.</small></div></div>
+  <div class="two">
+    <div class="lbox"><h3 class="lang-ro">Bilete</h3><h3 class="lang-en">Tickets</h3>
+      <ul>
+        <li><span class="lang-ro">De la Casa de bilete a Operei</span><span class="lang-en">From the Opera's box office</span></li>
+        <li><span class="lang-ro">Online, pe site-ul oficial</span><span class="lang-en">Online, on the official site</span></li>
+        <li><span class="lang-ro">Abonamente pentru stagiune</span><span class="lang-en">Season subscriptions</span></li>
+      </ul>
+    </div>
+    <div class="lbox"><h3 class="lang-ro">Bine de știut</h3><h3 class="lang-en">Good to know</h3>
+      <ul>
+        <li><span class="lang-ro">Ținută elegantă recomandată</span><span class="lang-en">Elegant dress recommended</span></li>
+        <li><span class="lang-ro">Aceeași clădire cu Teatrul Național</span><span class="lang-en">Same building as the National Theatre</span></li>
+        <li><span class="lang-ro">Sosire cu 20–30 min înainte de spectacol</span><span class="lang-en">Arrive 20–30 min before the show</span></li>
+      </ul>
+    </div>
+  </div>
+  <div style="margin-top:20px"><a href="teatrul-national.html" class="btn btn-outline"><span class="lang-ro">Vezi Teatrul Național</span><span class="lang-en">See the National Theatre</span> →</a></div>
+</div></section>
+<section id="contact"><div class="wrap">
+  <div class="sec-head"><span class="overline gold-text"><span class="lang-ro">Cum ajungi</span><span class="lang-en">How to reach it</span></span><h2>Contact</h2>
+    <p class="lang-ro">Strada Agatha Bârsescu nr. 18, Iași — în clădirea istorică a Teatrului Național, în centru.</p>
+    <p class="lang-en">18 Agatha Bârsescu Street, Iași — in the historic National Theatre building, downtown.</p></div>
+  <div class="cgrid">
+    <div class="cc"><span class="overline"><span class="lang-ro">Adresă</span><span class="lang-en">Address</span></span><b>📍 Str. Agatha Bârsescu 18</b><small>Iași</small></div>
+    <div class="cc"><span class="overline lang-ro">Bilete</span><span class="overline lang-en">Tickets</span><b class="lang-ro">Casa de bilete & online</b><b class="lang-en">Box office & online</b><small class="lang-ro">Repertoriu pe site-ul oficial</small><small class="lang-en">Repertoire on the official site</small></div>
+    <div class="cc"><span class="overline">Online</span><b>🌐 <a href="https://operaiasi.ro" target="_blank" rel="noopener">operaiasi.ro</a></b><small class="lang-ro">Program & abonamente</small><small class="lang-en">Program & subscriptions</small></div>
+  </div>
+  <div class="cta-row">
+    <a href="https://operaiasi.ro" target="_blank" rel="noopener" class="btn btn-gold"><span class="lang-ro">Vezi repertoriul</span><span class="lang-en">See the repertoire</span></a>
+    <a href="iasi.html" class="btn btn-outline"><span class="lang-ro">← Alte locuri din Iași</span><span class="lang-en">← More places in Iași</span></a>
+  </div>
+  <p class="disclaimer"><span class="lang-ro">Repertoriul și biletele se anunță pe site-ul oficial al Operei. Informațiile despre clădire sunt orientative (iulie 2026).</span><span class="lang-en">Repertoire and tickets are announced on the Opera's official site. Building information is indicative (July 2026).</span></p>
+</div></section>
+<footer><div class="wrap">© 2026 România · Iași — <span class="lang-ro">Ghid de călătorie · Demo</span><span class="lang-en">Travel guide · Demo</span> · <a href="iasi.html">Iași</a></div></footer>
+<script>function setLang(l){document.body.classList.toggle('en',l==='en');document.documentElement.lang=l;document.querySelectorAll('.langsw button').forEach(b=>b.classList.toggle('active',b.dataset.lang===l))}</script>
+</body>
+</html>

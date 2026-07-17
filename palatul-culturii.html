@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Palatul Culturii Iași · Program, bilete & cele 4 muzee</title>
+<meta name="description" content="Palatul Culturii din Iași — monument neogotic emblematic, cu 4 muzee și ceasul cu carillon. Program de vizitare, prețuri bilete și informații utile. RO/EN.">
+<meta name="keywords" content="Palatul Culturii Iași, muzee Iași, program Palatul Culturii, bilete Palatul Culturii, monument Iași">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#141d33;--navy-2:#1b2848;--navy-3:#243459;--royal:#2E4488;
+  --gold:#C9A24B;--gold-2:#E3C778;--cream:#F4ECD8;--cream-2:#EFE4C9;--paper:#FBF6EA;
+  --teal:#3E7C8C;--brick:#A8362E;--ink:#1a2033;--muted:#6b7794;
+  --line:rgba(201,162,75,.28);--line-soft:rgba(20,29,51,.1);--r:16px;--maxw:1080px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Jost',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.7;overflow-x:hidden}
+h1,h2,h3,h4,.display{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.1}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px}
+.gold-text{color:var(--gold)}
+.script{font-style:italic;font-weight:500}
+.lang-en{display:none}
+body.en .lang-ro{display:none}
+body.en .lang-en{display:inline}
+.overline{font-family:'Jost';font-weight:600;letter-spacing:.32em;text-transform:uppercase;font-size:.7rem}
+
+/* NAV */
+header.nav{position:sticky;top:0;z-index:60;background:rgba(20,29,51,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{display:flex;flex-direction:column;line-height:1}
+.logo b{font-family:'Cormorant Garamond';font-size:1.32rem;color:var(--cream);font-weight:700;letter-spacing:.5px}
+.logo small{font-family:'Jost';letter-spacing:.3em;text-transform:uppercase;font-size:.54rem;color:var(--gold);margin-top:3px}
+.nav-links{display:flex;gap:26px}
+.nav-links a{font-weight:500;font-size:.8rem;letter-spacing:.05em;color:var(--cream);opacity:.8;text-transform:uppercase;transition:.2s}
+.nav-links a:hover{opacity:1;color:var(--gold-2)}
+.langsw{display:flex;border:1px solid var(--line);border-radius:30px;padding:3px}
+.langsw button{border:0;background:transparent;padding:5px 11px;border-radius:24px;cursor:pointer;color:var(--cream);font-family:'Jost';font-weight:600;font-size:.72rem;letter-spacing:.08em;transition:.2s}
+.langsw button.active{background:var(--gold);color:var(--navy)}
+@media(max-width:820px){.nav-links{display:none}}
+
+/* HERO */
+.hero{position:relative;background:var(--navy);color:var(--cream);padding:70px 0 64px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(680px 420px at 82% 0%,rgba(46,68,136,.85),transparent 62%)}
+.hero::after{content:"";position:absolute;inset:0;opacity:.4;background-image:radial-gradient(rgba(201,162,75,.14) 1px,transparent 1px);background-size:24px 24px;-webkit-mask-image:linear-gradient(180deg,#000,transparent);mask-image:linear-gradient(180deg,#000,transparent)}
+.hero .wrap{position:relative;z-index:2}
+.crumb{font-size:.78rem;color:rgba(244,236,216,.6);margin-bottom:20px;letter-spacing:.05em}
+.crumb a:hover{color:var(--gold-2)}
+.hero .overline{color:var(--gold-2);display:inline-block;margin-bottom:16px}
+.hero h1{font-size:clamp(2.6rem,6vw,4.4rem);color:var(--cream)}
+.hero h1 .script{color:var(--gold-2)}
+.hero p{color:rgba(244,236,216,.78);font-weight:300;font-size:1.1rem;max-width:56ch;margin:20px 0 26px}
+.badges{display:flex;gap:10px;flex-wrap:wrap}
+.badge{border:1px solid var(--line);border-radius:30px;padding:8px 16px;font-size:.76rem;letter-spacing:.04em;color:var(--cream);display:flex;align-items:center;gap:8px}
+.badge .d{width:7px;height:7px;border-radius:50%;background:var(--gold-2)}
+.badge.open .d{background:#5fd08a}
+
+/* QUICK BAR */
+.quickbar{background:linear-gradient(120deg,var(--gold),var(--gold-2));color:var(--navy)}
+.quickbar .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px;padding:20px 26px}
+.qi{display:flex;gap:12px;align-items:center}
+.qi .em{font-size:1.4rem}
+.qi b{display:block;font-size:.92rem;font-weight:600}
+.qi small{font-size:.74rem;opacity:.82}
+
+/* SECTIONS */
+section{padding:66px 0}
+.sec-head{margin-bottom:34px}
+.sec-head .overline{color:var(--gold);display:block;margin-bottom:10px}
+.sec-head h2{font-size:clamp(1.9rem,3.6vw,2.7rem);color:var(--navy)}
+.sec-head p{color:var(--muted);font-weight:300;margin-top:8px;max-width:60ch}
+.alt{background:var(--cream-2)}
+
+/* MUSEUMS */
+.mus-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.mus{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:22px 24px;display:flex;gap:16px;align-items:flex-start}
+.mus .em{font-size:1.7rem;flex:0 0 auto}
+.mus b{font-size:1.15rem;font-family:'Cormorant Garamond';color:var(--navy);display:block}
+.mus small{color:var(--muted);font-weight:300;font-size:.86rem}
+
+/* HOURS */
+.hours-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.hcard{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px 28px}
+.hcard h3{font-size:1.4rem;color:var(--navy);margin-bottom:4px}
+.hcard .tag{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:16px;display:block}
+.hrow{display:flex;justify-content:space-between;gap:14px;padding:10px 0;border-bottom:1px solid var(--line-soft);font-size:.92rem}
+.hrow:last-child{border-bottom:0}
+.hrow span:first-child{color:var(--muted)}
+.hrow b{color:var(--navy);font-weight:600;text-align:right}
+.hrow.closed b{color:var(--brick)}
+.note{margin-top:14px;font-size:.82rem;color:var(--muted);font-weight:300;font-style:italic}
+
+/* PRICE TABLES */
+.ptable{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-bottom:18px}
+.ptable .ph{background:var(--navy);color:var(--cream);padding:16px 22px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.ptable .ph h4{font-size:1.2rem;color:var(--cream)}
+.ptable .ph small{color:rgba(244,236,216,.7);font-weight:300;font-size:.8rem;display:block;margin-top:2px}
+.ptable .ph .pill{background:var(--gold);color:var(--navy);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;font-weight:700;padding:5px 12px;border-radius:2px;white-space:nowrap}
+table{width:100%;border-collapse:collapse}
+th,td{padding:12px 22px;text-align:left;font-size:.9rem}
+thead th{background:var(--cream-2);color:var(--navy);font-family:'Jost';font-weight:600;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
+thead th:not(:first-child),tbody td:not(:first-child){text-align:right;width:26%}
+tbody tr{border-top:1px solid var(--line-soft)}
+tbody td:first-child{color:var(--muted)}
+tbody td b{color:var(--navy);font-weight:600}
+.price-hi{color:var(--gold);font-weight:700}
+.single-row{display:flex;justify-content:space-between;align-items:center;padding:16px 22px;background:#fff;border:1px solid var(--line);border-radius:var(--r);margin-bottom:14px;gap:14px;flex-wrap:wrap}
+.single-row div b{font-family:'Cormorant Garamond';font-size:1.2rem;color:var(--navy)}
+.single-row div small{display:block;color:var(--muted);font-weight:300;font-size:.82rem}
+.single-row .amt{font-family:'Cormorant Garamond';font-size:1.5rem;color:var(--gold);font-weight:700;white-space:nowrap}
+
+/* TWO COL LISTS */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.lbox{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px 28px}
+.lbox h3{font-size:1.4rem;color:var(--navy);margin-bottom:6px}
+.lbox .tag{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600;margin-bottom:16px;display:block}
+.lbox.red .tag{color:var(--brick)}
+.lbox.free .tag{color:var(--teal)}
+.lbox ul{list-style:none}
+.lbox ul li{position:relative;padding:8px 0 8px 26px;font-size:.9rem;border-bottom:1px solid var(--line-soft)}
+.lbox ul li:last-child{border-bottom:0}
+.lbox ul li::before{content:"✦";position:absolute;left:0;color:var(--gold);font-size:.8rem;top:9px}
+.pct{font-family:'Cormorant Garamond';font-weight:700;color:var(--navy)}
+
+/* RULES */
+.rules{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.rule{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:18px 20px;display:flex;gap:14px;align-items:flex-start}
+.rule .em{font-size:1.4rem;flex:0 0 auto}
+.rule p{font-size:.88rem;color:var(--ink);font-weight:300}
+
+/* CONTACT */
+#contact{background:var(--navy);color:var(--cream)}
+#contact .sec-head h2{color:var(--cream)}
+#contact .sec-head p{color:rgba(244,236,216,.7)}
+.cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.cc{border:1px solid var(--line);border-radius:var(--r);padding:24px 26px}
+.cc .overline{color:var(--gold-2);display:block;margin-bottom:12px}
+.cc b{color:var(--cream);font-size:1.02rem;display:block;font-weight:500}
+.cc small{color:rgba(244,236,216,.68);font-weight:300;font-size:.86rem;display:block;margin-top:4px}
+.cc a{color:var(--gold-2)}
+.cta-row{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:'Jost';font-weight:600;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;padding:14px 26px;border-radius:2px;cursor:pointer;border:0;transition:.3s}
+.btn-gold{background:linear-gradient(120deg,var(--gold),var(--gold-2));color:var(--navy)}
+.btn-gold:hover{transform:translateY(-2px)}
+.btn-outline{background:transparent;border:1px solid var(--gold);color:var(--gold-2)}
+.btn-outline:hover{background:var(--gold);color:var(--navy)}
+
+footer{background:#0f1728;color:rgba(244,236,216,.6);padding:30px 0;text-align:center;font-size:.82rem;font-weight:300}
+footer a{color:var(--gold-2)}
+.disclaimer{font-size:.78rem;color:var(--muted);font-style:italic;text-align:center;margin-top:26px;font-weight:300}
+
+@media(max-width:820px){
+  .mus-grid,.hours-grid,.two,.rules,.cgrid{grid-template-columns:1fr}
+  thead th,td{padding:11px 16px;font-size:.84rem}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="viziteaza-romania-iasi.html" class="logo"><b>România <span class="gold-text">·</span> Iași</b><small class="lang-ro">Ghid de călătorie</small><small class="lang-en">Travel guide</small></a>
+    <div class="nav-links">
+      <a href="#muzee"><span class="lang-ro">Muzee</span><span class="lang-en">Museums</span></a>
+      <a href="#program">Program</a>
+      <a href="#bilete"><span class="lang-ro">Bilete</span><span class="lang-en">Tickets</span></a>
+      <a href="#reduceri"><span class="lang-ro">Reduceri</span><span class="lang-en">Discounts</span></a>
+      <a href="#reguli"><span class="lang-ro">Reguli</span><span class="lang-en">Rules</span></a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="langsw">
+      <button data-lang="ro" class="active" onclick="setLang('ro')">RO</button>
+      <button data-lang="en" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="crumb"><a href="viziteaza-romania-iasi.html">România · Iași</a> &nbsp;›&nbsp; <a href="iasi.html">Iași</a> &nbsp;›&nbsp; <span class="gold-text">Palatul Culturii</span></div>
+    <span class="overline">✦ <span class="lang-ro">Simbolul Iașului</span><span class="lang-en">The symbol of Iași</span> · 100 <span class="lang-ro">de ani</span><span class="lang-en">years</span></span>
+    <h1><span class="lang-ro">Palatul</span><span class="lang-en">Palace of</span> <span class="script"><span class="lang-ro">Culturii</span><span class="lang-en">Culture</span></span></h1>
+    <p class="lang-ro">Monument neogotic cu 298 de camere, ceas cu carillon și patru muzee sub același acoperiș. Inima Complexului Muzeal Național „Moldova".</p>
+    <p class="lang-en">A Neo-Gothic landmark with 298 rooms, a carillon clock and four museums under one roof. The heart of the "Moldova" National Museum Complex.</p>
+    <div class="badges">
+      <span class="badge open"><span class="d"></span><span class="lang-ro">Program de la 1 mai 2026</span><span class="lang-en">Hours from 1 May 2026</span></span>
+      <span class="badge"><span class="d"></span><span class="lang-ro">4 muzee</span><span class="lang-en">4 museums</span></span>
+      <span class="badge"><span class="d"></span><span class="lang-ro">Bilet compus 100 lei</span><span class="lang-en">Combined ticket 100 lei</span></span>
+      <span class="badge"><span class="d"></span>www.palatulculturii.ro</span>
+    </div>
+  </div>
+</section>
+
+<!-- QUICK BAR -->
+<div class="quickbar">
+  <div class="wrap">
+    <div class="qi"><span class="em">🕙</span><div><b class="lang-ro">Muzee: Marți–Duminică</b><b class="lang-en">Museums: Tue–Sun</b><small class="lang-ro">Luni: închis</small><small class="lang-en">Monday: closed</small></div></div>
+    <div class="qi"><span class="em">🎟️</span><div><b class="lang-ro">Palatul Culturii — 100 lei</b><b class="lang-en">Palace of Culture — 100 lei</b><small class="lang-ro">4 muzee · 90 lei online</small><small class="lang-en">4 museums · 90 lei online</small></div></div>
+    <div class="qi"><span class="em">🏛️</span><div><b class="lang-ro">Săli reprezentative</b><b class="lang-en">Representative rooms</b><small class="lang-ro">Zilnic 9–22 · doar online</small><small class="lang-en">Daily 9–22 · online only</small></div></div>
+    <div class="qi"><span class="em">🔔</span><div><b class="lang-ro">Turnul cu ceas</b><b class="lang-en">Clock tower</b><small class="lang-ro">Tururi ghidate · 35 lei</small><small class="lang-en">Guided tours · 35 lei</small></div></div>
+  </div>
+</div>
+
+<!-- MUSEUMS -->
+<section id="muzee">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="overline"><span class="lang-ro">Sub același acoperiș</span><span class="lang-en">Under one roof</span></span>
+      <h2><span class="lang-ro">Cele patru muzee</span><span class="lang-en">The four museums</span></h2>
+      <p class="lang-ro">Biletul compus „Palatul Culturii" asigură accesul în toate cele patru muzee.</p>
+      <p class="lang-en">The combined "Palace of Culture" ticket grants access to all four museums.</p>
+    </div>
+    <div class="mus-grid">
+      <div class="mus"><span class="em">🎨</span><div><b class="lang-ro">Muzeul de Artă</b><b class="lang-en">The Art Museum</b><small class="lang-ro">Cea mai veche pinacotecă din România</small><small class="lang-en">Romania's oldest art gallery</small></div></div>
+      <div class="mus"><span class="em">🏰</span><div><b class="lang-ro">Muzeul de Istorie a Moldovei</b><b class="lang-en">Moldavia's History Museum</b><small class="lang-ro">Istoria regiunii, din preistorie până azi</small><small class="lang-en">The region's history, prehistory to today</small></div></div>
+      <div class="mus"><span class="em">🧵</span><div><b class="lang-ro">Muzeul Etnografic al Moldovei</b><b class="lang-en">The Ethnographic Museum of Moldavia</b><small class="lang-ro">Tradiții, meșteșuguri și port popular</small><small class="lang-en">Traditions, crafts and folk costume</small></div></div>
+      <div class="mus"><span class="em">⚙️</span><div><b class="lang-ro">Muzeul Științei și Tehnicii „Ștefan Procopiu"</b><b class="lang-en">"Ștefan Procopiu" Science & Technique Museum</b><small class="lang-ro">Invenții, energie și înregistrări istorice</small><small class="lang-en">Inventions, energy and historic recordings</small></div></div>
+    </div>
+    <p class="note" style="margin-top:18px">🎓 <span class="lang-ro">Atelierele D.I.C.E. — educaționale, interactive și creative — se rezervă la tel. 0232 275979, int. 142 / 116 / 114 / 129.</span><span class="lang-en">D.I.C.E. workshops — educational, interactive and creative — can be booked at +40 232 275979, ext. 142 / 116 / 114 / 129.</span></p>
+  </div>
+</section>
+
+<!-- PROGRAM -->
+<section id="program" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="overline"><span class="lang-ro">Orar de vizitare</span><span class="lang-en">Opening hours</span></span>
+      <h2>Program</h2>
+      <p class="lang-ro">Valabil începând cu 1 mai 2026. Ultimul vizitator este primit cu 30 de minute înainte de închidere.</p>
+      <p class="lang-en">Valid from 1 May 2026. The last visitor is admitted 30 minutes before closing.</p>
+    </div>
+    <div class="hours-grid">
+      <div class="hcard">
+        <span class="tag lang-ro">Cele 4 muzee</span><span class="tag lang-en">The 4 museums</span>
+        <h3 class="lang-ro">Muzee</h3><h3 class="lang-en">Museums</h3>
+        <div class="hrow"><span class="lang-ro">Marți, Miercuri, Joi, Duminică</span><span class="lang-en">Tue, Wed, Thu, Sunday</span><b>10:00 – 17:00</b></div>
+        <div class="hrow"><span class="lang-ro">Vineri, Sâmbătă</span><span class="lang-en">Friday, Saturday</span><b>10:00 – 18:00</b></div>
+        <div class="hrow closed"><span class="lang-ro">Luni & sărbători legale</span><span class="lang-en">Monday & public holidays</span><b class="lang-ro">Închis</b><b class="lang-en">Closed</b></div>
+        <p class="note lang-ro">Ultimul bilet: 16:30 (mar–joi, dum) / 17:30 (vin, sâm).</p>
+        <p class="note lang-en">Last ticket: 16:30 (Tue–Thu, Sun) / 17:30 (Fri, Sat).</p>
+      </div>
+      <div class="hcard">
+        <span class="tag lang-ro">Panoramă & carillon</span><span class="tag lang-en">Panorama & carillon</span>
+        <h3 class="lang-ro">Turnul cu Ceas</h3><h3 class="lang-en">Clock Tower</h3>
+        <div class="hrow"><span class="lang-ro">Luni</span><span class="lang-en">Monday</span><b>10:45 · 12:45 · 14:45</b></div>
+        <div class="hrow"><span class="lang-ro">Marți – Duminică</span><span class="lang-en">Tue – Sunday</span><b>9:45 → 15:45</b></div>
+        <div class="hrow closed"><span class="lang-ro">Sărbători legale</span><span class="lang-en">Public holidays</span><b class="lang-ro">Închis</b><b class="lang-en">Closed</b></div>
+        <p class="note lang-ro">Tururi ghidate din oră în oră: 9:45, 10:45, 11:45, 12:45, 13:45, 14:45, 15:45.</p>
+        <p class="note lang-en">Guided tours hourly: 9:45, 10:45, 11:45, 12:45, 13:45, 14:45, 15:45.</p>
+      </div>
+      <div class="hcard">
+        <span class="tag lang-ro">Doar online</span><span class="tag lang-en">Online only</span>
+        <h3 class="lang-ro">Sălile Reprezentative</h3><h3 class="lang-en">Representative Rooms</h3>
+        <div class="hrow"><span class="lang-ro">Luni – Duminică</span><span class="lang-en">Monday – Sunday</span><b>9:00 – 22:00</b></div>
+        <p class="note lang-ro">Holul de Onoare, Sala Voievozilor, Sala „Henri Coandă", Holul Monoxila. Bilete exclusiv online (Muzeu.ro).</p>
+        <p class="note lang-en">Hall of Honor, Voievozilor Hall, "Henri Coandă" Hall, Monoxila Hall. Tickets online only (Muzeu.ro).</p>
+      </div>
+      <div class="hcard">
+        <span class="tag lang-ro">Muzee memoriale</span><span class="tag lang-en">Memorial museums</span>
+        <h3 class="lang-ro">Unirii · Kogălniceanu · Poni-Cernătescu</h3><h3 class="lang-en">Unirii · Kogălniceanu · Poni-Cernătescu</h3>
+        <div class="hrow"><span class="lang-ro">Vineri – Duminică</span><span class="lang-en">Friday – Sunday</span><b>10:00 – 17:00</b></div>
+        <p class="note lang-ro">Muzeele din oraș, incluse în biletele compuse.</p>
+        <p class="note lang-en">City museums, included in the combined tickets.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKETS -->
+<section id="bilete">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="overline"><span class="lang-ro">Prețuri actualizate</span><span class="lang-en">Updated prices</span></span>
+      <h2><span class="lang-ro">Bilete de intrare</span><span class="lang-en">Entry tickets</span></h2>
+      <p class="lang-ro">Prețurile online sunt mai mici. Coloanele arată tariful la casierie și online.</p>
+      <p class="lang-en">Online prices are lower. Columns show box-office and online rates.</p>
+    </div>
+
+    <div class="ptable">
+      <div class="ph"><div><h4 class="lang-ro">Palatul Culturii — 4 muzee</h4><h4 class="lang-en">Palace of Culture — 4 museums</h4><small class="lang-ro">Acces în toate cele patru muzee</small><small class="lang-en">Access to all four museums</small></div><span class="pill lang-ro">Recomandat</span><span class="pill lang-en">Recommended</span></div>
+      <table><thead><tr><th class="lang-ro">Tip bilet</th><th class="lang-en">Ticket type</th><th class="lang-ro">Casierie</th><th class="lang-en">Box office</th><th>Online</th></tr></thead>
+      <tbody>
+        <tr><td><span class="lang-ro">Întreg (adult)</span><span class="lang-en">Full (adult)</span></td><td><b>100 lei</b></td><td class="price-hi">90 lei</td></tr>
+        <tr><td><span class="lang-ro">Redus 50%</span><span class="lang-en">Reduced 50%</span></td><td><b>50 lei</b></td><td class="price-hi">45 lei</td></tr>
+        <tr><td><span class="lang-ro">Redus 75%</span><span class="lang-en">Reduced 75%</span></td><td><b>25 lei</b></td><td class="price-hi">22,50 lei</td></tr>
+      </tbody></table>
+    </div>
+
+    <div class="ptable">
+      <div class="ph"><div><h4 class="lang-ro">Un singur muzeu</h4><h4 class="lang-en">Single museum</h4><small class="lang-ro">Artă · Istorie · Etnografic · Știință și Tehnică</small><small class="lang-en">Art · History · Ethnographic · Science & Technique</small></div></div>
+      <table><thead><tr><th class="lang-ro">Tip bilet</th><th class="lang-en">Ticket type</th><th class="lang-ro">Casierie</th><th class="lang-en">Box office</th><th>Online</th></tr></thead>
+      <tbody>
+        <tr><td><span class="lang-ro">Întreg (adult)</span><span class="lang-en">Full (adult)</span></td><td><b>30 lei</b></td><td class="price-hi">25 lei</td></tr>
+        <tr><td><span class="lang-ro">Redus 50%</span><span class="lang-en">Reduced 50%</span></td><td><b>15 lei</b></td><td class="price-hi">12,50 lei</td></tr>
+        <tr><td><span class="lang-ro">Redus 75%</span><span class="lang-en">Reduced 75%</span></td><td><b>7,50 lei</b></td><td class="price-hi">6,25 lei</td></tr>
+      </tbody></table>
+    </div>
+
+    <div class="ptable">
+      <div class="ph"><div><h4 class="lang-ro">Complexul Muzeal Național „Moldova"</h4><h4 class="lang-en">"Moldova" National Museum Complex</h4><small class="lang-ro">Palatul Culturii + Unirii + Kogălniceanu + Poni-Cernătescu</small><small class="lang-en">Palace of Culture + Unirii + Kogălniceanu + Poni-Cernătescu</small></div></div>
+      <table><thead><tr><th class="lang-ro">Tip bilet</th><th class="lang-en">Ticket type</th><th class="lang-ro">Casierie</th><th class="lang-en">Box office</th><th>Online</th></tr></thead>
+      <tbody>
+        <tr><td><span class="lang-ro">Întreg (adult)</span><span class="lang-en">Full (adult)</span></td><td><b>120 lei</b></td><td class="price-hi">110 lei</td></tr>
+        <tr><td><span class="lang-ro">Redus 50%</span><span class="lang-en">Reduced 50%</span></td><td><b>60 lei</b></td><td class="price-hi">55 lei</td></tr>
+        <tr><td><span class="lang-ro">Redus 75%</span><span class="lang-en">Reduced 75%</span></td><td><b>30 lei</b></td><td class="price-hi">27,50 lei</td></tr>
+      </tbody></table>
+    </div>
+
+    <div class="ptable">
+      <div class="ph"><div><h4 class="lang-ro">Trei muzee din orașul Iași</h4><h4 class="lang-en">Three museums in Iași city</h4><small class="lang-ro">Unirii · Memorial „Kogălniceanu" · Poni-Cernătescu</small><small class="lang-en">Unirii · "Kogălniceanu" Memorial · Poni-Cernătescu</small></div></div>
+      <table><thead><tr><th class="lang-ro">Tip bilet</th><th class="lang-en">Ticket type</th><th class="lang-ro">Casierie</th><th class="lang-en">Box office</th><th>Online</th></tr></thead>
+      <tbody>
+        <tr><td><span class="lang-ro">Întreg (adult)</span><span class="lang-en">Full (adult)</span></td><td><b>50 lei</b></td><td class="price-hi">40 lei</td></tr>
+        <tr><td><span class="lang-ro">Redus 50%</span><span class="lang-en">Reduced 50%</span></td><td><b>25 lei</b></td><td class="price-hi">20 lei</td></tr>
+        <tr><td><span class="lang-ro">Redus 75%</span><span class="lang-en">Reduced 75%</span></td><td><b>12,50 lei</b></td><td class="price-hi">10 lei</td></tr>
+      </tbody></table>
+    </div>
+
+    <div class="ptable">
+      <div class="ph"><div><h4 class="lang-ro">Trei muzee din județul Iași</h4><h4 class="lang-en">Three museums in Iași county</h4><small class="lang-ro">Muzeul Viei și Vinului Hârlău · Palatul Cuza Ruginoasa · Situl Cucuteni · miercuri–duminică 10–17</small><small class="lang-en">Vine & Wine Museum Hârlău · Cuza Palace Ruginoasa · Cucuteni site · Wed–Sun 10–17</small></div></div>
+      <table><thead><tr><th class="lang-ro">Tip bilet</th><th class="lang-en">Ticket type</th><th class="lang-ro">Casierie</th><th class="lang-en">Box office</th><th>Online</th></tr></thead>
+      <tbody>
+        <tr><td><span class="lang-ro">Întreg (adult)</span><span class="lang-en">Full (adult)</span></td><td><b>50 lei</b></td><td class="price-hi">40 lei</td></tr>
+        <tr><td><span class="lang-ro">Redus 50%</span><span class="lang-en">Reduced 50%</span></td><td><b>25 lei</b></td><td class="price-hi">20 lei</td></tr>
+        <tr><td><span class="lang-ro">Redus 75%</span><span class="lang-en">Reduced 75%</span></td><td><b>12,50 lei</b></td><td class="price-hi">10 lei</td></tr>
+      </tbody></table>
+    </div>
+
+    <div class="ptable">
+      <div class="ph"><div><h4 class="lang-ro">Expoziție temporară</h4><h4 class="lang-en">Temporary exhibition</h4><small class="lang-ro">La oricare dintre muzee</small><small class="lang-en">At any of the museums</small></div></div>
+      <table><thead><tr><th class="lang-ro">Tip bilet</th><th class="lang-en">Ticket type</th><th class="lang-ro">Casierie</th><th class="lang-en">Box office</th><th>Online</th></tr></thead>
+      <tbody>
+        <tr><td><span class="lang-ro">Întreg (adult)</span><span class="lang-en">Full (adult)</span></td><td><b>14 lei</b></td><td class="price-hi">10 lei</td></tr>
+        <tr><td><span class="lang-ro">Redus 50%</span><span class="lang-en">Reduced 50%</span></td><td><b>7 lei</b></td><td class="price-hi">5 lei</td></tr>
+        <tr><td><span class="lang-ro">Redus 75%</span><span class="lang-en">Reduced 75%</span></td><td><b>3,50 lei</b></td><td class="price-hi">2,50 lei</td></tr>
+      </tbody></table>
+    </div>
+
+    <div class="single-row"><div><b class="lang-ro">Ceasul din Turnul Palatului</b><b class="lang-en">Palace Clock Tower</b><small class="lang-ro">Tur ghidat cu rezervare · preț unic</small><small class="lang-en">Guided tour with reservation · single price</small></div><span class="amt">35 lei</span></div>
+    <div class="single-row"><div><b class="lang-ro">Săli Reprezentative — fără ghidaj</b><b class="lang-en">Representative Rooms — no guide</b><small class="lang-ro">Exclusiv online · luni–duminică 9–22</small><small class="lang-en">Online only · Mon–Sun 9–22</small></div><span class="amt">20 lei</span></div>
+    <div class="single-row"><div><b class="lang-ro">Săli Reprezentative — cu ghidaj</b><b class="lang-en">Representative Rooms — guided</b><small class="lang-ro">Marți–duminică · 11:00, 13:00, 15:00</small><small class="lang-en">Tue–Sun · 11:00, 13:00, 15:00</small></div><span class="amt">35 lei</span></div>
+    <div class="single-row"><div><b class="lang-ro">Atelier Educație Muzeală</b><b class="lang-en">Museum Education Workshop</b><small class="lang-ro">Preț în funcție de obiectul realizat</small><small class="lang-en">Price depends on the object made</small></div><span class="amt">15–45 lei</span></div>
+
+    <p class="note" style="margin-top:6px">🧑‍🏫 <span class="lang-ro">Taxă ghidaj / muzeu: 100 lei/grup (casierie) sau 90 lei/grup (online), grupuri de max. 30 persoane. Programare ghidaj în engleză: 0232 275979, int. 129. Înregistrarea audio-video a ghidajului este interzisă.</span><span class="lang-en">Guiding fee / museum: 100 lei/group (box office) or 90 lei/group (online), groups of max. 30 people. English guide booking: +40 232 275979, ext. 129. Audio-video recording of the guided tour is prohibited.</span></p>
+  </div>
+</section>
+
+<!-- DISCOUNTS & FREE -->
+<section id="reduceri" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="overline"><span class="lang-ro">Cine plătește mai puțin</span><span class="lang-en">Who pays less</span></span>
+      <h2><span class="lang-ro">Reduceri & gratuități</span><span class="lang-en">Discounts & free entry</span></h2>
+    </div>
+    <div class="two">
+      <div class="lbox red">
+        <span class="tag lang-ro">Reduceri</span><span class="tag lang-en">Discounts</span>
+        <h3 class="lang-ro">Bilet redus</h3><h3 class="lang-en">Reduced ticket</h3>
+        <ul>
+          <li><span class="pct">−75%</span> — <span class="lang-ro">elevi și studenți (inclusiv învățământ particular acreditat)</span><span class="lang-en">pupils and students (incl. accredited private education)</span></li>
+          <li><span class="pct">−75%</span> — <span class="lang-ro">posesori de card Euro 26, cu vârsta până la 30 de ani</span><span class="lang-en">Euro 26 card holders, up to 30 years old</span></li>
+          <li><span class="pct">−75%</span> — <span class="lang-ro">persoane adulte cu handicap mediu sau ușor</span><span class="lang-en">adults with moderate or mild disabilities</span></li>
+          <li><span class="pct">−50%</span> — <span class="lang-ro">pensionari</span><span class="lang-en">pensioners</span></li>
+        </ul>
+      </div>
+      <div class="lbox free">
+        <span class="tag lang-ro">Intrare gratuită</span><span class="tag lang-en">Free entry</span>
+        <h3 class="lang-ro">Gratuități</h3><h3 class="lang-en">Free admission</h3>
+        <ul>
+          <li><span class="lang-ro">Copii preșcolari și copii până la 18 ani în perioada vacanțelor</span><span class="lang-en">Preschoolers and children up to 18 during school holidays</span></li>
+          <li><span class="lang-ro">Copii până la 18 ani cu nevoi speciale / handicap, plus însoțitor</span><span class="lang-en">Children up to 18 with special needs / disability, plus companion</span></li>
+          <li><span class="lang-ro">Persoane cu handicap grav sau accentuat, plus însoțitor</span><span class="lang-en">People with severe or pronounced disabilities, plus companion</span></li>
+          <li><span class="lang-ro">Posesori card Euro 26 (sub 30 ani) — prima zi de 26 a fiecărei luni</span><span class="lang-en">Euro 26 card holders (under 30) — the first 26th of each month</span></li>
+          <li><span class="lang-ro">Grupuri organizate de elevi/studenți — prima zi de marți din lună</span><span class="lang-en">Organized pupil/student groups — the first Tuesday of the month</span></li>
+          <li><span class="lang-ro">Pensionari — 1 octombrie și prima miercuri din fiecare trimestru</span><span class="lang-en">Pensioners — 1 October and the first Wednesday of each quarter</span></li>
+          <li><span class="lang-ro">Ziua Națională a României și Ziua Internațională a Muzeelor (18 mai)</span><span class="lang-en">Romania's National Day and International Museum Day (18 May)</span></li>
+          <li><span class="lang-ro">Veterani și văduve de război, foști deținuți politici, revoluționari 1989</span><span class="lang-en">War veterans and widows, former political prisoners, 1989 revolutionaries</span></li>
+          <li><span class="lang-ro">Angajați ai rețelei muzeale / Ministerul Culturii, posesori card ICOM, delegații oficiale</span><span class="lang-en">Museum network / Ministry of Culture staff, ICOM card holders, official delegations</span></li>
+        </ul>
+      </div>
+    </div>
+    <p class="note" style="margin-top:16px"><span class="lang-ro">Gratuitatea se acordă la prezentarea unui document justificativ. Lista completă e afișată la casierie.</span><span class="lang-en">Free entry is granted on presentation of supporting documents. The full list is displayed at the box office.</span></p>
+  </div>
+</section>
+
+<!-- RULES -->
+<section id="reguli">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="overline"><span class="lang-ro">Înainte de vizită</span><span class="lang-en">Before you visit</span></span>
+      <h2><span class="lang-ro">Reguli de vizitare</span><span class="lang-en">Visiting rules</span></h2>
+    </div>
+    <div class="rules">
+      <div class="rule"><span class="em">🔐</span><p class="lang-ro">Pentru bagajele de mână, folosiți cutiile securizate de la parter.</p><p class="lang-en">For hand luggage, please use the secure lockers on the ground floor.</p></div>
+      <div class="rule"><span class="em">🚫</span><p class="lang-ro">Nu este permis accesul cu animale de companie, role, triciclete sau biciclete.</p><p class="lang-en">Pets, rollerblades, tricycles and bicycles are not allowed inside.</p></div>
+      <div class="rule"><span class="em">🖐️</span><p class="lang-ro">Pentru protecția patrimoniului, nu atingeți obiectele expuse.</p><p class="lang-en">To protect the heritage, please do not touch the exhibits.</p></div>
+      <div class="rule"><span class="em">🥤</span><p class="lang-ro">Nu este permisă intrarea în muzee cu sucuri, cafea sau alte alimente.</p><p class="lang-en">Food and drinks, including juices and coffee, are not permitted inside the museums.</p></div>
+      <div class="rule"><span class="em">🔕</span><p class="lang-ro">Setați telefoanele pe silențios pentru a nu deranja ceilalți vizitatori.</p><p class="lang-en">Set phones to silent so as not to disturb other visitors.</p></div>
+      <div class="rule"><span class="em">📷</span><p class="lang-ro">Fotografierea e permisă doar pentru uz personal, fără flash, lămpi, trepied sau monopod. Fără uz comercial.</p><p class="lang-en">Photography for personal use only — no flash, lamps, tripods or monopods. No commercial use.</p></div>
+      <div class="rule"><span class="em">🎥</span><p class="lang-ro">Este interzisă înregistrarea audio/video a ghidajului efectuat de personalul muzeului.</p><p class="lang-en">Audio/video recording of the guided tour given by museum staff is prohibited.</p></div>
+      <div class="rule"><span class="em">💳</span><p class="lang-ro">Sălile reprezentative se vizitează doar cu bilet cumpărat online (20 lei / bilet unic).</p><p class="lang-en">The representative rooms can only be visited with a ticket bought online (20 lei / single ticket).</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="overline gold-text"><span class="lang-ro">Informații & programări</span><span class="lang-en">Info & bookings</span></span>
+      <h2>Contact</h2>
+      <p class="lang-ro">Piața Ștefan cel Mare și Sfânt nr. 1, Iași · Complexul Muzeal Național „Moldova".</p>
+      <p class="lang-en">Ștefan cel Mare și Sfânt Square no. 1, Iași · "Moldova" National Museum Complex.</p>
+    </div>
+    <div class="cgrid">
+      <div class="cc"><span class="overline">Secretariat</span><b class="lang-ro">Informații & programări</b><b class="lang-en">Info & bookings</b><small class="lang-ro">Luni–Joi: 10:00–15:00 · Vineri: 10:00–13:00</small><small class="lang-en">Mon–Thu: 10:00–15:00 · Fri: 10:00–13:00</small><small>📞 <a href="tel:+40232231383">0232 231383</a></small></div>
+      <div class="cc"><span class="overline lang-ro">Ghidaj</span><span class="overline lang-en">Guided tours</span><b class="lang-ro">Programare ghidaj în engleză</b><b class="lang-en">English guide booking</b><small>📞 <a href="tel:+40232275979">0232 275979</a> · int. 129</small><small class="lang-ro">Ateliere D.I.C.E.: int. 142 / 116 / 114 / 129</small><small class="lang-en">D.I.C.E. workshops: ext. 142 / 116 / 114 / 129</small></div>
+      <div class="cc"><span class="overline lang-ro">Online</span><span class="overline lang-en">Online</span><b class="lang-ro">Bilete & informații</b><b class="lang-en">Tickets & info</b><small>🌐 <a href="https://www.palatulculturii.ro" target="_blank" rel="noopener">www.palatulculturii.ro</a></small><small class="lang-ro">Săli reprezentative: platforma Muzeu.ro</small><small class="lang-en">Representative rooms: Muzeu.ro platform</small></div>
+    </div>
+    <div class="cta-row">
+      <a href="https://www.palatulculturii.ro" target="_blank" rel="noopener" class="btn btn-gold"><span class="lang-ro">Cumpără bilete online</span><span class="lang-en">Buy tickets online</span></a>
+      <a href="#program" class="btn btn-outline"><span class="lang-ro">Vezi programul</span><span class="lang-en">See the hours</span></a>
+    </div>
+    <p class="disclaimer"><span class="lang-ro">Informații preluate din panourile oficiale afișate la Palatul Culturii (iulie 2026). Programul și tarifele se pot modifica — verifică pe palatulculturii.ro înainte de vizită.</span><span class="lang-en">Information taken from the official panels displayed at the Palace of Culture (July 2026). Hours and prices may change — please check palatulculturii.ro before your visit.</span></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    © 2026 România · Iași — <span class="lang-ro">Ghid de călătorie · Demo</span><span class="lang-en">Travel guide · Demo</span> · <a href="https://www.palatulculturii.ro" target="_blank" rel="noopener">palatulculturii.ro</a>
+  </div>
+</footer>
+
+<script>
+function setLang(l){
+  document.body.classList.toggle('en', l==='en');
+  document.documentElement.lang=l;
+  document.querySelectorAll('.langsw button').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));
+}
+</script>
+</body>
+</html>

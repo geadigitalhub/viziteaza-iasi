@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Palatul „Alexandru Ioan Cuza" de la Ruginoasa · Program & bilete</title>
+<meta name="description" content="Palatul neogotic de la Ruginoasa, reședința domnitorului Alexandru Ioan Cuza, azi muzeu memorial. La ~65 km de Iași. Istoric, program și bilete.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#141d33;--gold:#C9A24B;--gold-2:#E3C778;--cream:#F4ECD8;--cream-2:#EFE4C9;--paper:#FBF6EA;--accent:#5b3a6b;--accent-2:#7a5290;--teal:#3E7C8C;--ink:#1a2033;--muted:#6b7794;--line:rgba(201,162,75,.28);--line-soft:rgba(20,29,51,.1);--r:16px;--maxw:1080px}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:'Jost',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.7;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.1}
+a{color:inherit;text-decoration:none}.wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px}
+.gold-text{color:var(--gold)}.script{font-style:italic;font-weight:500}
+.lang-en{display:none}body.en .lang-ro{display:none}body.en .lang-en{display:inline}
+.overline{font-family:'Jost';font-weight:600;letter-spacing:.32em;text-transform:uppercase;font-size:.7rem}
+header.nav{position:sticky;top:0;z-index:60;background:rgba(20,29,51,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{display:flex;flex-direction:column;line-height:1}
+.logo b{font-family:'Cormorant Garamond';font-size:1.32rem;color:var(--cream);font-weight:700;letter-spacing:.5px}
+.logo small{letter-spacing:.3em;text-transform:uppercase;font-size:.54rem;color:var(--gold);margin-top:3px}
+.nav-links{display:flex;gap:26px}
+.nav-links a{font-weight:500;font-size:.8rem;letter-spacing:.05em;color:var(--cream);opacity:.8;text-transform:uppercase;transition:.2s}
+.nav-links a:hover{opacity:1;color:var(--gold-2)}
+.langsw{display:flex;border:1px solid var(--line);border-radius:30px;padding:3px}
+.langsw button{border:0;background:transparent;padding:5px 11px;border-radius:24px;cursor:pointer;color:var(--cream);font-family:'Jost';font-weight:600;font-size:.72rem;letter-spacing:.08em;transition:.2s}
+.langsw button.active{background:var(--gold);color:var(--navy)}
+@media(max-width:820px){.nav-links{display:none}}
+.hero{position:relative;background:var(--navy);color:var(--cream);padding:70px 0 64px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(680px 420px at 82% 0%,rgba(91,58,107,.6),transparent 62%)}
+.hero::after{content:"";position:absolute;inset:0;opacity:.4;background-image:radial-gradient(rgba(201,162,75,.14) 1px,transparent 1px);background-size:24px 24px;-webkit-mask-image:linear-gradient(180deg,#000,transparent);mask-image:linear-gradient(180deg,#000,transparent)}
+.hero .wrap{position:relative;z-index:2}
+.crumb{font-size:.78rem;color:rgba(244,236,216,.6);margin-bottom:20px}.crumb a:hover{color:var(--gold-2)}
+.hero .overline{color:var(--gold-2);display:inline-block;margin-bottom:16px}
+.hero h1{font-size:clamp(2.4rem,5.4vw,4rem);color:var(--cream)}.hero h1 .script{color:var(--gold-2)}
+.hero p{color:rgba(244,236,216,.78);font-weight:300;font-size:1.1rem;max-width:58ch;margin:20px 0 26px}
+.badges{display:flex;gap:10px;flex-wrap:wrap}
+.badge{border:1px solid var(--line);border-radius:30px;padding:8px 16px;font-size:.76rem;color:var(--cream);display:flex;align-items:center;gap:8px}
+.badge .d{width:7px;height:7px;border-radius:50%;background:var(--accent-2)}
+.quickbar{background:linear-gradient(120deg,var(--accent),var(--accent-2));color:#fff}
+.quickbar .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px;padding:20px 26px}
+.qi{display:flex;gap:12px;align-items:center}.qi .em{font-size:1.4rem}
+.qi b{display:block;font-size:.92rem;font-weight:600}.qi small{font-size:.74rem;opacity:.86}
+section{padding:62px 0}.sec-head{margin-bottom:32px}
+.sec-head .overline{color:var(--gold);display:block;margin-bottom:10px}
+.sec-head h2{font-size:clamp(1.9rem,3.6vw,2.6rem);color:var(--navy)}
+.sec-head p{color:var(--muted);font-weight:300;margin-top:8px;max-width:62ch}.alt{background:var(--cream-2)}
+.about-grid{display:grid;grid-template-columns:1.3fr .9fr;gap:34px;align-items:center}
+.about-grid p{color:var(--ink);font-weight:300;margin-bottom:14px}
+.facts{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px 26px}
+.facts .f{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px solid var(--line-soft);font-size:.92rem}
+.facts .f:last-child{border-bottom:0}.facts .f span{color:var(--muted)}
+.facts .f b{color:var(--navy);font-family:'Cormorant Garamond';font-size:1.12rem;text-align:right}
+.hours-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.hcard{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px 28px}
+.hcard h3{font-size:1.35rem;color:var(--navy);margin-bottom:4px}
+.hcard .tag{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:16px;display:block}
+.hrow{display:flex;justify-content:space-between;gap:14px;padding:10px 0;border-bottom:1px solid var(--line-soft);font-size:.92rem}
+.hrow:last-child{border-bottom:0}.hrow span:first-child{color:var(--muted)}
+.hrow b{color:var(--navy);font-weight:600;text-align:right}
+.note{margin-top:14px;font-size:.82rem;color:var(--muted);font-weight:300;font-style:italic}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.lbox{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px 28px}
+.lbox h3{font-size:1.35rem;color:var(--navy);margin-bottom:14px}.lbox ul{list-style:none}
+.lbox ul li{position:relative;padding:8px 0 8px 26px;font-size:.9rem;border-bottom:1px solid var(--line-soft);font-weight:300}
+.lbox ul li:last-child{border-bottom:0}.lbox ul li::before{content:"✦";position:absolute;left:0;color:var(--gold);font-size:.8rem;top:9px}
+#contact{background:var(--navy);color:var(--cream)}
+#contact .sec-head h2{color:var(--cream)}#contact .sec-head p{color:rgba(244,236,216,.7)}
+.cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.cc{border:1px solid var(--line);border-radius:var(--r);padding:24px 26px}
+.cc .overline{color:var(--gold-2);display:block;margin-bottom:12px}
+.cc b{color:var(--cream);font-size:1.02rem;display:block;font-weight:500}
+.cc small{color:rgba(244,236,216,.68);font-weight:300;font-size:.86rem;display:block;margin-top:4px}.cc a{color:var(--gold-2)}
+.cta-row{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:'Jost';font-weight:600;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;padding:14px 26px;border-radius:2px;cursor:pointer;border:0;transition:.3s}
+.btn-gold{background:linear-gradient(120deg,var(--gold),var(--gold-2));color:var(--navy)}.btn-gold:hover{transform:translateY(-2px)}
+.btn-outline{background:transparent;border:1px solid var(--gold);color:var(--gold-2)}.btn-outline:hover{background:var(--gold);color:var(--navy)}
+footer{background:#0f1728;color:rgba(244,236,216,.6);padding:30px 0;text-align:center;font-size:.82rem;font-weight:300}footer a{color:var(--gold-2)}
+.disclaimer{font-size:.78rem;color:var(--muted);font-style:italic;text-align:center;margin-top:24px;font-weight:300}
+@media(max-width:820px){.about-grid,.hours-grid,.cgrid,.two{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="viziteaza-romania-iasi.html" class="logo"><b>România <span class="gold-text">·</span> Iași</b><small class="lang-ro">Ghid de călătorie</small><small class="lang-en">Travel guide</small></a>
+    <div class="nav-links"><a href="#despre"><span class="lang-ro">Despre</span><span class="lang-en">About</span></a><a href="#program">Program</a><a href="#vezi"><span class="lang-ro">Ce vezi</span><span class="lang-en">Highlights</span></a><a href="iasi.html">Iași</a></div>
+    <div class="langsw"><button data-lang="ro" class="active" onclick="setLang('ro')">RO</button><button data-lang="en" onclick="setLang('en')">EN</button></div>
+  </div>
+</header>
+<section class="hero"><div class="wrap">
+  <div class="crumb"><a href="viziteaza-romania-iasi.html">România · Iași</a> &nbsp;›&nbsp; <a href="iasi.html">Iași</a> &nbsp;›&nbsp; <span class="gold-text">Palatul Cuza · Ruginoasa</span></div>
+  <span class="overline">👑 <span class="lang-ro">Excursie de o zi · Reședința lui Cuza</span><span class="lang-en">Day trip · Cuza's residence</span></span>
+  <h1><span class="lang-ro">Palatul Cuza</span><span class="lang-en">The Cuza Palace</span> <span class="script"><span class="lang-ro">de la Ruginoasa</span><span class="lang-en">at Ruginoasa</span></span></h1>
+  <p class="lang-ro">Un palat neogotic ridicat de familia Sturdza și cumpărat în 1862 de Alexandru Ioan Cuza, primul domnitor al Principatelor Unite. Astăzi, muzeu memorial dedicat Domnului Unirii — o excursie de o zi la circa 65 km de Iași.</p>
+  <p class="lang-en">A neo-Gothic palace built by the Sturdza family and bought in 1862 by Alexandru Ioan Cuza, the first ruler of the United Principalities. Today, a memorial museum dedicated to the Prince of the Union — a day trip about 65 km from Iași.</p>
+  <div class="badges">
+    <span class="badge"><span class="d"></span><span class="lang-ro">Stil neogotic</span><span class="lang-en">Neo-Gothic</span></span>
+    <span class="badge"><span class="d"></span><span class="lang-ro">Reședința lui Cuza, 1862</span><span class="lang-en">Cuza's residence, 1862</span></span>
+    <span class="badge"><span class="d"></span><span class="lang-ro">Bilet: 20 lei</span><span class="lang-en">Ticket: 20 lei</span></span>
+    <span class="badge"><span class="d"></span>~65 km <span class="lang-ro">de Iași</span><span class="lang-en">from Iași</span></span>
+  </div>
+</div></section>
+<div class="quickbar"><div class="wrap">
+  <div class="qi"><span class="em">🏰</span><div><b class="lang-ro">Palat neogotic</b><b class="lang-en">Neo-Gothic palace</b><small class="lang-ro">Sturdza, apoi Cuza</small><small class="lang-en">Sturdza, then Cuza</small></div></div>
+  <div class="qi"><span class="em">🗓️</span><div><b class="lang-ro">Miercuri – Duminică</b><b class="lang-en">Wednesday – Sunday</b><small class="lang-ro">10:00 – 17:00</small><small class="lang-en">10:00 – 17:00</small></div></div>
+  <div class="qi"><span class="em">🎟️</span><div><b class="lang-ro">20 lei</b><b class="lang-en">20 lei</b><small class="lang-ro">Bilet întreg</small><small class="lang-en">Full ticket</small></div></div>
+  <div class="qi"><span class="em">📍</span><div><b class="lang-ro">Ruginoasa, jud. Iași</b><b class="lang-en">Ruginoasa, Iași county</b><small class="lang-ro">~65 km de oraș</small><small class="lang-en">~65 km from the city</small></div></div>
+</div></div>
+<section id="despre"><div class="wrap">
+  <div class="sec-head"><span class="overline"><span class="lang-ro">Despre</span><span class="lang-en">About</span></span><h2><span class="lang-ro">Casa Domnului Unirii</span><span class="lang-en">The home of the Prince of the Union</span></h2></div>
+  <div class="about-grid">
+    <div>
+      <p class="lang-ro">Palatul a fost construit în primul deceniu al secolului al XIX-lea de vistiernicul Săndulache Sturdza, care l-a comandat arhitectului vienez Johan Freiwald, în stil neoclasic, pe locul vechii case boierești a înaintașilor săi. În 1847, logofătul Costache Sturdza l-a transformat în stil gotic, cu arhitectul Johan Brandel, lucrările fiind finalizate în 1855.</p>
+      <p class="lang-ro">În 1862, proprietatea a fost cumpărată de Alexandru Ioan Cuza, domnitorul Principatelor Unite. Clădirea păstrează caracteristicile stilului neogotic, inspirat de romantismul german: plan pătrat, cu un etaj, iar cele patru fațade au aceleași elemente — pridvoare largi și balcoane sprijinite pe lespezi de piatră. În 1982 s-a deschis aici Muzeul Memorial „Alexandru Ioan Cuza".</p>
+      <p class="lang-en">The palace was built in the first decade of the 19th century by treasurer Săndulache Sturdza, who commissioned the Viennese architect Johan Freiwald to raise a neoclassical residence on the site of his ancestors' old boyar house. In 1847, logothete Costache Sturdza transformed it in the Gothic style with architect Johan Brandel, the works being completed in 1855.</p>
+      <p class="lang-en">In 1862 the estate was bought by Alexandru Ioan Cuza, ruler of the United Principalities. The building preserves the features of the neo-Gothic style, inspired by German Romanticism: a square plan with one floor, its four facades sharing the same elements — wide porches and balconies resting on stone slabs. In 1982 the "Alexandru Ioan Cuza" Memorial Museum opened here.</p>
+    </div>
+    <div class="facts">
+      <div class="f"><span class="lang-ro">Construcție</span><span class="lang-en">Built</span><b class="lang-ro">Început sec. XIX</b><b class="lang-en">Early 19th c.</b></div>
+      <div class="f"><span class="lang-ro">Stil gotic din</span><span class="lang-en">Gothic since</span><b>1847 – 1855</b></div>
+      <div class="f"><span class="lang-ro">Cumpărat de Cuza</span><span class="lang-en">Bought by Cuza</span><b>1862</b></div>
+      <div class="f"><span class="lang-ro">Muzeu din</span><span class="lang-en">Museum since</span><b>1982</b></div>
+      <div class="f"><span class="lang-ro">Administrat de</span><span class="lang-en">Run by</span><b class="lang-ro">CMN „Moldova"</b><b class="lang-en">"Moldova" NMC</b></div>
+    </div>
+  </div>
+</div></section>
+<section id="program" class="alt"><div class="wrap">
+  <div class="sec-head"><span class="overline"><span class="lang-ro">Orar & bilete</span><span class="lang-en">Hours & tickets</span></span><h2>Program</h2>
+    <p class="lang-ro">Muzeul face parte din Complexul Muzeal Național „Moldova" Iași.</p>
+    <p class="lang-en">The museum is part of the "Moldova" National Museum Complex in Iași.</p></div>
+  <div class="hours-grid">
+    <div class="hcard"><span class="tag lang-ro">Vizitare</span><span class="tag lang-en">Visiting</span><h3 class="lang-ro">Program</h3><h3 class="lang-en">Opening hours</h3>
+      <div class="hrow"><span class="lang-ro">Miercuri – Duminică</span><span class="lang-en">Wednesday – Sunday</span><b>10:00 – 17:00</b></div>
+      <div class="hrow"><span class="lang-ro">Ultima intrare</span><span class="lang-en">Last entry</span><b>16:30</b></div>
+      <div class="hrow"><span class="lang-ro">Luni – Marți</span><span class="lang-en">Monday – Tuesday</span><b class="lang-ro">Închis</b><b class="lang-en">Closed</b></div>
+      <p class="note lang-ro">Program orientativ — verifică pe site-ul Palatului Culturii înainte de drum.</p><p class="note lang-en">Indicative schedule — check on the Palace of Culture site before travelling.</p>
+    </div>
+    <div class="hcard"><span class="tag lang-ro">Bilet</span><span class="tag lang-en">Ticket</span><h3 class="lang-ro">Tarif & acces</h3><h3 class="lang-en">Price & access</h3>
+      <div class="hrow"><span class="lang-ro">Bilet întreg</span><span class="lang-en">Full ticket</span><b>20 lei</b></div>
+      <div class="hrow"><span class="lang-ro">Distanță de Iași</span><span class="lang-en">Distance from Iași</span><b>~65 km</b></div>
+      <p class="note lang-ro">Se ajunge cu mașina sau cu trenul (gara Ruginoasa). Palatul este înconjurat de un parc — merită timp și pentru plimbare.</p><p class="note lang-en">Reachable by car or train (Ruginoasa station). The palace is set in a park — worth time for a walk too.</p>
+    </div>
+  </div>
+</div></section>
+<section id="vezi"><div class="wrap">
+  <div class="sec-head"><span class="overline">Highlights</span><h2><span class="lang-ro">Ce să vezi</span><span class="lang-en">What to see</span></h2></div>
+  <div class="two">
+    <div class="lbox"><h3 class="lang-ro">În palat</h3><h3 class="lang-en">In the palace</h3>
+      <ul>
+        <li><span class="lang-ro">Interioarele muzeului memorial dedicat lui Cuza</span><span class="lang-en">The interiors of the Cuza memorial museum</span></li>
+        <li><span class="lang-ro">Mobilier și obiecte de epocă</span><span class="lang-en">Period furniture and objects</span></li>
+        <li><span class="lang-ro">Fațadele neogotice cu pridvoare și balcoane</span><span class="lang-en">The neo-Gothic facades with porches and balconies</span></li>
+      </ul>
+    </div>
+    <div class="lbox"><h3 class="lang-ro">În jur</h3><h3 class="lang-en">Around it</h3>
+      <ul>
+        <li><span class="lang-ro">Parcul din jurul palatului</span><span class="lang-en">The park surrounding the palace</span></li>
+        <li><span class="lang-ro">Biserica unde a fost înmormântat inițial Cuza</span><span class="lang-en">The church where Cuza was first buried</span></li>
+        <li><span class="lang-ro">Peisajul colinar al zonei</span><span class="lang-en">The hilly landscape of the area</span></li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+<section id="contact"><div class="wrap">
+  <div class="sec-head"><span class="overline gold-text"><span class="lang-ro">Cum ajungi</span><span class="lang-en">How to reach it</span></span><h2>Contact</h2>
+    <p class="lang-ro">Comuna Ruginoasa, județul Iași — la circa 65 km nord-vest de Iași, o excursie de o zi.</p>
+    <p class="lang-en">Ruginoasa, Iași county — about 65 km north-west of Iași, a day trip.</p></div>
+  <div class="cgrid">
+    <div class="cc"><span class="overline"><span class="lang-ro">Adresă</span><span class="lang-en">Address</span></span><b class="lang-ro">📍 Ruginoasa, jud. Iași</b><b class="lang-en">📍 Ruginoasa, Iași county</b><small class="lang-ro">~65 km de oraș</small><small class="lang-en">~65 km from the city</small></div>
+    <div class="cc"><span class="overline"><span class="lang-ro">Administrat de</span><span class="lang-en">Run by</span></span><b class="lang-ro">CMN „Moldova" Iași</b><b class="lang-en">"Moldova" NMC Iași</b><small class="lang-ro">Muzeu memorial</small><small class="lang-en">Memorial museum</small></div>
+    <div class="cc"><span class="overline">Online</span><b>🌐 <a href="https://palatulculturii.ro" target="_blank" rel="noopener">palatulculturii.ro</a></b><small class="lang-ro">Program & bilete</small><small class="lang-en">Hours & tickets</small></div>
+  </div>
+  <div class="cta-row">
+    <a href="https://palatulculturii.ro/palatul-alexandru-ioan-cuza-de-la-ruginoasa/" target="_blank" rel="noopener" class="btn btn-gold"><span class="lang-ro">Site oficial</span><span class="lang-en">Official site</span></a>
+    <a href="iasi.html" class="btn btn-outline"><span class="lang-ro">← Alte locuri din Iași</span><span class="lang-en">← More places in Iași</span></a>
+  </div>
+  <p class="disclaimer"><span class="lang-ro">Program și tarife conform Complexului Muzeal Național „Moldova" Iași (iulie 2026). Se pot modifica — verifică înainte de drum.</span><span class="lang-en">Hours and prices per the "Moldova" National Museum Complex Iași (July 2026). May change — check before travelling.</span></p>
+</div></section>
+<footer><div class="wrap">© 2026 România · Iași — <span class="lang-ro">Ghid de călătorie · Demo</span><span class="lang-en">Travel guide · Demo</span> · <a href="iasi.html">Iași</a></div></footer>
+<script>function setLang(l){document.body.classList.toggle('en',l==='en');document.documentElement.lang=l;document.querySelectorAll('.langsw button').forEach(b=>b.classList.toggle('active',b.dataset.lang===l))}</script>
+</body>
+</html>

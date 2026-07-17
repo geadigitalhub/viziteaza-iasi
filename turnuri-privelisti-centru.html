@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Turnuri & priveliști din centrul Iașului · Belvedere urban</title>
+<meta name="description" content="Panorama Iașului fără să ieși din centru: Turnul Goliei, turnul Palatului Culturii, Restaurantul Panoramic de la Hotel Unirea și terasele rooftop din oraș.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#141d33;--gold:#C9A24B;--gold-2:#E3C778;--cream:#F4ECD8;--cream-2:#EFE4C9;--paper:#FBF6EA;--accent:#2E4488;--accent-2:#4a63ad;--teal:#3E7C8C;--sunset:#c1554d;--ink:#1a2033;--muted:#6b7794;--line:rgba(201,162,75,.28);--line-soft:rgba(20,29,51,.1);--r:16px;--maxw:1080px}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:'Jost',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.7;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.1}
+a{color:inherit;text-decoration:none}.wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px}
+.gold-text{color:var(--gold)}.script{font-style:italic;font-weight:500}
+.lang-en{display:none}body.en .lang-ro{display:none}body.en .lang-en{display:inline}
+.overline{font-family:'Jost';font-weight:600;letter-spacing:.32em;text-transform:uppercase;font-size:.7rem}
+header.nav{position:sticky;top:0;z-index:60;background:rgba(20,29,51,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{display:flex;flex-direction:column;line-height:1}
+.logo b{font-family:'Cormorant Garamond';font-size:1.32rem;color:var(--cream);font-weight:700;letter-spacing:.5px}
+.logo small{letter-spacing:.3em;text-transform:uppercase;font-size:.54rem;color:var(--gold);margin-top:3px}
+.nav-links{display:flex;gap:26px}
+.nav-links a{font-weight:500;font-size:.8rem;letter-spacing:.05em;color:var(--cream);opacity:.8;text-transform:uppercase;transition:.2s}
+.nav-links a:hover{opacity:1;color:var(--gold-2)}
+.langsw{display:flex;border:1px solid var(--line);border-radius:30px;padding:3px}
+.langsw button{border:0;background:transparent;padding:5px 11px;border-radius:24px;cursor:pointer;color:var(--cream);font-family:'Jost';font-weight:600;font-size:.72rem;letter-spacing:.08em;transition:.2s}
+.langsw button.active{background:var(--gold);color:var(--navy)}
+@media(max-width:820px){.nav-links{display:none}}
+.hero{position:relative;background:var(--navy);color:var(--cream);padding:70px 0 64px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(700px 440px at 80% -8%,rgba(46,68,136,.7),transparent 60%)}
+.hero::after{content:"";position:absolute;inset:0;opacity:.4;background-image:radial-gradient(rgba(201,162,75,.14) 1px,transparent 1px);background-size:24px 24px;-webkit-mask-image:linear-gradient(180deg,#000,transparent);mask-image:linear-gradient(180deg,#000,transparent)}
+.hero .wrap{position:relative;z-index:2}
+.crumb{font-size:.78rem;color:rgba(244,236,216,.6);margin-bottom:20px}.crumb a:hover{color:var(--gold-2)}
+.hero .overline{color:var(--gold-2);display:inline-block;margin-bottom:16px}
+.hero h1{font-size:clamp(2.4rem,5.4vw,4rem);color:var(--cream)}.hero h1 .script{color:var(--gold-2)}
+.hero p{color:rgba(244,236,216,.8);font-weight:300;font-size:1.1rem;max-width:60ch;margin:20px 0 26px}
+.badges{display:flex;gap:10px;flex-wrap:wrap}
+.badge{border:1px solid var(--line);border-radius:30px;padding:8px 16px;font-size:.76rem;color:var(--cream);display:flex;align-items:center;gap:8px}
+.badge .d{width:7px;height:7px;border-radius:50%;background:var(--accent-2)}
+.quickbar{background:linear-gradient(120deg,var(--accent),var(--accent-2));color:#fff}
+.quickbar .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px;padding:20px 26px}
+.qi{display:flex;gap:12px;align-items:center}.qi .em{font-size:1.4rem}
+.qi b{display:block;font-size:.92rem;font-weight:600}.qi small{font-size:.74rem;opacity:.9}
+section{padding:62px 0}.sec-head{max-width:660px;margin-bottom:34px}
+.sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+.sec-head .overline{color:var(--gold);display:block;margin-bottom:10px}
+.sec-head h2{font-size:clamp(1.9rem,3.6vw,2.6rem);color:var(--navy)}
+.sec-head p{color:var(--muted);font-weight:300;margin-top:8px}.alt{background:var(--cream-2)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.lbox{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px 28px;position:relative}
+.lbox.star{border-left:4px solid var(--accent)}
+.lbox h3{font-size:1.4rem;color:var(--navy);margin-bottom:4px}
+.lbox .meta{font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:14px;display:flex;gap:10px;flex-wrap:wrap}
+.lbox .meta .tm{color:var(--sunset)}
+.lbox p{color:var(--ink);font-weight:300;font-size:.94rem;margin-bottom:12px}
+.lbox ul{list-style:none}
+.lbox ul li{position:relative;padding:7px 0 7px 24px;font-size:.9rem;border-bottom:1px solid var(--line-soft);font-weight:300}
+.lbox ul li:last-child{border-bottom:0}.lbox ul li::before{content:"✦";position:absolute;left:0;color:var(--gold);font-size:.78rem;top:8px}
+.lbox a.pg{color:var(--teal);font-weight:600;font-size:.82rem}
+.freebar{background:#fff;border:1px solid var(--line);border-left:4px solid var(--teal);border-radius:var(--r);padding:22px 26px;display:flex;gap:16px;align-items:center;margin-top:26px}
+.freebar .em{font-size:1.8rem}.freebar b{color:var(--navy);font-family:'Cormorant Garamond';font-size:1.3rem}
+.freebar small{color:var(--muted);font-weight:300;display:block;font-size:.9rem}
+#contact{background:var(--navy);color:var(--cream)}
+#contact .sec-head h2{color:var(--cream)}#contact .sec-head p{color:rgba(244,236,216,.7)}
+.cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.cc{border:1px solid var(--line);border-radius:var(--r);padding:24px 26px}
+.cc .overline{color:var(--gold-2);display:block;margin-bottom:12px}
+.cc b{color:var(--cream);font-size:1.02rem;display:block;font-weight:500}
+.cc small{color:rgba(244,236,216,.68);font-weight:300;font-size:.86rem;display:block;margin-top:4px}.cc a{color:var(--gold-2)}
+.cta-row{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:'Jost';font-weight:600;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;padding:14px 26px;border-radius:2px;cursor:pointer;border:0;transition:.3s}
+.btn-gold{background:linear-gradient(120deg,var(--gold),var(--gold-2));color:var(--navy)}.btn-gold:hover{transform:translateY(-2px)}
+.btn-outline{background:transparent;border:1px solid var(--gold);color:var(--gold-2)}.btn-outline:hover{background:var(--gold);color:var(--navy)}
+footer{background:#0f1728;color:rgba(244,236,216,.6);padding:30px 0;text-align:center;font-size:.82rem;font-weight:300}footer a{color:var(--gold-2)}
+.disclaimer{font-size:.78rem;color:var(--muted);font-style:italic;text-align:center;margin-top:24px;font-weight:300}
+@media(max-width:820px){.two,.cgrid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="viziteaza-romania-iasi.html" class="logo"><b>România <span class="gold-text">·</span> Iași</b><small class="lang-ro">Ghid de călătorie</small><small class="lang-en">Travel guide</small></a>
+    <div class="nav-links"><a href="#turnuri"><span class="lang-ro">Turnuri</span><span class="lang-en">Towers</span></a><a href="#rooftop">Rooftop</a><a href="iasul-panoramic.html"><span class="lang-ro">Panoramă</span><span class="lang-en">Panorama</span></a><a href="iasi.html">Iași</a></div>
+    <div class="langsw"><button data-lang="ro" class="active" onclick="setLang('ro')">RO</button><button data-lang="en" onclick="setLang('en')">EN</button></div>
+  </div>
+</header>
+<section class="hero"><div class="wrap">
+  <div class="crumb"><a href="viziteaza-romania-iasi.html">România · Iași</a> &nbsp;›&nbsp; <a href="iasi.html">Iași</a> &nbsp;›&nbsp; <a href="iasul-panoramic.html">Iașul Panoramic</a> &nbsp;›&nbsp; <span class="gold-text">Turnuri din centru</span></div>
+  <span class="overline">🗼 <span class="lang-ro">Belvedere urban · Fără să ieși din oraș</span><span class="lang-en">Urban belvedere · Without leaving town</span></span>
+  <h1><span class="lang-ro">Turnuri & priveliști</span><span class="lang-en">Towers & views</span> <span class="script"><span class="lang-ro">din centru</span><span class="lang-en">from the centre</span></span></h1>
+  <p class="lang-ro">Nu trebuie să urci pe dealuri ca să vezi Iașul de sus. Chiar din inima orașului, câteva turnuri și terase îți deschid o panoramă largă — de la turnul-clopotniță al Goliei până la etajul 13 al Hotelului Unirea.</p>
+  <p class="lang-en">You don't have to climb the hills to see Iași from above. Right in the heart of the city, a few towers and terraces open a wide panorama — from the Golia bell tower to the 13th floor of Hotel Unirea.</p>
+  <div class="badges">
+    <span class="badge"><span class="d"></span><span class="lang-ro">Turnul Goliei · 120 trepte</span><span class="lang-en">Golia Tower · 120 steps</span></span>
+    <span class="badge"><span class="d"></span><span class="lang-ro">Palatul Culturii · 55 m</span><span class="lang-en">Palace of Culture · 55 m</span></span>
+    <span class="badge"><span class="d"></span><span class="lang-ro">Hotel Unirea · 360°</span><span class="lang-en">Hotel Unirea · 360°</span></span>
+  </div>
+</div></section>
+<div class="quickbar"><div class="wrap">
+  <div class="qi"><span class="em">🗼</span><div><b class="lang-ro">Turnul Goliei</b><b class="lang-en">Golia Tower</b><small class="lang-ro">~30 m · 120 trepte · terasă publică</small><small class="lang-en">~30 m · 120 steps · public terrace</small></div></div>
+  <div class="qi"><span class="em">🕰️</span><div><b class="lang-ro">Turnul Palatului</b><b class="lang-en">Palace tower</b><small class="lang-ro">55 m · reper & carillon</small><small class="lang-en">55 m · landmark & carillon</small></div></div>
+  <div class="qi"><span class="em">🏙️</span><div><b class="lang-ro">Panoramic · Hotel Unirea</b><b class="lang-en">Panoramic · Hotel Unirea</b><small class="lang-ro">Etaj 13 · 55 m · 360°</small><small class="lang-en">13th floor · 55 m · 360°</small></div></div>
+  <div class="qi"><span class="em">🍹</span><div><b class="lang-ro">Terase & rooftop</b><b class="lang-en">Terraces & rooftops</b><small class="lang-ro">Palas & hoteluri</small><small class="lang-en">Palas & hotels</small></div></div>
+</div></div>
+
+<section id="intro"><div class="wrap">
+  <div class="sec-head center"><span class="overline"><span class="lang-ro">Iașul de sus, din centru</span><span class="lang-en">Iași from above, downtown</span></span><h2><span class="lang-ro">Panoramă la câțiva pași de Piața Unirii</span><span class="lang-en">A panorama steps from Piața Unirii</span></h2>
+    <p class="lang-ro">Trei repere înalte îți dau orașul „la palmă", fără mașină și fără drum pe deal. Fac parte din secțiunea <a href="iasul-panoramic.html" style="color:var(--teal);font-weight:600">Iașul Panoramic</a> — aici sunt strânse doar cele din centru.</p>
+    <p class="lang-en">Three tall landmarks put the city at your feet, with no car and no hill climb. They are part of the <a href="iasul-panoramic.html" style="color:var(--teal);font-weight:600">Panoramic Iași</a> section — gathered here are only the central ones.</p>
+  </div>
+</div></section>
+
+<section id="turnuri" class="alt"><div class="wrap">
+  <div class="sec-head"><span class="overline"><span class="lang-ro">Turnuri de belvedere</span><span class="lang-en">Belvedere towers</span></span><h2><span class="lang-ro">Turnurile pe care le poți urca</span><span class="lang-en">The towers you can climb</span></h2></div>
+  <div class="two">
+    <div class="lbox star"><h3><span class="lang-ro">Turnul Goliei</span><span class="lang-en">Golia Tower</span></h3>
+      <div class="meta"><span class="lang-ro">Str. Cuza Vodă 51 · ~30 m</span><span class="lang-en">51 Cuza Vodă St. · ~30 m</span><span>🗼 <span class="lang-ro">Terasă publică</span><span class="lang-en">Public terrace</span></span></div>
+      <p class="lang-ro">Singurul turn-clopotniță din țară cu terasă superioară deschisă publicului. Urci 120 de trepte până la o panoramă completă a Iașului — iar pe timp senin se vede o parte din Basarabia. Este cel mai autentic belvedere din centru.</p>
+      <p class="lang-en">The only bell tower in the country with an upper terrace open to the public. You climb 120 steps to a full panorama of Iași — and on clear days you can see part of Bessarabia. It's the most authentic belvedere in the centre.</p>
+      <ul>
+        <li><span class="lang-ro">Program orientativ: L–V 9–17 · S–D 10–14</span><span class="lang-en">Indicative hours: Mon–Fri 9–17 · Sat–Sun 10–14</span></li>
+        <li><span class="lang-ro">Taxă de vizitare la fața locului</span><span class="lang-en">Visiting fee on site</span></li>
+      </ul>
+      <a class="pg" href="golia.html"><span class="lang-ro">Vezi pagina Mănăstirea Golia</span><span class="lang-en">See the Golia Monastery page</span> →</a>
+    </div>
+    <div class="lbox"><h3><span class="lang-ro">Turnul Palatului Culturii</span><span class="lang-en">The Palace of Culture tower</span></h3>
+      <div class="meta"><span class="lang-ro">Piața Ștefan cel Mare · 55 m</span><span class="lang-en">Piața Ștefan cel Mare · 55 m</span><span>🕰️ <span class="lang-ro">Reper & carillon</span><span class="lang-en">Landmark & carillon</span></span></div>
+      <p class="lang-ro">Turnul central al Palatului Culturii, înalt de 55 de metri, cu ceasul și carillonul său, domină centrul Iașului. Chiar și privit de jos e spectaculos; verifică la fața locului dacă accesul în turn este posibil.</p>
+      <p class="lang-en">The central tower of the Palace of Culture, 55 metres tall, with its clock and carillon, dominates central Iași. Even seen from below it's spectacular; check on site whether tower access is available.</p>
+      <a class="pg" href="palatul-culturii.html"><span class="lang-ro">Vezi pagina Palatul Culturii</span><span class="lang-en">See the Palace of Culture page</span> →</a>
+    </div>
+  </div>
+</div></section>
+
+<section id="rooftop"><div class="wrap">
+  <div class="sec-head"><span class="overline"><span class="lang-ro">Rooftop & terase</span><span class="lang-en">Rooftops & terraces</span></span><h2><span class="lang-ro">Panorama, cu o cafea sau la apus</span><span class="lang-en">The panorama, with a coffee or at sunset</span></h2></div>
+  <div class="two">
+    <div class="lbox star"><h3><span class="lang-ro">Restaurantul Panoramic · Hotel Unirea</span><span class="lang-en">Panoramic Restaurant · Hotel Unirea</span></h3>
+      <div class="meta"><span class="lang-ro">Piața Unirii · etajul 13 · 55 m</span><span class="lang-en">Piața Unirii · 13th floor · 55 m</span><span>🏙️ <span class="lang-ro">Panoramă 360°</span><span class="lang-en">360° panorama</span></span></div>
+      <p class="lang-ro">Pe acoperișul Hotelului Unirea, în Piața Unirii, la 55 de metri — o priveliște de 360° asupra întregului oraș. Cel mai cunoscut belvedere urban din centru, amenajat ca restaurant și bar; se ajunge fără efort, cu liftul. Deosebit spre seară și la apus.</p>
+      <p class="lang-en">On the roof of Hotel Unirea, in Piața Unirii, at 55 metres — a 360° view over the whole city. The best-known urban belvedere in the centre, set up as a restaurant and bar; reached effortlessly, by lift. Lovely toward evening and at sunset.</p>
+      <ul>
+        <li><span class="lang-ro">Panoramă de 360° din inima orașului</span><span class="lang-en">A 360° panorama from the heart of the city</span></li>
+        <li><span class="lang-ro">Rezervare recomandată · panoramic@hotelunirea.ro</span><span class="lang-en">Reservation recommended · panoramic@hotelunirea.ro</span></li>
+      </ul>
+    </div>
+    <div class="lbox"><h3><span class="lang-ro">Alte terase & rooftop</span><span class="lang-en">Other terraces & rooftops</span></h3>
+      <div class="meta"><span class="lang-ro">Palas & hoteluri din centru</span><span class="lang-en">Palas & downtown hotels</span><span class="tm">🍹 <span class="lang-ro">Apus urban</span><span class="lang-en">Urban sunset</span></span></div>
+      <p class="lang-ro">Pentru un apus urban cu o băutură în mână, caută și celelalte terase înalte și rooftop-uri din zona Palas și ale hotelurilor din centru — panoramă asupra orașului fără să urci pe deal.</p>
+      <p class="lang-en">For an urban sunset with a drink in hand, look for the other high terraces and rooftops around Palas and the downtown hotels — a panorama over the city without climbing a hill.</p>
+      <a class="pg" href="palas.html"><span class="lang-ro">Vezi pagina Palas</span><span class="lang-en">See the Palas page</span> →</a>
+    </div>
+  </div>
+  <div class="freebar">
+    <span class="em">⛪</span>
+    <div><b class="lang-ro">Repere înalte de admirat</b><b class="lang-en">Tall landmarks to admire</b>
+      <small class="lang-ro">Chiar dacă nu toate se pot urca, siluetele verticale ale orașului merită privite: turnurile gemene ale Catedralei Romano-Catolice, clopotnițele bisericilor din centru și turnul Palatului — repere care compun panorama Iașului.</small>
+      <small class="lang-en">Even if not all can be climbed, the city's vertical silhouettes are worth a look: the twin towers of the Roman Catholic Cathedral, the bell towers of the downtown churches and the Palace tower — landmarks that make up Iași's skyline.</small>
+    </div>
+  </div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+  <div class="sec-head"><span class="overline gold-text"><span class="lang-ro">Pe scurt</span><span class="lang-en">In short</span></span><h2><span class="lang-ro">Ce alegi, după chef</span><span class="lang-en">What to pick, by mood</span></h2>
+    <p class="lang-ro">Trei feluri de a vedea Iașul de sus, toate în centru.</p>
+    <p class="lang-en">Three ways to see Iași from above, all in the centre.</p></div>
+  <div class="cgrid">
+    <div class="cc"><span class="overline"><span class="lang-ro">Autentic</span><span class="lang-en">Authentic</span></span><b class="lang-ro">🗼 Turnul Goliei</b><b class="lang-en">🗼 Golia Tower</b><small class="lang-ro">120 de trepte, panoramă „de epocă"</small><small class="lang-en">120 steps, a vintage panorama</small></div>
+    <div class="cc"><span class="overline"><span class="lang-ro">Comod</span><span class="lang-en">Effortless</span></span><b class="lang-ro">🏙️ Hotel Unirea, etaj 13</b><b class="lang-en">🏙️ Hotel Unirea, 13th floor</b><small class="lang-ro">360° cu liftul, la apus</small><small class="lang-en">360° by lift, at sunset</small></div>
+    <div class="cc"><span class="overline"><span class="lang-ro">Reper</span><span class="lang-en">Landmark</span></span><b class="lang-ro">🕰️ Turnul Palatului</b><b class="lang-en">🕰️ Palace tower</b><small class="lang-ro">55 m, simbolul orașului</small><small class="lang-en">55 m, the city's symbol</small></div>
+  </div>
+  <div class="cta-row">
+    <a href="iasul-panoramic.html" class="btn btn-gold"><span class="lang-ro">← Iașul Panoramic (tot)</span><span class="lang-en">← Panoramic Iași (all)</span></a>
+    <a href="iasi.html" class="btn btn-outline"><span class="lang-ro">Alte locuri din Iași</span><span class="lang-en">More places in Iași</span></a>
+  </div>
+  <p class="disclaimer"><span class="lang-ro">Informații din surse recunoscute (site-ul Mănăstirii Golia, Hotel Unirea, presa locală), iulie 2026. Accesul și programul se pot modifica — verifică înainte de vizită.</span><span class="lang-en">Information from recognised sources (Golia Monastery site, Hotel Unirea, local press), July 2026. Access and hours may change — check before visiting.</span></p>
+</div></section>
+<footer><div class="wrap">© 2026 România · Iași — <span class="lang-ro">Ghid de călătorie · Demo</span><span class="lang-en">Travel guide · Demo</span> · <a href="iasi.html">Iași</a></div></footer>
+<script>function setLang(l){document.body.classList.toggle('en',l==='en');document.documentElement.lang=l;document.querySelectorAll('.langsw button').forEach(b=>b.classList.toggle('active',b.dataset.lang===l))}</script>
+</body>
+</html>

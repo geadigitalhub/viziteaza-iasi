@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harta site-ului · România · Iași — toate paginile organizate</title>
+<meta name="description" content="Harta completă a ghidului Vizitează România · Iași: toate paginile organizate pe categorii — locuri, biserici, natură, transport, teme și instrumente.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,500&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#141d33;--gold:#C9A24B;--gold-2:#E3C778;--cream:#F4ECD8;--cream-2:#EFE4C9;--paper:#FBF6EA;--leaf:#3f7d54;--teal:#3E7C8C;--brick:#A8362E;--plum:#5b3a6b;--bronze:#7A5240;--royal:#2E4488;--ink:#1a2033;--muted:#6b7794;--line:rgba(201,162,75,.28);--line-soft:rgba(20,29,51,.1);--r:16px;--maxw:1180px}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:'Jost',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.1}
+a{color:inherit;text-decoration:none}.wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px}
+.gold-text{color:var(--gold)}.script{font-style:italic;font-weight:500}
+.lang-en{display:none}body.en .lang-ro{display:none}body.en .lang-en{display:inline}
+.overline{font-family:'Jost';font-weight:600;letter-spacing:.32em;text-transform:uppercase;font-size:.7rem}
+header.nav{position:sticky;top:0;z-index:60;background:rgba(20,29,51,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{display:flex;flex-direction:column;line-height:1}
+.logo b{font-family:'Cormorant Garamond';font-size:1.32rem;color:var(--cream);font-weight:700;letter-spacing:.5px}
+.logo small{letter-spacing:.3em;text-transform:uppercase;font-size:.54rem;color:var(--gold);margin-top:3px}
+.nav-links{display:flex;gap:26px}
+.nav-links a{font-weight:500;font-size:.8rem;letter-spacing:.05em;color:var(--cream);opacity:.8;text-transform:uppercase;transition:.2s}
+.nav-links a:hover{opacity:1;color:var(--gold-2)}
+.langsw{display:flex;border:1px solid var(--line);border-radius:30px;padding:3px}
+.langsw button{border:0;background:transparent;padding:5px 11px;border-radius:24px;cursor:pointer;color:var(--cream);font-family:'Jost';font-weight:600;font-size:.72rem;letter-spacing:.08em;transition:.2s}
+.langsw button.active{background:var(--gold);color:var(--navy)}
+@media(max-width:820px){.nav-links{display:none}}
+.hero{background:var(--navy);color:var(--cream);padding:56px 0 46px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(600px 320px at 85% -10%,rgba(46,68,136,.7),transparent 60%)}
+.hero .wrap{position:relative;z-index:2}
+.hero .overline{color:var(--gold-2);display:block;margin-bottom:12px}
+.hero h1{font-size:clamp(2.2rem,4.6vw,3.4rem);color:var(--cream)}.hero h1 .script{color:var(--gold-2)}
+.hero p{color:rgba(244,236,216,.78);font-weight:300;margin-top:12px;max-width:64ch}
+main{padding:46px 0 64px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.cat{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px 26px;border-top:3px solid var(--gold)}
+.cat.c1{border-top-color:var(--royal)}.cat.c2{border-top-color:var(--brick)}.cat.c3{border-top-color:var(--leaf)}
+.cat.c4{border-top-color:var(--teal)}.cat.c5{border-top-color:var(--plum)}.cat.c6{border-top-color:var(--bronze)}
+.cat.c7{border-top-color:var(--gold)}.cat.c8{border-top-color:var(--amber,#c9902b)}.cat.c9{border-top-color:#2f6f6d}
+.cat h2{font-size:1.32rem;color:var(--navy);margin-bottom:4px}
+.cat .k{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:14px;display:block}
+.cat ul{list-style:none}
+.cat ul li{padding:0}
+.cat ul li a{display:block;padding:8px 0;border-bottom:1px solid var(--line-soft);font-size:.92rem;color:var(--ink);font-weight:400;transition:.15s;display:flex;justify-content:space-between;gap:8px;align-items:baseline}
+.cat ul li:last-child a{border-bottom:0}
+.cat ul li a:hover{color:var(--gold);padding-left:5px}
+.cat ul li a .tag{font-size:.64rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600;flex:0 0 auto}
+.count{display:inline-block;margin-left:8px;font-size:.72rem;color:var(--muted);font-weight:600}
+footer{background:#0f1728;color:rgba(244,236,216,.6);padding:30px 0;text-align:center;font-size:.82rem;font-weight:300}footer a{color:var(--gold-2)}
+@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="viziteaza-romania-iasi.html" class="logo"><b>România <span class="gold-text">·</span> Iași</b><small class="lang-ro">Ghid de călătorie</small><small class="lang-en">Travel guide</small></a>
+    <div class="nav-links">
+      <a href="viziteaza-romania-iasi.html"><span class="lang-ro">Acasă</span><span class="lang-en">Home</span></a>
+      <a href="iasi.html"><span class="lang-ro">Locuri</span><span class="lang-en">Places</span></a>
+      <a href="blog.html">Blog</a>
+      <a href="produse.html"><span class="lang-ro">Produse</span><span class="lang-en">Products</span></a>
+    </div>
+    <div class="langsw"><button data-lang="ro" class="active" onclick="setLang('ro')">RO</button><button data-lang="en" onclick="setLang('en')">EN</button></div>
+  </div>
+</header>
+<section class="hero"><div class="wrap">
+  <span class="overline">🗺️ <span class="lang-ro">Harta site-ului</span><span class="lang-en">Site map</span></span>
+  <h1><span class="lang-ro">Tot ghidul, </span><span class="lang-en">The whole guide, </span><span class="script"><span class="lang-ro">organizat</span><span class="lang-en">organised</span></span></h1>
+  <p class="lang-ro">Toate paginile ghidului Vizitează România · Iași, grupate pe categorii. Alege o secțiune și deschide direct pagina dorită.</p>
+  <p class="lang-en">All the pages of the Visit Romania · Iași guide, grouped by category. Pick a section and open the page you want directly.</p>
+</div></section>
+<main><div class="wrap">
+  <div class="grid">
+
+    <div class="cat c1">
+      <span class="k lang-ro">Navigare</span><span class="k lang-en">Navigation</span>
+      <h2><span class="lang-ro">Pagini principale</span><span class="lang-en">Main pages</span></h2>
+      <ul>
+        <li><a href="viziteaza-romania-iasi.html"><span><span class="lang-ro">Acasă</span><span class="lang-en">Home</span></span><span class="tag">start</span></a></li>
+        <li><a href="iasi.html"><span><span class="lang-ro">Iași — locuri de vizitat</span><span class="lang-en">Iași — places to visit</span></span><span class="tag">hub</span></a></li>
+        <li><a href="ghid-iasi-7zile.html"><span><span class="lang-ro">Ghid de 7 zile</span><span class="lang-en">7-day guide</span></span></a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="produse.html"><span><span class="lang-ro">Produse digitale</span><span class="lang-en">Digital products</span></span></a></li>
+      </ul>
+    </div>
+
+    <div class="cat c2">
+      <span class="k lang-ro">Muzee & clădiri istorice</span><span class="k lang-en">Museums & historic buildings</span>
+      <h2><span class="lang-ro">Cultură & patrimoniu</span><span class="lang-en">Culture & heritage</span></h2>
+      <ul>
+        <li><a href="palatul-culturii.html">Palatul Culturii</a></li>
+        <li><a href="muzeul-unirii.html"><span class="lang-ro">Muzeul Unirii</span><span class="lang-en">Union Museum</span></a></li>
+        <li><a href="istorie-naturala.html"><span class="lang-ro">Muzeul de Istorie Naturală</span><span class="lang-en">Natural History Museum</span></a></li>
+        <li><a href="casa-dosoftei.html">Casa Dosoftei</a></li>
+        <li><a href="vasile-pogor.html"><span class="lang-ro">Muzeul „Vasile Pogor"</span><span class="lang-en">"Vasile Pogor" Museum</span></a></li>
+        <li><a href="bojdeuca-creanga.html"><span class="lang-ro">Bojdeuca lui Ion Creangă</span><span class="lang-en">Ion Creangă's Cottage</span></a></li>
+        <li><a href="palatul-roznovanu.html"><span class="lang-ro">Palatul Roznovanu</span><span class="lang-en">Roznovanu Palace</span></a></li>
+        <li><a href="universitatea.html"><span class="lang-ro">Universitatea „Al. I. Cuza"</span><span class="lang-en">"Al. I. Cuza" University</span></a></li>
+        <li><a href="teatrul-national.html"><span class="lang-ro">Teatrul Național</span><span class="lang-en">National Theatre</span></a></li>
+        <li><a href="opera.html"><span class="lang-ro">Opera Națională</span><span class="lang-en">National Opera</span></a></li>
+        <li><a href="palas.html">Palas & Grădina Palas</a></li>
+      </ul>
+    </div>
+
+    <div class="cat c3">
+      <span class="k lang-ro">Biserici & mănăstiri</span><span class="k lang-en">Churches & monasteries</span>
+      <h2><span class="lang-ro">Iașul de credință</span><span class="lang-en">Faith & worship</span></h2>
+      <ul>
+        <li><a href="catedrala-mitropolitana.html"><span class="lang-ro">Catedrala Mitropolitană</span><span class="lang-en">Metropolitan Cathedral</span></a></li>
+        <li><a href="trei-ierarhi.html"><span class="lang-ro">Mănăstirea Trei Ierarhi</span><span class="lang-en">Three Hierarchs Monastery</span></a></li>
+        <li><a href="golia.html"><span class="lang-ro">Mănăstirea Golia</span><span class="lang-en">Golia Monastery</span></a></li>
+        <li><a href="cetatuia.html"><span class="lang-ro">Mănăstirea Cetățuia</span><span class="lang-en">Cetățuia Monastery</span></a></li>
+        <li><a href="sfantul-nicolae-domnesc.html"><span class="lang-ro">Sfântul Nicolae Domnesc</span><span class="lang-en">St. Nicholas the Princely</span></a></li>
+        <li><a href="sinagoga-mare.html"><span class="lang-ro">Sinagoga Mare</span><span class="lang-en">The Great Synagogue</span></a></li>
+      </ul>
+    </div>
+
+    <div class="cat c4">
+      <span class="k lang-ro">Natură, parcuri & agrement</span><span class="k lang-en">Nature, parks & recreation</span>
+      <h2><span class="lang-ro">Iașul verde</span><span class="lang-en">Green Iași</span></h2>
+      <ul>
+        <li><a href="copou.html"><span class="lang-ro">Parcul Copou</span><span class="lang-en">Copou Park</span></a></li>
+        <li><a href="gradina-botanica.html"><span class="lang-ro">Grădina Botanică</span><span class="lang-en">Botanical Garden</span></a></li>
+        <li><a href="ciric.html"><span class="lang-ro">Zona de agrement Ciric</span><span class="lang-en">Ciric Recreation Area</span></a></li>
+        <li><a href="nicolina.html"><span class="lang-ro">Plaja Nicolina</span><span class="lang-en">Nicolina Beach</span></a></li>
+        <li><a href="strandul-municipal.html"><span class="lang-ro">Ștrandul Municipal</span><span class="lang-en">Municipal Pool</span></a></li>
+        <li><a href="gratare-picnic.html"><span class="lang-ro">Grătare & picnic</span><span class="lang-en">BBQ & picnic</span></a></li>
+      </ul>
+    </div>
+
+    <div class="cat c5">
+      <span class="k lang-ro">Iașul tematic</span><span class="k lang-en">Themed Iași</span>
+      <h2><span class="lang-ro">Teme & trasee</span><span class="lang-en">Themes & routes</span></h2>
+      <ul>
+        <li><a href="iasul-panoramic.html"><span class="lang-ro">Iașul Panoramic</span><span class="lang-en">Panoramic Iași</span></a></li>
+        <li><a href="turnuri-privelisti-centru.html"><span class="lang-ro">Turnuri & priveliști din centru</span><span class="lang-en">Towers & views from the centre</span></a></li>
+        <li><a href="iasul-universitar.html"><span class="lang-ro">Iașul Universitar</span><span class="lang-en">Academic Iași</span></a></li>
+        <li><a href="iasul-rural.html"><span class="lang-ro">Iașul Rural — satele Moldovei</span><span class="lang-en">Rural Iași — Moldavia's villages</span></a></li>
+        <li><a href="iasul-literar.html"><span class="lang-ro">Iașul Literar — scriitori & Junimea</span><span class="lang-en">Literary Iași — writers & Junimea</span></a></li>
+        <li><a href="iasul-de-vara.html"><span class="lang-ro">Iașul de Vară — agrement & ștranduri</span><span class="lang-en">Summer Iași — recreation & pools</span></a></li>
+        <li><a href="iasul-de-toamna.html"><span class="lang-ro">Iașul de Toamnă — Parascheva, FILIT & vin</span><span class="lang-en">Autumn Iași — Parascheva, FILIT & wine</span></a></li>
+        <li><a href="bulevardul-stefan-cel-mare.html"><span class="lang-ro">Bulevardul Ștefan cel Mare</span><span class="lang-en">Ștefan cel Mare Boulevard</span></a></li>
+      </ul>
+    </div>
+
+    <div class="cat c6">
+      <span class="k lang-ro">Cum ajungi</span><span class="k lang-en">Getting there</span>
+      <h2><span class="lang-ro">Transport</span><span class="lang-en">Transport</span></h2>
+      <ul>
+        <li><a href="aeroport.html"><span class="lang-ro">Aeroportul Internațional</span><span class="lang-en">International Airport</span></a></li>
+        <li><a href="gara-autogari.html"><span class="lang-ro">Gara & autogările</span><span class="lang-en">Station & coach terminals</span></a></li>
+        <li><a href="acces-rutier.html"><span class="lang-ro">Drumurile spre Iași</span><span class="lang-en">The roads to Iași</span></a></li>
+      </ul>
+    </div>
+
+    <div class="cat c7">
+      <span class="k lang-ro">Împrejurimi</span><span class="k lang-en">Around Iași</span>
+      <h2><span class="lang-ro">Excursii de o zi</span><span class="lang-en">Day trips</span></h2>
+      <ul>
+        <li><a href="palatul-cuza-ruginoasa.html"><span class="lang-ro">Palatul Cuza · Ruginoasa</span><span class="lang-en">Cuza Palace · Ruginoasa</span></a></li>
+      </ul>
+    </div>
+
+    <div class="cat c8">
+      <span class="k lang-ro">Blog & articole</span><span class="k lang-en">Blog & articles</span>
+      <h2>Blog</h2>
+      <ul>
+        <li><a href="blog.html"><span class="lang-ro">Blog — pagina principală</span><span class="lang-en">Blog — main page</span></a></li>
+        <li><a href="blog-romania.html"><span class="lang-ro">România — introducere geografică</span><span class="lang-en">Romania — a geographic intro</span></a></li>
+        <li><a href="blog-iasi.html"><span class="lang-ro">Articol despre Iași</span><span class="lang-en">Article about Iași</span></a></li>
+        <li><a href="blog-voyagecalc-premium.html">VoyageCalc Premium</a></li>
+      </ul>
+    </div>
+
+    <div class="cat c9">
+      <span class="k lang-ro">Instrumente & planuri</span><span class="k lang-en">Tools & plans</span>
+      <h2><span class="lang-ro">Checklist-uri</span><span class="lang-en">Checklists</span></h2>
+      <ul>
+        <li><a href="checklist-iasul-tematic.html"><span class="lang-ro">Iașul tematic — checklist (4 teme)</span><span class="lang-en">Themed Iași — checklist</span></a></li>
+        <li><a href="checklist-regiunea-moldova.html"><span class="lang-ro">Regiunea Moldova — checklist</span><span class="lang-en">The Moldavia region — checklist</span></a></li>
+        <li><a href="natura-checklist.html"><span class="lang-ro">Natură & parcuri — plan</span><span class="lang-en">Nature & parks — plan</span></a></li>
+        <li><a href="piscine-parcuri-checklist.html"><span class="lang-ro">Piscine & parcuri — plan</span><span class="lang-en">Pools & parks — plan</span></a></li>
+        <li><a href="blog-checklist.html"><span class="lang-ro">Blog — plan de conținut</span><span class="lang-en">Blog — content plan</span></a></li>
+      </ul>
+    </div>
+
+  </div>
+</div></main>
+<footer><div class="wrap">© 2026 România · Iași — <span class="lang-ro">Ghid de călătorie · Demo</span><span class="lang-en">Travel guide · Demo</span> · <a href="viziteaza-romania-iasi.html"><span class="lang-ro">Acasă</span><span class="lang-en">Home</span></a></div></footer>
+<script>function setLang(l){document.body.classList.toggle('en',l==='en');document.documentElement.lang=l;document.querySelectorAll('.langsw button').forEach(b=>b.classList.toggle('active',b.dataset.lang===l))}</script>
+</body>
+</html>

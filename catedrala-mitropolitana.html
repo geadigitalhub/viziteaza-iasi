@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Catedrala Mitropolitană Iași · Moaștele Sfintei Parascheva</title>
+<meta name="description" content="Catedrala Mitropolitană din Iași, cea mai mare catedrală ortodoxă istorică din țară, unde se află moaștele Sfintei Parascheva. Program și vizitare. RO/EN.">
+<meta name="keywords" content="Catedrala Mitropolitană Iași, Sfânta Parascheva, moaște, pelerinaj Iași, catedrală ortodoxă">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#141d33;--gold:#C9A24B;--gold-2:#E3C778;--cream:#F4ECD8;--cream-2:#EFE4C9;--paper:#FBF6EA;--accent:#A8362E;--accent-2:#c9564c;--teal:#3E7C8C;--ink:#1a2033;--muted:#6b7794;--line:rgba(201,162,75,.28);--line-soft:rgba(20,29,51,.1);--r:16px;--maxw:1080px}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:'Jost',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.7;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.1}
+a{color:inherit;text-decoration:none}.wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px}
+.gold-text{color:var(--gold)}.script{font-style:italic;font-weight:500}
+.lang-en{display:none}body.en .lang-ro{display:none}body.en .lang-en{display:inline}
+.overline{font-family:'Jost';font-weight:600;letter-spacing:.32em;text-transform:uppercase;font-size:.7rem}
+header.nav{position:sticky;top:0;z-index:60;background:rgba(20,29,51,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{display:flex;flex-direction:column;line-height:1}
+.logo b{font-family:'Cormorant Garamond';font-size:1.32rem;color:var(--cream);font-weight:700;letter-spacing:.5px}
+.logo small{letter-spacing:.3em;text-transform:uppercase;font-size:.54rem;color:var(--gold);margin-top:3px}
+.nav-links{display:flex;gap:26px}
+.nav-links a{font-weight:500;font-size:.8rem;letter-spacing:.05em;color:var(--cream);opacity:.8;text-transform:uppercase;transition:.2s}
+.nav-links a:hover{opacity:1;color:var(--gold-2)}
+.langsw{display:flex;border:1px solid var(--line);border-radius:30px;padding:3px}
+.langsw button{border:0;background:transparent;padding:5px 11px;border-radius:24px;cursor:pointer;color:var(--cream);font-family:'Jost';font-weight:600;font-size:.72rem;letter-spacing:.08em;transition:.2s}
+.langsw button.active{background:var(--gold);color:var(--navy)}
+@media(max-width:820px){.nav-links{display:none}}
+.hero{position:relative;background:var(--navy);color:var(--cream);padding:70px 0 64px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(680px 420px at 82% 0%,rgba(168,54,46,.5),transparent 62%)}
+.hero::after{content:"";position:absolute;inset:0;opacity:.4;background-image:radial-gradient(rgba(201,162,75,.14) 1px,transparent 1px);background-size:24px 24px;-webkit-mask-image:linear-gradient(180deg,#000,transparent);mask-image:linear-gradient(180deg,#000,transparent)}
+.hero .wrap{position:relative;z-index:2}
+.crumb{font-size:.78rem;color:rgba(244,236,216,.6);margin-bottom:20px}.crumb a:hover{color:var(--gold-2)}
+.hero .overline{color:var(--gold-2);display:inline-block;margin-bottom:16px}
+.hero h1{font-size:clamp(2.4rem,5.4vw,4rem);color:var(--cream)}.hero h1 .script{color:var(--gold-2)}
+.hero p{color:rgba(244,236,216,.78);font-weight:300;font-size:1.1rem;max-width:58ch;margin:20px 0 26px}
+.badges{display:flex;gap:10px;flex-wrap:wrap}
+.badge{border:1px solid var(--line);border-radius:30px;padding:8px 16px;font-size:.76rem;color:var(--cream);display:flex;align-items:center;gap:8px}
+.badge .d{width:7px;height:7px;border-radius:50%;background:var(--accent-2)}
+.quickbar{background:linear-gradient(120deg,var(--accent),var(--accent-2));color:#fff}
+.quickbar .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px;padding:20px 26px}
+.qi{display:flex;gap:12px;align-items:center}.qi .em{font-size:1.4rem}
+.qi b{display:block;font-size:.92rem;font-weight:600}.qi small{font-size:.74rem;opacity:.86}
+section{padding:62px 0}.sec-head{margin-bottom:32px}
+.sec-head .overline{color:var(--gold);display:block;margin-bottom:10px}
+.sec-head h2{font-size:clamp(1.9rem,3.6vw,2.6rem);color:var(--navy)}
+.sec-head p{color:var(--muted);font-weight:300;margin-top:8px;max-width:62ch}.alt{background:var(--cream-2)}
+.about-grid{display:grid;grid-template-columns:1.3fr .9fr;gap:34px;align-items:center}
+.about-grid p{color:var(--ink);font-weight:300;margin-bottom:14px}
+.facts{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px 26px}
+.facts .f{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px solid var(--line-soft);font-size:.92rem}
+.facts .f:last-child{border-bottom:0}.facts .f span{color:var(--muted)}
+.facts .f b{color:var(--navy);font-family:'Cormorant Garamond';font-size:1.12rem;text-align:right}
+.hours-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.hcard{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px 28px}
+.hcard h3{font-size:1.35rem;color:var(--navy);margin-bottom:4px}
+.hcard .tag{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:16px;display:block}
+.hrow{display:flex;justify-content:space-between;gap:14px;padding:10px 0;border-bottom:1px solid var(--line-soft);font-size:.92rem}
+.hrow:last-child{border-bottom:0}.hrow span:first-child{color:var(--muted)}
+.hrow b{color:var(--navy);font-weight:600;text-align:right}
+.note{margin-top:14px;font-size:.82rem;color:var(--muted);font-weight:300;font-style:italic}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.lbox{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px 28px}
+.lbox h3{font-size:1.35rem;color:var(--navy);margin-bottom:14px}.lbox ul{list-style:none}
+.lbox ul li{position:relative;padding:8px 0 8px 26px;font-size:.9rem;border-bottom:1px solid var(--line-soft);font-weight:300}
+.lbox ul li:last-child{border-bottom:0}.lbox ul li::before{content:"✦";position:absolute;left:0;color:var(--gold);font-size:.8rem;top:9px}
+.freebar{background:#fff;border:1px solid var(--line);border-left:4px solid var(--teal);border-radius:var(--r);padding:22px 26px;display:flex;gap:16px;align-items:center;margin-bottom:20px}
+.freebar .em{font-size:1.8rem}.freebar b{color:var(--navy);font-family:'Cormorant Garamond';font-size:1.3rem}
+.freebar small{color:var(--muted);font-weight:300;display:block;font-size:.9rem}
+#contact{background:var(--navy);color:var(--cream)}
+#contact .sec-head h2{color:var(--cream)}#contact .sec-head p{color:rgba(244,236,216,.7)}
+.cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.cc{border:1px solid var(--line);border-radius:var(--r);padding:24px 26px}
+.cc .overline{color:var(--gold-2);display:block;margin-bottom:12px}
+.cc b{color:var(--cream);font-size:1.02rem;display:block;font-weight:500}
+.cc small{color:rgba(244,236,216,.68);font-weight:300;font-size:.86rem;display:block;margin-top:4px}.cc a{color:var(--gold-2)}
+.cta-row{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:'Jost';font-weight:600;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;padding:14px 26px;border-radius:2px;cursor:pointer;border:0;transition:.3s}
+.btn-gold{background:linear-gradient(120deg,var(--gold),var(--gold-2));color:var(--navy)}.btn-gold:hover{transform:translateY(-2px)}
+.btn-outline{background:transparent;border:1px solid var(--gold);color:var(--gold-2)}.btn-outline:hover{background:var(--gold);color:var(--navy)}
+footer{background:#0f1728;color:rgba(244,236,216,.6);padding:30px 0;text-align:center;font-size:.82rem;font-weight:300}footer a{color:var(--gold-2)}
+.disclaimer{font-size:.78rem;color:var(--muted);font-style:italic;text-align:center;margin-top:24px;font-weight:300}
+@media(max-width:820px){.about-grid,.hours-grid,.cgrid,.two{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="viziteaza-romania-iasi.html" class="logo"><b>România <span class="gold-text">·</span> Iași</b><small class="lang-ro">Ghid de călătorie</small><small class="lang-en">Travel guide</small></a>
+    <div class="nav-links"><a href="#despre"><span class="lang-ro">Despre</span><span class="lang-en">About</span></a><a href="#program">Program</a><a href="#vizita"><span class="lang-ro">Vizită</span><span class="lang-en">Visit</span></a><a href="iasi.html">Iași</a></div>
+    <div class="langsw"><button data-lang="ro" class="active" onclick="setLang('ro')">RO</button><button data-lang="en" onclick="setLang('en')">EN</button></div>
+  </div>
+</header>
+<section class="hero"><div class="wrap">
+  <div class="crumb"><a href="viziteaza-romania-iasi.html">România · Iași</a> &nbsp;›&nbsp; <a href="iasi.html">Iași</a> &nbsp;›&nbsp; <span class="gold-text">Catedrala Mitropolitană</span></div>
+  <span class="overline">✝ <span class="lang-ro">Ocrotitoarea Moldovei · Sf. Parascheva</span><span class="lang-en">Patroness of Moldavia · St. Parascheva</span></span>
+  <h1><span class="lang-ro">Catedrala</span><span class="lang-en">The Metropolitan</span> <span class="script"><span class="lang-ro">Mitropolitană</span><span class="lang-en">Cathedral</span></span></h1>
+  <p class="lang-ro">Cea mai mare catedrală ortodoxă istorică din România, unde odihnesc moaștele Sfintei Cuvioase Parascheva, ocrotitoarea Moldovei.</p>
+  <p class="lang-en">Romania's largest historic Orthodox cathedral, resting place of the relics of Saint Parascheva, patroness of Moldavia.</p>
+  <div class="badges">
+    <span class="badge"><span class="d"></span><span class="lang-ro">Intrare liberă</span><span class="lang-en">Free entry</span></span>
+    <span class="badge"><span class="d"></span><span class="lang-ro">Slujbe zilnice</span><span class="lang-en">Daily services</span></span>
+    <span class="badge"><span class="d"></span><span class="lang-ro">Hram: 14 octombrie</span><span class="lang-en">Feast: 14 October</span></span>
+    <span class="badge"><span class="d"></span>Bd. Ștefan cel Mare 16</span>
+  </div>
+</div></section>
+<div class="quickbar"><div class="wrap">
+  <div class="qi"><span class="em">🌅</span><div><b class="lang-ro">Dimineața</b><b class="lang-en">Morning</b><small class="lang-ro">Slujbe 6:45–12:30</small><small class="lang-en">Services 6:45–12:30</small></div></div>
+  <div class="qi"><span class="em">🌇</span><div><b class="lang-ro">După-amiaza</b><b class="lang-en">Afternoon</b><small class="lang-ro">15:50–19:00</small><small class="lang-en">15:50–19:00</small></div></div>
+  <div class="qi"><span class="em">🎟️</span><div><b class="lang-ro">Intrare liberă</b><b class="lang-en">Free entry</b><small class="lang-ro">Închinare la moaște</small><small class="lang-en">Veneration of relics</small></div></div>
+  <div class="qi"><span class="em">📍</span><div><b class="lang-ro">Bd. Ștefan cel Mare 16</b><b class="lang-en">16 Ștefan cel Mare Blvd.</b><small>Iași 700064</small></div></div>
+</div></div>
+<section id="despre"><div class="wrap">
+  <div class="sec-head"><span class="overline"><span class="lang-ro">Despre</span><span class="lang-en">About</span></span><h2><span class="lang-ro">Inima ortodoxă a Moldovei</span><span class="lang-en">The Orthodox heart of Moldavia</span></h2></div>
+  <div class="about-grid">
+    <div>
+      <p class="lang-ro">Sfințită în 1887, după decenii de lucrări, Catedrala Mitropolitană este cea mai mare biserică ortodoxă istorică din România, cu o pictură interioară monumentală și patru turle impunătoare.</p>
+      <p class="lang-ro">Aici se află racla cu moaștele Sfintei Cuvioase Parascheva, ocrotitoarea Moldovei. În fiecare an, pe 14 octombrie, sute de mii de pelerini vin la Iași pentru cel mai mare pelerinaj ortodox din țară.</p>
+      <p class="lang-en">Consecrated in 1887 after decades of works, the Metropolitan Cathedral is Romania's largest historic Orthodox church, with monumental interior frescoes and four imposing towers.</p>
+      <p class="lang-en">It holds the shrine with the relics of Saint Parascheva, patroness of Moldavia. Every year on 14 October, hundreds of thousands of pilgrims come to Iași for the country's largest Orthodox pilgrimage.</p>
+    </div>
+    <div class="facts">
+      <div class="f"><span class="lang-ro">Sfințită</span><span class="lang-en">Consecrated</span><b>1887</b></div>
+      <div class="f"><span class="lang-ro">Hram</span><span class="lang-en">Feast day</span><b class="lang-ro">14 octombrie</b><b class="lang-en">14 October</b></div>
+      <div class="f"><span class="lang-ro">Moaște</span><span class="lang-en">Relics</span><b class="lang-ro">Sf. Parascheva</b><b class="lang-en">St. Parascheva</b></div>
+      <div class="f"><span class="lang-ro">Turle</span><span class="lang-en">Towers</span><b>4</b></div>
+      <div class="f"><span class="lang-ro">Loc în țară</span><span class="lang-en">Rank</span><b class="lang-ro">Cea mai mare</b><b class="lang-en">Largest</b></div>
+    </div>
+  </div>
+</div></section>
+<section id="program" class="alt"><div class="wrap">
+  <div class="sec-head"><span class="overline"><span class="lang-ro">Orar</span><span class="lang-en">Hours</span></span><h2>Program</h2>
+    <p class="lang-ro">Catedrala este deschisă zilnic pentru rugăciune și închinare la moaște, în afara slujbelor.</p>
+    <p class="lang-en">The cathedral is open daily for prayer and veneration of the relics, outside services.</p></div>
+  <div class="hours-grid">
+    <div class="hcard"><span class="tag lang-ro">Slujbe</span><span class="tag lang-en">Services</span><h3 class="lang-ro">Program liturgic</h3><h3 class="lang-en">Liturgical schedule</h3>
+      <div class="hrow"><span class="lang-ro">Dimineața</span><span class="lang-en">Morning</span><b>6:45 – 12:30</b></div>
+      <div class="hrow"><span class="lang-ro">După-amiaza</span><span class="lang-en">Afternoon</span><b>15:50 – 19:00</b></div>
+      <p class="note lang-ro">Miezonoptica, Utrenia, Sfânta Liturghie, Acatistul Sf. Parascheva.</p><p class="note lang-en">Midnight Office, Matins, Holy Liturgy, Akathist of St. Parascheva.</p>
+    </div>
+    <div class="hcard"><span class="tag lang-ro">Spovedanie</span><span class="tag lang-en">Confession</span><h3 class="lang-ro">În posturi</h3><h3 class="lang-en">During fasts</h3>
+      <div class="hrow"><span class="lang-ro">Luni – Sâmbătă</span><span class="lang-en">Monday – Saturday</span><b>7–13 · 16–19</b></div>
+      <p class="note lang-ro">Pelerinajul Sfintei Parascheva: în jurul datei de 14 octombrie — program special, cozi mari.</p><p class="note lang-en">St. Parascheva pilgrimage: around 14 October — special schedule, long queues.</p>
+    </div>
+  </div>
+</div></section>
+<section id="vizita"><div class="wrap">
+  <div class="sec-head"><span class="overline"><span class="lang-ro">Bine de știut</span><span class="lang-en">Good to know</span></span><h2><span class="lang-ro">Intrare & reguli de vizită</span><span class="lang-en">Entry & visiting rules</span></h2></div>
+  <div class="freebar"><span class="em">🎟️</span><div><b class="lang-ro">Intrarea este liberă</b><b class="lang-en">Entry is free</b><small class="lang-ro">Biserică activă. Vizita se face cu respect pentru slujbe și pentru cei care se roagă.</small><small class="lang-en">An active church. Please visit with respect for services and those praying.</small></div></div>
+  <div class="two">
+    <div class="lbox"><h3 class="lang-ro">Ținută & comportament</h3><h3 class="lang-en">Dress & conduct</h3>
+      <ul>
+        <li><span class="lang-ro">Ținută decentă — umeri și genunchi acoperiți</span><span class="lang-en">Modest dress — shoulders and knees covered</span></li>
+        <li><span class="lang-ro">Liniște, mai ales în timpul slujbelor</span><span class="lang-en">Quiet, especially during services</span></li>
+        <li><span class="lang-ro">Telefoane pe silențios</span><span class="lang-en">Phones on silent</span></li>
+        <li><span class="lang-ro">Fotografiere discretă, fără blitz</span><span class="lang-en">Discreet, no-flash photography</span></li>
+      </ul>
+    </div>
+    <div class="lbox"><h3 class="lang-ro">Ce vezi</h3><h3 class="lang-en">What to see</h3>
+      <ul>
+        <li><span class="lang-ro">Racla cu moaștele Sfintei Parascheva</span><span class="lang-en">The shrine of Saint Parascheva's relics</span></li>
+        <li><span class="lang-ro">Pictura interioară monumentală</span><span class="lang-en">The monumental interior frescoes</span></li>
+        <li><span class="lang-ro">Ansamblul Mitropolitan și Palatul</span><span class="lang-en">The Metropolitan ensemble and Palace</span></li>
+        <li><span class="lang-ro">Grădina și esplanada din față</span><span class="lang-en">The garden and front esplanade</span></li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+<section id="contact"><div class="wrap">
+  <div class="sec-head"><span class="overline gold-text"><span class="lang-ro">Cum ajungi</span><span class="lang-en">How to reach it</span></span><h2>Contact</h2>
+    <p class="lang-ro">Bulevardul Ștefan cel Mare și Sfânt nr. 16, Iași 700064 — în centru, aproape de Palatul Culturii.</p>
+    <p class="lang-en">16 Ștefan cel Mare și Sfânt Boulevard, Iași 700064 — downtown, near the Palace of Culture.</p></div>
+  <div class="cgrid">
+    <div class="cc"><span class="overline"><span class="lang-ro">Adresă</span><span class="lang-en">Address</span></span><b>📍 Bd. Ștefan cel Mare 16</b><small>Iași 700064</small></div>
+    <div class="cc"><span class="overline lang-ro">Cult</span><span class="overline lang-en">Denomination</span><b class="lang-ro">Mitropolia Moldovei și Bucovinei</b><b class="lang-en">Metropolis of Moldavia & Bukovina</b><small class="lang-ro">Biserică ortodoxă activă</small><small class="lang-en">Active Orthodox church</small></div>
+    <div class="cc"><span class="overline">Online</span><b>🌐 <a href="https://catedralamitropolitanaiasi.mmb.ro" target="_blank" rel="noopener">catedralamitropolitanaiasi.mmb.ro</a></b><small class="lang-ro">Program & pelerinaj</small><small class="lang-en">Schedule & pilgrimage</small></div>
+  </div>
+  <div class="cta-row">
+    <a href="https://catedralamitropolitanaiasi.mmb.ro" target="_blank" rel="noopener" class="btn btn-gold"><span class="lang-ro">Site oficial</span><span class="lang-en">Official site</span></a>
+    <a href="iasi.html" class="btn btn-outline"><span class="lang-ro">← Alte locuri din Iași</span><span class="lang-en">← More places in Iași</span></a>
+  </div>
+  <p class="disclaimer"><span class="lang-ro">Program conform site-ului oficial al catedralei (iulie 2026). Se poate modifica în funcție de calendarul liturgic — verifică înainte de vizită.</span><span class="lang-en">Schedule per the cathedral's official site (July 2026). May change with the liturgical calendar — check before visiting.</span></p>
+</div></section>
+<footer><div class="wrap">© 2026 România · Iași — <span class="lang-ro">Ghid de călătorie · Demo</span><span class="lang-en">Travel guide · Demo</span> · <a href="iasi.html">Iași</a></div></footer>
+<script>function setLang(l){document.body.classList.toggle('en',l==='en');document.documentElement.lang=l;document.querySelectorAll('.langsw button').forEach(b=>b.classList.toggle('active',b.dataset.lang===l))}</script>
+</body>
+</html>

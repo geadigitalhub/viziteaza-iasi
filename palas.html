@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Palas & Grădina Palas Iași · Shopping, terase & grădină urbană</title>
+<meta name="description" content="Palas Iași — cel mai mare ansamblu urban modern al orașului, cu grădină, shopping și terase, lângă Palatul Culturii. Program de vizitare și acces. RO/EN.">
+<meta name="keywords" content="Palas Iași, Grădina Palas, shopping Iași, terase Iași, ansamblu urban modern">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#141d33;--gold:#C9A24B;--gold-2:#E3C778;--cream:#F4ECD8;--cream-2:#EFE4C9;--paper:#FBF6EA;--accent:#2f8f7a;--accent-2:#4bb59c;--leaf:#3f7d54;--ink:#1a2033;--muted:#6b7794;--line:rgba(201,162,75,.28);--line-soft:rgba(20,29,51,.1);--r:16px;--maxw:1080px}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:'Jost',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.7;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.1}
+a{color:inherit;text-decoration:none}.wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px}
+.gold-text{color:var(--gold)}.script{font-style:italic;font-weight:500}
+.lang-en{display:none}body.en .lang-ro{display:none}body.en .lang-en{display:inline}
+.overline{font-family:'Jost';font-weight:600;letter-spacing:.32em;text-transform:uppercase;font-size:.7rem}
+header.nav{position:sticky;top:0;z-index:60;background:rgba(20,29,51,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{display:flex;flex-direction:column;line-height:1}
+.logo b{font-family:'Cormorant Garamond';font-size:1.32rem;color:var(--cream);font-weight:700;letter-spacing:.5px}
+.logo small{letter-spacing:.3em;text-transform:uppercase;font-size:.54rem;color:var(--gold);margin-top:3px}
+.nav-links{display:flex;gap:26px}
+.nav-links a{font-weight:500;font-size:.8rem;letter-spacing:.05em;color:var(--cream);opacity:.8;text-transform:uppercase;transition:.2s}
+.nav-links a:hover{opacity:1;color:var(--gold-2)}
+.langsw{display:flex;border:1px solid var(--line);border-radius:30px;padding:3px}
+.langsw button{border:0;background:transparent;padding:5px 11px;border-radius:24px;cursor:pointer;color:var(--cream);font-family:'Jost';font-weight:600;font-size:.72rem;letter-spacing:.08em;transition:.2s}
+.langsw button.active{background:var(--gold);color:var(--navy)}
+@media(max-width:820px){.nav-links{display:none}}
+.hero{position:relative;background:var(--navy);color:var(--cream);padding:70px 0 64px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(680px 420px at 82% 0%,rgba(47,143,122,.55),transparent 62%)}
+.hero::after{content:"";position:absolute;inset:0;opacity:.4;background-image:radial-gradient(rgba(201,162,75,.14) 1px,transparent 1px);background-size:24px 24px;-webkit-mask-image:linear-gradient(180deg,#000,transparent);mask-image:linear-gradient(180deg,#000,transparent)}
+.hero .wrap{position:relative;z-index:2}
+.crumb{font-size:.78rem;color:rgba(244,236,216,.6);margin-bottom:20px}.crumb a:hover{color:var(--gold-2)}
+.hero .overline{color:var(--gold-2);display:inline-block;margin-bottom:16px}
+.hero h1{font-size:clamp(2.4rem,5.4vw,4rem);color:var(--cream)}.hero h1 .script{color:var(--accent-2)}
+.hero p{color:rgba(244,236,216,.78);font-weight:300;font-size:1.1rem;max-width:58ch;margin:20px 0 26px}
+.badges{display:flex;gap:10px;flex-wrap:wrap}
+.badge{border:1px solid var(--line);border-radius:30px;padding:8px 16px;font-size:.76rem;color:var(--cream);display:flex;align-items:center;gap:8px}
+.badge .d{width:7px;height:7px;border-radius:50%;background:var(--accent-2)}
+.quickbar{background:linear-gradient(120deg,var(--accent),var(--accent-2));color:#fff}
+.quickbar .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px;padding:20px 26px}
+.qi{display:flex;gap:12px;align-items:center}.qi .em{font-size:1.4rem}
+.qi b{display:block;font-size:.92rem;font-weight:600}.qi small{font-size:.74rem;opacity:.86}
+section{padding:62px 0}.sec-head{margin-bottom:32px}
+.sec-head .overline{color:var(--gold);display:block;margin-bottom:10px}
+.sec-head h2{font-size:clamp(1.9rem,3.6vw,2.6rem);color:var(--navy)}
+.sec-head p{color:var(--muted);font-weight:300;margin-top:8px;max-width:62ch}.alt{background:var(--cream-2)}
+.about-grid{display:grid;grid-template-columns:1.3fr .9fr;gap:34px;align-items:center}
+.about-grid p{color:var(--ink);font-weight:300;margin-bottom:14px}
+.facts{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px 26px}
+.facts .f{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px solid var(--line-soft);font-size:.92rem}
+.facts .f:last-child{border-bottom:0}.facts .f span{color:var(--muted)}
+.facts .f b{color:var(--navy);font-family:'Cormorant Garamond';font-size:1.12rem;text-align:right}
+.hours-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.hcard{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px 28px}
+.hcard h3{font-size:1.35rem;color:var(--navy);margin-bottom:4px}
+.hcard .tag{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:16px;display:block}
+.hrow{display:flex;justify-content:space-between;gap:14px;padding:10px 0;border-bottom:1px solid var(--line-soft);font-size:.92rem}
+.hrow:last-child{border-bottom:0}.hrow span:first-child{color:var(--muted)}
+.hrow b{color:var(--navy);font-weight:600;text-align:right}
+.note{margin-top:14px;font-size:.82rem;color:var(--muted);font-weight:300;font-style:italic}
+.freebar{background:#fff;border:1px solid var(--line);border-left:4px solid var(--leaf);border-radius:var(--r);padding:22px 26px;display:flex;gap:16px;align-items:center;margin-bottom:20px}
+.freebar .em{font-size:1.8rem}.freebar b{color:var(--navy);font-family:'Cormorant Garamond';font-size:1.3rem}
+.freebar small{color:var(--muted);font-weight:300;display:block;font-size:.9rem}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.lbox{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px 28px}
+.lbox h3{font-size:1.35rem;color:var(--navy);margin-bottom:14px}.lbox ul{list-style:none}
+.lbox ul li{position:relative;padding:8px 0 8px 26px;font-size:.9rem;border-bottom:1px solid var(--line-soft);font-weight:300}
+.lbox ul li:last-child{border-bottom:0}.lbox ul li::before{content:"✦";position:absolute;left:0;color:var(--accent);font-size:.8rem;top:9px}
+#contact{background:var(--navy);color:var(--cream)}
+#contact .sec-head h2{color:var(--cream)}#contact .sec-head p{color:rgba(244,236,216,.7)}
+.cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.cc{border:1px solid var(--line);border-radius:var(--r);padding:24px 26px}
+.cc .overline{color:var(--gold-2);display:block;margin-bottom:12px}
+.cc b{color:var(--cream);font-size:1.02rem;display:block;font-weight:500}
+.cc small{color:rgba(244,236,216,.68);font-weight:300;font-size:.86rem;display:block;margin-top:4px}.cc a{color:var(--gold-2)}
+.cta-row{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:'Jost';font-weight:600;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;padding:14px 26px;border-radius:2px;cursor:pointer;border:0;transition:.3s}
+.btn-gold{background:linear-gradient(120deg,var(--gold),var(--gold-2));color:var(--navy)}.btn-gold:hover{transform:translateY(-2px)}
+.btn-outline{background:transparent;border:1px solid var(--gold);color:var(--gold-2)}.btn-outline:hover{background:var(--gold);color:var(--navy)}
+footer{background:#0f1728;color:rgba(244,236,216,.6);padding:30px 0;text-align:center;font-size:.82rem;font-weight:300}footer a{color:var(--gold-2)}
+.disclaimer{font-size:.78rem;color:var(--muted);font-style:italic;text-align:center;margin-top:24px;font-weight:300}
+@media(max-width:820px){.about-grid,.hours-grid,.cgrid,.two{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="viziteaza-romania-iasi.html" class="logo"><b>România <span class="gold-text">·</span> Iași</b><small class="lang-ro">Ghid de călătorie</small><small class="lang-en">Travel guide</small></a>
+    <div class="nav-links"><a href="#despre"><span class="lang-ro">Despre</span><span class="lang-en">About</span></a><a href="#program">Program</a><a href="#vezi"><span class="lang-ro">Ce faci</span><span class="lang-en">What to do</span></a><a href="iasi.html">Iași</a></div>
+    <div class="langsw"><button data-lang="ro" class="active" onclick="setLang('ro')">RO</button><button data-lang="en" onclick="setLang('en')">EN</button></div>
+  </div>
+</header>
+<section class="hero"><div class="wrap">
+  <div class="crumb"><a href="viziteaza-romania-iasi.html">România · Iași</a> &nbsp;›&nbsp; <a href="iasi.html">Iași</a> &nbsp;›&nbsp; <span class="gold-text">Palas & Grădina Palas</span></div>
+  <span class="overline">🌿 <span class="lang-ro">Iașul contemporan · Reperul modern de lângă Palatul Culturii</span><span class="lang-en">Contemporary Iași · The modern landmark by the Palace of Culture</span></span>
+  <h1><span class="lang-ro">Palas &</span><span class="lang-en">Palas &</span> <span class="script"><span class="lang-ro">Grădina Palas</span><span class="lang-en">Palas Garden</span></span></h1>
+  <p class="lang-ro">O grădină urbană de 5 hectare cu fântână arteziană, carusel și terase — plus un mall cu peste 270 de magazine, chiar la poalele Palatului Culturii.</p>
+  <p class="lang-en">A 5-hectare urban garden with a fountain, carousel and terraces — plus a mall with over 270 shops, right at the foot of the Palace of Culture.</p>
+  <div class="badges">
+    <span class="badge"><span class="d"></span><span class="lang-ro">Grădina: acces liber</span><span class="lang-en">Garden: free access</span></span>
+    <span class="badge"><span class="d"></span><span class="lang-ro">Magazine 10–22</span><span class="lang-en">Shops 10–22</span></span>
+    <span class="badge"><span class="d"></span><span class="lang-ro">Parcare 2.500 locuri</span><span class="lang-en">2,500 parking spots</span></span>
+    <span class="badge"><span class="d"></span>palasiasi.ro</span>
+  </div>
+</div></section>
+<div class="quickbar"><div class="wrap">
+  <div class="qi"><span class="em">🌳</span><div><b class="lang-ro">Grădina Palas</b><b class="lang-en">Palas Garden</b><small class="lang-ro">Acces liber, zilnic</small><small class="lang-en">Free access, daily</small></div></div>
+  <div class="qi"><span class="em">🛍️</span><div><b class="lang-ro">Magazine</b><b class="lang-en">Shops</b><small class="lang-ro">10:00–22:00</small><small class="lang-en">10:00–22:00</small></div></div>
+  <div class="qi"><span class="em">🍽️</span><div><b class="lang-ro">Food court & restaurante</b><b class="lang-en">Food court & dining</b><small class="lang-ro">20+ restaurante</small><small class="lang-en">20+ restaurants</small></div></div>
+  <div class="qi"><span class="em">🅿️</span><div><b class="lang-ro">Parcare subterană</b><b class="lang-en">Underground parking</b><small class="lang-ro">Non-stop · 5 lei/oră (7–23)</small><small class="lang-en">24/7 · 5 lei/hr (7–23)</small></div></div>
+</div></div>
+<section id="despre"><div class="wrap">
+  <div class="sec-head"><span class="overline"><span class="lang-ro">Despre</span><span class="lang-en">About</span></span><h2><span class="lang-ro">Grădina din inima orașului</span><span class="lang-en">The garden in the heart of the city</span></h2></div>
+  <div class="about-grid">
+    <div>
+      <p class="lang-ro">Palas este cel mai mare ansamblu de tip lifestyle din Iași, ridicat chiar lângă Palatul Culturii. În mijloc, Grădina Palas — o oază verde de 5 hectare, cu alei pavate, gazon îngrijit, fântână arteziană și un carusel îndrăgit de copii.</p>
+      <p class="lang-ro">În jurul grădinii se află un mall cu peste 270 de magazine, un food court cu peste 20 de restaurante, cafenele, zone de health & beauty și un parc de peste 50.000 mp care găzduiește zeci de evenimente pe an. Un loc de plimbare, cumpărături și relaxare, la orice oră.</p>
+      <p class="lang-ro">Dincolo de shopping, Palas este reprezentarea modernă a Iașului de azi — capitolul contemporan al orașului, scris chiar lângă simbolul său istoric, Palatul Culturii. Vechiul și noul, față în față.</p>
+      <p class="lang-en">Palas is the largest lifestyle complex in Iași, built right next to the Palace of Culture. At its centre lies Palas Garden — a 5-hectare green oasis with paved alleys, neat lawns, a fountain and a carousel loved by children.</p>
+      <p class="lang-en">Around the garden are a mall with over 270 shops, a food court with more than 20 restaurants, cafés, health & beauty areas and a 50,000-sqm park hosting dozens of events a year. A place to stroll, shop and relax, at any hour.</p>
+      <p class="lang-en">Beyond the shopping, Palas is the modern face of today's Iași — the city's contemporary chapter, written right beside its historic symbol, the Palace of Culture. Old and new, face to face.</p>
+    </div>
+    <div class="facts">
+      <div class="f"><span class="lang-ro">Grădina</span><span class="lang-en">Garden</span><b>5 ha</b></div>
+      <div class="f"><span class="lang-ro">Parc</span><span class="lang-en">Park</span><b>50.000 mp</b></div>
+      <div class="f"><span class="lang-ro">Magazine</span><span class="lang-en">Shops</span><b>270+</b></div>
+      <div class="f"><span class="lang-ro">Restaurante</span><span class="lang-en">Restaurants</span><b>20+</b></div>
+      <div class="f"><span class="lang-ro">Parcare</span><span class="lang-en">Parking</span><b>2.500+</b></div>
+    </div>
+  </div>
+</div></section>
+<section id="program" class="alt"><div class="wrap">
+  <div class="sec-head"><span class="overline"><span class="lang-ro">Orar</span><span class="lang-en">Hours</span></span><h2>Program</h2>
+    <p class="lang-ro">Grădina și aleile sunt deschise permanent; magazinele au program propriu.</p>
+    <p class="lang-en">The garden and alleys are always open; the shops have their own hours.</p></div>
+  <div class="freebar"><span class="em">🌿</span><div><b class="lang-ro">Grădina Palas — acces liber</b><b class="lang-en">Palas Garden — free access</b><small class="lang-ro">Te plimbi oricând prin grădină, fără bilet. Fântâna și caruselul sunt punctul de atracție.</small><small class="lang-en">Stroll the garden anytime, no ticket. The fountain and carousel are the highlight.</small></div></div>
+  <div class="hours-grid">
+    <div class="hcard"><span class="tag lang-ro">Comerț</span><span class="tag lang-en">Retail</span><h3 class="lang-ro">Magazine & mall</h3><h3 class="lang-en">Shops & mall</h3>
+      <div class="hrow"><span class="lang-ro">Magazine</span><span class="lang-en">Shops</span><b>10:00 – 22:00</b></div>
+      <div class="hrow"><span class="lang-ro">Auchan</span><span class="lang-en">Auchan</span><b>07:00 – 22:00</b></div>
+      <p class="note lang-ro">Restaurantele și cafenelele pot avea program extins seara.</p><p class="note lang-en">Restaurants and cafés may stay open later in the evening.</p>
+    </div>
+    <div class="hcard"><span class="tag lang-ro">Acces auto</span><span class="tag lang-en">By car</span><h3 class="lang-ro">Parcare</h3><h3 class="lang-en">Parking</h3>
+      <div class="hrow"><span class="lang-ro">Parcare subterană</span><span class="lang-en">Underground parking</span><b class="lang-ro">Non-stop</b><b class="lang-en">24/7</b></div>
+      <div class="hrow"><span class="lang-ro">Tarif zi (7–23)</span><span class="lang-en">Day rate (7–23)</span><b>5 lei/<span class="lang-ro">oră</span><span class="lang-en">hr</span></b></div>
+      <p class="note lang-ro">Peste 2.500 de locuri, cu acces direct în complex.</p><p class="note lang-en">Over 2,500 spots, with direct access into the complex.</p>
+    </div>
+  </div>
+</div></section>
+<section id="vezi"><div class="wrap">
+  <div class="sec-head"><span class="overline"><span class="lang-ro">Ce faci aici</span><span class="lang-en">What to do</span></span><h2><span class="lang-ro">O zi la Palas</span><span class="lang-en">A day at Palas</span></h2></div>
+  <div class="two">
+    <div class="lbox"><h3 class="lang-ro">În grădină</h3><h3 class="lang-en">In the garden</h3>
+      <ul>
+        <li><span class="lang-ro">Fântâna arteziană și aleile pavate</span><span class="lang-en">The fountain and paved alleys</span></li>
+        <li><span class="lang-ro">Caruselul și zonele de joacă pentru copii</span><span class="lang-en">The carousel and children's play areas</span></li>
+        <li><span class="lang-ro">Terase și cafenele cu vedere la Palatul Culturii</span><span class="lang-en">Terraces and cafés facing the Palace of Culture</span></li>
+        <li><span class="lang-ro">Evenimente și târguri în aer liber</span><span class="lang-en">Open-air events and fairs</span></li>
+      </ul>
+    </div>
+    <div class="lbox"><h3 class="lang-ro">În complex</h3><h3 class="lang-en">In the complex</h3>
+      <ul>
+        <li><span class="lang-ro">Peste 270 de magazine, fashion și lifestyle</span><span class="lang-en">Over 270 fashion and lifestyle shops</span></li>
+        <li><span class="lang-ro">Food court cu peste 20 de restaurante</span><span class="lang-en">Food court with 20+ restaurants</span></li>
+        <li><span class="lang-ro">Cinema, divertisment și health & beauty</span><span class="lang-en">Cinema, entertainment and health & beauty</span></li>
+        <li><span class="lang-ro">La 2 minute de Palatul Culturii</span><span class="lang-en">2 minutes from the Palace of Culture</span></li>
+      </ul>
+    </div>
+  </div>
+  <div style="margin-top:20px"><a href="palatul-culturii.html" class="btn btn-outline"><span class="lang-ro">Vezi Palatul Culturii</span><span class="lang-en">See the Palace of Culture</span> →</a></div>
+</div></section>
+<section id="contact"><div class="wrap">
+  <div class="sec-head"><span class="overline gold-text"><span class="lang-ro">Cum ajungi</span><span class="lang-en">How to reach it</span></span><h2>Contact</h2>
+    <p class="lang-ro">Strada Palas nr. 7A, Iași — imediat lângă Palatul Culturii, în centru.</p>
+    <p class="lang-en">7A Palas Street, Iași — right next to the Palace of Culture, downtown.</p></div>
+  <div class="cgrid">
+    <div class="cc"><span class="overline"><span class="lang-ro">Adresă</span><span class="lang-en">Address</span></span><b>📍 Str. Palas 7A</b><small class="lang-ro">Lângă Palatul Culturii</small><small class="lang-en">Next to the Palace of Culture</small></div>
+    <div class="cc"><span class="overline lang-ro">Acces</span><span class="overline lang-en">Access</span><b class="lang-ro">Grădină — gratuit</b><b class="lang-en">Garden — free</b><small class="lang-ro">Parcare 5 lei/oră</small><small class="lang-en">Parking 5 lei/hr</small></div>
+    <div class="cc"><span class="overline">Online</span><b>🌐 <a href="https://www.palasiasi.ro" target="_blank" rel="noopener">palasiasi.ro</a></b><small class="lang-ro">Magazine, evenimente & orar</small><small class="lang-en">Shops, events & hours</small></div>
+  </div>
+  <div class="cta-row">
+    <a href="https://www.palasiasi.ro" target="_blank" rel="noopener" class="btn btn-gold"><span class="lang-ro">Site oficial</span><span class="lang-en">Official site</span></a>
+    <a href="iasi.html" class="btn btn-outline"><span class="lang-ro">← Alte locuri din Iași</span><span class="lang-en">← More places in Iași</span></a>
+  </div>
+  <p class="disclaimer"><span class="lang-ro">Program și tarife conform site-ului oficial palasiasi.ro (2026). Orarul magazinelor poate varia — verifică înainte de vizită.</span><span class="lang-en">Hours and rates per the official site palasiasi.ro (2026). Shop hours may vary — check before visiting.</span></p>
+</div></section>
+<footer><div class="wrap">© 2026 România · Iași — <span class="lang-ro">Ghid de călătorie · Demo</span><span class="lang-en">Travel guide · Demo</span> · <a href="iasi.html">Iași</a></div></footer>
+<script>function setLang(l){document.body.classList.toggle('en',l==='en');document.documentElement.lang=l;document.querySelectorAll('.langsw button').forEach(b=>b.classList.toggle('active',b.dataset.lang===l))}</script>
+</body>
+</html>

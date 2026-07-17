@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bojdeuca lui Ion Creangă Iași · Prima casă memorială din România</title>
+<meta name="description" content="Bojdeuca lui Ion Creangă din Țicău, Iași — prima casă memorială din România. Program de vizitare, prețuri bilete și informații utile pentru vizitatori. RO/EN.">
+<meta name="keywords" content="Bojdeuca lui Ion Creangă, Țicău Iași, prima casă memorială din România, muzeu, program bilete">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#141d33;--gold:#C9A24B;--gold-2:#E3C778;--cream:#F4ECD8;--cream-2:#EFE4C9;--paper:#FBF6EA;--accent:#8a5a2b;--accent-2:#b07d3f;--leaf:#3f7d54;--teal:#3E7C8C;--ink:#1a2033;--muted:#6b7794;--line:rgba(201,162,75,.28);--line-soft:rgba(20,29,51,.1);--r:16px;--maxw:1080px}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:'Jost',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.7;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.1}
+a{color:inherit;text-decoration:none}.wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px}
+.gold-text{color:var(--gold)}.script{font-style:italic;font-weight:500}
+.lang-en{display:none}body.en .lang-ro{display:none}body.en .lang-en{display:inline}
+.overline{font-family:'Jost';font-weight:600;letter-spacing:.32em;text-transform:uppercase;font-size:.7rem}
+header.nav{position:sticky;top:0;z-index:60;background:rgba(20,29,51,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{display:flex;flex-direction:column;line-height:1}
+.logo b{font-family:'Cormorant Garamond';font-size:1.32rem;color:var(--cream);font-weight:700;letter-spacing:.5px}
+.logo small{letter-spacing:.3em;text-transform:uppercase;font-size:.54rem;color:var(--gold);margin-top:3px}
+.nav-links{display:flex;gap:26px}
+.nav-links a{font-weight:500;font-size:.8rem;letter-spacing:.05em;color:var(--cream);opacity:.8;text-transform:uppercase;transition:.2s}
+.nav-links a:hover{opacity:1;color:var(--gold-2)}
+.langsw{display:flex;border:1px solid var(--line);border-radius:30px;padding:3px}
+.langsw button{border:0;background:transparent;padding:5px 11px;border-radius:24px;cursor:pointer;color:var(--cream);font-family:'Jost';font-weight:600;font-size:.72rem;letter-spacing:.08em;transition:.2s}
+.langsw button.active{background:var(--gold);color:var(--navy)}
+@media(max-width:820px){.nav-links{display:none}}
+.hero{position:relative;background:var(--navy);color:var(--cream);padding:70px 0 64px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(680px 420px at 82% 0%,rgba(138,90,43,.55),transparent 62%)}
+.hero::after{content:"";position:absolute;inset:0;opacity:.4;background-image:radial-gradient(rgba(201,162,75,.14) 1px,transparent 1px);background-size:24px 24px;-webkit-mask-image:linear-gradient(180deg,#000,transparent);mask-image:linear-gradient(180deg,#000,transparent)}
+.hero .wrap{position:relative;z-index:2}
+.crumb{font-size:.78rem;color:rgba(244,236,216,.6);margin-bottom:20px}.crumb a:hover{color:var(--gold-2)}
+.hero .overline{color:var(--gold-2);display:inline-block;margin-bottom:16px}
+.hero h1{font-size:clamp(2.4rem,5.4vw,4rem);color:var(--cream)}.hero h1 .script{color:var(--gold-2)}
+.hero p{color:rgba(244,236,216,.78);font-weight:300;font-size:1.1rem;max-width:58ch;margin:20px 0 26px}
+.badges{display:flex;gap:10px;flex-wrap:wrap}
+.badge{border:1px solid var(--line);border-radius:30px;padding:8px 16px;font-size:.76rem;color:var(--cream);display:flex;align-items:center;gap:8px}
+.badge .d{width:7px;height:7px;border-radius:50%;background:var(--accent-2)}
+.quickbar{background:linear-gradient(120deg,var(--accent),var(--accent-2));color:#fff}
+.quickbar .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px;padding:20px 26px}
+.qi{display:flex;gap:12px;align-items:center}.qi .em{font-size:1.4rem}
+.qi b{display:block;font-size:.92rem;font-weight:600}.qi small{font-size:.74rem;opacity:.86}
+section{padding:62px 0}.sec-head{margin-bottom:32px}
+.sec-head .overline{color:var(--gold);display:block;margin-bottom:10px}
+.sec-head h2{font-size:clamp(1.9rem,3.6vw,2.6rem);color:var(--navy)}
+.sec-head p{color:var(--muted);font-weight:300;margin-top:8px;max-width:62ch}.alt{background:var(--cream-2)}
+.about-grid{display:grid;grid-template-columns:1.3fr .9fr;gap:34px;align-items:center}
+.about-grid p{color:var(--ink);font-weight:300;margin-bottom:14px}
+.facts{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px 26px}
+.facts .f{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px solid var(--line-soft);font-size:.92rem}
+.facts .f:last-child{border-bottom:0}.facts .f span{color:var(--muted)}
+.facts .f b{color:var(--navy);font-family:'Cormorant Garamond';font-size:1.12rem;text-align:right}
+.hours-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.hcard{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px 28px}
+.hcard h3{font-size:1.35rem;color:var(--navy);margin-bottom:4px}
+.hcard .tag{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:16px;display:block}
+.hrow{display:flex;justify-content:space-between;gap:14px;padding:10px 0;border-bottom:1px solid var(--line-soft);font-size:.92rem}
+.hrow:last-child{border-bottom:0}.hrow span:first-child{color:var(--muted)}
+.hrow b{color:var(--navy);font-weight:600;text-align:right}.hrow.closed b{color:#A8362E}
+.note{margin-top:14px;font-size:.82rem;color:var(--muted);font-weight:300;font-style:italic}
+.ptable{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-bottom:18px}
+.ptable .ph{background:var(--navy);color:var(--cream);padding:16px 22px}
+.ptable .ph h4{font-size:1.15rem;color:var(--cream)}
+.ptable .ph small{color:rgba(244,236,216,.7);font-weight:300;font-size:.8rem;display:block;margin-top:2px}
+table{width:100%;border-collapse:collapse}th,td{padding:12px 22px;text-align:left;font-size:.9rem}
+thead th{background:var(--cream-2);color:var(--navy);font-weight:600;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
+thead th:not(:first-child),tbody td:not(:first-child){text-align:right;width:34%}
+tbody tr{border-top:1px solid var(--line-soft)}tbody td:first-child{color:var(--muted)}tbody td b{color:var(--navy);font-weight:600}
+.hi{color:var(--accent);font-weight:700}
+.freebar{background:#fff;border:1px solid var(--line);border-left:4px solid var(--leaf);border-radius:var(--r);padding:22px 26px;display:flex;gap:16px;align-items:center;margin-bottom:20px}
+.freebar .em{font-size:1.8rem}.freebar b{color:var(--navy);font-family:'Cormorant Garamond';font-size:1.3rem}
+.freebar small{color:var(--muted);font-weight:300;display:block;font-size:.9rem}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.lbox{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px 28px}
+.lbox h3{font-size:1.35rem;color:var(--navy);margin-bottom:14px}.lbox ul{list-style:none}
+.lbox ul li{position:relative;padding:8px 0 8px 26px;font-size:.9rem;border-bottom:1px solid var(--line-soft);font-weight:300}
+.lbox ul li:last-child{border-bottom:0}.lbox ul li::before{content:"✦";position:absolute;left:0;color:var(--gold);font-size:.8rem;top:9px}
+#contact{background:var(--navy);color:var(--cream)}
+#contact .sec-head h2{color:var(--cream)}#contact .sec-head p{color:rgba(244,236,216,.7)}
+.cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.cc{border:1px solid var(--line);border-radius:var(--r);padding:24px 26px}
+.cc .overline{color:var(--gold-2);display:block;margin-bottom:12px}
+.cc b{color:var(--cream);font-size:1.02rem;display:block;font-weight:500}
+.cc small{color:rgba(244,236,216,.68);font-weight:300;font-size:.86rem;display:block;margin-top:4px}.cc a{color:var(--gold-2)}
+.cta-row{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:'Jost';font-weight:600;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;padding:14px 26px;border-radius:2px;cursor:pointer;border:0;transition:.3s}
+.btn-gold{background:linear-gradient(120deg,var(--gold),var(--gold-2));color:var(--navy)}.btn-gold:hover{transform:translateY(-2px)}
+.btn-outline{background:transparent;border:1px solid var(--gold);color:var(--gold-2)}.btn-outline:hover{background:var(--gold);color:var(--navy)}
+footer{background:#0f1728;color:rgba(244,236,216,.6);padding:30px 0;text-align:center;font-size:.82rem;font-weight:300}footer a{color:var(--gold-2)}
+.disclaimer{font-size:.78rem;color:var(--muted);font-style:italic;text-align:center;margin-top:24px;font-weight:300}
+@media(max-width:820px){.about-grid,.hours-grid,.cgrid,.two{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="viziteaza-romania-iasi.html" class="logo"><b>România <span class="gold-text">·</span> Iași</b><small class="lang-ro">Ghid de călătorie</small><small class="lang-en">Travel guide</small></a>
+    <div class="nav-links"><a href="#despre"><span class="lang-ro">Despre</span><span class="lang-en">About</span></a><a href="#program">Program</a><a href="#bilete"><span class="lang-ro">Bilete</span><span class="lang-en">Tickets</span></a><a href="iasi.html">Iași</a></div>
+    <div class="langsw"><button data-lang="ro" class="active" onclick="setLang('ro')">RO</button><button data-lang="en" onclick="setLang('en')">EN</button></div>
+  </div>
+</header>
+<section class="hero"><div class="wrap">
+  <div class="crumb"><a href="viziteaza-romania-iasi.html">România · Iași</a> &nbsp;›&nbsp; <a href="iasi.html">Iași</a> &nbsp;›&nbsp; <span class="gold-text">Bojdeuca lui Ion Creangă</span></div>
+  <span class="overline">📖 <span class="lang-ro">Prima casă memorială din România · 1918</span><span class="lang-en">Romania's first memorial house · 1918</span></span>
+  <h1><span class="lang-ro">Bojdeuca lui</span><span class="lang-en">Ion Creangă's</span> <span class="script"><span class="lang-ro">Ion Creangă</span><span class="lang-en">Cottage</span></span></h1>
+  <p class="lang-ro">Căsuța din Țicău unde marele povestitor a locuit din 1872 până în 1889 și și-a scris întreaga operă. Aici a stat și Eminescu, șase luni.</p>
+  <p class="lang-en">The little cottage in Țicău where the great storyteller lived from 1872 to 1889 and wrote his entire work. Eminescu also stayed here, for six months.</p>
+  <div class="badges">
+    <span class="badge"><span class="d"></span><span class="lang-ro">Marți–Duminică 10–17</span><span class="lang-en">Tue–Sunday 10–17</span></span>
+    <span class="badge"><span class="d"></span><span class="lang-ro">Bilet adult 16 lei</span><span class="lang-en">Adult ticket 16 lei</span></span>
+    <span class="badge"><span class="d"></span><span class="lang-ro">Cartierul Țicău</span><span class="lang-en">Țicău district</span></span>
+    <span class="badge"><span class="d"></span>muzeulliteraturiiiasi.ro</span>
+  </div>
+</div></section>
+<div class="quickbar"><div class="wrap">
+  <div class="qi"><span class="em">🕙</span><div><b class="lang-ro">Marți – Duminică</b><b class="lang-en">Tue – Sunday</b><small class="lang-ro">10:00–17:00 · luni închis</small><small class="lang-en">10:00–17:00 · Monday closed</small></div></div>
+  <div class="qi"><span class="em">🎟️</span><div><b class="lang-ro">Adult — 16 lei</b><b class="lang-en">Adult — 16 lei</b><small class="lang-ro">Elevi/studenți 4 lei · pensionari 8 lei</small><small class="lang-en">Pupils/students 4 lei · pensioners 8 lei</small></div></div>
+  <div class="qi"><span class="em">🏡</span><div><b class="lang-ro">Casă memorială</b><b class="lang-en">Memorial house</b><small class="lang-ro">Prima din România</small><small class="lang-en">The first in Romania</small></div></div>
+  <div class="qi"><span class="em">📍</span><div><b class="lang-ro">Str. Simion Bărnuțiu 4</b><b class="lang-en">4 Simion Bărnuțiu St.</b><small class="lang-ro">Țicău, Iași</small><small class="lang-en">Țicău, Iași</small></div></div>
+</div></div>
+<section id="despre"><div class="wrap">
+  <div class="sec-head"><span class="overline"><span class="lang-ro">Despre</span><span class="lang-en">About</span></span><h2><span class="lang-ro">Casa în care s-au născut poveștile</span><span class="lang-en">The house where the tales were born</span></h2></div>
+  <div class="about-grid">
+    <div>
+      <p class="lang-ro">Bojdeuca — o căsuță modestă de pe dealul Țicăului — este primul muzeu memorial literar din România, deschis în 1918. Aici a locuit Ion Creangă din 1872 până la moartea sa, în 1889, scriindu-și „Amintirile din copilărie" și celebrele povești.</p>
+      <p class="lang-ro">Tot aici l-a găzduit, pentru o vreme, pe prietenul său Mihai Eminescu. După o restaurare recentă, casa și grădina și-au recăpătat farmecul de altădată.</p>
+      <p class="lang-en">The "bojdeuca" — a modest cottage on the Țicău hill — is Romania's first literary memorial museum, opened in 1918. Here Ion Creangă lived from 1872 until his death in 1889, writing his "Childhood Memories" and his famous tales.</p>
+      <p class="lang-en">He also hosted his friend Mihai Eminescu here for a while. After a recent restoration, the house and garden have regained their old-world charm.</p>
+    </div>
+    <div class="facts">
+      <div class="f"><span class="lang-ro">Muzeu din</span><span class="lang-en">Museum since</span><b>1918</b></div>
+      <div class="f"><span class="lang-ro">Creangă a locuit</span><span class="lang-en">Creangă lived</span><b>1872–1889</b></div>
+      <div class="f"><span class="lang-ro">Oaspete celebru</span><span class="lang-en">Famous guest</span><b>M. Eminescu</b></div>
+      <div class="f"><span class="lang-ro">Cartier</span><span class="lang-en">District</span><b>Țicău</b></div>
+      <div class="f"><span class="lang-ro">Loc în țară</span><span class="lang-en">Rank</span><b class="lang-ro">Prima casă memorială</b><b class="lang-en">First memorial house</b></div>
+    </div>
+  </div>
+</div></section>
+<section id="program" class="alt"><div class="wrap">
+  <div class="sec-head"><span class="overline"><span class="lang-ro">Orar</span><span class="lang-en">Hours</span></span><h2>Program</h2>
+    <p class="lang-ro">Parte din Muzeul Național al Literaturii Române Iași.</p>
+    <p class="lang-en">Part of the National Museum of Romanian Literature in Iași.</p></div>
+  <div class="hours-grid">
+    <div class="hcard"><span class="tag lang-ro">Casă memorială</span><span class="tag lang-en">Memorial house</span><h3 class="lang-ro">Bojdeuca</h3><h3 class="lang-en">The cottage</h3>
+      <div class="hrow"><span class="lang-ro">Marți – Duminică</span><span class="lang-en">Tuesday – Sunday</span><b>10:00 – 17:00</b></div>
+      <div class="hrow closed"><span class="lang-ro">Luni</span><span class="lang-en">Monday</span><b class="lang-ro">Închis</b><b class="lang-en">Closed</b></div>
+      <p class="note lang-ro">Informații bilete: 0756 125 863 (marți–duminică, 10–17).</p><p class="note lang-en">Ticket info: +40 756 125 863 (Tue–Sun, 10–17).</p>
+    </div>
+    <div class="hcard"><span class="tag lang-ro">Gratuit</span><span class="tag lang-en">Free</span><h3 class="lang-ro">O zi pe lună</h3><h3 class="lang-en">One day a month</h3>
+      <div class="hrow"><span class="lang-ro">Prima săptămână din lună</span><span class="lang-en">First week of the month</span><b class="lang-ro">O zi liberă</b><b class="lang-en">One free day</b></div>
+      <p class="note lang-ro">Intrare gratuită într-o zi lucrătoare din prima săptămână, anunțată pe site. Gratuit și de 1 Decembrie.</p><p class="note lang-en">Free entry on one weekday in the first week, announced online. Also free on 1 December.</p>
+    </div>
+  </div>
+</div></section>
+<section id="bilete"><div class="wrap">
+  <div class="sec-head"><span class="overline"><span class="lang-ro">Tarife oficiale</span><span class="lang-en">Official prices</span></span><h2><span class="lang-ro">Bilete de intrare</span><span class="lang-en">Entry tickets</span></h2></div>
+  <div class="ptable">
+    <div class="ph"><h4 class="lang-ro">Bojdeuca — expoziție permanentă</h4><h4 class="lang-en">The cottage — permanent exhibition</h4><small class="lang-ro">Muzeul „Ion Creangă"</small><small class="lang-en">"Ion Creangă" Museum</small></div>
+    <table><thead><tr><th class="lang-ro">Categorie</th><th class="lang-en">Category</th><th class="lang-ro">Preț</th><th class="lang-en">Price</th></tr></thead>
+    <tbody>
+      <tr><td><span class="lang-ro">Adult</span><span class="lang-en">Adult</span></td><td><b>16 lei</b></td></tr>
+      <tr><td><span class="lang-ro">Grup (peste 9 persoane)</span><span class="lang-en">Group (over 9 people)</span></td><td class="hi">13 lei</td></tr>
+      <tr><td><span class="lang-ro">Pensionari</span><span class="lang-en">Pensioners</span></td><td class="hi">8 lei</td></tr>
+      <tr><td><span class="lang-ro">Elevi & studenți</span><span class="lang-en">Pupils & students</span></td><td class="hi">4 lei</td></tr>
+    </tbody></table>
+  </div>
+  <div class="ptable">
+    <div class="ph"><h4 class="lang-ro">Ghidaj</h4><h4 class="lang-en">Guided tour</h4></div>
+    <table><thead><tr><th class="lang-ro">Tip</th><th class="lang-en">Type</th><th class="lang-ro">Preț</th><th class="lang-en">Price</th></tr></thead>
+    <tbody>
+      <tr><td><span class="lang-ro">În limba română</span><span class="lang-en">In Romanian</span></td><td><b>20 lei</b></td></tr>
+      <tr><td><span class="lang-ro">În limbă străină (EN/FR/IT, cu programare)</span><span class="lang-en">In a foreign language (EN/FR/IT, by appointment)</span></td><td class="hi">60 lei</td></tr>
+    </tbody></table>
+  </div>
+  <p class="note"><span class="lang-ro">Gratuit: preșcolari, persoane cu dizabilități și însoțitori, ghizi acreditați, posesori ICOM, toți vizitatorii de 1 Decembrie. Foto în interes personal: 30 lei/oră. Tarife conform site-ului oficial (actualizat ianuarie 2026).</span><span class="lang-en">Free: preschoolers, people with disabilities and companions, accredited guides, ICOM holders, all visitors on 1 December. Personal photography: 30 lei/hour. Prices per the official site (updated January 2026).</span></p>
+</div></section>
+<section id="vezi" class="alt"><div class="wrap">
+  <div class="sec-head"><span class="overline"><span class="lang-ro">Highlights</span><span class="lang-en">Highlights</span></span><h2><span class="lang-ro">Ce să vezi</span><span class="lang-en">What to see</span></h2></div>
+  <div class="two">
+    <div class="lbox"><h3 class="lang-ro">În bojdeucă</h3><h3 class="lang-en">In the cottage</h3>
+      <ul>
+        <li><span class="lang-ro">Interiorul de epocă, refăcut după restaurare</span><span class="lang-en">The period interior, restored</span></li>
+        <li><span class="lang-ro">Obiecte și manuscrise ale lui Creangă</span><span class="lang-en">Creangă's objects and manuscripts</span></li>
+        <li><span class="lang-ro">Colțul legat de prietenia cu Eminescu</span><span class="lang-en">The corner on his friendship with Eminescu</span></li>
+        <li><span class="lang-ro">Grădina și priveliștea din Țicău</span><span class="lang-en">The garden and the Țicău view</span></li>
+      </ul>
+    </div>
+    <div class="lbox"><h3 class="lang-ro">Alte muzee literare</h3><h3 class="lang-en">Other literary museums</h3>
+      <ul>
+        <li><span class="lang-ro">Muzeul „Mihai Eminescu" — în Parcul Copou</span><span class="lang-en">The "Mihai Eminescu" Museum — in Copou Park</span></li>
+        <li><span class="lang-ro">Casa Muzeelor și traseele literare ale orașului</span><span class="lang-en">The House of Museums and the city's literary routes</span></li>
+        <li><span class="lang-ro">Festivalul Internațional de Literatură FILIT (toamna)</span><span class="lang-en">The FILIT International Literature Festival (autumn)</span></li>
+      </ul>
+    </div>
+  </div>
+  <div style="margin-top:20px"><a href="copou.html" class="btn btn-outline"><span class="lang-ro">Vezi Muzeul Eminescu (Copou)</span><span class="lang-en">See the Eminescu Museum (Copou)</span> →</a></div>
+</div></section>
+<section id="contact"><div class="wrap">
+  <div class="sec-head"><span class="overline gold-text"><span class="lang-ro">Cum ajungi</span><span class="lang-en">How to reach it</span></span><h2>Contact</h2>
+    <p class="lang-ro">Strada Simion Bărnuțiu nr. 4, cartierul Țicău, Iași — pe deal, la câteva minute de centru.</p>
+    <p class="lang-en">4 Simion Bărnuțiu Street, Țicău district, Iași — on the hill, a few minutes from downtown.</p></div>
+  <div class="cgrid">
+    <div class="cc"><span class="overline"><span class="lang-ro">Adresă</span><span class="lang-en">Address</span></span><b>📍 Str. Simion Bărnuțiu 4</b><small class="lang-ro">Țicău, Iași</small><small class="lang-en">Țicău, Iași</small></div>
+    <div class="cc"><span class="overline"><span class="lang-ro">Telefon</span><span class="lang-en">Phone</span></span><b>📞 <a href="tel:+40756125863">0756 125 863</a></b><small class="lang-ro">Informații bilete, marți–duminică</small><small class="lang-en">Ticket info, Tue–Sunday</small></div>
+    <div class="cc"><span class="overline">Online</span><b>🌐 <a href="https://www.muzeulliteraturiiiasi.ro/muzeul-ion-creanga-bojdeuca/" target="_blank" rel="noopener">muzeulliteraturiiiasi.ro</a></b><small class="lang-ro">Program & tur virtual</small><small class="lang-en">Hours & virtual tour</small></div>
+  </div>
+  <div class="cta-row">
+    <a href="https://www.muzeulliteraturiiiasi.ro/muzeul-ion-creanga-bojdeuca/" target="_blank" rel="noopener" class="btn btn-gold"><span class="lang-ro">Site oficial</span><span class="lang-en">Official site</span></a>
+    <a href="iasi.html" class="btn btn-outline"><span class="lang-ro">← Alte locuri din Iași</span><span class="lang-en">← More places in Iași</span></a>
+  </div>
+  <p class="disclaimer"><span class="lang-ro">Program și tarife conform site-ului oficial al Muzeului Național al Literaturii Române Iași (actualizat ianuarie 2026). Se pot modifica — verifică înainte de vizită.</span><span class="lang-en">Hours and prices per the official site of the National Museum of Romanian Literature in Iași (updated January 2026). May change — check before visiting.</span></p>
+</div></section>
+<footer><div class="wrap">© 2026 România · Iași — <span class="lang-ro">Ghid de călătorie · Demo</span><span class="lang-en">Travel guide · Demo</span> · <a href="iasi.html">Iași</a></div></footer>
+<script>function setLang(l){document.body.classList.toggle('en',l==='en');document.documentElement.lang=l;document.querySelectorAll('.langsw button').forEach(b=>b.classList.toggle('active',b.dataset.lang===l))}</script>
+</body>
+</html>

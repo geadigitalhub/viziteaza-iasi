@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teatrul Național „Vasile Alecsandri" Iași · Cel mai vechi din România</title>
+<meta name="description" content="Teatrul Național „Vasile Alecsandri" din Iași, cea mai veche instituție teatrală din România, cu o arhitectură somptuoasă. Vizitare, spectacole, bilete. RO/EN.">
+<meta name="keywords" content="Teatrul Național Iași, Vasile Alecsandri, cel mai vechi teatru din România, spectacole Iași, vizitare">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#141d33;--gold:#C9A24B;--gold-2:#E3C778;--cream:#F4ECD8;--cream-2:#EFE4C9;--paper:#FBF6EA;--accent:#7a2e46;--accent-2:#a64a68;--teal:#3E7C8C;--ink:#1a2033;--muted:#6b7794;--line:rgba(201,162,75,.28);--line-soft:rgba(20,29,51,.1);--r:16px;--maxw:1080px}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:'Jost',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.7;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.1}
+a{color:inherit;text-decoration:none}.wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px}
+.gold-text{color:var(--gold)}.script{font-style:italic;font-weight:500}
+.lang-en{display:none}body.en .lang-ro{display:none}body.en .lang-en{display:inline}
+.overline{font-family:'Jost';font-weight:600;letter-spacing:.32em;text-transform:uppercase;font-size:.7rem}
+header.nav{position:sticky;top:0;z-index:60;background:rgba(20,29,51,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{display:flex;flex-direction:column;line-height:1}
+.logo b{font-family:'Cormorant Garamond';font-size:1.32rem;color:var(--cream);font-weight:700;letter-spacing:.5px}
+.logo small{letter-spacing:.3em;text-transform:uppercase;font-size:.54rem;color:var(--gold);margin-top:3px}
+.nav-links{display:flex;gap:26px}
+.nav-links a{font-weight:500;font-size:.8rem;letter-spacing:.05em;color:var(--cream);opacity:.8;text-transform:uppercase;transition:.2s}
+.nav-links a:hover{opacity:1;color:var(--gold-2)}
+.langsw{display:flex;border:1px solid var(--line);border-radius:30px;padding:3px}
+.langsw button{border:0;background:transparent;padding:5px 11px;border-radius:24px;cursor:pointer;color:var(--cream);font-family:'Jost';font-weight:600;font-size:.72rem;letter-spacing:.08em;transition:.2s}
+.langsw button.active{background:var(--gold);color:var(--navy)}
+@media(max-width:820px){.nav-links{display:none}}
+.hero{position:relative;background:var(--navy);color:var(--cream);padding:70px 0 64px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(680px 420px at 82% 0%,rgba(122,46,70,.6),transparent 62%)}
+.hero::after{content:"";position:absolute;inset:0;opacity:.4;background-image:radial-gradient(rgba(201,162,75,.14) 1px,transparent 1px);background-size:24px 24px;-webkit-mask-image:linear-gradient(180deg,#000,transparent);mask-image:linear-gradient(180deg,#000,transparent)}
+.hero .wrap{position:relative;z-index:2}
+.crumb{font-size:.78rem;color:rgba(244,236,216,.6);margin-bottom:20px}.crumb a:hover{color:var(--gold-2)}
+.hero .overline{color:var(--gold-2);display:inline-block;margin-bottom:16px}
+.hero h1{font-size:clamp(2.3rem,5.2vw,3.8rem);color:var(--cream)}.hero h1 .script{color:var(--gold-2)}
+.hero p{color:rgba(244,236,216,.78);font-weight:300;font-size:1.1rem;max-width:58ch;margin:20px 0 26px}
+.badges{display:flex;gap:10px;flex-wrap:wrap}
+.badge{border:1px solid var(--line);border-radius:30px;padding:8px 16px;font-size:.76rem;color:var(--cream);display:flex;align-items:center;gap:8px}
+.badge .d{width:7px;height:7px;border-radius:50%;background:var(--accent-2)}
+.quickbar{background:linear-gradient(120deg,var(--accent),var(--accent-2));color:#fff}
+.quickbar .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px;padding:20px 26px}
+.qi{display:flex;gap:12px;align-items:center}.qi .em{font-size:1.4rem}
+.qi b{display:block;font-size:.92rem;font-weight:600}.qi small{font-size:.74rem;opacity:.86}
+section{padding:62px 0}.sec-head{margin-bottom:32px}
+.sec-head .overline{color:var(--gold);display:block;margin-bottom:10px}
+.sec-head h2{font-size:clamp(1.9rem,3.6vw,2.6rem);color:var(--navy)}
+.sec-head p{color:var(--muted);font-weight:300;margin-top:8px;max-width:62ch}.alt{background:var(--cream-2)}
+.about-grid{display:grid;grid-template-columns:1.3fr .9fr;gap:34px;align-items:center}
+.about-grid p{color:var(--ink);font-weight:300;margin-bottom:14px}
+.facts{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px 26px}
+.facts .f{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px solid var(--line-soft);font-size:.92rem}
+.facts .f:last-child{border-bottom:0}.facts .f span{color:var(--muted)}
+.facts .f b{color:var(--navy);font-family:'Cormorant Garamond';font-size:1.12rem;text-align:right}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.lbox{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px 28px}
+.lbox h3{font-size:1.35rem;color:var(--navy);margin-bottom:14px}.lbox ul{list-style:none}
+.lbox ul li{position:relative;padding:8px 0 8px 26px;font-size:.9rem;border-bottom:1px solid var(--line-soft);font-weight:300}
+.lbox ul li:last-child{border-bottom:0}.lbox ul li::before{content:"✦";position:absolute;left:0;color:var(--gold);font-size:.8rem;top:9px}
+.freebar{background:#fff;border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:var(--r);padding:22px 26px;display:flex;gap:16px;align-items:center;margin-bottom:20px}
+.freebar .em{font-size:1.8rem}.freebar b{color:var(--navy);font-family:'Cormorant Garamond';font-size:1.3rem}
+.freebar small{color:var(--muted);font-weight:300;display:block;font-size:.9rem}
+#contact{background:var(--navy);color:var(--cream)}
+#contact .sec-head h2{color:var(--cream)}#contact .sec-head p{color:rgba(244,236,216,.7)}
+.cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.cc{border:1px solid var(--line);border-radius:var(--r);padding:24px 26px}
+.cc .overline{color:var(--gold-2);display:block;margin-bottom:12px}
+.cc b{color:var(--cream);font-size:1.02rem;display:block;font-weight:500}
+.cc small{color:rgba(244,236,216,.68);font-weight:300;font-size:.86rem;display:block;margin-top:4px}.cc a{color:var(--gold-2)}
+.cta-row{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:'Jost';font-weight:600;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;padding:14px 26px;border-radius:2px;cursor:pointer;border:0;transition:.3s}
+.btn-gold{background:linear-gradient(120deg,var(--gold),var(--gold-2));color:var(--navy)}.btn-gold:hover{transform:translateY(-2px)}
+.btn-outline{background:transparent;border:1px solid var(--gold);color:var(--gold-2)}.btn-outline:hover{background:var(--gold);color:var(--navy)}
+footer{background:#0f1728;color:rgba(244,236,216,.6);padding:30px 0;text-align:center;font-size:.82rem;font-weight:300}footer a{color:var(--gold-2)}
+.disclaimer{font-size:.78rem;color:var(--muted);font-style:italic;text-align:center;margin-top:24px;font-weight:300}
+@media(max-width:820px){.about-grid,.cgrid,.two{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="viziteaza-romania-iasi.html" class="logo"><b>România <span class="gold-text">·</span> Iași</b><small class="lang-ro">Ghid de călătorie</small><small class="lang-en">Travel guide</small></a>
+    <div class="nav-links"><a href="#despre"><span class="lang-ro">Despre</span><span class="lang-en">About</span></a><a href="#vizita"><span class="lang-ro">Vizitare</span><span class="lang-en">Visiting</span></a><a href="#vezi"><span class="lang-ro">Ce vezi</span><span class="lang-en">Highlights</span></a><a href="opera.html">Opera</a><a href="iasi.html">Iași</a></div>
+    <div class="langsw"><button data-lang="ro" class="active" onclick="setLang('ro')">RO</button><button data-lang="en" onclick="setLang('en')">EN</button></div>
+  </div>
+</header>
+<section class="hero"><div class="wrap">
+  <div class="crumb"><a href="viziteaza-romania-iasi.html">România · Iași</a> &nbsp;›&nbsp; <a href="iasi.html">Iași</a> &nbsp;›&nbsp; <span class="gold-text">Teatrul Național</span></div>
+  <span class="overline">🎭 <span class="lang-ro">Cel mai vechi teatru național din România</span><span class="lang-en">Romania's oldest national theatre</span></span>
+  <h1><span class="lang-ro">Teatrul Național</span><span class="lang-en">National Theatre</span> <span class="script">„Vasile Alecsandri"</span></h1>
+  <p class="lang-ro">O bijuterie arhitecturală semnată Fellner & Helmer (1896), cu candelabre de Murano și un plafon pictat. Aceeași clădire găzduiește și Opera Națională Română.</p>
+  <p class="lang-en">An architectural jewel by Fellner & Helmer (1896), with Murano chandeliers and a painted ceiling. The same building also houses the Romanian National Opera.</p>
+  <div class="badges">
+    <span class="badge"><span class="d"></span><span class="lang-ro">Deschis 1896</span><span class="lang-en">Opened 1896</span></span>
+    <span class="badge"><span class="d"></span><span class="lang-ro">Monument istoric</span><span class="lang-en">Historic monument</span></span>
+    <span class="badge"><span class="d"></span>Fellner & Helmer</span>
+    <span class="badge"><span class="d"></span>teatrulnationaliasi.ro</span>
+  </div>
+</div></section>
+<div class="quickbar"><div class="wrap">
+  <div class="qi"><span class="em">🎭</span><div><b class="lang-ro">Spectacole</b><b class="lang-en">Performances</b><small class="lang-ro">Stagiune · vezi programul online</small><small class="lang-en">Season · see program online</small></div></div>
+  <div class="qi"><span class="em">🎟️</span><div><b class="lang-ro">Bilete</b><b class="lang-en">Tickets</b><small class="lang-ro">Casa de bilete & online</small><small class="lang-en">Box office & online</small></div></div>
+  <div class="qi"><span class="em">🏛️</span><div><b class="lang-ro">Tururi ghidate</b><b class="lang-en">Guided tours</b><small class="lang-ro">Ocazional · vezi site</small><small class="lang-en">Occasional · see site</small></div></div>
+  <div class="qi"><span class="em">🎼</span><div><b class="lang-ro">Și Opera</b><b class="lang-en">Also the Opera</b><small class="lang-ro">Aceeași clădire</small><small class="lang-en">Same building</small></div></div>
+</div></div>
+<section id="despre"><div class="wrap">
+  <div class="sec-head"><span class="overline"><span class="lang-ro">Despre</span><span class="lang-en">About</span></span><h2><span class="lang-ro">O capodoperă vieneză la Iași</span><span class="lang-en">A Viennese masterpiece in Iași</span></h2></div>
+  <div class="about-grid">
+    <div>
+      <p class="lang-ro">Ridicată între 1894 și 1896 după planurile celebrilor arhitecți vienezi Fellner și Helmer — cei care au proiectat teatre la Viena, Praga, Odesa și Zürich — clădirea este cel mai vechi Teatru Național din România și monument istoric.</p>
+      <p class="lang-ro">Stilul eclectic îmbină neoclasicul, neobarocul și Art Nouveau. Sala de spectacol, de circa 1000 de locuri, are candelabre de cristal de Murano și un plafon pictat cu scene alegorice; scara monumentală duce spre un foaier cu oglinzi și vitralii.</p>
+      <p class="lang-en">Built between 1894 and 1896 to the designs of the famed Viennese architects Fellner and Helmer — who also designed theatres in Vienna, Prague, Odessa and Zürich — the building is Romania's oldest National Theatre and a historic monument.</p>
+      <p class="lang-en">Its eclectic style blends neoclassical, neo-baroque and Art Nouveau. The roughly 1,000-seat auditorium has Murano crystal chandeliers and a ceiling painted with allegorical scenes; the monumental staircase leads to a foyer of mirrors and stained glass.</p>
+    </div>
+    <div class="facts">
+      <div class="f"><span class="lang-ro">Construit</span><span class="lang-en">Built</span><b>1894–1896</b></div>
+      <div class="f"><span class="lang-ro">Arhitecți</span><span class="lang-en">Architects</span><b>Fellner & Helmer</b></div>
+      <div class="f"><span class="lang-ro">Locuri</span><span class="lang-en">Seats</span><b>~1000</b></div>
+      <div class="f"><span class="lang-ro">Stil</span><span class="lang-en">Style</span><b class="lang-ro">Eclectic</b><b class="lang-en">Eclectic</b></div>
+      <div class="f"><span class="lang-ro">Statut</span><span class="lang-en">Status</span><b class="lang-ro">Monument istoric</b><b class="lang-en">Historic monument</b></div>
+    </div>
+  </div>
+</div></section>
+<section id="vizita" class="alt"><div class="wrap">
+  <div class="sec-head"><span class="overline"><span class="lang-ro">Cum se vizitează</span><span class="lang-en">How to visit</span></span><h2><span class="lang-ro">Bilete & acces</span><span class="lang-en">Tickets & access</span></h2></div>
+  <div class="freebar"><span class="em">🎭</span><div><b class="lang-ro">Se vizitează la spectacole sau prin tururi ghidate</b><b class="lang-en">Visited during performances or guided tours</b><small class="lang-ro">Cel mai frumos mod de a vedea interiorul este la un spectacol. Prețurile variază în funcție de reprezentație.</small><small class="lang-en">The finest way to see the interior is at a performance. Prices vary by show.</small></div></div>
+  <div class="two">
+    <div class="lbox"><h3 class="lang-ro">Bilete la spectacole</h3><h3 class="lang-en">Performance tickets</h3>
+      <ul>
+        <li><span class="lang-ro">De la Casa de bilete a teatrului</span><span class="lang-en">From the theatre's box office</span></li>
+        <li><span class="lang-ro">Online, pe site-ul oficial</span><span class="lang-en">Online, on the official site</span></li>
+        <li><span class="lang-ro">Program-ul stagiunii se actualizează lunar</span><span class="lang-en">The season program is updated monthly</span></li>
+      </ul>
+    </div>
+    <div class="lbox"><h3 class="lang-ro">Tururi ghidate</h3><h3 class="lang-en">Guided tours</h3>
+      <ul>
+        <li><span class="lang-ro">Se organizează ocazional — verifică pe site</span><span class="lang-en">Held occasionally — check the site</span></li>
+        <li><span class="lang-ro">Ideale pentru a vedea sala și foaierele</span><span class="lang-en">Ideal for seeing the hall and foyers</span></li>
+        <li><span class="lang-ro">Recomandate în Noaptea Muzeelor / evenimente speciale</span><span class="lang-en">Recommended on Museum Night / special events</span></li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+<section id="vezi"><div class="wrap">
+  <div class="sec-head"><span class="overline"><span class="lang-ro">Highlights</span><span class="lang-en">Highlights</span></span><h2><span class="lang-ro">Ce să admiri</span><span class="lang-en">What to admire</span></h2></div>
+  <div class="two">
+    <div class="lbox"><h3 class="lang-ro">Interior</h3><h3 class="lang-en">Interior</h3>
+      <ul>
+        <li><span class="lang-ro">Candelabrul de cristal de Murano</span><span class="lang-en">The Murano crystal chandelier</span></li>
+        <li><span class="lang-ro">Plafonul pictat cu scene alegorice</span><span class="lang-en">The ceiling painted with allegorical scenes</span></li>
+        <li><span class="lang-ro">Scara monumentală cu balustrade forjate</span><span class="lang-en">The monumental staircase with forged railings</span></li>
+        <li><span class="lang-ro">Foaierul cu oglinzi, vitralii și panouri neobaroce</span><span class="lang-en">The foyer of mirrors, stained glass and neo-baroque panels</span></li>
+      </ul>
+    </div>
+    <div class="lbox"><h3 class="lang-ro">În aceeași clădire</h3><h3 class="lang-en">In the same building</h3>
+      <ul>
+        <li><span class="lang-ro">Opera Națională Română Iași</span><span class="lang-en">The Romanian National Opera in Iași</span></li>
+        <li><span class="lang-ro">Fațada monumentală și scuarul din față</span><span class="lang-en">The monumental façade and front square</span></li>
+        <li><span class="lang-ro">Statuia lui Vasile Alecsandri, în apropiere</span><span class="lang-en">The statue of Vasile Alecsandri, nearby</span></li>
+      </ul>
+    </div>
+  </div>
+  <div style="margin-top:20px"><a href="opera.html" class="btn btn-outline"><span class="lang-ro">Vezi Opera Națională Română</span><span class="lang-en">See the National Opera</span> →</a></div>
+</div></section>
+<section id="contact"><div class="wrap">
+  <div class="sec-head"><span class="overline gold-text"><span class="lang-ro">Cum ajungi</span><span class="lang-en">How to reach it</span></span><h2>Contact</h2>
+    <p class="lang-ro">Strada Agatha Bârsescu nr. 18, Iași — în centru, la câțiva pași de Piața Unirii.</p>
+    <p class="lang-en">18 Agatha Bârsescu Street, Iași — downtown, a few steps from Union Square.</p></div>
+  <div class="cgrid">
+    <div class="cc"><span class="overline"><span class="lang-ro">Adresă</span><span class="lang-en">Address</span></span><b>📍 Str. Agatha Bârsescu 18</b><small>Iași</small></div>
+    <div class="cc"><span class="overline lang-ro">Bilete</span><span class="overline lang-en">Tickets</span><b class="lang-ro">Casa de bilete & online</b><b class="lang-en">Box office & online</b><small class="lang-ro">Program pe site-ul oficial</small><small class="lang-en">Program on the official site</small></div>
+    <div class="cc"><span class="overline">Online</span><b>🌐 <a href="https://teatrulnationaliasi.ro" target="_blank" rel="noopener">teatrulnationaliasi.ro</a></b><small class="lang-ro">Repertoriu & bilete</small><small class="lang-en">Repertoire & tickets</small></div>
+  </div>
+  <div class="cta-row">
+    <a href="https://teatrulnationaliasi.ro" target="_blank" rel="noopener" class="btn btn-gold"><span class="lang-ro">Vezi repertoriul</span><span class="lang-en">See the repertoire</span></a>
+    <a href="iasi.html" class="btn btn-outline"><span class="lang-ro">← Alte locuri din Iași</span><span class="lang-en">← More places in Iași</span></a>
+  </div>
+  <p class="disclaimer"><span class="lang-ro">Repertoriul și biletele se anunță pe site-ul oficial al teatrului. Informațiile despre clădire sunt orientative (iulie 2026).</span><span class="lang-en">Repertoire and tickets are announced on the theatre's official site. Building information is indicative (July 2026).</span></p>
+</div></section>
+<footer><div class="wrap">© 2026 România · Iași — <span class="lang-ro">Ghid de călătorie · Demo</span><span class="lang-en">Travel guide · Demo</span> · <a href="iasi.html">Iași</a></div></footer>
+<script>function setLang(l){document.body.classList.toggle('en',l==='en');document.documentElement.lang=l;document.querySelectorAll('.langsw button').forEach(b=>b.classList.toggle('active',b.dataset.lang===l))}</script>
+</body>
+</html>

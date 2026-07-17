@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VoyageIași · Ghidul turistic interactiv</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --citrus:#FFA62B;
+  --citrus-soft:#FFC46B;
+  --sea:#86C5FF;
+  --sea-soft:#B9DEFF;
+  --amalfi:#2E5AA7;
+  --amalfi-deep:#1E3A6B;
+  --royal:#16223f;
+  --cream:#FBF7E8;
+  --cream-2:#F4EDD6;
+  --ink:#182338;
+  --muted:#5a6b86;
+  --white:#ffffff;
+  --shadow:0 18px 50px -18px rgba(30,58,107,.35);
+  --shadow-sm:0 8px 24px -12px rgba(30,58,107,.35);
+  --r:22px;
+  --maxw:1180px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Manrope',system-ui,sans-serif;
+  color:var(--ink);
+  background:var(--cream);
+  line-height:1.65;
+  overflow-x:hidden;
+}
+h1,h2,h3,.display{font-family:'Fraunces',Georgia,serif;line-height:1.08;font-weight:600}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.lang-en{display:none}
+body.en .lang-ro{display:none}
+body.en .lang-en{display:inline}
+body.en .block.lang-en{display:block}
+.block.lang-en{display:none}
+
+/* ---------- NAV ---------- */
+header.nav{
+  position:sticky;top:0;z-index:60;
+  backdrop-filter:blur(14px);
+  background:rgba(251,247,232,.82);
+  border-bottom:1px solid rgba(46,90,167,.12);
+}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:11px;font-family:'Fraunces';font-weight:700;font-size:1.32rem;color:var(--amalfi-deep)}
+.logo .mark{
+  width:38px;height:38px;border-radius:12px;display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--citrus),var(--citrus-soft));
+  box-shadow:var(--shadow-sm);font-size:20px;
+}
+.logo span.i{color:var(--citrus)}
+nav.links{display:flex;gap:30px;align-items:center}
+nav.links a{font-weight:600;font-size:.94rem;color:var(--ink);opacity:.8;transition:.2s}
+nav.links a:hover{opacity:1;color:var(--amalfi)}
+.nav-cta{display:flex;align-items:center;gap:14px}
+.langsw{display:flex;background:rgba(46,90,167,.09);border-radius:30px;padding:4px;font-weight:700;font-size:.82rem}
+.langsw button{border:0;background:transparent;padding:6px 13px;border-radius:24px;cursor:pointer;color:var(--amalfi-deep);transition:.2s;font-family:inherit;font-weight:700}
+.langsw button.active{background:var(--amalfi);color:#fff;box-shadow:var(--shadow-sm)}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:.95rem;
+  padding:13px 24px;border-radius:30px;cursor:pointer;border:0;font-family:inherit;transition:.25s;
+}
+.btn-primary{background:linear-gradient(135deg,var(--citrus),#ff922b);color:#3a2400;box-shadow:0 12px 26px -10px rgba(255,146,43,.7)}
+.btn-primary:hover{transform:translateY(-2px)}
+.btn-ghost{background:var(--white);color:var(--amalfi-deep);box-shadow:var(--shadow-sm)}
+.btn-ghost:hover{transform:translateY(-2px)}
+.btn-blue{background:var(--amalfi);color:#fff}
+.btn-blue:hover{background:var(--amalfi-deep);transform:translateY(-2px)}
+.menu-toggle{display:none;background:none;border:0;font-size:26px;cursor:pointer;color:var(--amalfi-deep)}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;padding:70px 0 90px;overflow:hidden}
+.hero::before{
+  content:"";position:absolute;inset:0;z-index:-2;
+  background:
+    radial-gradient(1100px 520px at 82% -8%, rgba(134,197,255,.55), transparent 60%),
+    radial-gradient(760px 520px at -6% 12%, rgba(255,166,43,.28), transparent 55%),
+    linear-gradient(180deg,var(--cream),var(--cream));
+}
+.sun{position:absolute;top:-90px;right:-70px;width:340px;height:340px;border-radius:50%;
+  background:radial-gradient(circle at 40% 40%,var(--citrus-soft),var(--citrus) 70%);
+  filter:blur(2px);opacity:.5;z-index:-1}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;font-size:.74rem;color:var(--amalfi);
+  background:rgba(134,197,255,.28);padding:8px 16px;border-radius:30px;margin-bottom:22px}
+.hero h1{font-size:clamp(2.6rem,5.2vw,4.15rem);color:var(--royal);letter-spacing:-.5px}
+.hero h1 em{font-style:italic;color:var(--citrus)}
+.hero p.lead{font-size:1.16rem;color:var(--muted);margin:22px 0 30px;max-width:33ch}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:30px}
+.trust{display:flex;gap:26px;flex-wrap:wrap;align-items:center}
+.trust .t{display:flex;flex-direction:column}
+.trust .t b{font-family:'Fraunces';font-size:1.5rem;color:var(--amalfi-deep)}
+.trust .t small{color:var(--muted);font-weight:600;font-size:.82rem}
+
+/* hero visual card */
+.hero-card{position:relative}
+.phone{
+  background:#fff;border-radius:34px;box-shadow:var(--shadow);padding:16px;
+  transform:rotate(2deg);border:1px solid rgba(46,90,167,.08);
+}
+.phone .screen{border-radius:24px;overflow:hidden;background:var(--sea-soft)}
+.phone .banner{
+  height:180px;position:relative;
+  background:linear-gradient(160deg,#3a74c9,var(--amalfi-deep));
+  display:flex;align-items:flex-end;padding:16px;color:#fff;
+}
+.phone .banner::after{content:"";position:absolute;inset:0;
+  background:radial-gradient(160px 90px at 78% 22%,rgba(255,166,43,.55),transparent 70%)}
+.phone .banner h4{font-size:1.25rem;position:relative;z-index:2}
+.phone .banner small{position:relative;z-index:2;opacity:.85;font-weight:600}
+.phone .body{padding:16px;background:#fff}
+.mini-row{display:flex;gap:10px;margin-bottom:12px}
+.chip{background:var(--cream-2);color:var(--amalfi-deep);font-weight:700;font-size:.72rem;
+  padding:6px 12px;border-radius:20px}
+.chip.on{background:var(--citrus);color:#3a2400}
+.poi{display:flex;gap:12px;align-items:center;padding:10px 0;border-bottom:1px solid #eee}
+.poi .pin{width:38px;height:38px;border-radius:12px;background:var(--sea-soft);display:grid;place-items:center;font-size:18px;flex:0 0 auto}
+.poi b{font-size:.9rem}
+.poi small{color:var(--muted);font-size:.76rem;font-weight:600}
+.float-badge{position:absolute;background:#fff;border-radius:16px;box-shadow:var(--shadow);
+  padding:11px 15px;display:flex;gap:9px;align-items:center;font-weight:700;font-size:.85rem}
+.fb1{top:-18px;left:-26px;color:var(--amalfi-deep)}
+.fb2{bottom:26px;right:-30px;color:var(--amalfi-deep)}
+.float-badge .dot{width:9px;height:9px;border-radius:50%;background:var(--citrus)}
+
+/* ---------- SECTION SHELL ---------- */
+section{padding:88px 0}
+.sec-head{max-width:620px;margin-bottom:52px}
+.sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+.kicker{font-weight:800;letter-spacing:.13em;text-transform:uppercase;font-size:.76rem;color:var(--citrus);margin-bottom:12px;display:block}
+.sec-head h2{font-size:clamp(2rem,3.6vw,2.9rem);color:var(--royal);letter-spacing:-.5px}
+.sec-head p{color:var(--muted);font-size:1.08rem;margin-top:14px}
+
+/* ---------- AUDIENCE STRIP ---------- */
+.audience{background:var(--amalfi-deep);color:#fff;padding:26px 0}
+.aud-grid{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+.aud-item{display:flex;gap:12px;align-items:center}
+.aud-item .em{font-size:1.7rem}
+.aud-item b{font-size:1rem;display:block}
+.aud-item small{opacity:.72;font-size:.82rem;font-weight:600}
+
+/* ---------- GUIDE FEATURE ---------- */
+#ghid{background:linear-gradient(180deg,var(--cream),#fff)}
+.guide-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.guide-visual{
+  border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);position:relative;
+  background:linear-gradient(150deg,#2f6fd0,var(--amalfi-deep));min-height:440px;padding:26px;
+  display:flex;flex-direction:column;justify-content:space-between;color:#fff;
+}
+.guide-visual::after{content:"";position:absolute;top:-40px;right:-40px;width:220px;height:220px;
+  border-radius:50%;background:radial-gradient(circle,var(--citrus),transparent 68%);opacity:.5}
+.gv-top{display:flex;justify-content:space-between;align-items:center;position:relative;z-index:2}
+.gv-map{position:relative;z-index:2;flex:1;margin:20px 0;border-radius:16px;
+  background:
+    linear-gradient(rgba(255,255,255,.06),rgba(255,255,255,.06)),
+    repeating-linear-gradient(0deg,rgba(255,255,255,.09) 0 1px,transparent 1px 34px),
+    repeating-linear-gradient(90deg,rgba(255,255,255,.09) 0 1px,transparent 1px 34px);
+  border:1px solid rgba(255,255,255,.18);overflow:hidden}
+.map-pin{position:absolute;width:30px;height:30px;border-radius:50% 50% 50% 2px;transform:rotate(45deg);
+  background:var(--citrus);box-shadow:0 6px 14px rgba(0,0,0,.3);display:grid;place-items:center}
+.map-pin b{transform:rotate(-45deg);font-size:.7rem;color:#3a2400}
+.map-route{position:absolute;inset:0}
+.gv-foot{position:relative;z-index:2;background:rgba(255,255,255,.12);border-radius:14px;padding:14px 16px;
+  display:flex;justify-content:space-between;align-items:center;backdrop-filter:blur(4px)}
+.feat-list{display:grid;gap:18px;margin-top:26px}
+.feat{display:flex;gap:16px;align-items:flex-start}
+.feat .ic{width:46px;height:46px;border-radius:14px;flex:0 0 auto;display:grid;place-items:center;
+  font-size:20px;background:var(--sea-soft);color:var(--amalfi-deep)}
+.feat b{display:block;font-size:1.04rem;margin-bottom:2px}
+.feat small{color:var(--muted);font-size:.9rem;line-height:1.5}
+
+/* ---------- PRODUCTS ---------- */
+.prod-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.pcard{
+  background:#fff;border-radius:var(--r);padding:0 0 26px;box-shadow:var(--shadow-sm);
+  overflow:hidden;transition:.3s;border:1px solid rgba(46,90,167,.07);display:flex;flex-direction:column;
+}
+.pcard:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.pcard .top{height:132px;position:relative;display:flex;align-items:flex-end;padding:16px;color:#fff}
+.pcard.g1 .top{background:linear-gradient(150deg,#3a74c9,var(--amalfi-deep))}
+.pcard.g2 .top{background:linear-gradient(150deg,var(--citrus),#ff8c1a)}
+.pcard.g3 .top{background:linear-gradient(150deg,#5aa0e6,#2f6fd0)}
+.pcard.g4 .top{background:linear-gradient(150deg,#ffb648,#e07d10)}
+.pcard .top .em{position:absolute;top:14px;right:16px;font-size:1.7rem}
+.pcard .top b{font-family:'Fraunces';font-size:1.28rem}
+.pcard .in{padding:20px 22px 0;flex:1;display:flex;flex-direction:column}
+.pcard .in p{color:var(--muted);font-size:.92rem;margin:8px 0 16px}
+.pcard ul{list-style:none;margin-bottom:18px}
+.pcard ul li{font-size:.88rem;padding:5px 0 5px 24px;position:relative;color:var(--ink)}
+.pcard ul li::before{content:"✓";position:absolute;left:0;color:var(--citrus);font-weight:800}
+.pcard .price{margin-top:auto;display:flex;align-items:baseline;gap:8px;padding:0 22px}
+.pcard .price b{font-family:'Fraunces';font-size:1.7rem;color:var(--amalfi-deep)}
+.pcard .price small{color:var(--muted);font-weight:600}
+.pcard .price .free{color:var(--citrus);font-weight:800}
+.pcard .cta{padding:16px 22px 0}
+.badge-soon{position:absolute;top:14px;left:16px;background:rgba(255,255,255,.9);color:var(--amalfi-deep);
+  font-weight:800;font-size:.66rem;letter-spacing:.06em;padding:4px 10px;border-radius:20px;text-transform:uppercase}
+
+/* ---------- GALLERY ---------- */
+#galerie{background:linear-gradient(180deg,#fff,var(--cream))}
+.gal-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:180px;gap:16px}
+.tile{border-radius:18px;overflow:hidden;position:relative;box-shadow:var(--shadow-sm);
+  display:flex;align-items:flex-end;padding:16px;color:#fff;cursor:pointer;transition:.35s}
+.tile:hover{transform:scale(1.02)}
+.tile::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 40%,rgba(20,34,63,.72))}
+.tile span{position:relative;z-index:2;font-weight:700;font-size:.98rem;font-family:'Fraunces'}
+.tile .up{position:absolute;z-index:2;top:12px;left:12px;background:rgba(255,255,255,.22);
+  backdrop-filter:blur(4px);border-radius:20px;font-size:.68rem;font-weight:700;padding:4px 10px}
+.big{grid-column:span 2;grid-row:span 2}
+.wide{grid-column:span 2}
+.t1{background:linear-gradient(150deg,#3a74c9,#1E3A6B)}
+.t2{background:linear-gradient(150deg,var(--citrus),#ff8c1a)}
+.t3{background:linear-gradient(150deg,#5aa0e6,#2f6fd0)}
+.t4{background:linear-gradient(150deg,#7fb2ec,#3a74c9)}
+.t5{background:linear-gradient(150deg,#ffb648,#e07d10)}
+.t6{background:linear-gradient(150deg,#2E5AA7,#16223f)}
+.gal-note{margin-top:26px;text-align:center;color:var(--muted);font-size:.94rem}
+.gal-note b{color:var(--amalfi-deep)}
+
+/* ---------- TICKETS ---------- */
+#bilete{background:var(--royal);color:#fff;border-radius:0}
+#bilete .sec-head h2{color:#fff}
+#bilete .sec-head p{color:rgba(255,255,255,.7)}
+.tick-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:10px}
+.tick{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:24px}
+.tick .em{font-size:1.9rem}
+.tick h4{font-size:1.15rem;margin:12px 0 6px;color:#fff}
+.tick p{color:rgba(255,255,255,.66);font-size:.9rem}
+.tick .soon{display:inline-block;margin-top:14px;font-weight:800;font-size:.72rem;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--citrus);background:rgba(255,166,43,.14);padding:5px 12px;border-radius:20px}
+
+/* ---------- CTA ---------- */
+.cta-band{background:linear-gradient(135deg,var(--citrus),#ff8c1a);border-radius:var(--r);
+  padding:56px;text-align:center;color:#3a2400;position:relative;overflow:hidden}
+.cta-band::before{content:"";position:absolute;top:-60px;right:-40px;width:220px;height:220px;border-radius:50%;
+  background:rgba(255,255,255,.25)}
+.cta-band h2{font-size:clamp(1.9rem,3.4vw,2.7rem);position:relative;z-index:2}
+.cta-band p{margin:14px auto 26px;max-width:46ch;font-weight:600;position:relative;z-index:2;opacity:.9}
+.cta-band .btn{position:relative;z-index:2}
+.newsletter{display:flex;gap:10px;max-width:440px;margin:0 auto;position:relative;z-index:2;flex-wrap:wrap;justify-content:center}
+.newsletter input{flex:1;min-width:220px;border:0;border-radius:30px;padding:14px 20px;font-family:inherit;font-size:.95rem}
+
+/* ---------- FOOTER ---------- */
+footer{background:var(--amalfi-deep);color:#fff;padding:56px 0 30px}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:36px;margin-bottom:36px}
+footer .logo{color:#fff}
+footer p.about{color:rgba(255,255,255,.66);font-size:.92rem;margin-top:14px;max-width:34ch}
+footer h5{font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--citrus);margin-bottom:16px}
+footer ul{list-style:none}
+footer ul li{margin-bottom:10px}
+footer ul li a{color:rgba(255,255,255,.75);font-size:.9rem;transition:.2s}
+footer ul li a:hover{color:#fff}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.14);padding-top:22px;display:flex;
+  justify-content:space-between;flex-wrap:wrap;gap:12px;color:rgba(255,255,255,.6);font-size:.84rem}
+
+/* ---------- RESPONSIVE ---------- */
+@media(max-width:900px){
+  .hero-grid,.guide-grid{grid-template-columns:1fr;gap:44px}
+  .prod-grid,.tick-grid{grid-template-columns:1fr}
+  .gal-grid{grid-template-columns:repeat(2,1fr)}
+  .big{grid-column:span 2;grid-row:span 1}
+  nav.links{display:none}
+  .menu-toggle{display:block}
+  .cta-band{padding:40px 24px}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:560px){
+  .aud-grid{gap:14px}.aud-item{width:45%}
+  .foot-grid{grid-template-columns:1fr}
+  .hero p.lead{max-width:none}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="#" class="logo"><span class="mark">🍋</span> Voyage<span class="i">Iași</span></a>
+    <nav class="links">
+      <a href="#ghid"><span class="lang-ro">Ghidul interactiv</span><span class="lang-en">Interactive guide</span></a>
+      <a href="#produse"><span class="lang-ro">Produse digitale</span><span class="lang-en">Digital products</span></a>
+      <a href="#galerie"><span class="lang-ro">Galerie</span><span class="lang-en">Gallery</span></a>
+      <a href="#bilete"><span class="lang-ro">Bilete & rezervări</span><span class="lang-en">Tickets & booking</span></a>
+    </nav>
+    <div class="nav-cta">
+      <div class="langsw">
+        <button data-lang="ro" class="active" onclick="setLang('ro')">RO</button>
+        <button data-lang="en" onclick="setLang('en')">EN</button>
+      </div>
+      <a href="#produse" class="btn btn-primary">
+        <span class="lang-ro">Descoperă</span><span class="lang-en">Explore</span> →
+      </a>
+      <button class="menu-toggle" onclick="document.querySelector('nav.links').style.display='flex'">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="sun"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">🌅 <span class="lang-ro">Ghid turistic interactiv · Iași</span><span class="lang-en">Interactive travel guide · Iași</span></span>
+      <h1 class="lang-ro">Descoperă <em>Iașul</em> ca niciodată, într-un singur ghid.</h1>
+      <h1 class="lang-en">Discover <em>Iași</em> like never before, in one guide.</h1>
+      <p class="lead lang-ro">Trasee inteligente, hărți offline, povești locale și produse digitale care transformă orașul într-o vacanță. Pentru ieșeni, moldoveni, români și turiști străini.</p>
+      <p class="lead lang-en">Smart routes, offline maps, local stories and digital products that turn the city into a holiday. For locals, the Moldova region, Romanians and foreign travelers.</p>
+      <div class="hero-actions">
+        <a href="#produse" class="btn btn-primary"><span class="lang-ro">Deschide ghidul</span><span class="lang-en">Open the guide</span> →</a>
+        <a href="#ghid" class="btn btn-ghost">▶ <span class="lang-ro">Vezi cum funcționează</span><span class="lang-en">See how it works</span></a>
+      </div>
+      <div class="trust">
+        <div class="t"><b>120+</b><small class="lang-ro">Locuri & povești</small><small class="lang-en">Places & stories</small></div>
+        <div class="t"><b>12</b><small class="lang-ro">Trasee tematice</small><small class="lang-en">Themed routes</small></div>
+        <div class="t"><b>2</b><small class="lang-ro">Limbi (RO / EN)</small><small class="lang-en">Languages (RO / EN)</small></div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="float-badge fb1"><span class="dot"></span><span class="lang-ro">Hartă offline</span><span class="lang-en">Offline map</span></div>
+      <div class="phone">
+        <div class="screen">
+          <div class="banner">
+            <div>
+              <h4 class="lang-ro">Traseu: Iașul Cultural</h4>
+              <h4 class="lang-en">Route: Cultural Iași</h4>
+              <small class="lang-ro">2.4 km · 7 opriri · 3 ore</small>
+              <small class="lang-en">2.4 km · 7 stops · 3 hours</small>
+            </div>
+          </div>
+          <div class="body">
+            <div class="mini-row">
+              <span class="chip on"><span class="lang-ro">Cultură</span><span class="lang-en">Culture</span></span>
+              <span class="chip"><span class="lang-ro">Cafenele</span><span class="lang-en">Cafés</span></span>
+              <span class="chip"><span class="lang-ro">Parcuri</span><span class="lang-en">Parks</span></span>
+            </div>
+            <div class="poi"><div class="pin">🏛️</div><div><b>Palatul Culturii</b><small class="lang-ro">Simbolul orașului · 4 muzee</small><small class="lang-en">City landmark · 4 museums</small></div></div>
+            <div class="poi"><div class="pin">⛪</div><div><b>Mănăstirea Trei Ierarhi</b><small class="lang-ro">Broderie în piatră, 1639</small><small class="lang-en">Stone lacework, 1639</small></div></div>
+            <div class="poi"><div class="pin">📚</div><div><b>Teiul lui Eminescu</b><small class="lang-ro">Copou · legenda poetului</small><small class="lang-en">Copou · the poet's legend</small></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="float-badge fb2">⭐ 4.9 <span class="lang-ro">· recenzii</span><span class="lang-en">· reviews</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- AUDIENCE -->
+<div class="audience">
+  <div class="wrap aud-grid">
+    <div class="aud-item"><span class="em">🏠</span><div><b class="lang-ro">Pentru ieșeni</b><b class="lang-en">For locals</b><small class="lang-ro">Redescoperă-ți orașul</small><small class="lang-en">Rediscover your city</small></div></div>
+    <div class="aud-item"><span class="em">🌾</span><div><b class="lang-ro">Pentru moldoveni</b><b class="lang-en">For Moldova region</b><small class="lang-ro">Din județele vecine</small><small class="lang-en">From nearby counties</small></div></div>
+    <div class="aud-item"><span class="em">🇷🇴</span><div><b class="lang-ro">Pentru români</b><b class="lang-en">For Romanians</b><small class="lang-ro">Capitala culturală</small><small class="lang-en">The cultural capital</small></div></div>
+    <div class="aud-item"><span class="em">✈️</span><div><b class="lang-ro">Pentru străini</b><b class="lang-en">For foreign travelers</b><small class="lang-ro">Din afara României · în EN</small><small class="lang-en">From outside Romania · in EN</small></div></div>
+  </div>
+</div>
+
+<!-- GUIDE FEATURE -->
+<section id="ghid">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker lang-ro">Ghidul interactiv</span><span class="kicker lang-en">The interactive guide</span>
+      <h2 class="lang-ro">Un oraș întreg în buzunarul tău</h2>
+      <h2 class="lang-en">A whole city in your pocket</h2>
+      <p class="lang-ro">Nu doar o listă de atracții — un însoțitor viu, cu hărți, audio-povești și trasee care se adaptează timpului și interesului tău.</p>
+      <p class="lang-en">Not just a list of sights — a living companion with maps, audio stories and routes that adapt to your time and interests.</p>
+    </div>
+    <div class="guide-grid">
+      <div class="guide-visual">
+        <div class="gv-top">
+          <b class="lang-ro">🗺️ Hartă interactivă</b><b class="lang-en">🗺️ Interactive map</b>
+          <span class="chip on lang-ro">LIVE</span><span class="chip on lang-en">LIVE</span>
+        </div>
+        <div class="gv-map">
+          <svg class="map-route" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <path d="M18,26 C40,40 30,60 62,58 S78,78 80,80" fill="none" stroke="#FFA62B" stroke-width="1.4" stroke-dasharray="3 3" opacity=".9"/>
+          </svg>
+          <div class="map-pin" style="top:16%;left:14%"><b>1</b></div>
+          <div class="map-pin" style="top:52%;left:56%"><b>4</b></div>
+          <div class="map-pin" style="top:74%;left:76%"><b>7</b></div>
+        </div>
+        <div class="gv-foot">
+          <div><b class="lang-ro">Traseu personalizat</b><b class="lang-en">Custom route</b></div>
+          <div>7 <span class="lang-ro">opriri</span><span class="lang-en">stops</span> · 3h</div>
+        </div>
+      </div>
+      <div>
+        <div class="feat-list">
+          <div class="feat"><div class="ic">🧭</div><div><b class="lang-ro">Trasee inteligente</b><b class="lang-en">Smart routes</b><small class="lang-ro">Alege tema — cultură, gastronomie, familie — și primești traseul optim pe hartă.</small><small class="lang-en">Pick a theme — culture, food, family — and get the optimal route on the map.</small></div></div>
+          <div class="feat"><div class="ic">🎧</div><div><b class="lang-ro">Audio-povești locale</b><b class="lang-en">Local audio stories</b><small class="lang-ro">Fiecare loc prinde viață prin poveștile spuse de ghizi din Iași.</small><small class="lang-en">Every place comes alive through stories told by local Iași guides.</small></div></div>
+          <div class="feat"><div class="ic">📡</div><div><b class="lang-ro">Funcționează offline</b><b class="lang-en">Works offline</b><small class="lang-ro">Descarci ghidul o dată și îl folosești fără internet — ideal pentru turiști.</small><small class="lang-en">Download once and use it without internet — perfect for travelers.</small></div></div>
+          <div class="feat"><div class="ic">🌐</div><div><b class="lang-ro">Bilingv RO / EN</b><b class="lang-en">Bilingual RO / EN</b><small class="lang-ro">Comută limba dintr-o atingere. Alte limbi în curând.</small><small class="lang-en">Switch language with one tap. More languages coming soon.</small></div></div>
+        </div>
+        <a href="#produse" class="btn btn-blue" style="margin-top:28px"><span class="lang-ro">Vezi produsele</span><span class="lang-en">See the products</span> →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="produse">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="kicker lang-ro">Produse digitale</span><span class="kicker lang-en">Digital products</span>
+      <h2 class="lang-ro">Alege felul în care explorezi</h2>
+      <h2 class="lang-en">Choose how you explore</h2>
+      <p class="lang-ro">Unelte digitale de călătorie, în 6 limbi. Cumperi o dată, folosești oricând.</p>
+      <p class="lang-en">Digital travel tools, in 6 languages. Buy once, use anytime.</p>
+    </div>
+    <div class="prod-grid">
+
+      <div class="pcard g1">
+        <div class="top"><span class="em">🧮</span><b>VoyageCalc Premium</b></div>
+        <div class="in">
+          <p class="lang-ro">Planificator Premium de Buget de Călătorie, complet și multilingv.</p>
+          <p class="lang-en">Premium Travel Budget Planner, complete and multilingual.</p>
+          <ul>
+            <li class="lang-ro">6 limbi · 5 valute</li><li class="lang-en">6 languages · 5 currencies</li>
+            <li class="lang-ro">Export PDF al planului</li><li class="lang-en">PDF export of the plan</li>
+            <li class="lang-ro">Comparator cheltuieli vacanțe</li><li class="lang-en">Vacation cost comparator</li>
+          </ul>
+        </div>
+        <div class="cta"><a href="https://payhip.com/b/NVH3Z" target="_blank" rel="noopener" class="btn btn-primary" style="width:100%;justify-content:center"><span class="lang-ro">Cumpără</span><span class="lang-en">Buy</span></a></div>
+      </div>
+
+      <div class="pcard g2">
+        <div class="top"><span class="em">🗺️</span><b>TripPlanner PRO</b></div>
+        <div class="in">
+          <p class="lang-ro">Planificator interactiv de itinerarii de călătorie.</p>
+          <p class="lang-en">Interactive travel itinerary planner.</p>
+          <ul>
+            <li class="lang-ro">Unealtă HTML interactivă</li><li class="lang-en">Interactive HTML tool</li>
+            <li class="lang-ro">Disponibil în 6 limbi</li><li class="lang-en">Available in 6 languages</li>
+            <li class="lang-ro">Itinerariu pe zile</li><li class="lang-en">Day-by-day itinerary</li>
+          </ul>
+        </div>
+        <div class="cta"><a href="https://payhip.com/b/cofRF" target="_blank" rel="noopener" class="btn btn-blue" style="width:100%;justify-content:center"><span class="lang-ro">Cumpără</span><span class="lang-en">Buy</span></a></div>
+      </div>
+
+      <div class="pcard g3">
+        <div class="top"><span class="em">🧭</span><b>TripPlanner Pro RO</b></div>
+        <div class="in">
+          <p class="lang-ro">Planificator de călătorii interactiv, ediția în română.</p>
+          <p class="lang-en">Interactive travel planner, Romanian edition.</p>
+          <ul>
+            <li class="lang-ro">Ediția în limba română</li><li class="lang-en">Romanian-language edition</li>
+            <li class="lang-ro">6 limbi disponibile</li><li class="lang-en">6 languages available</li>
+            <li class="lang-ro">Interfață interactivă</li><li class="lang-en">Interactive interface</li>
+          </ul>
+        </div>
+        <div class="cta"><a href="https://payhip.com/b/rfHs0" target="_blank" rel="noopener" class="btn btn-blue" style="width:100%;justify-content:center"><span class="lang-ro">Cumpără</span><span class="lang-en">Buy</span></a></div>
+      </div>
+
+      <div class="pcard g4">
+        <div class="top"><span class="badge-soon">2026</span><span class="em">🎒</span><b>PackSmart</b></div>
+        <div class="in">
+          <p class="lang-ro">Generator inteligent de listă de bagaje pentru orice călătorie.</p>
+          <p class="lang-en">Smart packing-list generator for any trip.</p>
+          <ul>
+            <li class="lang-ro">Listă de bagaje inteligentă</li><li class="lang-en">Smart packing list</li>
+            <li class="lang-ro">Unealtă HTML · 6 limbi</li><li class="lang-en">HTML tool · 6 languages</li>
+            <li class="lang-ro">Adaptată sezonului & duratei</li><li class="lang-en">Tailored to season & length</li>
+          </ul>
+        </div>
+        <div class="cta"><a href="https://payhip.com/b/4yUoY" target="_blank" rel="noopener" class="btn btn-primary" style="width:100%;justify-content:center"><span class="lang-ro">Cumpără</span><span class="lang-en">Buy</span></a></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="galerie">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="kicker lang-ro">Galerie</span><span class="kicker lang-en">Gallery</span>
+      <h2 class="lang-ro">Iașul care te face să visezi</h2>
+      <h2 class="lang-en">The Iași that makes you dream</h2>
+      <p class="lang-ro">Adaugă-ți propriile fotografii și descrieri în orice limbă — galeria e gata pentru conținutul tău.</p>
+      <p class="lang-en">Add your own photos and captions in any language — the gallery is ready for your content.</p>
+    </div>
+    <div class="gal-grid">
+      <div class="tile t1 big"><span class="up lang-ro">📷 Zona ta foto</span><span class="up lang-en">📷 Your photo slot</span><span class="lang-ro">Palatul Culturii</span><span class="lang-en">Palace of Culture</span></div>
+      <div class="tile t2"><span class="lang-ro">Copou · Teiul lui Eminescu</span><span class="lang-en">Copou · Eminescu's Linden</span></div>
+      <div class="tile t3"><span class="lang-ro">Trei Ierarhi</span><span class="lang-en">Three Hierarchs</span></div>
+      <div class="tile t4 wide"><span class="lang-ro">Grădina Botanică</span><span class="lang-en">Botanical Garden</span></div>
+      <div class="tile t5"><span class="lang-ro">Gastronomie locală</span><span class="lang-en">Local cuisine</span></div>
+      <div class="tile t6"><span class="lang-ro">Iașul noaptea</span><span class="lang-en">Iași by night</span></div>
+    </div>
+    <p class="gal-note"><b class="lang-ro">Multilingv:</b><b class="lang-en">Multilingual:</b>
+      <span class="lang-ro"> fiecare imagine poate avea titlu și descriere în RO, EN și alte limbi.</span>
+      <span class="lang-en"> each image can carry a title and caption in RO, EN and more languages.</span>
+    </p>
+  </div>
+</section>
+
+<!-- TICKETS -->
+<section id="bilete">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker lang-ro">Bilete & rezervări</span><span class="kicker lang-en">Tickets & booking</span>
+      <h2 class="lang-ro">Curând: totul într-un singur loc</h2>
+      <h2 class="lang-en">Coming soon: everything in one place</h2>
+      <p class="lang-ro">Următorul pas al platformei — cumperi bilete la muzee, tururi ghidate și evenimente, direct din ghid.</p>
+      <p class="lang-en">The platform's next step — buy tickets for museums, guided tours and events, straight from the guide.</p>
+    </div>
+    <div class="tick-grid">
+      <div class="tick"><span class="em">🎭</span><h4 class="lang-ro">Muzee & evenimente</h4><h4 class="lang-en">Museums & events</h4><p class="lang-ro">Bilete la Palatul Culturii, teatru și festivaluri.</p><p class="lang-en">Tickets for the Palace of Culture, theatre and festivals.</p><span class="soon lang-ro">În dezvoltare</span><span class="soon lang-en">In development</span></div>
+      <div class="tick"><span class="em">🚶</span><h4 class="lang-ro">Tururi ghidate</h4><h4 class="lang-en">Guided tours</h4><p class="lang-ro">Rezervă un ghid local pe traseul tău preferat.</p><p class="lang-en">Book a local guide on your favorite route.</p><span class="soon lang-ro">În dezvoltare</span><span class="soon lang-en">In development</span></div>
+      <div class="tick"><span class="em">🏨</span><h4 class="lang-ro">Cazare & prenotări</h4><h4 class="lang-en">Stays & booking</h4><p class="lang-ro">Rezervări de cazare recomandate în oraș.</p><p class="lang-en">Recommended accommodation bookings in the city.</p><span class="soon lang-ro">În dezvoltare</span><span class="soon lang-en">In development</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA / NEWSLETTER -->
+<section id="contact">
+  <div class="wrap">
+    <div class="cta-band">
+      <h2 class="lang-ro">Primește Pachetul Weekend gratuit</h2>
+      <h2 class="lang-en">Get the free Weekend Pack</h2>
+      <p class="lang-ro">Lasă-ți emailul și îți trimitem mini-ghidul de 48h în Iași, plus reduceri la produsele digitale.</p>
+      <p class="lang-en">Leave your email and we'll send the 48h Iași mini-guide, plus discounts on the digital products.</p>
+      <form class="newsletter" onsubmit="event.preventDefault();this.querySelector('input').value='';alert('Mulțumim! / Thank you!');">
+        <input type="email" required placeholder="email@exemplu.ro">
+        <button class="btn btn-blue" type="submit"><span class="lang-ro">Trimite</span><span class="lang-en">Send</span> →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="#" class="logo"><span class="mark">🍋</span> Voyage<span style="color:var(--citrus)">Iași</span></a>
+        <p class="about lang-ro">Ghidul turistic interactiv al Iașului și platformă de produse digitale de călătorie. Făcut cu drag pentru oraș.</p>
+        <p class="about lang-en">The interactive travel guide of Iași and a platform of digital travel products. Made with love for the city.</p>
+      </div>
+      <div>
+        <h5 class="lang-ro">Produse</h5><h5 class="lang-en">Products</h5>
+        <ul>
+          <li><a href="#produse"><span class="lang-ro">Ghidul Interactiv</span><span class="lang-en">Interactive Guide</span></a></li>
+          <li><a href="#produse">calcVoyage</a></li>
+          <li><a href="#produse"><span class="lang-ro">Pachet Weekend</span><span class="lang-en">Weekend Pack</span></a></li>
+          <li><a href="#bilete"><span class="lang-ro">Bilete & rezervări</span><span class="lang-en">Tickets & booking</span></a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="lang-ro">Explorează</h5><h5 class="lang-en">Explore</h5>
+        <ul>
+          <li><a href="#ghid"><span class="lang-ro">Cum funcționează</span><span class="lang-en">How it works</span></a></li>
+          <li><a href="#galerie"><span class="lang-ro">Galerie</span><span class="lang-en">Gallery</span></a></li>
+          <li><a href="#ghid"><span class="lang-ro">Trasee tematice</span><span class="lang-en">Themed routes</span></a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="lang-ro">Contact</h5><h5 class="lang-en">Contact</h5>
+        <ul>
+          <li><a href="mailto:hello@voyageiasi.ro">hello@voyageiasi.ro</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 VoyageIași · <span class="lang-ro">Demo landing page</span><span class="lang-en">Demo landing page</span></span>
+      <span class="lang-ro">Construit cu paleta Amalfi · RO / EN</span><span class="lang-en">Built with the Amalfi palette · RO / EN</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function setLang(l){
+  document.body.classList.toggle('en', l==='en');
+  document.documentElement.lang = l;
+  document.querySelectorAll('.langsw button').forEach(b=>{
+    b.classList.toggle('active', b.dataset.lang===l);
+  });
+}
+</script>
+</body>
+</html>

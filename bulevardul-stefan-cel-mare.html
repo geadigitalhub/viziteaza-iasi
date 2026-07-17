@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bulevardul Ștefan cel Mare Iași · Zona pietonală & axa centrului</title>
+<meta name="description" content="Bulevardul Ștefan cel Mare și Sfânt, axa pietonală a Iașului, de la Piața Unirii la Palatul Culturii. Istoric, monumente și ce vezi într-o plimbare.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#141d33;--gold:#C9A24B;--gold-2:#E3C778;--cream:#F4ECD8;--cream-2:#EFE4C9;--paper:#FBF6EA;--accent:#c9902b;--accent-2:#d8a743;--teal:#3E7C8C;--ink:#1a2033;--muted:#6b7794;--line:rgba(201,162,75,.28);--line-soft:rgba(20,29,51,.1);--r:16px;--maxw:1080px}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:'Jost',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.7;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.1}
+a{color:inherit;text-decoration:none}.wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px}
+.gold-text{color:var(--gold)}.script{font-style:italic;font-weight:500}
+.lang-en{display:none}body.en .lang-ro{display:none}body.en .lang-en{display:inline}
+.overline{font-family:'Jost';font-weight:600;letter-spacing:.32em;text-transform:uppercase;font-size:.7rem}
+header.nav{position:sticky;top:0;z-index:60;background:rgba(20,29,51,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{display:flex;flex-direction:column;line-height:1}
+.logo b{font-family:'Cormorant Garamond';font-size:1.32rem;color:var(--cream);font-weight:700;letter-spacing:.5px}
+.logo small{letter-spacing:.3em;text-transform:uppercase;font-size:.54rem;color:var(--gold);margin-top:3px}
+.nav-links{display:flex;gap:26px}
+.nav-links a{font-weight:500;font-size:.8rem;letter-spacing:.05em;color:var(--cream);opacity:.8;text-transform:uppercase;transition:.2s}
+.nav-links a:hover{opacity:1;color:var(--gold-2)}
+.langsw{display:flex;border:1px solid var(--line);border-radius:30px;padding:3px}
+.langsw button{border:0;background:transparent;padding:5px 11px;border-radius:24px;cursor:pointer;color:var(--cream);font-family:'Jost';font-weight:600;font-size:.72rem;letter-spacing:.08em;transition:.2s}
+.langsw button.active{background:var(--gold);color:var(--navy)}
+@media(max-width:820px){.nav-links{display:none}}
+.hero{position:relative;background:var(--navy);color:var(--cream);padding:70px 0 64px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(680px 420px at 82% 0%,rgba(201,144,43,.5),transparent 62%)}
+.hero::after{content:"";position:absolute;inset:0;opacity:.4;background-image:radial-gradient(rgba(201,162,75,.14) 1px,transparent 1px);background-size:24px 24px;-webkit-mask-image:linear-gradient(180deg,#000,transparent);mask-image:linear-gradient(180deg,#000,transparent)}
+.hero .wrap{position:relative;z-index:2}
+.crumb{font-size:.78rem;color:rgba(244,236,216,.6);margin-bottom:20px}.crumb a:hover{color:var(--gold-2)}
+.hero .overline{color:var(--gold-2);display:inline-block;margin-bottom:16px}
+.hero h1{font-size:clamp(2.4rem,5.4vw,4rem);color:var(--cream)}.hero h1 .script{color:var(--gold-2)}
+.hero p{color:rgba(244,236,216,.78);font-weight:300;font-size:1.1rem;max-width:58ch;margin:20px 0 26px}
+.badges{display:flex;gap:10px;flex-wrap:wrap}
+.badge{border:1px solid var(--line);border-radius:30px;padding:8px 16px;font-size:.76rem;color:var(--cream);display:flex;align-items:center;gap:8px}
+.badge .d{width:7px;height:7px;border-radius:50%;background:var(--accent-2)}
+.quickbar{background:linear-gradient(120deg,var(--accent),var(--accent-2));color:#fff}
+.quickbar .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px;padding:20px 26px}
+.qi{display:flex;gap:12px;align-items:center}.qi .em{font-size:1.4rem}
+.qi b{display:block;font-size:.92rem;font-weight:600}.qi small{font-size:.74rem;opacity:.86}
+section{padding:62px 0}.sec-head{margin-bottom:32px}
+.sec-head .overline{color:var(--gold);display:block;margin-bottom:10px}
+.sec-head h2{font-size:clamp(1.9rem,3.6vw,2.6rem);color:var(--navy)}
+.sec-head p{color:var(--muted);font-weight:300;margin-top:8px;max-width:62ch}.alt{background:var(--cream-2)}
+.about-grid{display:grid;grid-template-columns:1.3fr .9fr;gap:34px;align-items:center}
+.about-grid p{color:var(--ink);font-weight:300;margin-bottom:14px}
+.facts{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px 26px}
+.facts .f{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px solid var(--line-soft);font-size:.92rem}
+.facts .f:last-child{border-bottom:0}.facts .f span{color:var(--muted)}
+.facts .f b{color:var(--navy);font-family:'Cormorant Garamond';font-size:1.12rem;text-align:right}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.lbox{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px 28px}
+.lbox h3{font-size:1.35rem;color:var(--navy);margin-bottom:14px}.lbox ul{list-style:none}
+.lbox ul li{position:relative;padding:8px 0 8px 26px;font-size:.9rem;border-bottom:1px solid var(--line-soft);font-weight:300}
+.lbox ul li:last-child{border-bottom:0}.lbox ul li::before{content:"✦";position:absolute;left:0;color:var(--gold);font-size:.8rem;top:9px}
+.note{margin-top:14px;font-size:.82rem;color:var(--muted);font-weight:300;font-style:italic}
+#contact{background:var(--navy);color:var(--cream)}
+#contact .sec-head h2{color:var(--cream)}#contact .sec-head p{color:rgba(244,236,216,.7)}
+.cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.cc{border:1px solid var(--line);border-radius:var(--r);padding:24px 26px}
+.cc .overline{color:var(--gold-2);display:block;margin-bottom:12px}
+.cc b{color:var(--cream);font-size:1.02rem;display:block;font-weight:500}
+.cc small{color:rgba(244,236,216,.68);font-weight:300;font-size:.86rem;display:block;margin-top:4px}.cc a{color:var(--gold-2)}
+.cta-row{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:'Jost';font-weight:600;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;padding:14px 26px;border-radius:2px;cursor:pointer;border:0;transition:.3s}
+.btn-gold{background:linear-gradient(120deg,var(--gold),var(--gold-2));color:var(--navy)}.btn-gold:hover{transform:translateY(-2px)}
+.btn-outline{background:transparent;border:1px solid var(--gold);color:var(--gold-2)}.btn-outline:hover{background:var(--gold);color:var(--navy)}
+footer{background:#0f1728;color:rgba(244,236,216,.6);padding:30px 0;text-align:center;font-size:.82rem;font-weight:300}footer a{color:var(--gold-2)}
+.disclaimer{font-size:.78rem;color:var(--muted);font-style:italic;text-align:center;margin-top:24px;font-weight:300}
+@media(max-width:820px){.about-grid,.cgrid,.two{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="viziteaza-romania-iasi.html" class="logo"><b>România <span class="gold-text">·</span> Iași</b><small class="lang-ro">Ghid de călătorie</small><small class="lang-en">Travel guide</small></a>
+    <div class="nav-links"><a href="#despre"><span class="lang-ro">Despre</span><span class="lang-en">About</span></a><a href="#vezi"><span class="lang-ro">Ce vezi</span><span class="lang-en">Highlights</span></a><a href="iasi.html">Iași</a></div>
+    <div class="langsw"><button data-lang="ro" class="active" onclick="setLang('ro')">RO</button><button data-lang="en" onclick="setLang('en')">EN</button></div>
+  </div>
+</header>
+<section class="hero"><div class="wrap">
+  <div class="crumb"><a href="viziteaza-romania-iasi.html">România · Iași</a> &nbsp;›&nbsp; <a href="iasi.html">Iași</a> &nbsp;›&nbsp; <span class="gold-text">Bulevardul Ștefan cel Mare</span></div>
+  <span class="overline">🚶 <span class="lang-ro">Zona pietonală · Axa centrului</span><span class="lang-en">Pedestrian zone · The city's spine</span></span>
+  <h1><span class="lang-ro">Bulevardul</span><span class="lang-en">Ștefan cel Mare</span> <span class="script"><span class="lang-ro">Ștefan cel Mare</span><span class="lang-en">Boulevard</span></span></h1>
+  <p class="lang-ro">Axa pietonală a Iașului, de la Piața Unirii până la Palatul Culturii. Fostă parte din „Ulița Mare", pietonalizată din 2012, mărginită de biserici, palate și instituții — cel mai frumos traseu de plimbare prin centru.</p>
+  <p class="lang-en">The pedestrian spine of Iași, from Piața Unirii to the Palace of Culture. Once part of the "Great Street", pedestrianised since 2012, lined with churches, palaces and institutions — the finest walking route through the centre.</p>
+  <div class="badges">
+    <span class="badge"><span class="d"></span><span class="lang-ro">Zonă pietonală din 2012</span><span class="lang-en">Pedestrian since 2012</span></span>
+    <span class="badge"><span class="d"></span><span class="lang-ro">Fosta „Uliță Mare"</span><span class="lang-en">The former "Great Street"</span></span>
+    <span class="badge"><span class="d"></span><span class="lang-ro">Acces liber</span><span class="lang-en">Free access</span></span>
+  </div>
+</div></section>
+<div class="quickbar"><div class="wrap">
+  <div class="qi"><span class="em">🚶</span><div><b class="lang-ro">Zonă pietonală</b><b class="lang-en">Pedestrian zone</b><small class="lang-ro">Pavaj de piatră cubică</small><small class="lang-en">Cobblestone paving</small></div></div>
+  <div class="qi"><span class="em">📐</span><div><b class="lang-ro">Piața Unirii → Palatul Culturii</b><b class="lang-en">Piața Unirii → Palace of Culture</b><small class="lang-ro">Axa centrului istoric</small><small class="lang-en">The historic centre's axis</small></div></div>
+  <div class="qi"><span class="em">⛪</span><div><b class="lang-ro">Monumente pe traseu</b><b class="lang-en">Monuments en route</b><small class="lang-ro">Biserici, palate, teatre</small><small class="lang-en">Churches, palaces, theatres</small></div></div>
+  <div class="qi"><span class="em">🕐</span><div><b class="lang-ro">Oricând</b><b class="lang-en">Anytime</b><small class="lang-ro">Acces liber, non-stop</small><small class="lang-en">Free access, 24/7</small></div></div>
+</div></div>
+<section id="despre"><div class="wrap">
+  <div class="sec-head"><span class="overline"><span class="lang-ro">Despre</span><span class="lang-en">About</span></span><h2><span class="lang-ro">Inima de plimbare a orașului</span><span class="lang-en">The city's walking heart</span></h2></div>
+  <div class="about-grid">
+    <div>
+      <p class="lang-ro">Bulevardul Ștefan cel Mare și Sfânt este una dintre arterele principale ale Iașului, în centrul orașului. Începe din Piața Unirii și se termină în Piața Ștefan cel Mare și Sfânt, în fața Palatului Culturii. Istoric, făcea parte din „Ulița Mare", care lega Podul Verde (Copou) de Curtea Domnească.</p>
+      <p class="lang-ro">În 2012, Primăria a transformat bulevardul în zonă pietonală, înlocuind asfaltul cu pavaj de piatră cubică. Dintr-o zonă de trafic intens, a devenit un spațiu dedicat plimbării, cu terase și evenimente — traseul ideal pentru a descoperi orașul „pe jos".</p>
+      <p class="lang-en">Ștefan cel Mare și Sfânt Boulevard is one of Iași's main arteries, in the city centre. It begins at Piața Unirii and ends at Piața Ștefan cel Mare și Sfânt, in front of the Palace of Culture. Historically, it was part of the "Great Street" linking the Green Bridge (Copou) with the Princely Court.</p>
+      <p class="lang-en">In 2012, the City Hall turned the boulevard into a pedestrian zone, replacing asphalt with cobblestone paving. From an area of heavy traffic, it became a space for walking, with terraces and events — the ideal route to discover the city on foot.</p>
+    </div>
+    <div class="facts">
+      <div class="f"><span class="lang-ro">Traseu</span><span class="lang-en">Route</span><b class="lang-ro">Unirii → P. Culturii</b><b class="lang-en">Unirii → Palace</b></div>
+      <div class="f"><span class="lang-ro">Pietonalizat</span><span class="lang-en">Pedestrianised</span><b>2012</b></div>
+      <div class="f"><span class="lang-ro">Origine</span><span class="lang-en">Origin</span><b class="lang-ro">Ulița Mare</b><b class="lang-en">The Great Street</b></div>
+      <div class="f"><span class="lang-ro">Acces</span><span class="lang-en">Access</span><b class="lang-ro">Liber</b><b class="lang-en">Free</b></div>
+    </div>
+  </div>
+</div></section>
+<section id="vezi" class="alt"><div class="wrap">
+  <div class="sec-head"><span class="overline">Highlights</span><h2><span class="lang-ro">Ce vezi pe traseu</span><span class="lang-en">What you see along the way</span></h2>
+    <p class="lang-ro">O plimbare de la un capăt la altul trece pe lângă unele dintre cele mai importante monumente ale Iașului.</p>
+    <p class="lang-en">A walk from one end to the other passes some of Iași's most important monuments.</p></div>
+  <div class="two">
+    <div class="lbox"><h3 class="lang-ro">Monumente pe bulevard</h3><h3 class="lang-en">Monuments on the boulevard</h3>
+      <ul>
+        <li><a href="palatul-culturii.html"><span class="lang-ro">Palatul Culturii — la capătul dinspre est</span><span class="lang-en">The Palace of Culture — at the eastern end</span> →</a></li>
+        <li><a href="catedrala-mitropolitana.html"><span class="lang-ro">Catedrala Mitropolitană</span><span class="lang-en">The Metropolitan Cathedral</span> →</a></li>
+        <li><a href="trei-ierarhi.html"><span class="lang-ro">Mănăstirea Trei Ierarhi</span><span class="lang-en">The Three Hierarchs Monastery</span> →</a></li>
+        <li><a href="palatul-roznovanu.html"><span class="lang-ro">Palatul Roznovanu (Primăria)</span><span class="lang-en">The Roznovanu Palace (City Hall)</span> →</a></li>
+      </ul>
+    </div>
+    <div class="lbox"><h3 class="lang-ro">Atmosferă</h3><h3 class="lang-en">Atmosphere</h3>
+      <ul>
+        <li><span class="lang-ro">Terase, cafenele și magazine pe toată lungimea</span><span class="lang-en">Terraces, cafés and shops along its length</span></li>
+        <li><span class="lang-ro">Evenimente și concerte în aer liber</span><span class="lang-en">Open-air events and concerts</span></li>
+        <li><span class="lang-ro">Piața Unirii, cu statuia lui Cuza, la un capăt</span><span class="lang-en">Piața Unirii, with Cuza's statue, at one end</span></li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+<section id="contact"><div class="wrap">
+  <div class="sec-head"><span class="overline gold-text"><span class="lang-ro">Cum ajungi</span><span class="lang-en">How to reach it</span></span><h2><span class="lang-ro">Poziție</span><span class="lang-en">Location</span></h2>
+    <p class="lang-ro">Centrul Iașului — între Piața Unirii și Piața Ștefan cel Mare (Palatul Culturii). Punctul de plecare firesc pentru orice plimbare prin oraș.</p>
+    <p class="lang-en">The centre of Iași — between Piața Unirii and Piața Ștefan cel Mare (Palace of Culture). The natural starting point for any walk through the city.</p></div>
+  <div class="cgrid">
+    <div class="cc"><span class="overline"><span class="lang-ro">Zonă</span><span class="lang-en">Area</span></span><b class="lang-ro">📍 Centrul istoric</b><b class="lang-en">📍 Historic centre</b><small>Iași</small></div>
+    <div class="cc"><span class="overline"><span class="lang-ro">Acces</span><span class="lang-en">Access</span></span><b class="lang-ro">🚶 Pietonal, liber</b><b class="lang-en">🚶 Pedestrian, free</b><small class="lang-ro">Oricând</small><small class="lang-en">Anytime</small></div>
+    <div class="cc"><span class="overline"><span class="lang-ro">Bun de știut</span><span class="lang-en">Good to know</span></span><b class="lang-ro">☕ Terase & evenimente</b><b class="lang-en">☕ Terraces & events</b><small class="lang-ro">Cel mai animat în serile de weekend</small><small class="lang-en">Liveliest on weekend evenings</small></div>
+  </div>
+  <div class="cta-row">
+    <a href="iasi.html" class="btn btn-outline"><span class="lang-ro">← Alte locuri din Iași</span><span class="lang-en">← More places in Iași</span></a>
+  </div>
+  <p class="disclaimer"><span class="lang-ro">Informații din surse recunoscute (Wikipedia, turistiniasi, presa locală), iulie 2026.</span><span class="lang-en">Information from recognised sources (Wikipedia, local guides and press), July 2026.</span></p>
+</div></section>
+<footer><div class="wrap">© 2026 România · Iași — <span class="lang-ro">Ghid de călătorie · Demo</span><span class="lang-en">Travel guide · Demo</span> · <a href="iasi.html">Iași</a></div></footer>
+<script>function setLang(l){document.body.classList.toggle('en',l==='en');document.documentElement.lang=l;document.querySelectorAll('.langsw button').forEach(b=>b.classList.toggle('active',b.dataset.lang===l))}</script>
+</body>
+</html>

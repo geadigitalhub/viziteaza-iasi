@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Obiective turistice Iași · Ghid de călătorie — locuri de vizitat</title>
+<meta name="description" content="Ghid complet cu obiectivele turistice din Iași: muzee, palate, biserici și mănăstiri, parcuri și lacuri. Program, bilete și informații actualizate. Bilingv RO/EN.">
+<meta name="keywords" content="obiective turistice Iași, locuri de vizitat Iași, ce să vizitezi în Iași, muzee Iași, biserici Iași, ghid Iași">
+<meta property="og:title" content="Obiective turistice Iași · Ghid de călătorie — locuri de vizitat">
+<meta property="og:description" content="Muzee, palate, biserici, parcuri și lacuri din Iași — program, bilete și informații actualizate.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#141d33;--navy-3:#243459;--royal:#2E4488;
+  --gold:#C9A24B;--gold-2:#E3C778;--cream:#F4ECD8;--cream-2:#EFE4C9;--paper:#FBF6EA;
+  --leaf:#3f7d54;--teal:#3E7C8C;--brick:#A8362E;--bronze:#7A5240;--plum:#5b3a6b;
+  --ink:#1a2033;--muted:#6b7794;--line:rgba(201,162,75,.28);--r:16px;--maxw:1180px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Jost',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.7;overflow-x:hidden}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.08}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px}
+.gold-text{color:var(--gold)}.script{font-style:italic;font-weight:500}
+.lang-en{display:none}
+body.en .lang-ro{display:none}
+body.en .lang-en{display:inline}
+.overline{font-family:'Jost';font-weight:600;letter-spacing:.32em;text-transform:uppercase;font-size:.7rem}
+
+header.nav{position:sticky;top:0;z-index:60;background:rgba(20,29,51,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{display:flex;flex-direction:column;line-height:1}
+.logo b{font-family:'Cormorant Garamond';font-size:1.32rem;color:var(--cream);font-weight:700;letter-spacing:.5px}
+.logo small{letter-spacing:.3em;text-transform:uppercase;font-size:.54rem;color:var(--gold);margin-top:3px}
+.nav-links{display:flex;gap:26px}
+.nav-links a{font-weight:500;font-size:.8rem;letter-spacing:.05em;color:var(--cream);opacity:.8;text-transform:uppercase;transition:.2s}
+.nav-links a:hover{opacity:1;color:var(--gold-2)}
+.langsw{display:flex;border:1px solid var(--line);border-radius:30px;padding:3px}
+.langsw button{border:0;background:transparent;padding:5px 11px;border-radius:24px;cursor:pointer;color:var(--cream);font-family:'Jost';font-weight:600;font-size:.72rem;letter-spacing:.08em;transition:.2s}
+.langsw button.active{background:var(--gold);color:var(--navy)}
+@media(max-width:820px){.nav-links{display:none}}
+
+.hero{position:relative;background:var(--navy);color:var(--cream);padding:74px 0 66px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(720px 460px at 82% 0%,rgba(46,68,136,.85),transparent 62%)}
+.hero::after{content:"";position:absolute;inset:0;opacity:.4;background-image:radial-gradient(rgba(201,162,75,.14) 1px,transparent 1px);background-size:24px 24px;-webkit-mask-image:linear-gradient(180deg,#000,transparent);mask-image:linear-gradient(180deg,#000,transparent)}
+.hero .wrap{position:relative;z-index:2}
+.crumb{font-size:.78rem;color:rgba(244,236,216,.6);margin-bottom:20px}
+.crumb a:hover{color:var(--gold-2)}
+.hero .overline{color:var(--gold-2);display:inline-block;margin-bottom:16px}
+.hero h1{font-size:clamp(2.8rem,6.4vw,4.8rem);color:var(--cream)}
+.hero h1 .script{color:var(--gold-2)}
+.hero p{color:rgba(244,236,216,.78);font-weight:300;font-size:1.14rem;max-width:56ch;margin:20px 0 30px}
+.hstats{display:flex;gap:34px;flex-wrap:wrap}
+.hstats .s b{font-family:'Cormorant Garamond';font-size:1.9rem;color:var(--gold-2);display:block;line-height:1}
+.hstats .s small{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(244,236,216,.6);margin-top:6px;display:block}
+
+section{padding:66px 0}
+.sec-head{max-width:640px;margin:0 auto 46px;text-align:center}
+.sec-head .overline{color:var(--gold);display:block;margin-bottom:12px}
+.sec-head h2{font-size:clamp(2rem,3.8vw,2.9rem);color:var(--navy)}
+.sec-head p{color:var(--muted);font-weight:300;margin-top:10px}
+
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.place{position:relative;border-radius:var(--r);overflow:hidden;min-height:300px;display:flex;flex-direction:column;justify-content:flex-end;padding:24px;color:#fff;box-shadow:0 20px 44px -24px rgba(20,29,51,.5);transition:.4s}
+.place:hover{transform:translateY(-6px)}
+.place::before{content:"";position:absolute;inset:0;transition:.5s}
+.place:hover::before{transform:scale(1.05)}
+.place::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 34%,rgba(20,29,51,.88))}
+.place .c{position:relative;z-index:2}
+.place .cat{position:relative;z-index:2;font-family:'Jost';font-weight:600;letter-spacing:.16em;text-transform:uppercase;font-size:.66rem;color:var(--gold-2);margin-bottom:8px;display:block}
+.place h3{font-size:1.6rem;color:#fff}
+.place p{position:relative;z-index:2;font-size:.88rem;opacity:.84;font-weight:300;margin-top:6px}
+.place .link{position:relative;z-index:2;margin-top:16px;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--gold-2);display:inline-flex;align-items:center;gap:6px}
+.place .soon{position:absolute;z-index:3;top:18px;right:18px;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--cream);border:1px solid var(--line);padding:5px 11px;border-radius:2px;background:rgba(20,29,51,.4)}
+.place .avail{position:absolute;z-index:3;top:18px;right:18px;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--navy);background:var(--gold-2);padding:5px 11px;border-radius:2px}
+.p1::before{background:linear-gradient(155deg,#2E4488,#141d33)}
+.p2::before{background:linear-gradient(155deg,#3f7d54,#1d3a28)}
+.p3::before{background:linear-gradient(155deg,#A8362E,#4a1712)}
+.p4::before{background:linear-gradient(155deg,#3E7C8C,#1b3540)}
+.p5::before{background:linear-gradient(155deg,#7A5240,#2f1d15)}
+.p6::before{background:linear-gradient(155deg,#243459,#141d33)}
+.p7::before{background:linear-gradient(155deg,#5b3a6b,#291831)}
+.p8::before{background:linear-gradient(155deg,#B98A6B,#5a3b28)}
+.p9::before{background:linear-gradient(155deg,#2f6fd0,#16223f)}
+a.place{cursor:pointer}
+div.place{cursor:default;opacity:.94}
+
+.cta{background:var(--navy);color:var(--cream);text-align:center}
+.cta h2{color:var(--cream);font-size:clamp(2rem,4vw,3rem)}
+.cta h2 .script{color:var(--gold-2)}
+.cta p{color:rgba(244,236,216,.75);font-weight:300;max-width:48ch;margin:16px auto 26px}
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:'Jost';font-weight:600;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;padding:14px 28px;border-radius:2px;cursor:pointer;border:0;transition:.3s}
+.btn-gold{background:linear-gradient(120deg,var(--gold),var(--gold-2));color:var(--navy)}
+.btn-gold:hover{transform:translateY(-2px)}
+footer{background:#0f1728;color:rgba(244,236,216,.6);padding:30px 0;text-align:center;font-size:.82rem;font-weight:300}
+footer a{color:var(--gold-2)}
+@media(max-width:820px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="viziteaza-romania-iasi.html" class="logo"><b>România <span class="gold-text">·</span> Iași</b><small class="lang-ro">Ghid de călătorie</small><small class="lang-en">Travel guide</small></a>
+    <div class="nav-links">
+      <a href="viziteaza-romania-iasi.html"><span class="lang-ro">Acasă</span><span class="lang-en">Home</span></a>
+      <a href="#locuri"><span class="lang-ro">Locuri</span><span class="lang-en">Places</span></a>
+      <a href="palatul-culturii.html">Palatul Culturii</a>
+      <a href="aeroport.html"><span class="lang-ro">Aeroport</span><span class="lang-en">Airport</span></a>
+      <a href="blog.html">Blog</a>
+      <a href="produse.html"><span class="lang-ro">Produse</span><span class="lang-en">Products</span></a>
+    </div>
+    <div class="langsw">
+      <button data-lang="ro" class="active" onclick="setLang('ro')">RO</button>
+      <button data-lang="en" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="crumb"><a href="viziteaza-romania-iasi.html">România · Iași</a> &nbsp;›&nbsp; <span class="gold-text">Iași</span></div>
+    <span class="overline">✦ <span class="lang-ro">Capitala culturală a României</span><span class="lang-en">Romania's cultural capital</span></span>
+    <h1><span class="lang-ro">Descoperă</span><span class="lang-en">Discover</span> <span class="script">Iași</span></h1>
+    <p class="lang-ro">Orașul celor șapte coline — palate, mănăstiri, parcuri și povești. Alege un loc și deschide-i pagina cu program, bilete și tot ce trebuie să știi.</p>
+    <p class="lang-en">The city of seven hills — palaces, monasteries, parks and stories. Pick a place and open its page with hours, tickets and everything you need to know.</p>
+    <div class="hstats">
+      <div class="s"><b>7</b><small class="lang-ro">Coline</small><small class="lang-en">Hills</small></div>
+      <div class="s"><b>120+</b><small class="lang-ro">Locuri</small><small class="lang-en">Places</small></div>
+      <div class="s"><b>1408</b><small class="lang-ro">Prima atestare</small><small class="lang-en">First mention</small></div>
+      <div class="s"><b>RO/EN</b><small class="lang-ro">Bilingv</small><small class="lang-en">Bilingual</small></div>
+    </div>
+  </div>
+</section>
+
+<section id="locuri">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="overline"><span class="lang-ro">Locuri importante</span><span class="lang-en">Important places</span></span>
+      <h2><span class="lang-ro">Ce să vizitezi în Iași</span><span class="lang-en">What to visit in Iași</span></h2>
+      <p class="lang-ro">Fiecare loc are pagina lui, cu program, prețuri și informații actualizate.</p>
+      <p class="lang-en">Each place has its own page, with hours, prices and up-to-date information.</p>
+    </div>
+    <div class="grid">
+
+      <a class="place p1" href="palatul-culturii.html">
+        <span class="avail"><span class="lang-ro">Pagină</span><span class="lang-en">Page</span></span>
+        <div class="c"><span class="cat lang-ro">Muzee · Simbol</span><span class="cat lang-en">Museums · Landmark</span>
+          <h3>Palatul Culturii</h3>
+          <p class="lang-ro">Monument neogotic, 4 muzee și ceas cu carillon.</p>
+          <p class="lang-en">Neo-Gothic landmark, 4 museums and a carillon clock.</p>
+          <span class="link"><span class="lang-ro">Program & bilete</span><span class="lang-en">Hours & tickets</span> →</span>
+        </div>
+      </a>
+
+      <a class="place p2" href="gradina-botanica.html">
+        <span class="avail"><span class="lang-ro">Pagină</span><span class="lang-en">Page</span></span>
+        <div class="c"><span class="cat lang-ro">Natură · Parcuri</span><span class="cat lang-en">Nature · Parks</span>
+          <h3 class="lang-ro">Grădina Botanică</h3><h3 class="lang-en">Botanical Garden</h3>
+          <p class="lang-ro">Cea mai mare din țară, 10.000+ specii, din 1856.</p>
+          <p class="lang-en">The country's largest, 10,000+ species, since 1856.</p>
+          <span class="link"><span class="lang-ro">Program & bilete</span><span class="lang-en">Hours & tickets</span> →</span>
+        </div>
+      </a>
+
+      <a class="place p3" href="trei-ierarhi.html">
+        <span class="avail"><span class="lang-ro">Pagină</span><span class="lang-en">Page</span></span>
+        <div class="c"><span class="cat lang-ro">Biserici · Patrimoniu</span><span class="cat lang-en">Churches · Heritage</span>
+          <h3 class="lang-ro">Mănăstirea Trei Ierarhi</h3><h3 class="lang-en">Three Hierarchs Monastery</h3>
+          <p class="lang-ro">Broderie în piatră, ctitorie din 1639.</p>
+          <p class="lang-en">Stone lacework, founded in 1639.</p>
+          <span class="link"><span class="lang-ro">Program & vizită</span><span class="lang-en">Hours & visit</span> →</span>
+        </div>
+      </a>
+
+      <a class="place p4" href="copou.html">
+        <span class="avail"><span class="lang-ro">Pagină</span><span class="lang-en">Page</span></span>
+        <div class="c"><span class="cat lang-ro">Parcuri · Romantic</span><span class="cat lang-en">Parks · Romantic</span>
+          <h3 class="lang-ro">Parcul Copou & Teiul lui Eminescu</h3><h3 class="lang-en">Copou Park & Eminescu's Linden</h3>
+          <p class="lang-ro">Cel mai vechi parc public, legenda poetului.</p>
+          <p class="lang-en">The oldest public park, the poet's legend.</p>
+          <span class="link"><span class="lang-ro">Program & bilete</span><span class="lang-en">Hours & tickets</span> →</span>
+        </div>
+      </a>
+
+      <a class="place p5" href="catedrala-mitropolitana.html">
+        <span class="avail"><span class="lang-ro">Pagină</span><span class="lang-en">Page</span></span>
+        <div class="c"><span class="cat lang-ro">Biserici · Credință</span><span class="cat lang-en">Churches · Faith</span>
+          <h3 class="lang-ro">Catedrala Mitropolitană</h3><h3 class="lang-en">Metropolitan Cathedral</h3>
+          <p class="lang-ro">Cea mai mare catedrală ortodoxă istorică din țară.</p>
+          <p class="lang-en">The country's largest historic Orthodox cathedral.</p>
+          <span class="link"><span class="lang-ro">Program & vizită</span><span class="lang-en">Hours & visit</span> →</span>
+        </div>
+      </a>
+
+      <a class="place p6" href="golia.html">
+        <span class="avail"><span class="lang-ro">Pagină</span><span class="lang-en">Page</span></span>
+        <div class="c"><span class="cat lang-ro">Biserici · Cetate</span><span class="cat lang-en">Churches · Fortress</span>
+          <h3 class="lang-ro">Mănăstirea Golia</h3><h3 class="lang-en">Golia Monastery</h3>
+          <p class="lang-ro">Turnul Goliei și ziduri de cetate în inima orașului.</p>
+          <p class="lang-en">Golia Tower and fortress walls in the city heart.</p>
+          <span class="link"><span class="lang-ro">Program & turn</span><span class="lang-en">Hours & tower</span> →</span>
+        </div>
+      </a>
+
+      <a class="place p7" href="teatrul-national.html">
+        <span class="avail"><span class="lang-ro">Pagină</span><span class="lang-en">Page</span></span>
+        <div class="c"><span class="cat lang-ro">Teatru · Cultură</span><span class="cat lang-en">Theatre · Culture</span>
+          <h3 class="lang-ro">Teatrul Național „Vasile Alecsandri"</h3><h3 class="lang-en">"Vasile Alecsandri" National Theatre</h3>
+          <p class="lang-ro">Cea mai veche instituție teatrală din România.</p>
+          <p class="lang-en">The oldest theatre institution in Romania.</p>
+          <span class="link"><span class="lang-ro">Vizitare & spectacole</span><span class="lang-en">Visiting & shows</span> →</span>
+        </div>
+      </a>
+
+      <a class="place p5" href="opera.html">
+        <span class="avail"><span class="lang-ro">Pagină</span><span class="lang-en">Page</span></span>
+        <div class="c"><span class="cat lang-ro">Operă · Balet</span><span class="cat lang-en">Opera · Ballet</span>
+          <h3 class="lang-ro">Opera Națională Română</h3><h3 class="lang-en">Romanian National Opera</h3>
+          <p class="lang-ro">Operă, operetă și balet, în clădirea Teatrului Național.</p>
+          <p class="lang-en">Opera, operetta and ballet, in the National Theatre building.</p>
+          <span class="link"><span class="lang-ro">Bilete & spectacole</span><span class="lang-en">Tickets & shows</span> →</span>
+        </div>
+      </a>
+
+      <a class="place p8" href="muzeul-unirii.html">
+        <span class="avail"><span class="lang-ro">Pagină</span><span class="lang-en">Page</span></span>
+        <div class="c"><span class="cat lang-ro">Muzee · Istorie</span><span class="cat lang-en">Museums · History</span>
+          <h3 class="lang-ro">Muzeul Unirii</h3><h3 class="lang-en">Union Museum</h3>
+          <p class="lang-ro">Reședința domnitorului Alexandru Ioan Cuza.</p>
+          <p class="lang-en">The residence of ruler Alexandru Ioan Cuza.</p>
+          <span class="link"><span class="lang-ro">Program & bilete</span><span class="lang-en">Hours & tickets</span> →</span>
+        </div>
+      </a>
+
+      <a class="place p9" href="universitatea.html">
+        <span class="avail"><span class="lang-ro">Pagină</span><span class="lang-en">Page</span></span>
+        <div class="c"><span class="cat lang-ro">Universitate · Neoclasic</span><span class="cat lang-en">University · Neoclassical</span>
+          <h3 class="lang-ro">Universitatea „Al. I. Cuza"</h3><h3 class="lang-en">"Al. I. Cuza" University</h3>
+          <p class="lang-ro">Prima universitate modernă din România, Sala Pașilor Pierduți.</p>
+          <p class="lang-en">Romania's first modern university, the Hall of Lost Steps.</p>
+          <span class="link"><span class="lang-ro">Vizitare & fresce</span><span class="lang-en">Visiting & frescoes</span> →</span>
+        </div>
+      </a>
+
+      <a class="place p8" href="bojdeuca-creanga.html">
+        <span class="avail"><span class="lang-ro">Pagină</span><span class="lang-en">Page</span></span>
+        <div class="c"><span class="cat lang-ro">Case memoriale · Literatură</span><span class="cat lang-en">Memorial houses · Literature</span>
+          <h3 class="lang-ro">Bojdeuca lui Ion Creangă</h3><h3 class="lang-en">Ion Creangă's Cottage</h3>
+          <p class="lang-ro">Prima casă memorială din România, în Țicău.</p>
+          <p class="lang-en">Romania's first memorial house, in Țicău.</p>
+          <span class="link"><span class="lang-ro">Program & bilete</span><span class="lang-en">Hours & tickets</span> →</span>
+        </div>
+      </a>
+
+      <a class="place p2" href="istorie-naturala.html">
+        <span class="avail"><span class="lang-ro">Pagină</span><span class="lang-en">Page</span></span>
+        <div class="c"><span class="cat lang-ro">Muzee · Știință</span><span class="cat lang-en">Museums · Science</span>
+          <h3 class="lang-ro">Muzeul de Istorie Naturală</h3><h3 class="lang-en">Natural History Museum</h3>
+          <p class="lang-ro">Primul muzeu de științe naturale din Principate, în Casa Roset.</p>
+          <p class="lang-en">The Principalities' first natural-science museum, in Casa Roset.</p>
+          <span class="link"><span class="lang-ro">Program & bilete</span><span class="lang-en">Hours & tickets</span> →</span>
+        </div>
+      </a>
+
+      <a class="place p5" href="casa-dosoftei.html">
+        <span class="avail"><span class="lang-ro">Pagină</span><span class="lang-en">Page</span></span>
+        <div class="c"><span class="cat lang-ro">Muzee · Carte veche</span><span class="cat lang-en">Museums · Old books</span>
+          <h3 class="lang-ro">Casa Dosoftei</h3><h3 class="lang-en">The Dosoftei House</h3>
+          <p class="lang-ro">A doua tiparniță din Moldova, literatură română veche.</p>
+          <p class="lang-en">Moldavia's second printing press, old Romanian literature.</p>
+          <span class="link"><span class="lang-ro">Program & bilete</span><span class="lang-en">Hours & tickets</span> →</span>
+        </div>
+      </a>
+
+      <a class="place p2" href="palas.html">
+        <span class="avail"><span class="lang-ro">Pagină</span><span class="lang-en">Page</span></span>
+        <div class="c"><span class="cat lang-ro">Iașul modern · Reper contemporan</span><span class="cat lang-en">Modern Iași · Contemporary landmark</span>
+          <h3 class="lang-ro">Palas & Grădina Palas</h3><h3 class="lang-en">Palas & Palas Garden</h3>
+          <p class="lang-ro">Reprezentarea modernă a Iașului de azi — grădină, shopping și terase, lângă Palatul Culturii.</p>
+          <p class="lang-en">The modern face of today's Iași — garden, shopping and terraces, by the Palace of Culture.</p>
+          <span class="link"><span class="lang-ro">Program & acces</span><span class="lang-en">Hours & access</span> →</span>
+        </div>
+      </a>
+
+      <a class="place p4" href="aeroport.html">
+        <span class="avail"><span class="lang-ro">Pagină</span><span class="lang-en">Page</span></span>
+        <div class="c"><span class="cat lang-ro">Transport · Sosire</span><span class="cat lang-en">Transport · Arrival</span>
+          <h3 class="lang-ro">Aeroportul Internațional</h3><h3 class="lang-en">International Airport</h3>
+          <p class="lang-ro">~25 destinații directe și autobuzul 50 spre centru.</p>
+          <p class="lang-en">~25 direct destinations and bus 50 to the centre.</p>
+          <span class="link"><span class="lang-ro">Zboruri & transport</span><span class="lang-en">Flights & transport</span> →</span>
+        </div>
+      </a>
+
+      <a class="place p2" href="ciric.html">
+        <span class="avail"><span class="lang-ro">Pagină</span><span class="lang-en">Page</span></span>
+        <div class="c"><span class="cat lang-ro">Natură · Agrement</span><span class="cat lang-en">Nature · Recreation</span>
+          <h3 class="lang-ro">Zona de agrement Ciric</h3><h3 class="lang-en">Ciric Recreation Area</h3>
+          <p class="lang-ro">Salbă de 5 lacuri, plajă, aventură, pescuit și grătar — la 6 km de centru.</p>
+          <p class="lang-en">Five lakes, beach, adventure, fishing and BBQ — 6 km from the centre.</p>
+          <span class="link"><span class="lang-ro">Lacuri, grătar & ponturi</span><span class="lang-en">Lakes, BBQ & tips</span> →</span>
+        </div>
+      </a>
+
+      <a class="place p3" href="gratare-picnic.html">
+        <span class="avail"><span class="lang-ro">Ghid practic</span><span class="lang-en">Practical</span></span>
+        <div class="c"><span class="cat lang-ro">Practic · Grătar</span><span class="cat lang-en">Practical · BBQ</span>
+          <h3 class="lang-ro">Grătare & picnic în Iași</h3><h3 class="lang-en">BBQ & picnic in Iași</h3>
+          <p class="lang-ro">Unde faci grătar legal, „Legea Picnicului" și zonele interzise.</p>
+          <p class="lang-en">Where to BBQ legally, the "Picnic Law" and forbidden zones.</p>
+          <span class="link"><span class="lang-ro">Vezi ghidul</span><span class="lang-en">See the guide</span> →</span>
+        </div>
+      </a>
+
+      <a class="place p4" href="nicolina.html">
+        <span class="avail"><span class="lang-ro">Pagină</span><span class="lang-en">Page</span></span>
+        <div class="c"><span class="cat lang-ro">Ștrand · Balnear</span><span class="cat lang-en">Pool · Spa</span>
+          <h3 class="lang-ro">Plaja Nicolina „Purcica"</h3><h3 class="lang-en">Nicolina Beach "Purcica"</h3>
+          <p class="lang-ro">Apă sulfuroasă și nămol terapeutic, la preț simbolic, în oraș.</p>
+          <p class="lang-en">Sulfurous water and therapeutic mud, at a symbolic price, in the city.</p>
+          <span class="link"><span class="lang-ro">Beneficii, prețuri & ponturi</span><span class="lang-en">Benefits, prices & tips</span> →</span>
+        </div>
+      </a>
+
+      <a class="place p4" href="strandul-municipal.html">
+        <span class="avail"><span class="lang-ro">Pagină</span><span class="lang-en">Page</span></span>
+        <div class="c"><span class="cat lang-ro">Ștrand · Familii</span><span class="cat lang-en">Pool · Families</span>
+          <h3 class="lang-ro">Ștrandul Municipal</h3><h3 class="lang-en">The Municipal Pool</h3>
+          <p class="lang-ro">Bazine, parc de joacă și zone verzi, la preț mic, lângă centru.</p>
+          <p class="lang-en">Pools, playground and green areas, cheap, near the centre.</p>
+          <span class="link"><span class="lang-ro">Bazine, prețuri & ponturi</span><span class="lang-en">Pools, prices & tips</span> →</span>
+        </div>
+      </a>
+
+      <a class="place p3" href="sfantul-nicolae-domnesc.html">
+        <span class="avail"><span class="lang-ro">Pagină</span><span class="lang-en">Page</span></span>
+        <div class="c"><span class="cat lang-ro">Biserici · Patrimoniu</span><span class="cat lang-en">Churches · Heritage</span>
+          <h3 class="lang-ro">Biserica Sfântul Nicolae Domnesc</h3><h3 class="lang-en">St. Nicholas the Princely</h3>
+          <p class="lang-ro">Cea mai veche biserică din oraș, ctitorie Ștefan cel Mare (1491–92).</p>
+          <p class="lang-en">The oldest church in the city, founded by Stephen the Great (1491–92).</p>
+          <span class="link"><span class="lang-ro">Istoric & vizitare</span><span class="lang-en">History & visit</span> →</span>
+        </div>
+      </a>
+
+      <a class="place p4" href="cetatuia.html">
+        <span class="avail"><span class="lang-ro">Pagină</span><span class="lang-en">Page</span></span>
+        <div class="c"><span class="cat lang-ro">Biserici · Cetate</span><span class="cat lang-en">Churches · Fortress</span>
+          <h3 class="lang-ro">Mănăstirea Cetățuia</h3><h3 class="lang-en">Cetățuia Monastery</h3>
+          <p class="lang-ro">Ansamblu fortificat din 1672, pe deal, cu panoramă asupra Iașului.</p>
+          <p class="lang-en">A 1672 fortified ensemble, on a hill, with a panorama over Iași.</p>
+          <span class="link"><span class="lang-ro">Program & panoramă</span><span class="lang-en">Hours & panorama</span> →</span>
+        </div>
+      </a>
+
+      <a class="place p7" href="sinagoga-mare.html">
+        <span class="avail"><span class="lang-ro">Pagină</span><span class="lang-en">Page</span></span>
+        <div class="c"><span class="cat lang-ro">Patrimoniu · Iudaic</span><span class="cat lang-en">Heritage · Jewish</span>
+          <h3 class="lang-ro">Sinagoga Mare</h3><h3 class="lang-en">The Great Synagogue</h3>
+          <p class="lang-ro">Din 1671 — cel mai vechi lăcaș de cult mozaic din România.</p>
+          <p class="lang-en">Since 1671 — the oldest Jewish house of worship in Romania.</p>
+          <span class="link"><span class="lang-ro">Istoric & program</span><span class="lang-en">History & hours</span> →</span>
+        </div>
+      </a>
+
+      <a class="place p8" href="vasile-pogor.html">
+        <span class="avail"><span class="lang-ro">Pagină</span><span class="lang-en">Page</span></span>
+        <div class="c"><span class="cat lang-ro">Muzee · Literatură</span><span class="cat lang-en">Museums · Literature</span>
+          <h3 class="lang-ro">Muzeul „Vasile Pogor"</h3><h3 class="lang-en">The "Vasile Pogor" Museum</h3>
+          <p class="lang-ro">Casa Junimii și a revistei „Convorbiri literare" — Muzeul Literaturii.</p>
+          <p class="lang-en">Home of Junimea and "Convorbiri literare" — the Literature Museum.</p>
+          <span class="link"><span class="lang-ro">Program & bilete</span><span class="lang-en">Hours & tickets</span> →</span>
+        </div>
+      </a>
+
+      <a class="place p1" href="palatul-roznovanu.html">
+        <span class="avail"><span class="lang-ro">Pagină</span><span class="lang-en">Page</span></span>
+        <div class="c"><span class="cat lang-ro">Palate · Primărie</span><span class="cat lang-en">Palaces · City Hall</span>
+          <h3 class="lang-ro">Palatul Roznovanu</h3><h3 class="lang-en">The Roznovanu Palace</h3>
+          <p class="lang-ro">Palat boieresc neoclasic, azi sediul Primăriei Iași.</p>
+          <p class="lang-en">A neoclassical boyar palace, now the Iași City Hall.</p>
+          <span class="link"><span class="lang-ro">Istoric & arhitectură</span><span class="lang-en">History & architecture</span> →</span>
+        </div>
+      </a>
+
+      <a class="place p6" href="bulevardul-stefan-cel-mare.html">
+        <span class="avail"><span class="lang-ro">Pagină</span><span class="lang-en">Page</span></span>
+        <div class="c"><span class="cat lang-ro">Urban · Promenadă</span><span class="cat lang-en">Urban · Promenade</span>
+          <h3 class="lang-ro">Bulevardul Ștefan cel Mare</h3><h3 class="lang-en">Ștefan cel Mare Boulevard</h3>
+          <p class="lang-ro">Axa pietonală a centrului, de la Piața Unirii la Palatul Culturii.</p>
+          <p class="lang-en">The pedestrian spine, from Piața Unirii to the Palace of Culture.</p>
+          <span class="link"><span class="lang-ro">Ce vezi pe traseu</span><span class="lang-en">What to see</span> →</span>
+        </div>
+      </a>
+
+      <a class="place p5" href="palatul-cuza-ruginoasa.html">
+        <span class="avail"><span class="lang-ro">Excursie</span><span class="lang-en">Day trip</span></span>
+        <div class="c"><span class="cat lang-ro">Împrejurimi · Palate</span><span class="cat lang-en">Around Iași · Palaces</span>
+          <h3 class="lang-ro">Palatul Cuza · Ruginoasa</h3><h3 class="lang-en">Cuza Palace · Ruginoasa</h3>
+          <p class="lang-ro">Palat neogotic, reședința domnitorului Cuza — la ~65 km de Iași.</p>
+          <p class="lang-en">A neo-Gothic palace, ruler Cuza's residence — ~65 km from Iași.</p>
+          <span class="link"><span class="lang-ro">Program & bilete</span><span class="lang-en">Hours & tickets</span> →</span>
+        </div>
+      </a>
+
+      <a class="place p4" href="gara-autogari.html">
+        <span class="avail"><span class="lang-ro">Pagină</span><span class="lang-en">Page</span></span>
+        <div class="c"><span class="cat lang-ro">Transport · Tren & autocar</span><span class="cat lang-en">Transport · Train & coach</span>
+          <h3 class="lang-ro">Gara & autogările</h3><h3 class="lang-en">Station & coach terminals</h3>
+          <p class="lang-ro">Gara Iași, trenul direct din Chișinău și autogările — cum ajungi cu trenul sau autocarul.</p>
+          <p class="lang-en">Iași Station, the direct train from Chișinău and the coach terminals — how to arrive by train or coach.</p>
+          <span class="link"><span class="lang-ro">Tren, autocar & ponturi</span><span class="lang-en">Train, coach & tips</span> →</span>
+        </div>
+      </a>
+
+      <a class="place p6" href="acces-rutier.html">
+        <span class="avail"><span class="lang-ro">Pagină</span><span class="lang-en">Page</span></span>
+        <div class="c"><span class="cat lang-ro">Transport · Cu mașina</span><span class="cat lang-en">Transport · By car</span>
+          <h3 class="lang-ro">Drumurile spre Iași</h3><h3 class="lang-en">The roads to Iași</h3>
+          <p class="lang-ro">DN24 & DN28, drumurile europene E58 & E583, vămile și stadiul autostrăzii A8.</p>
+          <p class="lang-en">DN24 & DN28, European roads E58 & E583, the crossings and the A8 status.</p>
+          <span class="link"><span class="lang-ro">Acces rutier & distanțe</span><span class="lang-en">Road access & distances</span> →</span>
+        </div>
+      </a>
+
+      <a class="place p3" href="iasul-panoramic.html">
+        <span class="avail"><span class="lang-ro">Pagină</span><span class="lang-en">Page</span></span>
+        <div class="c"><span class="cat lang-ro">Panoramă · Răsărit & apus</span><span class="cat lang-en">Panorama · Sunrise & sunset</span>
+          <h3 class="lang-ro">Iașul Panoramic</h3><h3 class="lang-en">Panoramic Iași</h3>
+          <p class="lang-ro">Orașul celor 7 coline văzut de sus: dealuri, turnuri și cele mai bune apusuri.</p>
+          <p class="lang-en">The city of 7 hills from above: hills, towers and the best sunsets.</p>
+          <span class="link"><span class="lang-ro">Priveliști & ponturi</span><span class="lang-en">Views & tips</span> →</span>
+        </div>
+      </a>
+
+      <a class="place p6" href="turnuri-privelisti-centru.html">
+        <span class="avail"><span class="lang-ro">Pagină</span><span class="lang-en">Page</span></span>
+        <div class="c"><span class="cat lang-ro">Panoramă · Belvedere urban</span><span class="cat lang-en">Panorama · Urban belvedere</span>
+          <h3 class="lang-ro">Turnuri & priveliști din centru</h3><h3 class="lang-en">Towers & views from the centre</h3>
+          <p class="lang-ro">Turnul Goliei, turnul Palatului și rooftop-ul Hotelului Unirea — Iașul de sus, fără să ieși din oraș.</p>
+          <p class="lang-en">Golia Tower, the Palace tower and the Hotel Unirea rooftop — Iași from above, without leaving town.</p>
+          <span class="link"><span class="lang-ro">Belvedere urban</span><span class="lang-en">Urban belvedere</span> →</span>
+        </div>
+      </a>
+
+      <a class="place p9" href="iasul-universitar.html">
+        <span class="avail"><span class="lang-ro">Pagină</span><span class="lang-en">Page</span></span>
+        <div class="c"><span class="cat lang-ro">Educație · Oraș universitar</span><span class="cat lang-en">Education · University city</span>
+          <h3 class="lang-ro">Iașul Universitar</h3><h3 class="lang-en">Academic Iași</h3>
+          <p class="lang-ro">Leagănul universității românești: UAIC (1860), Tehnica, UMF, USV și Arte.</p>
+          <p class="lang-en">The cradle of the Romanian university: UAIC (1860), Technical, UMF, USV and Arts.</p>
+          <span class="link"><span class="lang-ro">Universitățile din Iași</span><span class="lang-en">The universities of Iași</span> →</span>
+        </div>
+      </a>
+
+      <a class="place p5" href="checklist-iasul-tematic.html">
+        <span class="avail"><span class="lang-ro">Checklist</span><span class="lang-en">Checklist</span></span>
+        <div class="c"><span class="cat lang-ro">Checklist · 4 teme</span><span class="cat lang-en">Checklist · 4 themes</span>
+          <h3 class="lang-ro">Iașul tematic — checklist</h3><h3 class="lang-en">Themed Iași — checklist</h3>
+          <p class="lang-ro">Universitar · Panoramic · Mănăstiresc · Bisericesc. Bifează ce ai văzut.</p>
+          <p class="lang-en">Academic · Panoramic · Monastic · Church Iași. Tick what you've seen.</p>
+          <span class="link"><span class="lang-ro">Deschide checklist-ul</span><span class="lang-en">Open the checklist</span> →</span>
+        </div>
+      </a>
+
+      <a class="place p2" href="checklist-regiunea-moldova.html">
+        <span class="avail"><span class="lang-ro">Checklist</span><span class="lang-en">Checklist</span></span>
+        <div class="c"><span class="cat lang-ro">Regiune · Împrejurimi</span><span class="cat lang-en">Region · Around Iași</span>
+          <h3 class="lang-ro">Regiunea Moldova — checklist</h3><h3 class="lang-en">The Moldavia region — checklist</h3>
+          <p class="lang-ro">Orașe vecine, mănăstirile UNESCO din Bucovina, muntele din Neamț și peste graniță.</p>
+          <p class="lang-en">Neighbouring towns, Bucovina's UNESCO monasteries, the Neamț mountains and beyond the border.</p>
+          <span class="link"><span class="lang-ro">Analiză & checklist</span><span class="lang-en">Analysis & checklist</span> →</span>
+        </div>
+      </a>
+
+      <a class="place p5" href="iasul-rural.html">
+        <span class="avail"><span class="lang-ro">Pagină</span><span class="lang-en">Page</span></span>
+        <div class="c"><span class="cat lang-ro">Tradiții · Turism rural</span><span class="cat lang-en">Traditions · Rural tourism</span>
+          <h3 class="lang-ro">Iașul Rural</h3><h3 class="lang-en">Rural Iași</h3>
+          <p class="lang-ro">Satul moldovenesc: case cu prispă, ceramica neagră, ouă încondeiate și podgorii.</p>
+          <p class="lang-en">The Moldavian village: porched houses, black pottery, painted eggs and vineyards.</p>
+          <span class="link"><span class="lang-ro">Sate & tradiții</span><span class="lang-en">Villages & traditions</span> →</span>
+        </div>
+      </a>
+
+      <a class="place p7" href="iasul-literar.html">
+        <span class="avail"><span class="lang-ro">Pagină</span><span class="lang-en">Page</span></span>
+        <div class="c"><span class="cat lang-ro">Cultură · Iașul literar</span><span class="cat lang-en">Culture · Literary Iași</span>
+          <h3 class="lang-ro">Iașul Literar</h3><h3 class="lang-en">Literary Iași</h3>
+          <p class="lang-ro">Leagănul literaturii române: Negruzzi, Dacia literară, Junimea, Eminescu și Creangă.</p>
+          <p class="lang-en">The cradle of Romanian literature: Negruzzi, Dacia literară, Junimea, Eminescu and Creangă.</p>
+          <span class="link"><span class="lang-ro">Scriitori & locuri</span><span class="lang-en">Writers & places</span> →</span>
+        </div>
+      </a>
+
+      <a class="place p4" href="iasul-de-vara.html">
+        <span class="avail"><span class="lang-ro">Sezon</span><span class="lang-en">Season</span></span>
+        <div class="c"><span class="cat lang-ro">Sezonier · Vara</span><span class="cat lang-en">Seasonal · Summer</span>
+          <h3 class="lang-ro">Iașul de Vară</h3><h3 class="lang-en">Summer Iași</h3>
+          <p class="lang-ro">Ștranduri, lacuri & agrement — program și prețuri 2026, grădini, terase și apusuri.</p>
+          <p class="lang-en">Pools, lakes & recreation — 2026 hours and prices, gardens, terraces and sunsets.</p>
+          <span class="link"><span class="lang-ro">Agrement de vară</span><span class="lang-en">Summer recreation</span> →</span>
+        </div>
+      </a>
+
+      <a class="place p3" href="iasul-de-toamna.html">
+        <span class="avail"><span class="lang-ro">Sezon</span><span class="lang-en">Season</span></span>
+        <div class="c"><span class="cat lang-ro">Sezonier · Toamna</span><span class="cat lang-en">Seasonal · Autumn</span>
+          <h3 class="lang-ro">Iașul de Toamnă</h3><h3 class="lang-en">Autumn Iași</h3>
+          <p class="lang-ro">Sf. Parascheva, Sărbătorile Iașului, FILIT, culorile din Copou și sezonul vinului.</p>
+          <p class="lang-en">St. Parascheva, the Days of Iași, FILIT, the Copou colours and the wine season.</p>
+          <span class="link"><span class="lang-ro">Sărbători & culori</span><span class="lang-en">Feasts & colours</span> →</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <span class="overline gold-text">✦ <span class="lang-ro">Ghidul interactiv</span><span class="lang-en">Interactive guide</span> ✦</span>
+    <h2 style="margin-top:14px"><span class="lang-ro">Tot Iașul într-un</span><span class="lang-en">All of Iași in one</span> <span class="script"><span class="lang-ro">singur ghid</span><span class="lang-en">guide</span></span></h2>
+    <p class="lang-ro">Trasee, hărți offline și povești locale — descoperă orașul pas cu pas.</p>
+    <p class="lang-en">Routes, offline maps and local stories — discover the city step by step.</p>
+    <a href="produse.html" class="btn btn-gold"><span class="lang-ro">Vezi produsele digitale</span><span class="lang-en">See the digital products</span></a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    © 2026 România · Iași — <span class="lang-ro">Ghid de călătorie · Demo</span><span class="lang-en">Travel guide · Demo</span> · <a href="harta-site.html"><span class="lang-ro">Harta site-ului</span><span class="lang-en">Site map</span></a> · <a href="viziteaza-romania-iasi.html"><span class="lang-ro">Acasă</span><span class="lang-en">Home</span></a>
+  </div>
+</footer>
+
+<script>
+function setLang(l){
+  document.body.classList.toggle('en', l==='en');
+  document.documentElement.lang=l;
+  document.querySelectorAll('.langsw button').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));
+}
+</script>
+</body>
+</html>

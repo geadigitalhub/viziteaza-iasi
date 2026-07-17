@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mănăstirea Golia & Turnul Goliei Iași · Panoramă din centru</title>
+<meta name="description" content="Mănăstirea Golia din Iași și Turnul Goliei — singurul turn-clopotniță cu terasă publică din țară, 120 de trepte până la panorama orașului. Program și vizitare. RO/EN.">
+<meta name="keywords" content="Mănăstirea Golia Iași, Turnul Goliei, panoramă Iași, belvedere, program vizitare">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#141d33;--gold:#C9A24B;--gold-2:#E3C778;--cream:#F4ECD8;--cream-2:#EFE4C9;--paper:#FBF6EA;--accent:#7A5240;--accent-2:#a06f52;--teal:#3E7C8C;--ink:#1a2033;--muted:#6b7794;--line:rgba(201,162,75,.28);--line-soft:rgba(20,29,51,.1);--r:16px;--maxw:1080px}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:'Jost',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.7;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.1}
+a{color:inherit;text-decoration:none}.wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px}
+.gold-text{color:var(--gold)}.script{font-style:italic;font-weight:500}
+.lang-en{display:none}body.en .lang-ro{display:none}body.en .lang-en{display:inline}
+.overline{font-family:'Jost';font-weight:600;letter-spacing:.32em;text-transform:uppercase;font-size:.7rem}
+header.nav{position:sticky;top:0;z-index:60;background:rgba(20,29,51,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{display:flex;flex-direction:column;line-height:1}
+.logo b{font-family:'Cormorant Garamond';font-size:1.32rem;color:var(--cream);font-weight:700;letter-spacing:.5px}
+.logo small{letter-spacing:.3em;text-transform:uppercase;font-size:.54rem;color:var(--gold);margin-top:3px}
+.nav-links{display:flex;gap:26px}
+.nav-links a{font-weight:500;font-size:.8rem;letter-spacing:.05em;color:var(--cream);opacity:.8;text-transform:uppercase;transition:.2s}
+.nav-links a:hover{opacity:1;color:var(--gold-2)}
+.langsw{display:flex;border:1px solid var(--line);border-radius:30px;padding:3px}
+.langsw button{border:0;background:transparent;padding:5px 11px;border-radius:24px;cursor:pointer;color:var(--cream);font-family:'Jost';font-weight:600;font-size:.72rem;letter-spacing:.08em;transition:.2s}
+.langsw button.active{background:var(--gold);color:var(--navy)}
+@media(max-width:820px){.nav-links{display:none}}
+.hero{position:relative;background:var(--navy);color:var(--cream);padding:70px 0 64px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(680px 420px at 82% 0%,rgba(122,82,64,.6),transparent 62%)}
+.hero::after{content:"";position:absolute;inset:0;opacity:.4;background-image:radial-gradient(rgba(201,162,75,.14) 1px,transparent 1px);background-size:24px 24px;-webkit-mask-image:linear-gradient(180deg,#000,transparent);mask-image:linear-gradient(180deg,#000,transparent)}
+.hero .wrap{position:relative;z-index:2}
+.crumb{font-size:.78rem;color:rgba(244,236,216,.6);margin-bottom:20px}.crumb a:hover{color:var(--gold-2)}
+.hero .overline{color:var(--gold-2);display:inline-block;margin-bottom:16px}
+.hero h1{font-size:clamp(2.4rem,5.4vw,4rem);color:var(--cream)}.hero h1 .script{color:var(--gold-2)}
+.hero p{color:rgba(244,236,216,.78);font-weight:300;font-size:1.1rem;max-width:58ch;margin:20px 0 26px}
+.badges{display:flex;gap:10px;flex-wrap:wrap}
+.badge{border:1px solid var(--line);border-radius:30px;padding:8px 16px;font-size:.76rem;color:var(--cream);display:flex;align-items:center;gap:8px}
+.badge .d{width:7px;height:7px;border-radius:50%;background:var(--accent-2)}
+.quickbar{background:linear-gradient(120deg,var(--accent),var(--accent-2));color:#fff}
+.quickbar .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px;padding:20px 26px}
+.qi{display:flex;gap:12px;align-items:center}.qi .em{font-size:1.4rem}
+.qi b{display:block;font-size:.92rem;font-weight:600}.qi small{font-size:.74rem;opacity:.86}
+section{padding:62px 0}.sec-head{margin-bottom:32px}
+.sec-head .overline{color:var(--gold);display:block;margin-bottom:10px}
+.sec-head h2{font-size:clamp(1.9rem,3.6vw,2.6rem);color:var(--navy)}
+.sec-head p{color:var(--muted);font-weight:300;margin-top:8px;max-width:62ch}.alt{background:var(--cream-2)}
+.about-grid{display:grid;grid-template-columns:1.3fr .9fr;gap:34px;align-items:center}
+.about-grid p{color:var(--ink);font-weight:300;margin-bottom:14px}
+.facts{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px 26px}
+.facts .f{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px solid var(--line-soft);font-size:.92rem}
+.facts .f:last-child{border-bottom:0}.facts .f span{color:var(--muted)}
+.facts .f b{color:var(--navy);font-family:'Cormorant Garamond';font-size:1.12rem;text-align:right}
+.hours-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.hcard{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px 28px}
+.hcard h3{font-size:1.35rem;color:var(--navy);margin-bottom:4px}
+.hcard .tag{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:16px;display:block}
+.hrow{display:flex;justify-content:space-between;gap:14px;padding:10px 0;border-bottom:1px solid var(--line-soft);font-size:.92rem}
+.hrow:last-child{border-bottom:0}.hrow span:first-child{color:var(--muted)}
+.hrow b{color:var(--navy);font-weight:600;text-align:right}
+.note{margin-top:14px;font-size:.82rem;color:var(--muted);font-weight:300;font-style:italic}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.lbox{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px 28px}
+.lbox h3{font-size:1.35rem;color:var(--navy);margin-bottom:14px}.lbox ul{list-style:none}
+.lbox ul li{position:relative;padding:8px 0 8px 26px;font-size:.9rem;border-bottom:1px solid var(--line-soft);font-weight:300}
+.lbox ul li:last-child{border-bottom:0}.lbox ul li::before{content:"✦";position:absolute;left:0;color:var(--gold);font-size:.8rem;top:9px}
+.freebar{background:#fff;border:1px solid var(--line);border-left:4px solid var(--teal);border-radius:var(--r);padding:22px 26px;display:flex;gap:16px;align-items:center;margin-bottom:20px}
+.freebar .em{font-size:1.8rem}.freebar b{color:var(--navy);font-family:'Cormorant Garamond';font-size:1.3rem}
+.freebar small{color:var(--muted);font-weight:300;display:block;font-size:.9rem}
+#contact{background:var(--navy);color:var(--cream)}
+#contact .sec-head h2{color:var(--cream)}#contact .sec-head p{color:rgba(244,236,216,.7)}
+.cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.cc{border:1px solid var(--line);border-radius:var(--r);padding:24px 26px}
+.cc .overline{color:var(--gold-2);display:block;margin-bottom:12px}
+.cc b{color:var(--cream);font-size:1.02rem;display:block;font-weight:500}
+.cc small{color:rgba(244,236,216,.68);font-weight:300;font-size:.86rem;display:block;margin-top:4px}.cc a{color:var(--gold-2)}
+.cta-row{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:'Jost';font-weight:600;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;padding:14px 26px;border-radius:2px;cursor:pointer;border:0;transition:.3s}
+.btn-gold{background:linear-gradient(120deg,var(--gold),var(--gold-2));color:var(--navy)}.btn-gold:hover{transform:translateY(-2px)}
+.btn-outline{background:transparent;border:1px solid var(--gold);color:var(--gold-2)}.btn-outline:hover{background:var(--gold);color:var(--navy)}
+footer{background:#0f1728;color:rgba(244,236,216,.6);padding:30px 0;text-align:center;font-size:.82rem;font-weight:300}footer a{color:var(--gold-2)}
+.disclaimer{font-size:.78rem;color:var(--muted);font-style:italic;text-align:center;margin-top:24px;font-weight:300}
+@media(max-width:820px){.about-grid,.hours-grid,.cgrid,.two{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="viziteaza-romania-iasi.html" class="logo"><b>România <span class="gold-text">·</span> Iași</b><small class="lang-ro">Ghid de călătorie</small><small class="lang-en">Travel guide</small></a>
+    <div class="nav-links"><a href="#despre"><span class="lang-ro">Despre</span><span class="lang-en">About</span></a><a href="#program">Program</a><a href="#vezi"><span class="lang-ro">Ce vezi</span><span class="lang-en">Highlights</span></a><a href="iasi.html">Iași</a></div>
+    <div class="langsw"><button data-lang="ro" class="active" onclick="setLang('ro')">RO</button><button data-lang="en" onclick="setLang('en')">EN</button></div>
+  </div>
+</header>
+<section class="hero"><div class="wrap">
+  <div class="crumb"><a href="viziteaza-romania-iasi.html">România · Iași</a> &nbsp;›&nbsp; <a href="iasi.html">Iași</a> &nbsp;›&nbsp; <span class="gold-text">Mănăstirea Golia</span></div>
+  <span class="overline">🏰 <span class="lang-ro">Cetate & panoramă · Turnul Goliei</span><span class="lang-en">Fortress & panorama · Golia Tower</span></span>
+  <h1><span class="lang-ro">Mănăstirea</span><span class="lang-en">Golia</span> <span class="script"><span class="lang-ro">Golia</span><span class="lang-en">Monastery</span></span></h1>
+  <p class="lang-ro">Ziduri de cetate în inima orașului, o biserică de o splendoare bizantină și un turn de 30 de metri de unde vezi Iașul — și, pe timp senin, o parte din Basarabia.</p>
+  <p class="lang-en">Fortress walls in the city heart, a church of Byzantine splendour and a 30-metre tower from which you see Iași — and, on a clear day, part of Bessarabia.</p>
+  <div class="badges">
+    <span class="badge"><span class="d"></span><span class="lang-ro">Turnul: 120 de trepte</span><span class="lang-en">Tower: 120 steps</span></span>
+    <span class="badge"><span class="d"></span><span class="lang-ro">Biserica: intrare liberă</span><span class="lang-en">Church: free entry</span></span>
+    <span class="badge"><span class="d"></span><span class="lang-ro">Casa lui Ion Creangă</span><span class="lang-en">Ion Creangă's House</span></span>
+    <span class="badge"><span class="d"></span>golia.mmb.ro</span>
+  </div>
+</div></section>
+<div class="quickbar"><div class="wrap">
+  <div class="qi"><span class="em">🗼</span><div><b class="lang-ro">Turnul Goliei</b><b class="lang-en">Golia Tower</b><small class="lang-ro">L–V 9–17 · S–D 10–14</small><small class="lang-en">Mon–Fri 9–17 · Sat–Sun 10–14</small></div></div>
+  <div class="qi"><span class="em">⛪</span><div><b class="lang-ro">Biserica Goliei</b><b class="lang-en">Golia Church</b><small class="lang-ro">Intrare liberă</small><small class="lang-en">Free entry</small></div></div>
+  <div class="qi"><span class="em">📖</span><div><b class="lang-ro">Casa lui Ion Creangă</b><b class="lang-en">Ion Creangă's House</b><small class="lang-ro">Mic muzeu etnografic</small><small class="lang-en">Small ethnographic museum</small></div></div>
+  <div class="qi"><span class="em">📍</span><div><b class="lang-ro">Str. Cuza Vodă 51</b><b class="lang-en">51 Cuza Vodă St.</b><small>Iași</small></div></div>
+</div></div>
+<section id="despre"><div class="wrap">
+  <div class="sec-head"><span class="overline"><span class="lang-ro">Despre</span><span class="lang-en">About</span></span><h2><span class="lang-ro">O cetate în mijlocul orașului</span><span class="lang-en">A fortress in the middle of the city</span></h2></div>
+  <div class="about-grid">
+    <div>
+      <p class="lang-ro">Mănăstirea Golia este înconjurată de ziduri masive de cetate, cu un turn-clopotniță impunător. Biserica actuală, de secol XVII, îmbină stilul bizantin cu elemente renascentiste — un spațiu de o splendoare aparte.</p>
+      <p class="lang-ro">Turnul Goliei, înalt de aproape 30 de metri, este singurul turn-clopotniță din țară cu terasă superioară deschisă publicului: 120 de trepte până la o panoramă completă a Iașului. În incintă se află și Casa cu coloane în care a locuit Ion Creangă.</p>
+      <p class="lang-en">Golia Monastery is surrounded by massive fortress walls, with an imposing bell tower. The present 17th-century church blends the Byzantine style with Renaissance elements — a space of singular splendour.</p>
+      <p class="lang-en">The Golia Tower, nearly 30 metres tall, is the only bell tower in the country with an upper terrace open to the public: 120 steps to a full panorama of Iași. In the grounds stands the columned house where Ion Creangă once lived.</p>
+    </div>
+    <div class="facts">
+      <div class="f"><span class="lang-ro">Biserica</span><span class="lang-en">Church</span><b class="lang-ro">Sec. XVII</b><b class="lang-en">17th c.</b></div>
+      <div class="f"><span class="lang-ro">Turnul</span><span class="lang-en">Tower</span><b>~30 m</b></div>
+      <div class="f"><span class="lang-ro">Trepte</span><span class="lang-en">Steps</span><b>120</b></div>
+      <div class="f"><span class="lang-ro">Stil</span><span class="lang-en">Style</span><b class="lang-ro">Bizantin</b><b class="lang-en">Byzantine</b></div>
+      <div class="f"><span class="lang-ro">Legături</span><span class="lang-en">Linked to</span><b>Ion Creangă</b></div>
+    </div>
+  </div>
+</div></section>
+<section id="program" class="alt"><div class="wrap">
+  <div class="sec-head"><span class="overline"><span class="lang-ro">Orar</span><span class="lang-en">Hours</span></span><h2>Program</h2>
+    <p class="lang-ro">Biserica se vizitează liber; turnul are program de vizitare.</p>
+    <p class="lang-en">The church is free to enter; the tower has set visiting hours.</p></div>
+  <div class="hours-grid">
+    <div class="hcard"><span class="tag lang-ro">Panoramă</span><span class="tag lang-en">Panorama</span><h3 class="lang-ro">Turnul Goliei</h3><h3 class="lang-en">Golia Tower</h3>
+      <div class="hrow"><span class="lang-ro">Luni – Vineri</span><span class="lang-en">Monday – Friday</span><b>9:00 – 17:00</b></div>
+      <div class="hrow"><span class="lang-ro">Sâmbătă – Duminică</span><span class="lang-en">Saturday – Sunday</span><b>10:00 – 14:00</b></div>
+      <p class="note lang-ro">Urcarea se face pe 120 de trepte; taxă de vizitare la fața locului.</p><p class="note lang-en">Access is via 120 steps; visiting fee on site.</p>
+    </div>
+    <div class="hcard"><span class="tag lang-ro">Loc de cult</span><span class="tag lang-en">Place of worship</span><h3 class="lang-ro">Biserica & incinta</h3><h3 class="lang-en">Church & grounds</h3>
+      <div class="hrow"><span class="lang-ro">Zilnic</span><span class="lang-en">Daily</span><b class="lang-ro">Intrare liberă</b><b class="lang-en">Free entry</b></div>
+      <p class="note lang-ro">Accesul poate fi limitat în timpul slujbelor. Casa lui Ion Creangă are program propriu — verifică la fața locului.</p><p class="note lang-en">Access may be limited during services. Ion Creangă's House has its own hours — check on site.</p>
+    </div>
+  </div>
+</div></section>
+<section id="vezi"><div class="wrap">
+  <div class="sec-head"><span class="overline"><span class="lang-ro">Highlights</span><span class="lang-en">Highlights</span></span><h2><span class="lang-ro">Ce să vezi la Golia</span><span class="lang-en">What to see at Golia</span></h2></div>
+  <div class="two">
+    <div class="lbox"><h3 class="lang-ro">În incintă</h3><h3 class="lang-en">In the grounds</h3>
+      <ul>
+        <li><span class="lang-ro">Biserica Goliei — pictură și splendoare bizantină</span><span class="lang-en">Golia Church — frescoes and Byzantine splendour</span></li>
+        <li><span class="lang-ro">Zidurile și turnurile de cetate</span><span class="lang-en">The fortress walls and towers</span></li>
+        <li><span class="lang-ro">Casa lui Ion Creangă — mic muzeu etnografic</span><span class="lang-en">Ion Creangă's House — small ethnographic museum</span></li>
+      </ul>
+    </div>
+    <div class="lbox"><h3 class="lang-ro">Din turn</h3><h3 class="lang-en">From the tower</h3>
+      <ul>
+        <li><span class="lang-ro">Panorama completă a Iașului</span><span class="lang-en">The full panorama of Iași</span></li>
+        <li><span class="lang-ro">Pe timp senin, o parte din Basarabia</span><span class="lang-en">On a clear day, part of Bessarabia</span></li>
+        <li><span class="lang-ro">Turnurile bisericilor din centru</span><span class="lang-en">The towers of the downtown churches</span></li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+<section id="contact"><div class="wrap">
+  <div class="sec-head"><span class="overline gold-text"><span class="lang-ro">Cum ajungi</span><span class="lang-en">How to reach it</span></span><h2>Contact</h2>
+    <p class="lang-ro">Strada Cuza Vodă nr. 51, Iași — la câteva minute de Palatul Culturii și de centru.</p>
+    <p class="lang-en">51 Cuza Vodă Street, Iași — a few minutes from the Palace of Culture and downtown.</p></div>
+  <div class="cgrid">
+    <div class="cc"><span class="overline"><span class="lang-ro">Adresă</span><span class="lang-en">Address</span></span><b>📍 Str. Cuza Vodă 51</b><small>Iași</small></div>
+    <div class="cc"><span class="overline lang-ro">Cult</span><span class="overline lang-en">Denomination</span><b class="lang-ro">Arhiepiscopia Iașilor</b><b class="lang-en">Archdiocese of Iași</b><small class="lang-ro">Mănăstire ortodoxă activă</small><small class="lang-en">Active Orthodox monastery</small></div>
+    <div class="cc"><span class="overline">Online</span><b>🌐 <a href="https://golia.mmb.ro" target="_blank" rel="noopener">golia.mmb.ro</a></b><small class="lang-ro">Program turn & slujbe</small><small class="lang-en">Tower hours & services</small></div>
+  </div>
+  <div class="cta-row">
+    <a href="https://golia.mmb.ro" target="_blank" rel="noopener" class="btn btn-gold"><span class="lang-ro">Site oficial</span><span class="lang-en">Official site</span></a>
+    <a href="iasi.html" class="btn btn-outline"><span class="lang-ro">← Alte locuri din Iași</span><span class="lang-en">← More places in Iași</span></a>
+  </div>
+  <p class="disclaimer"><span class="lang-ro">Program conform site-ului oficial al mănăstirii (iulie 2026). Se poate modifica — verifică înainte de vizită.</span><span class="lang-en">Schedule per the monastery's official site (July 2026). May change — check before visiting.</span></p>
+</div></section>
+<footer><div class="wrap">© 2026 România · Iași — <span class="lang-ro">Ghid de călătorie · Demo</span><span class="lang-en">Travel guide · Demo</span> · <a href="iasi.html">Iași</a></div></footer>
+<script>function setLang(l){document.body.classList.toggle('en',l==='en');document.documentElement.lang=l;document.querySelectorAll('.langsw button').forEach(b=>b.classList.toggle('active',b.dataset.lang===l))}</script>
+</body>
+</html>

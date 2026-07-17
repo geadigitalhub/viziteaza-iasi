@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Casa Dosoftei Iași · A doua tiparniță din Moldova — carte veche</title>
+<meta name="description" content="Casa Dosoftei din Iași, legată de a doua tiparniță din Moldova și de literatura română veche. Program de vizitare, prețuri bilete și informații. RO/EN.">
+<meta name="keywords" content="Casa Dosoftei Iași, tiparniță Moldova, literatură română veche, muzeu, program bilete">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#141d33;--gold:#C9A24B;--gold-2:#E3C778;--cream:#F4ECD8;--cream-2:#EFE4C9;--paper:#FBF6EA;--accent:#8a6d2b;--accent-2:#b0913f;--leaf:#3f7d54;--ink:#1a2033;--muted:#6b7794;--line:rgba(201,162,75,.28);--line-soft:rgba(20,29,51,.1);--r:16px;--maxw:1080px}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:'Jost',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.7;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.1}
+a{color:inherit;text-decoration:none}.wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px}
+.gold-text{color:var(--gold)}.script{font-style:italic;font-weight:500}
+.lang-en{display:none}body.en .lang-ro{display:none}body.en .lang-en{display:inline}
+.overline{font-family:'Jost';font-weight:600;letter-spacing:.32em;text-transform:uppercase;font-size:.7rem}
+header.nav{position:sticky;top:0;z-index:60;background:rgba(20,29,51,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{display:flex;flex-direction:column;line-height:1}
+.logo b{font-family:'Cormorant Garamond';font-size:1.32rem;color:var(--cream);font-weight:700;letter-spacing:.5px}
+.logo small{letter-spacing:.3em;text-transform:uppercase;font-size:.54rem;color:var(--gold);margin-top:3px}
+.nav-links{display:flex;gap:26px}
+.nav-links a{font-weight:500;font-size:.8rem;letter-spacing:.05em;color:var(--cream);opacity:.8;text-transform:uppercase;transition:.2s}
+.nav-links a:hover{opacity:1;color:var(--gold-2)}
+.langsw{display:flex;border:1px solid var(--line);border-radius:30px;padding:3px}
+.langsw button{border:0;background:transparent;padding:5px 11px;border-radius:24px;cursor:pointer;color:var(--cream);font-family:'Jost';font-weight:600;font-size:.72rem;letter-spacing:.08em;transition:.2s}
+.langsw button.active{background:var(--gold);color:var(--navy)}
+@media(max-width:820px){.nav-links{display:none}}
+.hero{position:relative;background:var(--navy);color:var(--cream);padding:70px 0 64px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(680px 420px at 82% 0%,rgba(138,109,43,.5),transparent 62%)}
+.hero::after{content:"";position:absolute;inset:0;opacity:.4;background-image:radial-gradient(rgba(201,162,75,.14) 1px,transparent 1px);background-size:24px 24px;-webkit-mask-image:linear-gradient(180deg,#000,transparent);mask-image:linear-gradient(180deg,#000,transparent)}
+.hero .wrap{position:relative;z-index:2}
+.crumb{font-size:.78rem;color:rgba(244,236,216,.6);margin-bottom:20px}.crumb a:hover{color:var(--gold-2)}
+.hero .overline{color:var(--gold-2);display:inline-block;margin-bottom:16px}
+.hero h1{font-size:clamp(2.4rem,5.4vw,4rem);color:var(--cream)}.hero h1 .script{color:var(--gold-2)}
+.hero p{color:rgba(244,236,216,.78);font-weight:300;font-size:1.1rem;max-width:58ch;margin:20px 0 26px}
+.badges{display:flex;gap:10px;flex-wrap:wrap}
+.badge{border:1px solid var(--line);border-radius:30px;padding:8px 16px;font-size:.76rem;color:var(--cream);display:flex;align-items:center;gap:8px}
+.badge .d{width:7px;height:7px;border-radius:50%;background:var(--accent-2)}
+.quickbar{background:linear-gradient(120deg,var(--accent),var(--accent-2));color:#fff}
+.quickbar .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px;padding:20px 26px}
+.qi{display:flex;gap:12px;align-items:center}.qi .em{font-size:1.4rem}
+.qi b{display:block;font-size:.92rem;font-weight:600}.qi small{font-size:.74rem;opacity:.86}
+section{padding:62px 0}.sec-head{margin-bottom:32px}
+.sec-head .overline{color:var(--gold);display:block;margin-bottom:10px}
+.sec-head h2{font-size:clamp(1.9rem,3.6vw,2.6rem);color:var(--navy)}
+.sec-head p{color:var(--muted);font-weight:300;margin-top:8px;max-width:62ch}.alt{background:var(--cream-2)}
+.about-grid{display:grid;grid-template-columns:1.3fr .9fr;gap:34px;align-items:center}
+.about-grid p{color:var(--ink);font-weight:300;margin-bottom:14px}
+.facts{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px 26px}
+.facts .f{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px solid var(--line-soft);font-size:.92rem}
+.facts .f:last-child{border-bottom:0}.facts .f span{color:var(--muted)}
+.facts .f b{color:var(--navy);font-family:'Cormorant Garamond';font-size:1.12rem;text-align:right}
+.hours-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.hcard{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px 28px}
+.hcard h3{font-size:1.35rem;color:var(--navy);margin-bottom:4px}
+.hcard .tag{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:16px;display:block}
+.hrow{display:flex;justify-content:space-between;gap:14px;padding:10px 0;border-bottom:1px solid var(--line-soft);font-size:.92rem}
+.hrow:last-child{border-bottom:0}.hrow span:first-child{color:var(--muted)}
+.hrow b{color:var(--navy);font-weight:600;text-align:right}.hrow.closed b{color:#A8362E}
+.note{margin-top:14px;font-size:.82rem;color:var(--muted);font-weight:300;font-style:italic}
+.ptable{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-bottom:18px}
+.ptable .ph{background:var(--navy);color:var(--cream);padding:16px 22px}
+.ptable .ph h4{font-size:1.15rem;color:var(--cream)}
+.ptable .ph small{color:rgba(244,236,216,.7);font-weight:300;font-size:.8rem;display:block;margin-top:2px}
+table{width:100%;border-collapse:collapse}th,td{padding:12px 22px;text-align:left;font-size:.9rem}
+thead th{background:var(--cream-2);color:var(--navy);font-weight:600;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
+thead th:not(:first-child),tbody td:not(:first-child){text-align:right;width:34%}
+tbody tr{border-top:1px solid var(--line-soft)}tbody td:first-child{color:var(--muted)}tbody td b{color:var(--navy);font-weight:600}
+.hi{color:var(--accent);font-weight:700}
+.freebar{background:#fff;border:1px solid var(--line);border-left:4px solid var(--leaf);border-radius:var(--r);padding:22px 26px;display:flex;gap:16px;align-items:center;margin-bottom:20px}
+.freebar .em{font-size:1.8rem}.freebar b{color:var(--navy);font-family:'Cormorant Garamond';font-size:1.3rem}
+.freebar small{color:var(--muted);font-weight:300;display:block;font-size:.9rem}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.lbox{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px 28px}
+.lbox h3{font-size:1.35rem;color:var(--navy);margin-bottom:14px}.lbox ul{list-style:none}
+.lbox ul li{position:relative;padding:8px 0 8px 26px;font-size:.9rem;border-bottom:1px solid var(--line-soft);font-weight:300}
+.lbox ul li:last-child{border-bottom:0}.lbox ul li::before{content:"✦";position:absolute;left:0;color:var(--gold);font-size:.8rem;top:9px}
+#contact{background:var(--navy);color:var(--cream)}
+#contact .sec-head h2{color:var(--cream)}#contact .sec-head p{color:rgba(244,236,216,.7)}
+.cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.cc{border:1px solid var(--line);border-radius:var(--r);padding:24px 26px}
+.cc .overline{color:var(--gold-2);display:block;margin-bottom:12px}
+.cc b{color:var(--cream);font-size:1.02rem;display:block;font-weight:500}
+.cc small{color:rgba(244,236,216,.68);font-weight:300;font-size:.86rem;display:block;margin-top:4px}.cc a{color:var(--gold-2)}
+.cta-row{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:'Jost';font-weight:600;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;padding:14px 26px;border-radius:2px;cursor:pointer;border:0;transition:.3s}
+.btn-gold{background:linear-gradient(120deg,var(--gold),var(--gold-2));color:var(--navy)}.btn-gold:hover{transform:translateY(-2px)}
+.btn-outline{background:transparent;border:1px solid var(--gold);color:var(--gold-2)}.btn-outline:hover{background:var(--gold);color:var(--navy)}
+footer{background:#0f1728;color:rgba(244,236,216,.6);padding:30px 0;text-align:center;font-size:.82rem;font-weight:300}footer a{color:var(--gold-2)}
+.disclaimer{font-size:.78rem;color:var(--muted);font-style:italic;text-align:center;margin-top:24px;font-weight:300}
+@media(max-width:820px){.about-grid,.hours-grid,.cgrid,.two{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="viziteaza-romania-iasi.html" class="logo"><b>România <span class="gold-text">·</span> Iași</b><small class="lang-ro">Ghid de călătorie</small><small class="lang-en">Travel guide</small></a>
+    <div class="nav-links"><a href="#despre"><span class="lang-ro">Despre</span><span class="lang-en">About</span></a><a href="#program">Program</a><a href="#bilete"><span class="lang-ro">Bilete</span><span class="lang-en">Tickets</span></a><a href="iasi.html">Iași</a></div>
+    <div class="langsw"><button data-lang="ro" class="active" onclick="setLang('ro')">RO</button><button data-lang="en" onclick="setLang('en')">EN</button></div>
+  </div>
+</header>
+<section class="hero"><div class="wrap">
+  <div class="crumb"><a href="viziteaza-romania-iasi.html">România · Iași</a> &nbsp;›&nbsp; <a href="iasi.html">Iași</a> &nbsp;›&nbsp; <span class="gold-text">Casa Dosoftei</span></div>
+  <span class="overline">📜 <span class="lang-ro">A doua tiparniță din Moldova · 1679</span><span class="lang-en">Moldavia's second printing press · 1679</span></span>
+  <h1><span class="lang-ro">Casa</span><span class="lang-en">The Dosoftei</span> <span class="script"><span class="lang-ro">Dosoftei</span><span class="lang-en">House</span></span></h1>
+  <p class="lang-ro">Casă negustorească de secol XVII, cu portic către stradă, unde mitropolitul Dosoftei a instalat a doua tipografie din Moldova. Azi — muzeul literaturii române vechi.</p>
+  <p class="lang-en">A 17th-century merchant house with a street portico, where Metropolitan Dosoftei set up Moldavia's second printing press. Today — the museum of old Romanian literature.</p>
+  <div class="badges">
+    <span class="badge"><span class="d"></span><span class="lang-ro">Marți–Duminică 10–17</span><span class="lang-en">Tue–Sunday 10–17</span></span>
+    <span class="badge"><span class="d"></span><span class="lang-ro">Bilet adult 11 lei</span><span class="lang-en">Adult ticket 11 lei</span></span>
+    <span class="badge"><span class="d"></span><span class="lang-ro">Str. Anastasie Panu 54</span><span class="lang-en">54 Anastasie Panu St.</span></span>
+    <span class="badge"><span class="d"></span>muzeulliteraturiiiasi.ro</span>
+  </div>
+</div></section>
+<div class="quickbar"><div class="wrap">
+  <div class="qi"><span class="em">🕙</span><div><b class="lang-ro">Marți – Duminică</b><b class="lang-en">Tue – Sunday</b><small class="lang-ro">10:00–17:00 · luni închis</small><small class="lang-en">10:00–17:00 · Monday closed</small></div></div>
+  <div class="qi"><span class="em">🎟️</span><div><b class="lang-ro">Adult — 11 lei</b><b class="lang-en">Adult — 11 lei</b><small class="lang-ro">Elevi/studenți 2 lei · pensionari 6 lei</small><small class="lang-en">Pupils/students 2 lei · pensioners 6 lei</small></div></div>
+  <div class="qi"><span class="em">📖</span><div><b class="lang-ro">Literatură română veche</b><b class="lang-en">Old Romanian literature</b><small class="lang-ro">Manuscrise & tipărituri</small><small class="lang-en">Manuscripts & early prints</small></div></div>
+  <div class="qi"><span class="em">📍</span><div><b class="lang-ro">Str. Anastasie Panu 54</b><b class="lang-en">54 Anastasie Panu St.</b><small class="lang-ro">Lângă Palatul Culturii</small><small class="lang-en">Near the Palace of Culture</small></div></div>
+</div></div>
+<section id="despre"><div class="wrap">
+  <div class="sec-head"><span class="overline"><span class="lang-ro">Despre</span><span class="lang-en">About</span></span><h2><span class="lang-ro">Locul unde s-a tipărit limba română</span><span class="lang-en">Where the Romanian language was printed</span></h2></div>
+  <div class="about-grid">
+    <div>
+      <p class="lang-ro">Una dintre cele mai vechi clădiri civile din Iași, Casa Dosoftei este un monument istoric de secol XVII, cu portic către stradă. În 1679, mitropolitul Dosoftei a instalat aici a doua tipografie din Moldova.</p>
+      <p class="lang-ro">De sub teascurile ei au ieșit lucrări fundamentale: Liturghia (1679), Psaltirea de-nțeles (1680) și monumentala „Viața și petrecerea sfinților" (1682–1686). Azi găzduiește secția de literatură română veche a Muzeului Național al Literaturii Române Iași.</p>
+      <p class="lang-en">One of the oldest civil buildings in Iași, Casa Dosoftei is a 17th-century historic monument with a street portico. In 1679, Metropolitan Dosoftei set up Moldavia's second printing press here.</p>
+      <p class="lang-en">Its presses produced fundamental works: the Liturgy (1679), the Psalter in plain language (1680) and the monumental "Lives of the Saints" (1682–1686). Today it houses the old-Romanian-literature section of the National Museum of Romanian Literature in Iași.</p>
+    </div>
+    <div class="facts">
+      <div class="f"><span class="lang-ro">Clădirea</span><span class="lang-en">Building</span><b class="lang-ro">Sec. XVII</b><b class="lang-en">17th c.</b></div>
+      <div class="f"><span class="lang-ro">Tiparnița</span><span class="lang-en">Printing press</span><b>1679</b></div>
+      <div class="f"><span class="lang-ro">Ctitor tipar</span><span class="lang-en">Founder</span><b class="lang-ro">Mitropolitul Dosoftei</b><b class="lang-en">Metropolitan Dosoftei</b></div>
+      <div class="f"><span class="lang-ro">Colecție</span><span class="lang-en">Collection</span><b class="lang-ro">Carte veche</b><b class="lang-en">Old books</b></div>
+    </div>
+  </div>
+</div></section>
+<section id="program" class="alt"><div class="wrap">
+  <div class="sec-head"><span class="overline"><span class="lang-ro">Orar</span><span class="lang-en">Hours</span></span><h2>Program</h2>
+    <p class="lang-ro">Parte din Muzeul Național al Literaturii Române Iași.</p>
+    <p class="lang-en">Part of the National Museum of Romanian Literature in Iași.</p></div>
+  <div class="hours-grid">
+    <div class="hcard"><span class="tag lang-ro">Muzeu</span><span class="tag lang-en">Museum</span><h3 class="lang-ro">Casa Dosoftei</h3><h3 class="lang-en">The Dosoftei House</h3>
+      <div class="hrow"><span class="lang-ro">Marți – Duminică</span><span class="lang-en">Tuesday – Sunday</span><b>10:00 – 17:00</b></div>
+      <div class="hrow closed"><span class="lang-ro">Luni</span><span class="lang-en">Monday</span><b class="lang-ro">Închis</b><b class="lang-en">Closed</b></div>
+      <p class="note lang-ro">Ultimul bilet: ora 16:30.</p><p class="note lang-en">Last ticket: 16:30.</p>
+    </div>
+    <div class="hcard"><span class="tag lang-ro">Gratuit</span><span class="tag lang-en">Free</span><h3 class="lang-ro">O zi pe lună</h3><h3 class="lang-en">One day a month</h3>
+      <div class="hrow"><span class="lang-ro">Prima săptămână din lună</span><span class="lang-en">First week of the month</span><b class="lang-ro">O zi liberă</b><b class="lang-en">One free day</b></div>
+      <p class="note lang-ro">Intrare gratuită într-o zi lucrătoare din prima săptămână (anunțată pe site) și de 1 Decembrie.</p><p class="note lang-en">Free entry on one weekday in the first week (announced online) and on 1 December.</p>
+    </div>
+  </div>
+</div></section>
+<section id="bilete"><div class="wrap">
+  <div class="sec-head"><span class="overline"><span class="lang-ro">Tarife oficiale</span><span class="lang-en">Official prices</span></span><h2><span class="lang-ro">Bilete de intrare</span><span class="lang-en">Entry tickets</span></h2></div>
+  <div class="ptable">
+    <div class="ph"><h4 class="lang-ro">Casa Dosoftei — expoziție permanentă</h4><h4 class="lang-en">The Dosoftei House — permanent exhibition</h4><small class="lang-ro">Muzeul „Sf. Ierarh Dosoftei – Mitropolitul"</small><small class="lang-en">"St. Hierarch Dosoftei – Metropolitan" Museum</small></div>
+    <table><thead><tr><th class="lang-ro">Categorie</th><th class="lang-en">Category</th><th class="lang-ro">Preț</th><th class="lang-en">Price</th></tr></thead>
+    <tbody>
+      <tr><td><span class="lang-ro">Adult</span><span class="lang-en">Adult</span></td><td><b>11 lei</b></td></tr>
+      <tr><td><span class="lang-ro">Grup (peste 9 persoane)</span><span class="lang-en">Group (over 9 people)</span></td><td class="hi">8 lei</td></tr>
+      <tr><td><span class="lang-ro">Pensionari</span><span class="lang-en">Pensioners</span></td><td class="hi">6 lei</td></tr>
+      <tr><td><span class="lang-ro">Elevi & studenți</span><span class="lang-en">Pupils & students</span></td><td class="hi">2 lei</td></tr>
+    </tbody></table>
+  </div>
+  <p class="note"><span class="lang-ro">Ghidaj: 20 lei (RO) / 60 lei (limbă străină, cu programare). Gratuit: preșcolari, persoane cu dizabilități + însoțitori, ICOM. Tarife conform site-ului oficial (actualizat ianuarie 2026).</span><span class="lang-en">Guiding: 20 lei (RO) / 60 lei (foreign language, by appointment). Free: preschoolers, people with disabilities + companions, ICOM. Prices per the official site (updated January 2026).</span></p>
+</div></section>
+<section id="vezi" class="alt"><div class="wrap">
+  <div class="sec-head"><span class="overline"><span class="lang-ro">Highlights</span><span class="lang-en">Highlights</span></span><h2><span class="lang-ro">Ce să vezi</span><span class="lang-en">What to see</span></h2></div>
+  <div class="two">
+    <div class="lbox"><h3 class="lang-ro">Comori de carte</h3><h3 class="lang-en">Book treasures</h3>
+      <ul>
+        <li><span class="lang-ro">Apostolul (1559) — cel mai vechi manuscris românesc datat</span><span class="lang-en">The Apostle (1559) — the oldest dated Romanian manuscript</span></li>
+        <li><span class="lang-ro">Cazania lui Varlaam (1643)</span><span class="lang-en">Varlaam's Homiliary (1643)</span></li>
+        <li><span class="lang-ro">Psaltirea în versuri a lui Dosoftei (1673)</span><span class="lang-en">Dosoftei's Psalter in verse (1673)</span></li>
+        <li><span class="lang-ro">Pateric slavon din secolul al XIV-lea</span><span class="lang-en">A 14th-century Slavonic Patericon</span></li>
+      </ul>
+    </div>
+    <div class="lbox"><h3 class="lang-ro">În apropiere</h3><h3 class="lang-en">Nearby</h3>
+      <ul>
+        <li><span class="lang-ro">Palatul Culturii — la câțiva pași</span><span class="lang-en">The Palace of Culture — a few steps away</span></li>
+        <li><span class="lang-ro">Mănăstirea Trei Ierarhi</span><span class="lang-en">The Three Hierarchs Monastery</span></li>
+        <li><span class="lang-ro">Grădina Palas</span><span class="lang-en">Palas Garden</span></li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+<section id="contact"><div class="wrap">
+  <div class="sec-head"><span class="overline gold-text"><span class="lang-ro">Cum ajungi</span><span class="lang-en">How to reach it</span></span><h2>Contact</h2>
+    <p class="lang-ro">Strada Anastasie Panu nr. 54, Iași — în centru, la câțiva pași de Palatul Culturii.</p>
+    <p class="lang-en">54 Anastasie Panu Street, Iași — downtown, a few steps from the Palace of Culture.</p></div>
+  <div class="cgrid">
+    <div class="cc"><span class="overline"><span class="lang-ro">Adresă</span><span class="lang-en">Address</span></span><b>📍 Str. Anastasie Panu 54</b><small>Iași</small></div>
+    <div class="cc"><span class="overline lang-ro">Parte din</span><span class="overline lang-en">Part of</span><b class="lang-ro">MNLR Iași</b><b class="lang-en">MNLR Iași</b><small class="lang-ro">Secția literatură română veche</small><small class="lang-en">Old Romanian literature section</small></div>
+    <div class="cc"><span class="overline">Online</span><b>🌐 <a href="https://www.muzeulliteraturiiiasi.ro/muzeul-sf-ierarh-dosoftei/" target="_blank" rel="noopener">muzeulliteraturiiiasi.ro</a></b><small class="lang-ro">Program & tarife</small><small class="lang-en">Hours & prices</small></div>
+  </div>
+  <div class="cta-row">
+    <a href="https://www.muzeulliteraturiiiasi.ro/muzeul-sf-ierarh-dosoftei/" target="_blank" rel="noopener" class="btn btn-gold"><span class="lang-ro">Site oficial</span><span class="lang-en">Official site</span></a>
+    <a href="iasi.html" class="btn btn-outline"><span class="lang-ro">← Alte locuri din Iași</span><span class="lang-en">← More places in Iași</span></a>
+  </div>
+  <p class="disclaimer"><span class="lang-ro">Program și tarife conform site-ului oficial al Muzeului Național al Literaturii Române Iași (actualizat ianuarie 2026). Se pot modifica — verifică înainte de vizită.</span><span class="lang-en">Hours and prices per the official site of the National Museum of Romanian Literature in Iași (updated January 2026). May change — check before visiting.</span></p>
+</div></section>
+<footer><div class="wrap">© 2026 România · Iași — <span class="lang-ro">Ghid de călătorie · Demo</span><span class="lang-en">Travel guide · Demo</span> · <a href="iasi.html">Iași</a></div></footer>
+<script>function setLang(l){document.body.classList.toggle('en',l==='en');document.documentElement.lang=l;document.querySelectorAll('.langsw button').forEach(b=>b.classList.toggle('active',b.dataset.lang===l))}</script>
+</body>
+</html>
