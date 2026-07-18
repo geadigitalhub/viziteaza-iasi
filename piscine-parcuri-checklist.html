@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Piscine & parcuri de divertisment Iași · Plan de conținut</title>
+<meta name="description" content="Plan de conținut cu piscinele și parcurile de divertisment din Iași — checklist interactiv pentru organizare. RO.">
+<meta name="robots" content="noindex, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#141d33;--navy-2:#1b2848;--gold:#C9A24B;--gold-2:#E3C778;--cream:#F4ECD8;--cream-2:#EFE4C9;--paper:#FBF6EA;--leaf:#3f7d54;--teal:#2F6F6D;--sea:#3a74c9;--amber:#c9902b;--muted:#6b7794;--ink:#1a2033;--line:rgba(201,162,75,.28);--line-soft:rgba(20,29,51,.1);--r:14px}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Jost',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.1}
+.wrap{max-width:960px;margin:0 auto;padding:0 22px}
+header{background:var(--navy);color:var(--cream);padding:40px 0 34px;position:relative;overflow:hidden}
+header::before{content:"";position:absolute;inset:0;background:radial-gradient(600px 300px at 85% -10%,rgba(58,116,201,.45),transparent 60%)}
+header .wrap{position:relative;z-index:2}
+.eyebrow{font-weight:600;letter-spacing:.28em;text-transform:uppercase;font-size:.7rem;color:var(--gold-2);margin-bottom:12px}
+header h1{font-size:clamp(1.9rem,4vw,2.8rem);color:#fff}
+header p{color:rgba(244,236,216,.75);font-weight:300;margin-top:10px;font-size:1rem;max-width:66ch}
+.bar{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:22px}
+.progress{flex:1;min-width:220px}
+.progress .track{height:9px;border-radius:20px;background:rgba(255,255,255,.12);overflow:hidden}
+.progress .fill{height:100%;border-radius:20px;background:linear-gradient(90deg,var(--sea),var(--gold-2));transition:width .4s}
+.progress .lbl{font-size:.78rem;color:rgba(244,236,216,.8);margin-top:7px;font-weight:500}
+.tools{display:flex;gap:8px;flex-wrap:wrap}
+.tbtn{border:1px solid var(--line);background:transparent;color:var(--cream);font-family:'Jost';font-weight:600;font-size:.74rem;letter-spacing:.06em;padding:9px 14px;border-radius:30px;cursor:pointer;transition:.2s}
+.tbtn:hover{background:var(--gold);color:var(--navy);border-color:var(--gold)}
+.legend{display:flex;gap:16px;flex-wrap:wrap;margin:22px 0 6px;font-size:.8rem;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:7px}
+.dot{width:12px;height:12px;border-radius:50%;display:inline-block}
+.d-idee{background:#c3c8d4}.d-lucru{background:var(--amber)}.d-publicat{background:var(--leaf)}
+main{padding:14px 0 60px}
+.section{background:#fff;border:1px solid var(--line);border-radius:var(--r);margin-bottom:18px;overflow:hidden}
+.s-head{display:flex;align-items:center;gap:12px;padding:16px 20px;cursor:pointer;background:var(--cream-2);border-bottom:1px solid var(--line-soft)}
+.s-head .num{width:30px;height:30px;flex:0 0 auto;border-radius:8px;background:var(--navy);color:var(--gold-2);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond';font-weight:700;font-size:1.1rem}
+.s-head h2{font-size:1.3rem;color:var(--navy);flex:1}
+.s-head .count{font-size:.78rem;color:var(--muted);font-weight:600}
+.s-head .caret{color:var(--gold);transition:.25s;font-size:.9rem}
+.section.collapsed .caret{transform:rotate(-90deg)}
+.section.collapsed .s-body{display:none}
+.s-body{padding:8px 20px 16px}
+.item{display:flex;align-items:center;gap:12px;padding:10px 4px;border-bottom:1px dashed var(--line-soft)}
+.item:last-child{border-bottom:0}
+.badge{flex:0 0 auto;border:0;cursor:pointer;font-family:'Jost';font-weight:700;font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;padding:6px 10px;border-radius:20px;color:#fff;min-width:82px;text-align:center;transition:.2s}
+.b-idee{background:#9aa3b5}.b-lucru{background:var(--amber)}.b-publicat{background:var(--leaf)}
+.badge:hover{filter:brightness(1.08)}
+.title{flex:1;font-size:.92rem;color:var(--ink);outline:none;padding:3px 5px;border-radius:6px}
+.title:focus{background:var(--cream-2);box-shadow:0 0 0 1px var(--line)}
+.title.done{text-decoration:line-through;color:var(--muted)}
+.pin{font-size:.62rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--gold);border:1px solid var(--line);border-radius:20px;padding:3px 8px;flex:0 0 auto}
+.del{flex:0 0 auto;background:transparent;border:0;color:#c98;font-size:1.15rem;cursor:pointer;line-height:1;padding:2px 6px;border-radius:6px;transition:.2s;opacity:.5}
+.del:hover{opacity:1;background:rgba(168,54,46,.1);color:#a8362e}
+.add-row{display:flex;gap:8px;margin-top:12px}
+.add-row input{flex:1;border:1px solid var(--line);border-radius:8px;padding:10px 13px;font-family:'Jost';font-size:.9rem;background:var(--paper)}
+.add-row input:focus{outline:none;border-color:var(--gold)}
+.add-row button{border:0;background:var(--navy);color:var(--cream);font-family:'Jost';font-weight:600;font-size:.82rem;padding:0 18px;border-radius:8px;cursor:pointer;transition:.2s}
+.add-row button:hover{background:var(--gold);color:var(--navy)}
+.add-section{width:100%;border:1px dashed var(--line);background:transparent;color:var(--muted);font-family:'Jost';font-weight:600;font-size:.85rem;padding:14px;border-radius:var(--r);cursor:pointer;transition:.2s}
+.add-section:hover{border-color:var(--gold);color:var(--navy);background:#fff}
+.note{color:var(--muted);font-size:.82rem;font-weight:300;font-style:italic;margin-top:22px;text-align:center}
+@media print{.tools,.add-row,.add-section,.del{display:none!important}header{background:#fff;color:#000}header h1,header p,.eyebrow{color:#000}.progress .lbl{color:#333}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="eyebrow">România · Iași · Agrement</div>
+  <h1>Piscine & Parcuri de divertisment — plan de conținut</h1>
+  <p>Ștranduri, piscine, aquaparkuri și parcuri de distracție din Iași și împrejurimi, din cercetare. Bifează starea, adaugă sau șterge — se salvează automat. Prețurile sunt orientative (se schimbă sezonier).</p>
+  <div class="bar">
+    <div class="progress"><div class="track"><div class="fill" id="fill"></div></div><div class="lbl" id="plbl"></div></div>
+    <div class="tools">
+      <button class="tbtn" onclick="expandAll(true)">▸ Extinde tot</button>
+      <button class="tbtn" onclick="expandAll(false)">▾ Restrânge tot</button>
+      <button class="tbtn" onclick="exportJSON()">⭳ Exportă</button>
+      <button class="tbtn" onclick="window.print()">⎙ Printează</button>
+      <button class="tbtn" onclick="resetAll()">↺ Resetează</button>
+    </div>
+  </div>
+  <div class="legend">
+    <span><i class="dot d-idee"></i> Idee / de cercetat</span>
+    <span><i class="dot d-lucru"></i> În lucru</span>
+    <span><i class="dot d-publicat"></i> Pagină gata</span>
+    <span style="margin-left:auto">✎ dublu-click pe titlu ca să-l editezi</span>
+  </div>
+</div></header>
+
+<main><div class="wrap" id="app"></div>
+  <div class="wrap"><p class="note">Datele-cheie sunt din surse recunoscute (iasi365, alohotels, gokid, Ziarul de Iași). „verifică" = mai are nevoie de confirmare oficială. Prețurile pot varia de la un sezon la altul.</p></div>
+</main>
+
+<script>
+const KEY='piscine_parcuri_iasi_v1';
+const STATUSES=['idee','lucru','publicat'];
+const LABEL={idee:'Idee',lucru:'În lucru',publicat:'Pagină'};
+
+const DEFAULT=[
+ {t:'Ștranduri & piscine publice', items:[
+   {x:'Ștrandul Municipal — Sofia Nădejde 2; bazine, parc de joacă; ~10 lei adult / ~3 lei copii-pensionari',s:'publicat',pin:'→ strandul-municipal.html'},
+   {x:'Plaja Nicolina „Purcica" — apă sulfuroasă mezotermală & nămol terapeutic',s:'publicat',pin:'→ nicolina.html'},
+ ]},
+ {t:'Piscine private', items:[
+   {x:'Sunrise Pool (Ciric) — adulți & copii; ~50 lei L–V / 70 lei weekend',s:'idee'},
+   {x:'La Playa Pool (Bucium) — adâncimi variate, bar, atmosferă relaxată',s:'idee'},
+   {x:'Havana Summer Pool (Tomești) — 2 bazine, 110 șezlonguri, gastro-pub, tenis; 09:30–20:00; 40/60 lei',s:'idee'},
+   {x:'Piscina Le Gaga (~8 km) — bazin ~30×10 m, 0,8–1,6 m; zilnic 09:00–21:00',s:'idee'},
+ ]},
+ {t:'Aquaparkuri (tobogane)', items:[
+   {x:'Aqua Party Victoria (com. Victoria, ~15 km) — primul waterpark din Iași; tobogane, jeturi, bazine separate',s:'idee',pin:'AQUAPARK'},
+   {x:'Agrement Victoria — aqua park & tobogane',s:'idee',pin:'verifică'},
+ ]},
+ {t:'Parcuri de divertisment & distracție', items:[
+   {x:'Tiki Village (Plaja Veneția, Ciric) — sat de vacanță + piscină plutitoare (prima din România)',s:'idee',pin:'→ ciric.html'},
+   {x:'Parc de aventură Ciric — trasee suspendate și la sol, în pădure',s:'idee',pin:'→ ciric.html'},
+   {x:'Kidsland Club (Iulius Mall) — parc de distracție pentru copii, petreceri',s:'idee'},
+   {x:'Kids Land Capitol — spațiu de joacă tematic (temă subacvatică)',s:'idee'},
+   {x:'Galaxy Arena — laser tag, arcade, VR, cinema 9D',s:'idee'},
+   {x:'Patinoar (sezonier, iarna) — patinaj, închiriere patine',s:'idee',pin:'iarna'},
+ ]},
+];
+
+let data=load();
+function load(){try{const r=localStorage.getItem(KEY);if(r)return JSON.parse(r);}catch(e){}return JSON.parse(JSON.stringify(DEFAULT));}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(data));}catch(e){}render();}
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function render(){
+  const app=document.getElementById('app');app.innerHTML='';
+  let tot=0,pub=0;
+  data.forEach((sec,si)=>{
+    sec.items.forEach(it=>{tot++;if(it.s==='publicat')pub++;});
+    const div=document.createElement('div');div.className='section'+(sec.collapsed?' collapsed':'');
+    const done=sec.items.filter(i=>i.s==='publicat').length;
+    let body='';
+    sec.items.forEach((it,ii)=>{
+      body+=`<div class="item">
+        <button class="badge b-${it.s}" onclick="cycle(${si},${ii})">${LABEL[it.s]}</button>
+        <span class="title ${it.s==='publicat'?'done':''}" contenteditable="true" onblur="editT(${si},${ii},this)" spellcheck="false">${esc(it.x)}</span>
+        ${it.pin?`<span class="pin">${esc(it.pin)}</span>`:''}
+        <button class="del" title="Șterge" onclick="delItem(${si},${ii})">×</button>
+      </div>`;
+    });
+    div.innerHTML=`
+      <div class="s-head" onclick="toggle(${si})">
+        <span class="num">${si+1}</span>
+        <h2 contenteditable="true" onclick="event.stopPropagation()" onblur="editS(${si},this)" spellcheck="false">${esc(sec.t)}</h2>
+        <span class="count">${done}/${sec.items.length}</span>
+        <span class="caret">▾</span>
+      </div>
+      <div class="s-body">${body}
+        <div class="add-row">
+          <input type="text" placeholder="Adaugă o piscină / un parc nou…" onkeydown="if(event.key==='Enter')addItem(${si},this)">
+          <button onclick="addItem(${si},this.previousElementSibling)">Adaugă</button>
+        </div>
+      </div>`;
+    app.appendChild(div);
+  });
+  const addS=document.createElement('button');addS.className='add-section';addS.textContent='+ Adaugă o secțiune nouă';addS.onclick=addSection;
+  app.appendChild(addS);
+  const pct=tot?Math.round(pub/tot*100):0;
+  document.getElementById('fill').style.width=pct+'%';
+  document.getElementById('plbl').textContent=`${pub} din ${tot} obiective cu pagină · ${pct}%`;
+}
+function cycle(si,ii){const it=data[si].items[ii];it.s=STATUSES[(STATUSES.indexOf(it.s)+1)%3];save();}
+function editT(si,ii,el){const v=el.textContent.trim();if(v)data[si].items[ii].x=v;else el.textContent=data[si].items[ii].x;save();}
+function editS(si,el){const v=el.textContent.trim();if(v)data[si].t=v;else el.textContent=data[si].t;save();}
+function delItem(si,ii){if(confirm('Ștergi „'+data[si].items[ii].x+'”?')){data[si].items.splice(ii,1);save();}}
+function addItem(si,input){const v=input.value.trim();if(!v)return;data[si].items.push({x:v,s:'idee'});input.value='';save();}
+function addSection(){const t=prompt('Numele secțiunii noi:');if(t&&t.trim()){data.push({t:t.trim(),items:[]});save();}}
+function toggle(si){data[si].collapsed=!data[si].collapsed;save();}
+function expandAll(open){data.forEach(s=>s.collapsed=!open);save();}
+function resetAll(){if(confirm('Revii la structura implicită? Modificările se pierd.')){data=JSON.parse(JSON.stringify(DEFAULT));save();}}
+function exportJSON(){const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='plan-piscine-parcuri-iasi.json';a.click();}
+render();
+</script>
+</body>
+</html>
