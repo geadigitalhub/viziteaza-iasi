@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iașul Universitar · Universitățile din Iași — leagănul învățământului superior modern din România</title>
+<meta name="description" content="Iașul, primul oraș universitar modern al României: UAIC (1860), Universitatea Tehnică Gheorghe Asachi, UMF Grigore T. Popa, USV Ion Ionescu de la Brad și UNAGE George Enescu.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#141d33;--gold:#C9A24B;--gold-2:#E3C778;--cream:#F4ECD8;--cream-2:#EFE4C9;--paper:#FBF6EA;--accent:#2E4488;--accent-2:#4a63ad;--teal:#3E7C8C;--leaf:#3f7d54;--brick:#A8362E;--plum:#5b3a6b;--bronze:#7A5240;--ink:#1a2033;--muted:#6b7794;--line:rgba(201,162,75,.28);--line-soft:rgba(20,29,51,.1);--r:16px;--maxw:1080px}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:'Jost',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.7;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.1}
+a{color:inherit;text-decoration:none}.wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px}
+.gold-text{color:var(--gold)}.script{font-style:italic;font-weight:500}
+.lang-en{display:none}body.en .lang-ro{display:none}body.en .lang-en{display:inline}
+.overline{font-family:'Jost';font-weight:600;letter-spacing:.32em;text-transform:uppercase;font-size:.7rem}
+header.nav{position:sticky;top:0;z-index:60;background:rgba(20,29,51,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{display:flex;flex-direction:column;line-height:1}
+.logo b{font-family:'Cormorant Garamond';font-size:1.32rem;color:var(--cream);font-weight:700;letter-spacing:.5px}
+.logo small{letter-spacing:.3em;text-transform:uppercase;font-size:.54rem;color:var(--gold);margin-top:3px}
+.nav-links{display:flex;gap:26px}
+.nav-links a{font-weight:500;font-size:.8rem;letter-spacing:.05em;color:var(--cream);opacity:.8;text-transform:uppercase;transition:.2s}
+.nav-links a:hover{opacity:1;color:var(--gold-2)}
+.langsw{display:flex;border:1px solid var(--line);border-radius:30px;padding:3px}
+.langsw button{border:0;background:transparent;padding:5px 11px;border-radius:24px;cursor:pointer;color:var(--cream);font-family:'Jost';font-weight:600;font-size:.72rem;letter-spacing:.08em;transition:.2s}
+.langsw button.active{background:var(--gold);color:var(--navy)}
+@media(max-width:820px){.nav-links{display:none}}
+.hero{position:relative;background:var(--navy);color:var(--cream);padding:74px 0 66px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(720px 460px at 80% -8%,rgba(46,68,136,.8),transparent 60%)}
+.hero::after{content:"";position:absolute;inset:0;opacity:.4;background-image:radial-gradient(rgba(201,162,75,.14) 1px,transparent 1px);background-size:24px 24px;-webkit-mask-image:linear-gradient(180deg,#000,transparent);mask-image:linear-gradient(180deg,#000,transparent)}
+.hero .wrap{position:relative;z-index:2}
+.crumb{font-size:.78rem;color:rgba(244,236,216,.6);margin-bottom:20px}.crumb a:hover{color:var(--gold-2)}
+.hero .overline{color:var(--gold-2);display:inline-block;margin-bottom:16px}
+.hero h1{font-size:clamp(2.6rem,5.8vw,4.4rem);color:var(--cream)}.hero h1 .script{color:var(--gold-2)}
+.hero p{color:rgba(244,236,216,.8);font-weight:300;font-size:1.12rem;max-width:60ch;margin:20px 0 30px}
+.hstats{display:flex;gap:34px;flex-wrap:wrap}
+.hstats .s b{font-family:'Cormorant Garamond';font-size:1.9rem;color:var(--gold-2);display:block;line-height:1}
+.hstats .s small{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(244,236,216,.6);margin-top:6px;display:block}
+.quickbar{background:linear-gradient(120deg,var(--accent),var(--accent-2));color:#fff}
+.quickbar .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px;padding:20px 26px}
+.qi{display:flex;gap:12px;align-items:center}.qi .em{font-size:1.4rem}
+.qi b{display:block;font-size:.92rem;font-weight:600}.qi small{font-size:.74rem;opacity:.9}
+section{padding:62px 0}.sec-head{max-width:680px;margin-bottom:34px}
+.sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+.sec-head .overline{color:var(--gold);display:block;margin-bottom:10px}
+.sec-head h2{font-size:clamp(1.9rem,3.6vw,2.6rem);color:var(--navy)}
+.sec-head p{color:var(--muted);font-weight:300;margin-top:8px}.alt{background:var(--cream-2)}
+.about-grid{display:grid;grid-template-columns:1.3fr .9fr;gap:34px;align-items:center}
+.about-grid p{color:var(--ink);font-weight:300;margin-bottom:14px}
+.facts{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px 26px}
+.facts h4{color:var(--navy);font-size:1.2rem;margin-bottom:10px}
+.facts .f{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--line-soft);font-size:.92rem}
+.facts .f:last-child{border-bottom:0}.facts .f span{color:var(--muted)}
+.facts .f b{color:var(--navy);font-weight:600;text-align:right}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.lbox{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px 28px;position:relative}
+.lbox.wide{margin-bottom:26px;border-left:4px solid var(--accent)}
+.lbox .badge-uni{position:absolute;top:22px;right:24px;font-family:'Cormorant Garamond';font-size:1.6rem;color:var(--gold);font-weight:700}
+.lbox h3{font-size:1.4rem;color:var(--navy);margin-bottom:4px;padding-right:60px}
+.lbox .meta{font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:14px;display:flex;gap:10px;flex-wrap:wrap}
+.lbox p{color:var(--ink);font-weight:300;font-size:.94rem;margin-bottom:12px}
+.lbox ul{list-style:none}
+.lbox ul li{position:relative;padding:7px 0 7px 24px;font-size:.9rem;border-bottom:1px solid var(--line-soft);font-weight:300}
+.lbox ul li:last-child{border-bottom:0}.lbox ul li::before{content:"✦";position:absolute;left:0;color:var(--gold);font-size:.78rem;top:8px}
+.lbox a.pg{color:var(--teal);font-weight:600;font-size:.82rem}
+.freebar{background:#fff;border:1px solid var(--line);border-left:4px solid var(--teal);border-radius:var(--r);padding:22px 26px;display:flex;gap:16px;align-items:center;margin-top:26px}
+.freebar .em{font-size:1.8rem}.freebar b{color:var(--navy);font-family:'Cormorant Garamond';font-size:1.3rem}
+.freebar small{color:var(--muted);font-weight:300;display:block;font-size:.9rem}
+#contact{background:var(--navy);color:var(--cream)}
+#contact .sec-head h2{color:var(--cream)}#contact .sec-head p{color:rgba(244,236,216,.7)}
+.cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.cc{border:1px solid var(--line);border-radius:var(--r);padding:24px 26px}
+.cc .overline{color:var(--gold-2);display:block;margin-bottom:12px}
+.cc b{color:var(--cream);font-size:1.02rem;display:block;font-weight:500}
+.cc small{color:rgba(244,236,216,.68);font-weight:300;font-size:.86rem;display:block;margin-top:4px}.cc a{color:var(--gold-2)}
+.cta-row{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:'Jost';font-weight:600;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;padding:14px 26px;border-radius:2px;cursor:pointer;border:0;transition:.3s}
+.btn-gold{background:linear-gradient(120deg,var(--gold),var(--gold-2));color:var(--navy)}.btn-gold:hover{transform:translateY(-2px)}
+.btn-outline{background:transparent;border:1px solid var(--gold);color:var(--gold-2)}.btn-outline:hover{background:var(--gold);color:var(--navy)}
+footer{background:#0f1728;color:rgba(244,236,216,.6);padding:30px 0;text-align:center;font-size:.82rem;font-weight:300}footer a{color:var(--gold-2)}
+.disclaimer{font-size:.78rem;color:var(--muted);font-style:italic;text-align:center;margin-top:24px;font-weight:300}
+@media(max-width:820px){.about-grid,.two,.cgrid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="viziteaza-romania-iasi.html" class="logo"><b>România <span class="gold-text">·</span> Iași</b><small class="lang-ro">Ghid de călătorie</small><small class="lang-en">Travel guide</small></a>
+    <div class="nav-links"><a href="#universitati"><span class="lang-ro">Universități</span><span class="lang-en">Universities</span></a><a href="#viata"><span class="lang-ro">Viața studențească</span><span class="lang-en">Student life</span></a><a href="universitatea.html">UAIC</a><a href="iasi.html">Iași</a></div>
+    <div class="langsw"><button data-lang="ro" class="active" onclick="setLang('ro')">RO</button><button data-lang="en" onclick="setLang('en')">EN</button></div>
+  </div>
+</header>
+<section class="hero"><div class="wrap">
+  <div class="crumb"><a href="viziteaza-romania-iasi.html">România · Iași</a> &nbsp;›&nbsp; <a href="iasi.html">Iași</a> &nbsp;›&nbsp; <span class="gold-text">Iașul Universitar</span></div>
+  <span class="overline">🎓 <span class="lang-ro">Leagănul universității românești moderne</span><span class="lang-en">The cradle of the modern Romanian university</span></span>
+  <h1><span class="lang-ro">Iașul</span><span class="lang-en">Academic</span> <span class="script"><span class="lang-ro">Universitar</span><span class="lang-en">Iași</span></span></h1>
+  <p class="lang-ro">La Iași s-a născut, în 1860, prima universitate modernă a României. De atunci, orașul a rămas unul dintre marile centre universitare ale țării — cu cinci universități de stat și zeci de mii de studenți care îi dau energia.</p>
+  <p class="lang-en">In 1860, Romania's first modern university was born in Iași. Ever since, the city has remained one of the country's great academic centres — with five public universities and tens of thousands of students giving it its energy.</p>
+  <div class="hstats">
+    <div class="s"><b>1860</b><small class="lang-ro">Prima universitate</small><small class="lang-en">First university</small></div>
+    <div class="s"><b>5</b><small class="lang-ro">Universități de stat</small><small class="lang-en">Public universities</small></div>
+    <div class="s"><b>50.000+</b><small class="lang-ro">Studenți</small><small class="lang-en">Students</small></div>
+    <div class="s"><b>RO/EN</b><small class="lang-ro">Bilingv</small><small class="lang-en">Bilingual</small></div>
+  </div>
+</div></section>
+<div class="quickbar"><div class="wrap">
+  <div class="qi"><span class="em">🎓</span><div><b>UAIC · 1860</b><small class="lang-ro">Prima universitate modernă</small><small class="lang-en">First modern university</small></div></div>
+  <div class="qi"><span class="em">⚙️</span><div><b class="lang-ro">Tehnică · Gh. Asachi</b><b class="lang-en">Technical · Gh. Asachi</b><small class="lang-ro">Inginerie & arhitectură</small><small class="lang-en">Engineering & architecture</small></div></div>
+  <div class="qi"><span class="em">⚕️</span><div><b>UMF · Grigore T. Popa</b><small class="lang-ro">Medicină & farmacie</small><small class="lang-en">Medicine & pharmacy</small></div></div>
+  <div class="qi"><span class="em">🎭</span><div><b>UNAGE · George Enescu</b><small class="lang-ro">Arte · din 1860</small><small class="lang-en">Arts · since 1860</small></div></div>
+</div></div>
+
+<section id="despre"><div class="wrap">
+  <div class="sec-head"><span class="overline"><span class="lang-ro">De ce „oraș universitar"</span><span class="lang-en">Why a "university city"</span></span><h2><span class="lang-ro">Orașul care a deschis prima universitate a țării</span><span class="lang-en">The city that opened the country's first university</span></h2></div>
+  <div class="about-grid">
+    <div>
+      <p class="lang-ro">În 1860, domnitorul Alexandru Ioan Cuza a înființat la Iași prima universitate modernă a României — Universitatea „Alexandru Ioan Cuza". Tot în 1860 a luat naștere și învățământul artistic superior, prin Școala de Muzică și Declamațiune și Școala de Sculptură și Pictură.</p>
+      <p class="lang-ro">De la acest început, Iașul a devenit un pol academic complet: inginerie, medicină, agronomie și arte, fiecare cu propria universitate. Astăzi, orașul numără cinci universități de stat și zeci de mii de studenți, care îi dau ritmul — de la cafenelele din Copou până la campusul Tudor Vladimirescu.</p>
+      <p class="lang-en">In 1860, ruler Alexandru Ioan Cuza founded Romania's first modern university in Iași — the "Alexandru Ioan Cuza" University. Also in 1860, higher artistic education began, through the School of Music and Declamation and the School of Sculpture and Painting.</p>
+      <p class="lang-en">From this beginning, Iași became a complete academic hub: engineering, medicine, agronomy and the arts, each with its own university. Today the city has five public universities and tens of thousands of students who set its pace — from the cafés of Copou to the Tudor Vladimirescu campus.</p>
+    </div>
+    <div class="facts">
+      <h4 class="lang-ro">Reperele academice</h4><h4 class="lang-en">Academic milestones</h4>
+      <div class="f"><span>UAIC</span><b>1860</b></div>
+      <div class="f"><span class="lang-ro">Arte (UNAGE)</span><span class="lang-en">Arts (UNAGE)</span><b>1860</b></div>
+      <div class="f"><span class="lang-ro">Agronomie (USV)</span><span class="lang-en">Agronomy (USV)</span><b>1912</b></div>
+      <div class="f"><span class="lang-ro">Tehnică (TUIASI)</span><span class="lang-en">Technical (TUIASI)</span><b>1937</b></div>
+      <div class="f"><span class="lang-ro">Universități de stat</span><span class="lang-en">Public universities</span><b>5</b></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="universitati" class="alt"><div class="wrap">
+  <div class="sec-head"><span class="overline"><span class="lang-ro">Universitățile de stat</span><span class="lang-en">The public universities</span></span><h2><span class="lang-ro">Cele cinci universități ale Iașului</span><span class="lang-en">The five universities of Iași</span></h2>
+    <p class="lang-ro">De la universitatea comprehensivă la cele de profil — inginerie, medicină, științele vieții și arte.</p>
+    <p class="lang-en">From the comprehensive university to the specialised ones — engineering, medicine, life sciences and the arts.</p></div>
+
+  <div class="lbox wide"><span class="badge-uni">1860</span><h3><span class="lang-ro">Universitatea „Alexandru Ioan Cuza" (UAIC)</span><span class="lang-en">"Alexandru Ioan Cuza" University (UAIC)</span></h3>
+    <div class="meta"><span class="lang-ro">Comprehensivă · Copou</span><span class="lang-en">Comprehensive · Copou</span><span class="lang-ro">~23.000 studenți</span><span class="lang-en">~23,000 students</span></div>
+    <p class="lang-ro">Prima universitate modernă a României și cea mai veche instituție de învățământ superior din țară. O universitate comprehensivă, cu facultăți de litere, drept, economie, științe, istorie, teologie și multe altele. Clădirea din Copou și „Sala Pașilor Pierduți" sunt ele însele o atracție.</p>
+    <p class="lang-en">Romania's first modern university and the country's oldest higher-education institution. A comprehensive university, with faculties of letters, law, economics, sciences, history, theology and many more. Its Copou building and the "Hall of Lost Steps" are an attraction in themselves.</p>
+    <a class="pg" href="universitatea.html"><span class="lang-ro">Vezi pagina Universitatea & Sala Pașilor Pierduți</span><span class="lang-en">See the University & Hall of Lost Steps page</span> →</a>
+  </div>
+
+  <div class="two">
+    <div class="lbox"><span class="badge-uni">1937</span><h3><span class="lang-ro">Universitatea Tehnică „Gheorghe Asachi" (TUIASI)</span><span class="lang-en">"Gheorghe Asachi" Technical University</span></h3>
+      <div class="meta"><span class="lang-ro">Inginerie · Arhitectură</span><span class="lang-en">Engineering · Architecture</span></div>
+      <p class="lang-ro">Cea mai mare universitate tehnică a Moldovei, clasată între universitățile de cercetare avansată. Acoperă ingineria, construcțiile, arhitectura, electronica, chimia și automatica. Campusul „Tudor Vladimirescu" este unul dintre cele mai mari campusuri studențești din țară.</p>
+      <p class="lang-en">Moldavia's largest technical university, ranked among the advanced-research universities. It covers engineering, construction, architecture, electronics, chemistry and automation. The "Tudor Vladimirescu" campus is one of the country's largest student campuses.</p>
+    </div>
+    <div class="lbox"><span class="badge-uni">⚕️</span><h3><span class="lang-ro">UMF „Grigore T. Popa"</span><span class="lang-en">"Grigore T. Popa" UMF</span></h3>
+      <div class="meta"><span class="lang-ro">Medicină & Farmacie</span><span class="lang-en">Medicine & Pharmacy</span></div>
+      <p class="lang-ro">Una dintre cele mai vechi și prestigioase universități medicale din România. Formează medici, medici dentiști, farmaciști și specialiști în asistență medicală și bioinginerie, cu o puternică deschidere internațională.</p>
+      <p class="lang-en">One of the oldest and most prestigious medical universities in Romania. It trains doctors, dentists, pharmacists and specialists in nursing and bioengineering, with a strong international dimension.</p>
+    </div>
+    <div class="lbox"><span class="badge-uni">1912</span><h3><span class="lang-ro">USV „Ion Ionescu de la Brad"</span><span class="lang-en">"Ion Ionescu de la Brad" USV</span></h3>
+      <div class="meta"><span class="lang-ro">Științele Vieții · Agronomie</span><span class="lang-en">Life Sciences · Agronomy</span></div>
+      <p class="lang-ro">Universitatea de Științele Vieții, cu rădăcini în învățământul agricol din 1912. Pregătește ingineri în agronomie, horticultură, zootehnie, ingineria produselor alimentare și medici veterinari. Din 2021 poartă numele actual (fostă USAMV).</p>
+      <p class="lang-en">The University of Life Sciences, rooted in agricultural education from 1912. It trains engineers in agronomy, horticulture, animal husbandry, food engineering and veterinary doctors. It took its current name in 2021 (formerly USAMV).</p>
+    </div>
+    <div class="lbox"><span class="badge-uni">1860</span><h3><span class="lang-ro">UNAGE „George Enescu"</span><span class="lang-en">"George Enescu" UNAGE</span></h3>
+      <div class="meta"><span class="lang-ro">Muzică · Teatru · Arte vizuale</span><span class="lang-en">Music · Theatre · Visual arts</span></div>
+      <p class="lang-ro">Universitatea Națională de Arte, cu origini în 1860, din Școala de Muzică și Declamațiune și Școala de Sculptură și Pictură. Poartă numele actual din 1997 și reunește muzica, teatrul și artele vizuale — o prezență vie în viața culturală a orașului.</p>
+      <p class="lang-en">The National University of Arts, originating in 1860 from the School of Music and Declamation and the School of Sculpture and Painting. It has held its current name since 1997 and brings together music, theatre and visual arts — a lively presence in the city's cultural life.</p>
+    </div>
+  </div>
+  <div class="sec-head" style="margin-top:44px;margin-bottom:22px"><span class="overline"><span class="lang-ro">Învățământ privat</span><span class="lang-en">Private education</span></span><h2 style="font-size:clamp(1.5rem,2.8vw,2rem)"><span class="lang-ro">Universitatea „Petre Andrei" — o moștenire ieșeană</span><span class="lang-en">"Petre Andrei" University — an Iași legacy</span></h2>
+    <p class="lang-ro">Cea mai mare universitate privată din Moldova poartă numele unui savant format la Iași — și îi continuă spiritul.</p>
+    <p class="lang-en">Moldavia's largest private university bears the name of a scholar shaped in Iași — and carries on his spirit.</p></div>
+  <div class="two">
+    <div class="lbox"><span class="badge-uni">🕯️</span><h3><span class="lang-ro">Petre Andrei, savantul (1891–1940)</span><span class="lang-en">Petre Andrei, the scholar (1891–1940)</span></h3>
+      <div class="meta"><span class="lang-ro">Sociolog · Filosof · Ministru al Educației</span><span class="lang-en">Sociologist · Philosopher · Education Minister</span></div>
+      <p class="lang-ro">Absolvent al Universității din Iași (1913) și doctor în filosofie tot la Iași (1918), Petre Andrei a devenit din 1922 profesor titular la catedra de sociologie a Universității — unul dintre întemeietorii sociologiei românești. A fost ministru al Educației Naționale (1938–1940) și un reformator al învățământului interbelic.</p>
+      <p class="lang-ro">Cariera lui, legată profund de Iași, s-a încheiat tragic în 1940. În 1991 a fost ales membru post-mortem al Academiei Române. Opera și numele său au rămas un reper al vieții intelectuale a orașului.</p>
+      <p class="lang-en">A graduate of the University of Iași (1913) and a doctor of philosophy there (1918), from 1922 Petre Andrei became full professor at the University's chair of sociology — one of the founders of Romanian sociology. He served as Minister of National Education (1938–1940) and reformed interwar schooling.</p>
+      <p class="lang-en">His career, deeply tied to Iași, ended tragically in 1940. In 1991 he was elected a post-mortem member of the Romanian Academy. His work and name have remained a landmark of the city's intellectual life.</p>
+    </div>
+    <div class="lbox"><span class="badge-uni">1990</span><h3><span class="lang-ro">Universitatea „Petre Andrei" din Iași (UPA)</span><span class="lang-en">"Petre Andrei" University of Iași (UPA)</span></h3>
+      <div class="meta"><span class="lang-ro">Din 1990 · Cea mai mare privată din Moldova</span><span class="lang-en">Since 1990 · Moldavia's largest private university</span></div>
+      <p class="lang-ro">Înființată în 1990, în cadrul Fundației Academice „Petre Andrei" și dedicată memoriei savantului, universitatea a pornit cu trei facultăți — Drept, Economie și Psihologie. În 1998 s-a adăugat Științe Politice, iar astăzi numără cinci facultăți, cu programe de licență și master. A dobândit personalitate juridică prin Legea nr. 408 din 2002.</p>
+      <p class="lang-ro">Dintr-un val de peste 100 de universități private apărute după 1990, UPA este una dintre puținele rămase viabile — cea mai mare și mai prestigioasă instituție privată de învățământ superior din Moldova. A contribuit la diversificarea și dezvoltarea Iașului academic de după 1989, aducând alternativa privată lângă marile universități de stat.</p>
+      <p class="lang-en">Founded in 1990 within the "Petre Andrei" Academic Foundation and dedicated to the scholar's memory, the university began with three faculties — Law, Economics and Psychology. Political Science was added in 1998, and today it has five faculties, with bachelor's and master's programmes. It gained legal personality through Law no. 408 of 2002.</p>
+      <p class="lang-en">Of a wave of over 100 private universities that appeared after 1990, UPA is one of the few still viable — the largest and most prestigious private higher-education institution in Moldavia. It has helped diversify and develop academic Iași after 1989, bringing a private alternative alongside the great public universities.</p>
+    </div>
+  </div>
+</div></section>
+
+<section id="viata"><div class="wrap">
+  <div class="sec-head"><span class="overline"><span class="lang-ro">Viața studențească</span><span class="lang-en">Student life</span></span><h2><span class="lang-ro">Un oraș care trăiește în ritmul studenților</span><span class="lang-en">A city that lives to a student rhythm</span></h2></div>
+  <div class="two">
+    <div class="lbox"><h3><span class="lang-ro">Copou — nucleul academic</span><span class="lang-en">Copou — the academic core</span></h3>
+      <div class="meta"><span class="lang-ro">Dealul Copou</span><span class="lang-en">Copou Hill</span></div>
+      <p class="lang-ro">Pe dealul Copou se află clădirea istorică a UAIC, Grădina Botanică și Parcul Copou — inima academică și verde a orașului, plină de studenți, terase și biblioteci.</p>
+      <p class="lang-en">On Copou Hill stand the historic UAIC building, the Botanical Garden and Copou Park — the city's academic and green heart, full of students, terraces and libraries.</p>
+      <a class="pg" href="copou.html"><span class="lang-ro">Vezi pagina Copou</span><span class="lang-en">See the Copou page</span> →</a>
+    </div>
+    <div class="lbox"><h3><span class="lang-ro">Campusul Tudor Vladimirescu</span><span class="lang-en">The Tudor Vladimirescu campus</span></h3>
+      <div class="meta"><span class="lang-ro">TUIASI · cămine</span><span class="lang-en">TUIASI · halls</span></div>
+      <p class="lang-ro">Unul dintre cele mai mari campusuri studențești din România, cu mii de studenți cazați. Un „oraș în oraș", cu cămine, cantine, terenuri de sport și o viață studențească intensă.</p>
+      <p class="lang-en">One of the largest student campuses in Romania, housing thousands of students. A "city within the city", with halls of residence, canteens, sports grounds and a lively student scene.</p>
+    </div>
+  </div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+  <div class="sec-head"><span class="overline gold-text"><span class="lang-ro">Pe scurt</span><span class="lang-en">In short</span></span><h2><span class="lang-ro">Iașul academic, în trei repere</span><span class="lang-en">Academic Iași, in three landmarks</span></h2>
+    <p class="lang-ro">Dacă vrei să simți orașul universitar, pornește de aici.</p>
+    <p class="lang-en">If you want to feel the university city, start here.</p></div>
+  <div class="cgrid">
+    <div class="cc"><span class="overline"><span class="lang-ro">Istorie</span><span class="lang-en">History</span></span><b class="lang-ro">🎓 UAIC & Sala Pașilor Pierduți</b><b class="lang-en">🎓 UAIC & Hall of Lost Steps</b><small class="lang-ro">Prima universitate, din 1860</small><small class="lang-en">The first university, since 1860</small></div>
+    <div class="cc"><span class="overline"><span class="lang-ro">Atmosferă</span><span class="lang-en">Atmosphere</span></span><b class="lang-ro">🌳 Dealul Copou</b><b class="lang-en">🌳 Copou Hill</b><small class="lang-ro">Nucleul academic & verde</small><small class="lang-en">The academic, green core</small></div>
+    <div class="cc"><span class="overline"><span class="lang-ro">Amploare</span><span class="lang-en">Scale</span></span><b class="lang-ro">⚙️ Campus Tudor Vladimirescu</b><b class="lang-en">⚙️ Tudor Vladimirescu campus</b><small class="lang-ro">Un oraș studențesc în sine</small><small class="lang-en">A student city in itself</small></div>
+  </div>
+  <div class="cta-row">
+    <a href="universitatea.html" class="btn btn-gold"><span class="lang-ro">Pagina UAIC & Sala Pașilor Pierduți</span><span class="lang-en">UAIC & Hall of Lost Steps page</span> →</a>
+    <a href="iasi.html" class="btn btn-outline"><span class="lang-ro">Alte locuri din Iași</span><span class="lang-en">More places in Iași</span></a>
+  </div>
+  <p class="disclaimer"><span class="lang-ro">Informații din surse recunoscute (site-urile universităților, Wikipedia, IasiLife), iulie 2026. Cifrele și denumirile se pot modifica — verifică pe site-urile oficiale.</span><span class="lang-en">Information from recognised sources (university websites, Wikipedia, IasiLife), July 2026. Figures and names may change — check the official websites.</span></p>
+</div></section>
+<footer><div class="wrap">© 2026 România · Iași — <span class="lang-ro">Ghid de călătorie · Demo</span><span class="lang-en">Travel guide · Demo</span> · <a href="iasi.html">Iași</a></div></footer>
+<script>function setLang(l){document.body.classList.toggle('en',l==='en');document.documentElement.lang=l;document.querySelectorAll('.langsw button').forEach(b=>b.classList.toggle('active',b.dataset.lang===l))}</script>
+</body>
+</html>
