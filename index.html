@@ -185,12 +185,14 @@ a.exp{cursor:pointer}
 #galerie{background:var(--navy);color:var(--cream)}
 #galerie .sec-head h2{color:var(--cream)}
 #galerie .sec-head p{color:rgba(244,236,216,.7)}
-.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:170px;gap:14px}
-.g{position:relative;border-radius:6px;overflow:hidden;display:flex;align-items:flex-end;padding:16px;color:#fff;cursor:pointer;transition:.4s;border:1px solid var(--line)}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:170px;gap:14px;grid-auto-flow:dense}
+.g{position:relative;border-radius:6px;overflow:hidden;display:flex;align-items:flex-end;padding:16px;color:#fff;cursor:pointer;transition:.4s;border:1px solid var(--line);background:var(--navy)}
+.g img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;transition:.5s}
 .g:hover{transform:scale(1.02)}
-.g::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 42%,rgba(20,29,51,.82))}
-.g span{position:relative;z-index:2;font-family:'Cormorant Garamond';font-size:1.15rem;font-weight:600}
-.g .up{position:absolute;z-index:2;top:12px;left:12px;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;background:rgba(201,162,75,.85);color:var(--navy);padding:4px 9px;border-radius:2px;font-weight:700}
+.g:hover img{transform:scale(1.06)}
+.g::after{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(transparent 42%,rgba(20,29,51,.82))}
+.g span{position:relative;z-index:3;font-family:'Cormorant Garamond';font-size:1.15rem;font-weight:600}
+.g .up{position:absolute;z-index:3;top:12px;left:12px;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;background:rgba(201,162,75,.85);color:var(--navy);padding:4px 9px;border-radius:2px;font-weight:700}
 .g.big{grid-column:span 2;grid-row:span 2}
 .g.wide{grid-column:span 2}
 .ga{background:linear-gradient(150deg,#2E4488,#141d33)}
@@ -447,12 +449,24 @@ footer ul li a:hover{color:var(--gold-2)}
       <h2><span class="lang-ro">Iași, în imagini</span><span class="lang-en">Iași, in pictures</span></h2>
     </div>
     <div class="gal">
-      <div class="g big ga"><span class="up lang-ro">Zona ta foto</span><span class="up lang-en">Your photo slot</span><span class="lang-ro">Palatul Culturii, Iași</span><span class="lang-en">Palace of Culture, Iași</span></div>
-      <div class="g gb"><span class="lang-ro">Bucovina</span><span class="lang-en">Bucovina</span></div>
-      <div class="g gc"><span class="lang-ro">Transilvania</span><span class="lang-en">Transylvania</span></div>
-      <div class="g wide gd"><span class="lang-ro">Copou, Iași</span><span class="lang-en">Copou, Iași</span></div>
-      <div class="g ge"><span class="lang-ro">Delta Dunării</span><span class="lang-en">Danube Delta</span></div>
-      <div class="g gf"><span class="lang-ro">Iașul noaptea</span><span class="lang-en">Iași by night</span></div>
+      <div class="g big"><img src="images/palatul-culturii-iasi.webp" alt="Palatul Culturii din Iași" loading="lazy"><span class="lang-ro">Palatul Culturii</span><span class="lang-en">Palace of Culture</span></div>
+      <div class="g"><img src="images/catedrala-mitropolitana-iasi.webp" alt="Catedrala Mitropolitană din Iași" loading="lazy"><span class="lang-ro">Catedrala Mitropolitană</span><span class="lang-en">Metropolitan Cathedral</span></div>
+      <div class="g"><img src="images/manastirea-trei-ierarhi-iasi.webp" alt="Mănăstirea Trei Ierarhi din Iași" loading="lazy"><span class="lang-ro">Mănăstirea Trei Ierarhi</span><span class="lang-en">Three Hierarchs Monastery</span></div>
+      <div class="g wide"><img src="images/gradina-botanica-iasi-arcada-trandafiri.webp" alt="Arcada cu trandafiri din Grădina Botanică Iași" loading="lazy"><span class="lang-ro">Grădina Botanică — arcada cu trandafiri</span><span class="lang-en">Botanical Garden — rose arch</span></div>
+      <div class="g"><img src="images/teatrul-national-vasile-alecsandri-iasi.webp" alt="Teatrul Național Vasile Alecsandri din Iași" loading="lazy"><span class="lang-ro">Teatrul Național</span><span class="lang-en">National Theatre</span></div>
+      <div class="g wide"><img src="images/parcul-copou-iasi.webp" alt="Parcul Copou din Iași" loading="lazy"><span class="lang-ro">Parcul Copou</span><span class="lang-en">Copou Park</span></div>
+      <div class="g"><img src="images/biblioteca-centrala-universitara-iasi.webp" alt="Biblioteca Centrală Universitară din Iași" loading="lazy"><span class="lang-ro">Biblioteca Centrală Universitară</span><span class="lang-en">Central University Library</span></div>
+      <div class="g"><img src="images/palatul-roznovanu-primaria-iasi.webp" alt="Palatul Roznovanu — Primăria Iași" loading="lazy"><span class="lang-ro">Palatul Roznovanu</span><span class="lang-en">Roznovanu Palace</span></div>
+      <div class="g"><img src="images/teiul-lui-eminescu-copou-iasi.webp" alt="Teiul lui Eminescu din Copou, Iași" loading="lazy"><span class="lang-ro">Teiul lui Eminescu, Copou</span><span class="lang-en">Eminescu's Linden, Copou</span></div>
+      <div class="g wide"><img src="images/teatrul-national-fantana-iasi.webp" alt="Fântânile din fața Teatrului Național Iași" loading="lazy"><span class="lang-ro">Teatrul Național — fântânile</span><span class="lang-en">National Theatre — fountains</span></div>
+      <div class="g"><img src="images/palatul-braunstein-iasi.webp" alt="Palatul Braunstein din Iași" loading="lazy"><span class="lang-ro">Palatul Braunstein</span><span class="lang-en">Braunstein Palace</span></div>
+      <div class="g"><img src="images/turnul-cu-ceas-palatul-culturii-iasi.webp" alt="Turnul cu ceas al Palatului Culturii din Iași" loading="lazy"><span class="lang-ro">Turnul cu ceas</span><span class="lang-en">The clock tower</span></div>
+      <div class="g"><img src="images/flori-canna-parc-iasi.webp" alt="Flori de canna într-un parc din Iași" loading="lazy"><span class="lang-ro">Flori de canna</span><span class="lang-en">Canna flowers</span></div>
+      <div class="g"><img src="images/fantana-flori-galbene-iasi.webp" alt="Fântână și flori galbene în Iași" loading="lazy"><span class="lang-ro">Fântână & flori</span><span class="lang-en">Fountain & flowers</span></div>
+      <div class="g"><img src="images/parcul-expozitiei-iasi-fantana.webp" alt="Fântâna din Parcul Expoziției, Iași" loading="lazy"><span class="lang-ro">Parcul Expoziției</span><span class="lang-en">Expo Park</span></div>
+      <div class="g"><img src="images/biserica-sfantul-nicolae-domnesc-iasi.webp" alt="Biserica Sfântul Nicolae Domnesc din Iași" loading="lazy"><span class="lang-ro">Sf. Nicolae Domnesc</span><span class="lang-en">St. Nicholas the Princely</span></div>
+      <div class="g"><img src="images/statuia-ferdinand-iasi.webp" alt="Statuia lui Ferdinand din Iași" loading="lazy"><span class="lang-ro">Statuia Ferdinand</span><span class="lang-en">Ferdinand Statue</span></div>
+      <div class="g wide"><img src="images/palatul-culturii-iasi-bulevard.webp" alt="Palatul Culturii văzut de pe bulevard, Iași" loading="lazy"><span class="lang-ro">Palatul Culturii, de pe bulevard</span><span class="lang-en">Palace of Culture, from the boulevard</span></div>
     </div>
   </div>
 </section>
