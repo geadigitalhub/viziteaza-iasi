@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iași · Album elegant — Vizitează România</title>
+<style>
+  :root{
+    --royal:#1a2a6c;
+    --royal-deep:#0f1b4d;
+    --gold:#c9a227;
+    --gold-light:#e6c25a;
+    --ink:#12172b;
+    --paper:#f7f5ef;
+    --muted:#6b7280;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Georgia","Times New Roman",serif;
+    background:var(--paper);
+    color:var(--ink);
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+
+  /* ---------- Header ---------- */
+  header.hero{
+    background:linear-gradient(165deg,#0a1236,var(--royal-deep) 55%,var(--royal));
+    color:#fff;
+    padding:66px 0 54px;
+    text-align:center;
+    border-bottom:1px solid rgba(201,162,39,.4);
+  }
+  .eyebrow{
+    letter-spacing:.34em;
+    text-transform:uppercase;
+    font-size:.68rem;
+    color:var(--gold-light);
+    font-family:system-ui,-apple-system,sans-serif;
+    font-weight:600;
+    margin-bottom:20px;
+  }
+  header.hero h1{
+    font-size:clamp(2.1rem,5vw,3.4rem);
+    line-height:1.1;
+    font-weight:400;
+    letter-spacing:.5px;
+  }
+  header.hero h1 span{color:var(--gold-light);font-style:italic}
+  header.hero p{
+    max-width:600px;margin:20px auto 0;
+    font-size:1.02rem;line-height:1.65;color:#d6dbef;
+    font-family:system-ui,-apple-system,sans-serif;font-weight:300;
+  }
+  .play-all{
+    margin-top:32px;
+    display:inline-flex;align-items:center;gap:12px;
+    background:transparent;color:var(--gold-light);
+    border:1px solid rgba(201,162,39,.6);cursor:pointer;
+    padding:14px 30px;border-radius:2px;
+    font-family:system-ui,-apple-system,sans-serif;
+    font-weight:600;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;
+    transition:.3s;
+  }
+  .play-all:hover{background:var(--gold);color:var(--royal-deep);border-color:var(--gold)}
+  .play-all svg{width:15px;height:15px}
+
+  /* ---------- Gallery grid ---------- */
+  .section-head{text-align:center;padding:58px 0 6px}
+  .section-head .eyebrow{color:var(--gold)}
+  .section-head h2{
+    font-size:clamp(1.7rem,4vw,2.5rem);font-weight:400;letter-spacing:.4px;
+  }
+  .section-head p{
+    color:var(--muted);max-width:540px;margin:14px auto 0;
+    font-family:system-ui,-apple-system,sans-serif;font-size:.98rem;line-height:1.6;font-weight:300;
+  }
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+    gap:14px;
+    padding:38px 0 74px;
+  }
+  .card{
+    position:relative;overflow:hidden;border-radius:3px;cursor:pointer;
+    aspect-ratio:4/3;
+    box-shadow:0 4px 16px rgba(15,27,77,.1);
+    background:var(--royal-deep);
+  }
+  .card img{
+    width:100%;height:100%;object-fit:cover;display:block;
+    filter:saturate(.96);
+    transition:opacity .5s ease, filter .5s ease;
+  }
+  .card::after{
+    content:"";position:absolute;inset:0;
+    background:rgba(15,27,77,.12);transition:background .4s;
+  }
+  .card:hover::after{background:rgba(15,27,77,0)}
+  .card:hover img{filter:saturate(1.04)}
+
+  /* ---------- Elegant viewer ---------- */
+  .viewer{
+    position:fixed;inset:0;z-index:100;
+    background:#080a16;
+    display:none;opacity:0;transition:opacity .6s ease;
+  }
+  .viewer.open{display:block}
+  .viewer.show{opacity:1}
+  .stage{position:absolute;inset:0;overflow:hidden}
+  .slide{
+    position:absolute;inset:0;
+    opacity:0;
+    transition:opacity 1.6s ease;
+  }
+  .slide.active{opacity:1}
+  .slide .bg{
+    position:absolute;inset:0;
+    background-size:cover;background-position:center;
+    filter:blur(40px) brightness(.32);
+    transform:scale(1.15);
+  }
+  .slide .fg{
+    position:absolute;inset:0;
+    background-size:contain;background-position:center;background-repeat:no-repeat;
+  }
+  /* subtle gold hairline frame feel */
+  .frame-line{
+    position:absolute;inset:26px;z-index:3;pointer-events:none;
+    border:1px solid rgba(201,162,39,.16);
+  }
+
+  .caption{
+    position:absolute;left:0;right:0;bottom:0;z-index:4;
+    padding:70px 8vw 40px;
+    background:linear-gradient(to top,rgba(0,0,0,.6),transparent);
+    color:#fff;text-align:center;
+    transform:translateY(8px);opacity:0;transition:.6s;
+  }
+  .viewer.captions .caption{transform:translateY(0);opacity:1}
+  .caption b{display:block;font-size:clamp(1.1rem,2.6vw,1.7rem);font-weight:400;letter-spacing:.4px}
+  .caption small{color:var(--gold-light);font-family:system-ui,sans-serif;letter-spacing:.06em;font-size:.82rem}
+
+  .v-top{
+    position:absolute;top:0;left:0;right:0;z-index:6;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:22px 26px;
+    font-family:system-ui,-apple-system,sans-serif;color:#fff;
+  }
+  .counter{font-variant-numeric:tabular-nums;letter-spacing:.24em;font-size:.8rem;opacity:.7}
+  .v-tools{display:flex;gap:12px}
+  .vbtn{
+    width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.14);cursor:pointer;
+    background:transparent;
+    color:#fff;display:grid;place-items:center;transition:.25s;opacity:.8;
+  }
+  .vbtn:hover{border-color:var(--gold);color:var(--gold-light);opacity:1}
+  .vbtn svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.6}
+  .nav{
+    position:absolute;top:50%;transform:translateY(-50%);z-index:6;
+    width:54px;height:54px;border-radius:50%;border:1px solid rgba(255,255,255,.12);cursor:pointer;
+    background:transparent;color:#fff;
+    display:grid;place-items:center;transition:.25s;opacity:.55;
+  }
+  .nav:hover{opacity:1;border-color:var(--gold);color:var(--gold-light)}
+  .nav svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.6}
+  .nav.prev{left:24px}.nav.next{right:24px}
+
+  /* dots */
+  .dots{
+    position:absolute;left:0;right:0;bottom:30px;z-index:5;
+    display:flex;gap:9px;justify-content:center;align-items:center;flex-wrap:wrap;
+    padding:0 40px;transition:opacity .4s;
+  }
+  .viewer.captions .dots{opacity:0;pointer-events:none}
+  .dot{
+    width:7px;height:7px;border-radius:50%;cursor:pointer;
+    background:rgba(255,255,255,.28);transition:.3s;
+  }
+  .dot.active{background:var(--gold);transform:scale(1.3)}
+  .dot:hover{background:rgba(255,255,255,.6)}
+
+  footer{
+    background:var(--royal-deep);color:#c7cbe0;text-align:center;
+    padding:34px 20px;font-family:system-ui,-apple-system,sans-serif;font-size:.85rem;font-weight:300;
+  }
+  footer b{color:var(--gold-light);font-weight:500}
+  .demo-note{
+    background:#fff8e1;border:1px solid #f0e2a8;color:#7a5c00;
+    font-family:system-ui,sans-serif;font-size:.9rem;line-height:1.5;
+    max-width:1140px;margin:22px auto 0;padding:14px 18px;border-radius:6px;
+  }
+  @media(max-width:640px){
+    .grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:9px}
+    .nav{width:44px;height:44px}
+    .frame-line{inset:14px}
+    .caption{padding:56px 6vw 32px}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Album foto · Photo album</div>
+    <h1>Iașul <span>în fotografii</span></h1>
+    <p>Un album elegant pentru cei care vor să vadă sau să revadă unele din frumusețile acestui oraș. Apasă „Redă albumul" pentru o prezentare liniștită pe tot ecranul, sau dă click pe orice fotografie.</p>
+    <button class="play-all" id="playAll">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+      Redă albumul · Play album
+    </button>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="section-head">
+    <div class="eyebrow">Galerie · Gallery</div>
+    <h2>Iași, în imagini</h2>
+    <p>Click pe o fotografie pentru a o deschide pe tot ecranul, cu tranziții fine.</p>
+  </div>
+  <div class="grid" id="grid"></div>
+</main>
+
+<div class="demo-note">
+  <b>Notă demo:</b> aceasta este varianta <em>elegantă</em> — fundal întunecat, tranziții fade fine, fără zoom și fără denumiri vizibile (imaginea pură). Apasă tasta <strong>T</strong> în slideshow dacă vrei să vezi denumirile.
+</div>
+
+<footer>
+  © 2026 <b>România · Iași</b> — Album elegant demo · Paletă Royal Blue &amp; Gold
+</footer>
+
+<!-- ---------- Elegant viewer ---------- -->
+<div class="viewer" id="viewer" aria-hidden="true">
+  <div class="stage" id="stage"></div>
+  <div class="frame-line"></div>
+
+  <div class="caption" id="caption"><b></b><small></small></div>
+
+  <div class="v-top">
+    <div class="counter" id="counter">01 / 18</div>
+    <div class="v-tools">
+      <button class="vbtn" id="toggleCap" title="Denumiri (T)">
+        <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+      </button>
+      <button class="vbtn" id="playPause" title="Play / Pauză (spațiu)">
+        <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M8 5v14l11-7z"/></svg>
+      </button>
+      <button class="vbtn" id="closeV" title="Închide (Esc)">
+        <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <button class="nav prev" id="prev"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button>
+  <button class="nav next" id="next"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+
+  <div class="dots" id="dots"></div>
+</div>
+
+<script>
+const BASE = "https://geadigitalhub.github.io/viziteaza-iasi/images/";
+const PHOTOS = [
+  ["palatul-culturii-iasi.webp","Palatul Culturii","Palace of Culture"],
+  ["catedrala-mitropolitana-iasi.webp","Catedrala Mitropolitană","Metropolitan Cathedral"],
+  ["manastirea-trei-ierarhi-iasi.webp","Mănăstirea Trei Ierarhi","Three Hierarchs Monastery"],
+  ["gradina-botanica-iasi-arcada-trandafiri.webp","Grădina Botanică — arcada cu trandafiri","Botanical Garden — rose arch"],
+  ["teatrul-national-vasile-alecsandri-iasi.webp","Teatrul Național","National Theatre"],
+  ["parcul-copou-iasi.webp","Parcul Copou","Copou Park"],
+  ["teiul-lui-eminescu-copou-iasi.webp","Teiul lui Eminescu, Copou","Eminescu's Linden, Copou"],
+  ["teatrul-national-fantana-iasi.webp","Teatrul Național — fântânile","National Theatre — fountains"],
+  ["palatul-braunstein-iasi.webp","Palatul Braunstein","Braunstein Palace"],
+  ["biblioteca-centrala-universitara-iasi.webp","Biblioteca Centrală Universitară","Central University Library"],
+  ["palatul-roznovanu-primaria-iasi.webp","Palatul Roznovanu — Primăria","Roznovanu Palace — City Hall"],
+  ["turnul-cu-ceas-palatul-culturii-iasi.webp","Turnul cu ceas","The clock tower"],
+  ["flori-canna-parc-iasi.webp","Flori de canna","Canna flowers"],
+  ["fantana-flori-galbene-iasi.webp","Fântână & flori","Fountain & flowers"],
+  ["aranjament-floral-parc-iasi.webp","Iașul în limbajul florilor de vară","Iași in summer bloom"],
+  ["parcul-expozitiei-iasi-fantana.webp","Parcul Expoziției","Expo Park"],
+  ["biserica-sfantul-nicolae-domnesc-iasi.webp","Biserica Sf. Nicolae Domnesc","St. Nicholas the Princely Church"],
+  ["palatul-culturii-iasi-bulevard.webp","Palatul Culturii, de pe bulevard","Palace of Culture, from the boulevard"]
+];
+
+const grid=document.getElementById('grid');
+const stage=document.getElementById('stage');
+const dots=document.getElementById('dots');
+const viewer=document.getElementById('viewer');
+const counter=document.getElementById('counter');
+const captionEl=document.getElementById('caption');
+
+let current=0, playing=false, timer=null;
+const DURATION=6500; // calmer pace
+
+// build grid
+PHOTOS.forEach((p,i)=>{
+  const c=document.createElement('div');
+  c.className='card';
+  c.innerHTML=`<img loading="lazy" src="${BASE+p[0]}" alt="${p[1]}">`;
+  c.addEventListener('click',()=>open(i,false));
+  grid.appendChild(c);
+});
+
+// build slides + dots
+PHOTOS.forEach((p,i)=>{
+  const s=document.createElement('div');
+  s.className='slide';s.dataset.i=i;
+  s.innerHTML=`<div class="bg" style="background-image:url(${BASE+p[0]})"></div>`+
+              `<div class="fg" style="background-image:url(${BASE+p[0]})"></div>`;
+  stage.appendChild(s);
+
+  const d=document.createElement('div');
+  d.className='dot';d.dataset.i=i;
+  d.addEventListener('click',e=>{e.stopPropagation();go(i)});
+  dots.appendChild(d);
+});
+const slides=[...stage.children];
+const dotEls=[...dots.children];
+
+function show(i){
+  slides.forEach(s=>s.classList.remove('active'));
+  dotEls.forEach(d=>d.classList.remove('active'));
+  slides[i].classList.add('active');
+  dotEls[i].classList.add('active');
+  counter.textContent=String(i+1).padStart(2,'0')+' / '+PHOTOS.length;
+  captionEl.querySelector('b').textContent=PHOTOS[i][1];
+  captionEl.querySelector('small').textContent=PHOTOS[i][2];
+  current=i;
+}
+function go(i){ show((i+PHOTOS.length)%PHOTOS.length); if(playing) restartTimer(); }
+function next(){ go(current+1); }
+function prev(){ go(current-1); }
+
+function restartTimer(){ clearTimeout(timer); timer=setTimeout(next,DURATION); }
+function play(){
+  playing=true;
+  document.getElementById('playPause').innerHTML='<svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>';
+  restartTimer();
+}
+function pause(){
+  playing=false;clearTimeout(timer);
+  document.getElementById('playPause').innerHTML='<svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M8 5v14l11-7z"/></svg>';
+}
+function togglePlay(){ playing?pause():play(); }
+
+function open(i,auto){
+  viewer.classList.add('open');
+  viewer.setAttribute('aria-hidden','false');
+  document.body.style.overflow='hidden';
+  requestAnimationFrame(()=>viewer.classList.add('show'));
+  show(i);
+  if(auto) play();
+}
+function close(){
+  pause();
+  viewer.classList.remove('show');
+  viewer.setAttribute('aria-hidden','true');
+  document.body.style.overflow='';
+  setTimeout(()=>viewer.classList.remove('open'),600);
+}
+
+document.getElementById('playAll').addEventListener('click',()=>open(0,true));
+document.getElementById('next').addEventListener('click',next);
+document.getElementById('prev').addEventListener('click',prev);
+document.getElementById('closeV').addEventListener('click',close);
+document.getElementById('playPause').addEventListener('click',togglePlay);
+document.getElementById('toggleCap').addEventListener('click',()=>viewer.classList.toggle('captions'));
+
+document.addEventListener('keydown',e=>{
+  if(!viewer.classList.contains('open'))return;
+  if(e.key==='ArrowRight')next();
+  else if(e.key==='ArrowLeft')prev();
+  else if(e.key==='Escape')close();
+  else if(e.key===' '){e.preventDefault();togglePlay();}
+  else if(e.key.toLowerCase()==='t')viewer.classList.toggle('captions');
+});
+
+let sx=0;
+stage.addEventListener('touchstart',e=>sx=e.touches[0].clientX,{passive:true});
+stage.addEventListener('touchend',e=>{
+  const dx=e.changedTouches[0].clientX-sx;
+  if(Math.abs(dx)>40){ dx<0?next():prev(); }
+});
+</script>
+</body>
+</html>
