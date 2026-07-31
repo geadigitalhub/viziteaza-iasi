@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mănăstirea Humor · Prima biserică pictată din Bucovina — roșul de Humor & frescele lui Toma</title>
+<meta name="description" content="Mănăstirea Humor (1530), ctitorie a logofătului Toader Bubuiog, prima biserică cu pictură exterioară din Bucovina (1535), renumită pentru „roșul de Humor". Monument UNESCO. Ghid bilingv RO/EN.">
+<meta name="keywords" content="Mănăstirea Humor, roșul de Humor, Toader Bubuiog, Toma din Suceava, prima biserică pictată, mănăstirile Bucovina, UNESCO, Gura Humorului, obiective Suceava">
+<meta name="og:title" content="Mănăstirea Humor · Prima biserică pictată din Bucovina">
+<meta name="og:description" content="Ctitorie din 1530, prima pictură exterioară din Bucovina (1535) și celebrul „roșu de Humor" — monument UNESCO.">
+<meta name="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#141d33;--navy-3:#243459;--royal:#2E4488;
+  --gold:#C9A24B;--gold-2:#E3C778;--cream:#F4ECD8;--cream-2:#EFE4C9;--paper:#FBF6EA;
+  --leaf:#3f7d54;--leaf-2:#5a9c6f;--teal:#3E7C8C;--brick:#A8362E;--humor:#9E2B24;--humor-2:#C0453A;
+  --ink:#1a2033;--muted:#6b7794;--line:rgba(201,162,75,.28);--line-soft:rgba(20,29,51,.1);--r:16px;--maxw:1080px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Jost',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.7;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.1}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px}
+.gold-text{color:var(--gold)}.script{font-style:italic;font-weight:500}
+.lang-en{display:none}
+body.en .lang-ro{display:none}
+body.en .lang-en{display:inline}
+.overline{font-family:'Jost';font-weight:600;letter-spacing:.32em;text-transform:uppercase;font-size:.7rem}
+
+header.nav{position:sticky;top:0;z-index:60;background:rgba(20,29,51,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{display:flex;flex-direction:column;line-height:1}
+.logo b{font-family:'Cormorant Garamond';font-size:1.32rem;color:var(--cream);font-weight:700;letter-spacing:.5px}
+.logo small{letter-spacing:.3em;text-transform:uppercase;font-size:.54rem;color:var(--gold);margin-top:3px}
+.nav-links{display:flex;gap:22px}
+.nav-links a{font-weight:500;font-size:.8rem;letter-spacing:.05em;color:var(--cream);opacity:.8;text-transform:uppercase;transition:.2s}
+.nav-links a:hover{opacity:1;color:var(--gold-2)}
+.langsw{display:flex;border:1px solid var(--line);border-radius:30px;padding:3px}
+.langsw button{border:0;background:transparent;padding:5px 11px;border-radius:24px;cursor:pointer;color:var(--cream);font-family:'Jost';font-weight:600;font-size:.72rem;letter-spacing:.08em;transition:.2s}
+.langsw button.active{background:var(--gold);color:var(--navy)}
+@media(max-width:900px){.nav-links{display:none}}
+
+.hero{position:relative;background:var(--navy);color:var(--cream);padding:70px 0 64px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(680px 420px at 82% 0%,rgba(192,69,58,.55),transparent 62%)}
+.hero::after{content:"";position:absolute;inset:0;opacity:.4;background-image:radial-gradient(rgba(201,162,75,.14) 1px,transparent 1px);background-size:24px 24px;-webkit-mask-image:linear-gradient(180deg,#000,transparent);mask-image:linear-gradient(180deg,#000,transparent)}
+.hero .wrap{position:relative;z-index:2}
+.crumb{font-size:.78rem;color:rgba(244,236,216,.6);margin-bottom:20px}
+.crumb a:hover{color:var(--gold-2)}
+.hero .overline{color:var(--gold-2);display:inline-block;margin-bottom:16px}
+.hero h1{font-size:clamp(2.4rem,5.4vw,4rem);color:var(--cream)}
+.hero h1 .script{color:var(--humor-2)}
+.hero p{color:rgba(244,236,216,.78);font-weight:300;font-size:1.1rem;max-width:60ch;margin:20px 0 26px}
+.badges{display:flex;gap:10px;flex-wrap:wrap}
+.badge{border:1px solid var(--line);border-radius:30px;padding:8px 16px;font-size:.76rem;color:var(--cream);display:flex;align-items:center;gap:8px}
+.badge .d{width:7px;height:7px;border-radius:50%;background:var(--humor-2)}
+
+.quickbar{background:linear-gradient(120deg,var(--humor),var(--humor-2));color:#fff}
+.quickbar .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px;padding:20px 26px}
+.qi{display:flex;gap:12px;align-items:center}
+.qi .em{font-size:1.4rem}
+.qi b{display:block;font-size:.92rem;font-weight:600}
+.qi small{font-size:.74rem;opacity:.9}
+
+section{padding:58px 0}
+.sec-head{margin-bottom:30px}
+.sec-head .overline{color:var(--gold);display:block;margin-bottom:10px}
+.sec-head h2{font-size:clamp(1.9rem,3.6vw,2.6rem);color:var(--navy)}
+.sec-head p{color:var(--muted);font-weight:300;margin-top:8px;max-width:64ch}
+.alt{background:var(--cream-2)}
+
+.toc{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px 28px}
+.toc h2{font-size:1.5rem;color:var(--navy);margin-bottom:6px}
+.toc .lead{color:var(--muted);font-weight:300;font-size:.9rem;margin-bottom:16px}
+.toc ol{list-style:none;counter-reset:toc;display:grid;grid-template-columns:1fr 1fr;gap:2px 26px}
+.toc ol li{counter-increment:toc;border-bottom:1px solid var(--line-soft)}
+.toc ol li a{display:flex;gap:12px;align-items:baseline;padding:11px 2px;font-size:.95rem;transition:.2s}
+.toc ol li a:hover{color:var(--humor)}
+.toc ol li a::before{content:counter(toc,decimal-leading-zero);font-family:'Cormorant Garamond';font-size:1.05rem;color:var(--gold);font-weight:700;min-width:26px}
+@media(max-width:820px){.toc ol{grid-template-columns:1fr}}
+
+.body-grid{display:grid;grid-template-columns:1.3fr .9fr;gap:34px;align-items:start}
+.prose p{color:var(--ink);font-weight:300;margin-bottom:14px}
+.prose p.lead{font-size:1.1rem;color:var(--navy);font-weight:400}
+.facts{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px 26px;position:sticky;top:90px}
+.facts h4{font-size:1.15rem;color:var(--navy);margin-bottom:8px}
+.facts .f{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px solid var(--line-soft);font-size:.92rem}
+.facts .f:last-child{border-bottom:0}
+.facts .f span{color:var(--muted)}
+.facts .f b{color:var(--navy);font-family:'Cormorant Garamond';font-size:1.12rem;text-align:right}
+
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.vcard{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:22px 24px;border-top:3px solid var(--humor-2)}
+.vcard h3{font-size:1.25rem;color:var(--navy);margin-bottom:2px}
+.vcard .tag{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--humor);font-weight:600;margin-bottom:12px;display:block}
+.vcard p{font-size:.88rem;font-weight:300;color:var(--ink)}
+
+.lbox{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px 28px}
+.lbox h3{font-size:1.35rem;color:var(--navy);margin-bottom:14px}
+.lbox ul{list-style:none}
+.lbox ul li{position:relative;padding:8px 0 8px 26px;font-size:.92rem;border-bottom:1px solid var(--line-soft);font-weight:300}
+.lbox ul li:last-child{border-bottom:0}
+.lbox ul li::before{content:"✦";position:absolute;left:0;color:var(--humor);font-size:.8rem;top:9px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+
+.callout{background:linear-gradient(120deg,rgba(158,43,36,.09),rgba(192,69,58,.16));border:1px solid var(--humor-2);border-radius:var(--r);padding:20px 24px;font-size:.92rem;color:var(--ink);font-weight:300;margin-top:20px}
+.callout b{color:var(--navy);font-weight:600}
+
+#contact{background:var(--navy);color:var(--cream)}
+#contact .sec-head h2{color:var(--cream)}
+#contact .sec-head p{color:rgba(244,236,216,.7)}
+.cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.cc{border:1px solid var(--line);border-radius:var(--r);padding:24px 26px}
+.cc .overline{color:var(--gold-2);display:block;margin-bottom:12px}
+.cc b{color:var(--cream);font-size:1.02rem;display:block;font-weight:500}
+.cc small{color:rgba(244,236,216,.68);font-weight:300;font-size:.86rem;display:block;margin-top:4px}
+.cc a{color:var(--gold-2)}
+.cta-row{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:'Jost';font-weight:600;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;padding:14px 26px;border-radius:2px;cursor:pointer;border:0;transition:.3s}
+.btn-gold{background:linear-gradient(120deg,var(--gold),var(--gold-2));color:var(--navy)}
+.btn-gold:hover{transform:translateY(-2px)}
+.btn-outline{background:transparent;border:1px solid var(--gold);color:var(--gold-2)}
+.btn-outline:hover{background:var(--gold);color:var(--navy)}
+
+.closing{background:var(--cream-2)}
+.closing .box{background:#fff;border:1px solid var(--line);border-left:4px solid var(--humor-2);border-radius:var(--r);padding:30px 32px;max-width:820px}
+.closing .box p{font-weight:300;color:var(--ink);margin-bottom:12px}
+.closing .box p:last-child{margin-bottom:0}
+
+footer{background:#0f1728;color:rgba(244,236,216,.6);padding:30px 0;text-align:center;font-size:.82rem;font-weight:300}
+footer a{color:var(--gold-2)}
+.disclaimer{font-size:.78rem;color:var(--muted);font-style:italic;text-align:center;margin-top:24px;font-weight:300}
+@media(max-width:820px){.body-grid,.cards,.cgrid,.two{grid-template-columns:1fr}.facts{position:static}}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="viziteaza-romania-iasi.html" class="logo"><b>România <span class="gold-text">·</span> Iași</b><small class="lang-ro">Ghid de călătorie</small><small class="lang-en">Travel guide</small></a>
+    <div class="nav-links">
+      <a href="#istoric"><span class="lang-ro">Istoric</span><span class="lang-en">History</span></a>
+      <a href="#fresce"><span class="lang-ro">Frescele</span><span class="lang-en">Frescoes</span></a>
+      <a href="#vezi"><span class="lang-ro">De văzut</span><span class="lang-en">To see</span></a>
+      <a href="#acces">Acces</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="langsw">
+      <button data-lang="ro" class="active" onclick="setLang('ro')">RO</button>
+      <button data-lang="en" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="crumb"><a href="viziteaza-romania-iasi.html">România · Iași</a> &nbsp;›&nbsp; <a href="iasi.html">Iași</a> &nbsp;›&nbsp; <a href="checklist-regiunea-moldova.html"><span class="lang-ro">Regiunea Moldova</span><span class="lang-en">Moldavia region</span></a> &nbsp;›&nbsp; <span class="gold-text">Humor</span></div>
+    <span class="overline">⛪ <span class="lang-ro">Mănăstirile pictate din Bucovina · UNESCO</span><span class="lang-en">The painted monasteries of Bukovina · UNESCO</span></span>
+    <h1><span class="lang-ro">Mănăstirea</span><span class="lang-en">Humor</span> <span class="script">Humor</span></h1>
+    <p class="lang-ro">Ridicată în 1530 de logofătul Toader Bubuiog, Humor este prima biserică din Bucovina care a primit pictură exterioară (1535) — locul unde a început tradiția mănăstirilor pictate. Este renumită pentru tonurile sale calde de „roșu de Humor".</p>
+    <p class="lang-en">Built in 1530 by the chancellor Toader Bubuiog, Humor is the first church in Bukovina to receive exterior painting (1535) — the place where the tradition of the painted monasteries began. It is famous for its warm "Humor red" tones.</p>
+    <div class="badges">
+      <span class="badge"><span class="d"></span><span class="lang-ro">Ctitorie 1530</span><span class="lang-en">Founded 1530</span></span>
+      <span class="badge"><span class="d"></span><span class="lang-ro">Prima pictată · 1535</span><span class="lang-en">First painted · 1535</span></span>
+      <span class="badge"><span class="d"></span><span class="lang-ro">UNESCO · ~150 km de Iași</span><span class="lang-en">UNESCO · ~150 km from Iași</span></span>
+    </div>
+  </div>
+</section>
+
+<div class="quickbar">
+  <div class="wrap">
+    <div class="qi"><span class="em">📜</span><div><b class="lang-ro">Toader Bubuiog</b><b class="lang-en">Toader Bubuiog</b><small class="lang-ro">Logofăt · ctitor 1530</small><small class="lang-en">Chancellor · founder 1530</small></div></div>
+    <div class="qi"><span class="em">🎨</span><div><b class="lang-ro">Roșul de Humor</b><b class="lang-en">The Humor red</b><small class="lang-ro">Prima pictură exterioară, 1535</small><small class="lang-en">The first exterior painting, 1535</small></div></div>
+    <div class="qi"><span class="em">🏛️</span><div><b class="lang-ro">Patrimoniu UNESCO</b><b class="lang-en">UNESCO Heritage</b><small class="lang-ro">Din 1993</small><small class="lang-en">Since 1993</small></div></div>
+    <div class="qi"><span class="em">📍</span><div><b class="lang-ro">Mănăstirea Humorului, Suceava</b><b class="lang-en">Mănăstirea Humorului, Suceava</b><small class="lang-ro">Lângă Gura Humorului</small><small class="lang-en">Near Gura Humorului</small></div></div>
+  </div>
+</div>
+
+<!-- CUPRINS -->
+<section>
+  <div class="wrap">
+    <div class="toc">
+      <h2><span class="lang-ro">Cuprins</span><span class="lang-en">Contents</span></h2>
+      <p class="lead"><span class="lang-ro">Sari direct la ce te interesează.</span><span class="lang-en">Jump straight to what interests you.</span></p>
+      <ol>
+        <li><a href="#istoric"><span class="lang-ro">Ctitoria logofătului Bubuiog</span><span class="lang-en">Chancellor Bubuiog's foundation</span></a></li>
+        <li><a href="#fresce"><span class="lang-ro">Roșul de Humor & frescele</span><span class="lang-en">The Humor red & the frescoes</span></a></li>
+        <li><a href="#vezi"><span class="lang-ro">Ce vezi la Humor</span><span class="lang-en">What to see at Humor</span></a></li>
+        <li><a href="#acces"><span class="lang-ro">Acces din Iași</span><span class="lang-en">Getting there from Iași</span></a></li>
+        <li><a href="#retine"><span class="lang-ro">De ce merită</span><span class="lang-en">Why it matters</span></a></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ISTORIC -->
+<section id="istoric" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="overline"><span class="lang-ro">Începutul</span><span class="lang-en">The beginning</span></span>
+      <h2><span class="lang-ro">Ctitoria logofătului Bubuiog</span><span class="lang-en">Chancellor Bubuiog's foundation</span></h2>
+    </div>
+    <div class="body-grid">
+      <div class="prose">
+        <p class="lead lang-ro">Mănăstirea Humor a fost ridicată în 1530 de Toader Bubuiog, mare logofăt (înalt dregător) al domnitorului Petru Rareș, împreună cu soția sa, Anastasia. Biserica are hramul „Adormirea Maicii Domnului".</p>
+        <p class="lead lang-en">Humor Monastery was built in 1530 by Toader Bubuiog, the grand chancellor of ruler Petru Rareș, together with his wife Anastasia. The church is dedicated to the "Dormition of the Mother of God".</p>
+        <p class="lang-ro">Spre deosebire de ctitoriile domnești, Humor este o ctitorie boierească — dar tocmai aici, în 1535, s-a pictat pentru prima dată o biserică din Moldova pe exterior. Este, așadar, punctul de plecare al întregii tradiții a mănăstirilor pictate.</p>
+        <p class="lang-en">Unlike the princely foundations, Humor is a boyar foundation — yet it was here, in 1535, that a church in Moldavia was first painted on the outside. It is therefore the starting point of the entire tradition of the painted monasteries.</p>
+        <p class="lang-ro">Mai târziu, în timpul domniei lui Vasile Lupu (1641), mănăstirea a fost înconjurată cu ziduri de piatră și un turn masiv de apărare, păstrat până azi.</p>
+        <p class="lang-en">Later, during the reign of Vasile Lupu (1641), the monastery was surrounded by stone walls and a massive defensive tower, preserved to this day.</p>
+      </div>
+      <div class="facts">
+        <h4><span class="lang-ro">Pe scurt</span><span class="lang-en">At a glance</span></h4>
+        <div class="f"><span class="lang-ro">Ctitor</span><span class="lang-en">Founder</span><b class="lang-ro">Toader Bubuiog</b><b class="lang-en">Toader Bubuiog</b></div>
+        <div class="f"><span class="lang-ro">An</span><span class="lang-en">Year</span><b>1530</b></div>
+        <div class="f"><span class="lang-ro">Hram</span><span class="lang-en">Dedication</span><b class="lang-ro">Adormirea Maicii Domnului</b><b class="lang-en">Dormition of the Virgin</b></div>
+        <div class="f"><span class="lang-ro">Fresce exterioare</span><span class="lang-en">Exterior frescoes</span><b class="lang-ro">1535 · primele</b><b class="lang-en">1535 · the first</b></div>
+        <div class="f"><span class="lang-ro">Pictor</span><span class="lang-en">Painter</span><b class="lang-ro">Toma din Suceava</b><b class="lang-en">Toma of Suceava</b></div>
+        <div class="f"><span class="lang-ro">Turn</span><span class="lang-en">Tower</span><b class="lang-ro">Vasile Lupu · 1641</b><b class="lang-en">Vasile Lupu · 1641</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FRESCE -->
+<section id="fresce">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="overline"><span class="lang-ro">Comoara mănăstirii</span><span class="lang-en">The monastery's treasure</span></span>
+      <h2><span class="lang-ro">Roșul de Humor & frescele</span><span class="lang-en">The Humor red & the frescoes</span></h2>
+      <p class="lang-ro">Pictura exterioară din 1535, realizată de Toma din Suceava, este dominată de tonuri calde de roșu-cărămiziu — culoarea care a dat renumele mănăstirii.</p>
+      <p class="lang-en">The 1535 exterior painting, made by Toma of Suceava, is dominated by warm red-brick tones — the colour that gave the monastery its fame.</p>
+    </div>
+    <div class="cards">
+      <div class="vcard">
+        <span class="tag lang-ro">Culoarea</span><span class="tag lang-en">The colour</span>
+        <h3><span class="lang-ro">Roșul de Humor</span><span class="lang-en">The Humor red</span></h3>
+        <p class="lang-ro">Dacă Voroneț are albastrul și Sucevița verdele, Humor este mănăstirea roșului — un roșu-cărămiziu cald, care dă întregii biserici o lumină aparte, mai ales la apus.</p>
+        <p class="lang-en">If Voroneț has its blue and Sucevița its green, Humor is the monastery of red — a warm red-brick that gives the whole church a special glow, especially at sunset.</p>
+      </div>
+      <div class="vcard">
+        <span class="tag lang-ro">Prima</span><span class="tag lang-en">The first</span>
+        <h3><span class="lang-ro">Unde a început totul</span><span class="lang-en">Where it all began</span></h3>
+        <p class="lang-ro">Humor este prima biserică din seria mănăstirilor pictate — aici, în 1535, s-a deschis drumul unei tradiții unice în lume, continuată apoi la Voroneț, Moldovița și Sucevița.</p>
+        <p class="lang-en">Humor is the first church in the series of painted monasteries — here, in 1535, began a tradition unique in the world, later continued at Voroneț, Moldovița and Sucevița.</p>
+      </div>
+      <div class="vcard">
+        <span class="tag lang-ro">Scenele</span><span class="tag lang-en">The scenes</span>
+        <h3><span class="lang-ro">Teme mari, pictate</span><span class="lang-en">Great themes, painted</span></h3>
+        <p class="lang-ro">Pe fațade se desfășoară scene celebre — „Imnul Acatist", „Asediul Constantinopolului" și „Întoarcerea fiului risipitor" — adevărate predici în culoare pentru credincioșii de altădată.</p>
+        <p class="lang-en">On the façades unfold famous scenes — the "Akathist Hymn", the "Siege of Constantinople" and the "Return of the Prodigal Son" — true sermons in colour for the faithful of old.</p>
+      </div>
+    </div>
+    <div class="callout">
+      <span class="lang-ro"><b>De reținut:</b> biserica are un pridvor deschis, cu arcade — o inovație arhitecturală pentru vremea sa, cu influențe de Renaștere, care o deosebește de celelalte ctitorii.</span>
+      <span class="lang-en"><b>Worth noting:</b> the church has an open porch with arcades — an architectural innovation for its time, with Renaissance influences, that sets it apart from the other foundations.</span>
+    </div>
+  </div>
+</section>
+
+<!-- CE VEZI -->
+<section id="vezi" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="overline"><span class="lang-ro">La fața locului</span><span class="lang-en">On site</span></span>
+      <h2><span class="lang-ro">Ce vezi la Humor</span><span class="lang-en">What to see at Humor</span></h2>
+      <p class="lang-ro">O vizită înseamnă biserica pictată, pridvorul cu arcade și turnul lui Vasile Lupu.</p>
+      <p class="lang-en">A visit means the painted church, the arcaded porch and Vasile Lupu's tower.</p>
+    </div>
+    <div class="two">
+      <div class="lbox">
+        <h3><span class="lang-ro">Nu rata</span><span class="lang-en">Don't miss</span></h3>
+        <ul>
+          <li><span class="lang-ro">Fațadele în faimosul roșu de Humor</span><span class="lang-en">The façades in the famous Humor red</span></li>
+          <li><span class="lang-ro">Pridvorul deschis, cu arcade — o raritate arhitecturală</span><span class="lang-en">The open, arcaded porch — an architectural rarity</span></li>
+          <li><span class="lang-ro">Scenele „Imnul Acatist" și „Asediul Constantinopolului"</span><span class="lang-en">The "Akathist Hymn" and "Siege of Constantinople" scenes</span></li>
+          <li><span class="lang-ro">Turnul de apărare ridicat de Vasile Lupu (1641)</span><span class="lang-en">The defensive tower built by Vasile Lupu (1641)</span></li>
+        </ul>
+      </div>
+      <div class="lbox">
+        <h3><span class="lang-ro">Bine de știut</span><span class="lang-en">Good to know</span></h3>
+        <ul>
+          <li><span class="lang-ro">Este lăcaș de cult — ține cont de slujbe și de ținuta decentă</span><span class="lang-en">It is a place of worship — mind services and modest dress</span></li>
+          <li><span class="lang-ro">Fotografierea în interior poate fi restricționată</span><span class="lang-en">Photography inside may be restricted</span></li>
+          <li><span class="lang-ro">Verifică programul de vizitare înainte de a merge</span><span class="lang-en">Check visiting hours before you go</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACCES -->
+<section id="acces">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="overline"><span class="lang-ro">Acces din Iași</span><span class="lang-en">Getting there from Iași</span></span>
+      <h2><span class="lang-ro">Cum ajungi la Humor</span><span class="lang-en">How to reach Humor</span></h2>
+    </div>
+    <div class="two">
+      <div class="lbox">
+        <h3><span class="lang-ro">Reperele drumului</span><span class="lang-en">Route markers</span></h3>
+        <ul>
+          <li><span class="lang-ro">Distanță: circa 150 km nord-vest de Iași</span><span class="lang-en">Distance: about 150 km north-west of Iași</span></li>
+          <li><span class="lang-ro">Prin Suceava și Gura Humorului</span><span class="lang-en">Via Suceava and Gura Humorului</span></li>
+          <li><span class="lang-ro">La numai câțiva kilometri de centrul Gura Humorului</span><span class="lang-en">Just a few kilometres from the centre of Gura Humorului</span></li>
+        </ul>
+      </div>
+      <div class="lbox">
+        <h3><span class="lang-ro">Sfat de traseu</span><span class="lang-en">Route tip</span></h3>
+        <ul>
+          <li><span class="lang-ro">Este foarte aproape de Voroneț — le poți vedea pe amândouă ușor</span><span class="lang-en">It is very close to Voroneț — you can easily see both</span></li>
+          <li><span class="lang-ro">Împreună cu Moldovița și Sucevița, întregește circuitul</span><span class="lang-en">Together with Moldovița and Sucevița, it completes the circuit</span></li>
+          <li><span class="lang-ro">Mașina proprie sau o excursie organizată sunt cele mai comode</span><span class="lang-en">Your own car or an organised tour are the most convenient</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DE CE MERITA -->
+<section id="retine" class="closing">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="overline"><span class="lang-ro">Pe scurt</span><span class="lang-en">In short</span></span>
+      <h2><span class="lang-ro">De ce merită Humor</span><span class="lang-en">Why Humor is worth it</span></h2>
+    </div>
+    <div class="box">
+      <p class="lang-ro">Humor este locul unde a început totul. Fără această biserică boierească, pictată prima, poate n-ar fi existat nici Voroneț, nici Sucevița. A o vizita înseamnă a merge la izvorul unei tradiții artistice unice în lume.</p>
+      <p class="lang-en">Humor is where it all began. Without this boyar church, the first to be painted, perhaps neither Voroneț nor Sucevița would have existed. To visit it is to go to the source of an artistic tradition unique in the world.</p>
+      <p class="lang-ro">Pentru un vizitator pornit din Iași, Humor se vede cel mai bine împreună cu Voroneț, aflată foarte aproape — iar apoi, cu Moldovița și Sucevița, ai bifat tot patrimoniul pictat al Bucovinei.</p>
+      <p class="lang-en">For a visitor setting out from Iași, Humor is best seen together with Voroneț, which is very close — and then, with Moldovița and Sucevița, you've ticked off all the painted heritage of Bukovina.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="overline gold-text"><span class="lang-ro">Planifică vizita</span><span class="lang-en">Plan your visit</span></span>
+      <h2>Contact</h2>
+      <p class="lang-ro">Humor este lăcaș de cult activ. Pentru program și condiții de vizitare, verifică sursele oficiale de turism ale județului Suceava înainte de deplasare.</p>
+      <p class="lang-en">Humor is an active place of worship. For hours and visiting conditions, check the official Suceava County tourism sources before travelling.</p>
+    </div>
+    <div class="cgrid">
+      <div class="cc"><span class="overline"><span class="lang-ro">Localitate</span><span class="lang-en">Location</span></span><b>📍 Mănăstirea Humorului</b><small class="lang-ro">Lângă Gura Humorului, județul Suceava</small><small class="lang-en">Near Gura Humorului, Suceava County</small></div>
+      <div class="cc"><span class="overline"><span class="lang-ro">Statut</span><span class="lang-en">Status</span></span><b class="lang-ro">🏛️ Monument UNESCO</b><b class="lang-en">🏛️ UNESCO monument</b><small class="lang-ro">„Bisericile din Moldova", din 1993</small><small class="lang-en">"Churches of Moldavia", since 1993</small></div>
+      <div class="cc"><span class="overline"><span class="lang-ro">Bine de știut</span><span class="lang-en">Good to know</span></span><b class="lang-ro">🕒 Verifică programul</b><b class="lang-en">🕒 Check the hours</b><small class="lang-ro">Lăcaș activ · ținută decentă</small><small class="lang-en">Active place of worship · modest dress</small></div>
+    </div>
+    <div class="cta-row">
+      <a href="checklist-regiunea-moldova.html" class="btn btn-gold"><span class="lang-ro">← Checklist Regiunea Moldova</span><span class="lang-en">← Moldavia Region checklist</span></a>
+      <a href="iasi.html" class="btn btn-outline"><span class="lang-ro">Alte locuri din Iași</span><span class="lang-en">More places in Iași</span></a>
+    </div>
+    <p class="disclaimer"><span class="lang-ro">Informațiile istorice provin din surse documentare despre Mănăstirea Humor (august 2026). Programul de vizitare se poate modifica — verifică datele actuale înainte de deplasare.</span><span class="lang-en">Historical information is drawn from documentary sources on Humor Monastery (August 2026). Visiting hours may change — check current details before travelling.</span></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    © 2026 România · Iași — <span class="lang-ro">Ghid de călătorie · Demo</span><span class="lang-en">Travel guide · Demo</span> · <a href="harta-site.html"><span class="lang-ro">Harta site-ului</span><span class="lang-en">Site map</span></a> · <a href="iasi.html">Iași</a>
+  </div>
+</footer>
+
+<script>
+function setLang(l){
+  document.body.classList.toggle('en', l==='en');
+  document.documentElement.lang=l;
+  document.querySelectorAll('.langsw button').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));
+}
+</script>
+</body>
+</html>
