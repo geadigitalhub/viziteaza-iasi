@@ -17,7 +17,7 @@
   --navy:#141d33;--navy-3:#243459;--royal:#2E4488;
   --gold:#C9A24B;--gold-2:#E3C778;--cream:#F4ECD8;--cream-2:#EFE4C9;--paper:#FBF6EA;
   --leaf:#3f7d54;--leaf-2:#5a9c6f;--teal:#3E7C8C;--brick:#A8362E;
-  --ink:#1a2033;--muted:#6b7794;--line:rgba(201,162,75,.28);--line-soft:rgba(20,29,51,.1);--r:16px;--maxw:1080px;
+  --ink:#1a2033;--muted:#6b7794;--line:rgba(201,162,75,.34);--line-soft:rgba(20,29,51,.1);--r:16px;--maxw:1080px;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -154,8 +154,8 @@ footer a{color:var(--gold-2)}
     <div class="sec-head">
       <span class="overline"><span class="lang-ro">La îndemână</span><span class="lang-en">Within easy reach</span></span>
       <h2><span class="tno lang-ro">Aproape</span><span class="tno lang-en">Near</span><span class="lang-ro">Excursii de o zi din Iași</span><span class="lang-en">Day trips from Iași</span></h2>
-      <p class="lang-ro">Cele mai la îndemână obiective din jurul Iașului — un palat, o podgorie și un sit preistoric, toate la sub o oră–două de mers.</p>
-      <p class="lang-en">The easiest sights around Iași — a palace, a vineyard and a prehistoric site, all within an hour or two.</p>
+      <p class="lang-ro">Cele mai la îndemână obiective din jurul Iașului — un palat, o podgorie și un sit preistoric.</p>
+      <p class="lang-en">The easiest sights around Iași — a palace, a vineyard and a prehistoric site.</p>
     </div>
     <div class="checklist">
       <div class="check"><input type="checkbox" id="ruginoasa" data-id="ruginoasa"><label class="box" for="ruginoasa"></label><a class="lk" href="palatul-cuza-ruginoasa.html"><b class="lang-ro">Palatul Cuza · Ruginoasa</b><b class="lang-en">Cuza Palace · Ruginoasa</b><small class="lang-ro">Palat neogotic, reședința domnitorului Alexandru Ioan Cuza.</small><small class="lang-en">A neo-Gothic palace, ruler Alexandru Ioan Cuza's residence.</small><span class="dist lang-ro">Județul Iași · ~65 km</span><span class="dist lang-en">Iași County · ~65 km</span><span class="go lang-ro">· Deschide pagina →</span><span class="go lang-en">· Open the page →</span></a></div>
@@ -170,17 +170,17 @@ footer a{color:var(--gold-2)}
     <div class="sec-head">
       <span class="overline"><span class="lang-ro">Patrimoniu mondial UNESCO</span><span class="lang-en">UNESCO World Heritage</span></span>
       <h2><span class="tno lang-ro">Bucovina</span><span class="tno lang-en">Bukovina</span><span class="lang-ro">Mănăstirile pictate din Bucovina</span><span class="lang-en">The painted monasteries of Bukovina</span></h2>
-      <p class="lang-ro">„Bisericile din Moldova" sunt înscrise în patrimoniul mondial UNESCO — opt biserici pictate pe exterior. Iată cele mai cunoscute, plus fosta capitală a Moldovei.</p>
-      <p class="lang-en">The "Churches of Moldavia" are inscribed on the UNESCO World Heritage List — eight churches painted on the outside. Here are the best known, plus Moldavia's former capital.</p>
+      <p class="lang-ro">„Bisericile din Moldova", patrimoniu UNESCO. Cele mai cunoscute, plus fosta capitală.</p>
+      <p class="lang-en">The "Churches of Moldavia", UNESCO heritage. The best known, plus the former capital.</p>
     </div>
     <div class="checklist">
-      <div class="check"><input type="checkbox" id="voronet" data-id="voronet"><label class="box" for="voronet"></label><a class="lk" href="voronet.html"><b class="lang-ro">Mănăstirea Voroneț</b><b class="lang-en">Voroneț Monastery</b><small class="lang-ro">Ctitorie a lui Ștefan cel Mare (1488), celebră pentru „albastrul de Voroneț". UNESCO.</small><small class="lang-en">Founded by Stephen the Great (1488), famous for the "Voroneț blue". UNESCO.</small><span class="dist lang-ro">Bucovina · ~150 km</span><span class="dist lang-en">Bukovina · ~150 km</span><span class="go lang-ro">· Deschide pagina →</span><span class="go lang-en">· Open the page →</span></a></div>
-      <div class="check"><input type="checkbox" id="sucevita" data-id="sucevita"><label class="box" for="sucevita"></label><a class="lk" href="sucevita.html"><b class="lang-ro">Mănăstirea Sucevița</b><b class="lang-en">Sucevița Monastery</b><small class="lang-ro">Ridicată în 1585 de familia Movilă, cu fresce exterioare complete. UNESCO.</small><small class="lang-en">Built in 1585 by the Movilă family, with complete exterior frescoes. UNESCO.</small><span class="dist lang-ro">Bucovina · ~185 km</span><span class="dist lang-en">Bukovina · ~185 km</span><span class="go lang-ro">· Deschide pagina →</span><span class="go lang-en">· Open the page →</span></a></div>
-      <div class="check"><input type="checkbox" id="moldovita" data-id="moldovita"><label class="box" for="moldovita"></label><a class="lk" href="moldovita.html"><b class="lang-ro">Mănăstirea Moldovița</b><b class="lang-en">Moldovița Monastery</b><small class="lang-ro">Ctitorie a domnitorului Petru Rareș (1532), cu fresce în tonuri de galben-auriu. UNESCO.</small><small class="lang-en">Founded by ruler Petru Rareș (1532), with frescoes in golden-yellow tones. UNESCO.</small><span class="dist lang-ro">Bucovina · ~180 km</span><span class="dist lang-en">Bukovina · ~180 km</span><span class="go lang-ro">· Deschide pagina →</span><span class="go lang-en">· Open the page →</span></a></div>
-      <div class="check"><input type="checkbox" id="humor" data-id="humor"><label class="box" for="humor"></label><a class="lk" href="humor.html"><b class="lang-ro">Mănăstirea Humor</b><b class="lang-en">Humor Monastery</b><small class="lang-ro">Ridicată în 1530, prima biserică pictată din Bucovina, roșul de Humor. UNESCO.</small><small class="lang-en">Built in 1530, the first painted church in Bukovina, the Humor red. UNESCO.</small><span class="dist lang-ro">Bucovina · ~150 km</span><span class="dist lang-en">Bukovina · ~150 km</span><span class="go lang-ro">· Deschide pagina →</span><span class="go lang-en">· Open the page →</span></a></div>
-      <div class="check"><input type="checkbox" id="cetatea-sucevei" data-id="cetatea-sucevei"><label class="box" for="cetatea-sucevei"></label><a class="lk" href="cetatea-suceava.html"><b class="lang-ro">Cetatea de Scaun a Sucevei</b><b class="lang-en">Suceava's Princely Fortress</b><small class="lang-ro">Cetatea medievală a Sucevei, fosta capitală a Moldovei lui Ștefan cel Mare.</small><small class="lang-en">The medieval fortress of Suceava, Moldavia's former capital under Stephen the Great.</small><span class="dist lang-ro">Suceava · ~145 km</span><span class="dist lang-en">Suceava · ~145 km</span><span class="go lang-ro">· Deschide pagina →</span><span class="go lang-en">· Open the page →</span></a></div>
+      <div class="check"><input type="checkbox" id="voronet" data-id="voronet"><label class="box" for="voronet"></label><a class="lk" href="voronet.html"><b class="lang-ro">Mănăstirea Voroneț</b><b class="lang-en">Voroneț Monastery</b><small class="lang-ro">Ctitorie a lui Ștefan cel Mare (1488), „albastrul de Voroneț". UNESCO.</small><small class="lang-en">Founded by Stephen the Great (1488), the "Voroneț blue". UNESCO.</small><span class="dist lang-ro">Bucovina · ~150 km</span><span class="dist lang-en">Bukovina · ~150 km</span><span class="go lang-ro">· Deschide pagina →</span><span class="go lang-en">· Open the page →</span></a></div>
+      <div class="check"><input type="checkbox" id="sucevita" data-id="sucevita"><label class="box" for="sucevita"></label><a class="lk" href="sucevita.html"><b class="lang-ro">Mănăstirea Sucevița</b><b class="lang-en">Sucevița Monastery</b><small class="lang-ro">Ridicată în 1585 de familia Movilă, fresce complete. UNESCO.</small><small class="lang-en">Built in 1585 by the Movilă family, complete frescoes. UNESCO.</small><span class="dist lang-ro">Bucovina · ~185 km</span><span class="dist lang-en">Bukovina · ~185 km</span><span class="go lang-ro">· Deschide pagina →</span><span class="go lang-en">· Open the page →</span></a></div>
+      <div class="check"><input type="checkbox" id="moldovita" data-id="moldovita"><label class="box" for="moldovita"></label><a class="lk" href="moldovita.html"><b class="lang-ro">Mănăstirea Moldovița</b><b class="lang-en">Moldovița Monastery</b><small class="lang-ro">Ctitorie a lui Petru Rareș (1532), fresce în tonuri de aur. UNESCO.</small><small class="lang-en">Founded by Petru Rareș (1532), golden-toned frescoes. UNESCO.</small><span class="dist lang-ro">Bucovina · ~180 km</span><span class="dist lang-en">Bukovina · ~180 km</span><span class="go lang-ro">· Deschide pagina →</span><span class="go lang-en">· Open the page →</span></a></div>
+      <div class="check"><input type="checkbox" id="humor" data-id="humor"><label class="box" for="humor"></label><a class="lk" href="humor.html"><b class="lang-ro">Mănăstirea Humor</b><b class="lang-en">Humor Monastery</b><small class="lang-ro">Ridicată în 1530, prima biserică pictată din Bucovina, „roșul de Humor". UNESCO.</small><small class="lang-en">Built in 1530, the first painted church in Bukovina, the "Humor red". UNESCO.</small><span class="dist lang-ro">Bucovina · ~150 km</span><span class="dist lang-en">Bukovina · ~150 km</span><span class="go lang-ro">· Deschide pagina →</span><span class="go lang-en">· Open the page →</span></a></div>
+      <div class="check"><input type="checkbox" id="cetatea-sucevei" data-id="cetatea-sucevei"><label class="box" for="cetatea-sucevei"></label><a class="lk" href="cetatea-suceava.html"><b class="lang-ro">Cetatea de Scaun a Sucevei</b><b class="lang-en">Suceava's Princely Fortress</b><small class="lang-ro">Cetatea medievală a Sucevei, fosta capitală a Moldovei lui Ștefan cel Mare.</small><small class="lang-en">The medieval fortress of Suceava, Moldavia's former capital.</small><span class="dist lang-ro">Suceava · ~145 km</span><span class="dist lang-en">Suceava · ~145 km</span><span class="go lang-ro">· Deschide pagina →</span><span class="go lang-en">· Open the page →</span></a></div>
     </div>
-    <div class="reward"><span class="stars">✦ ✦ ✦ ✦</span><b class="lang-ro">Superb! Ai văzut comorile UNESCO ale Bucovinei.</b><b class="lang-en">Superb! You've seen Bukovina's UNESCO treasures.</b><small class="lang-ro">Fresce de 500 de ani, unice în lume — puțini le bifează pe toate. 🎨</small><small class="lang-en">500-year-old frescoes, unique in the world — few tick them all. 🎨</small></div>
+    <div class="reward"><span class="stars">✦ ✦ ✦ ✦</span><b class="lang-ro">Superb! Ai văzut comorile UNESCO ale Bucovinei.</b><b class="lang-en">Superb! You've seen Bukovina's UNESCO treasures.</b><small class="lang-ro">Fresce de 500 de ani, unice în lume. 🎨</small><small class="lang-en">500-year-old frescoes, unique in the world. 🎨</small></div>
   </div>
 </section>
 <section>
@@ -188,15 +188,15 @@ footer a{color:var(--gold-2)}
     <div class="sec-head">
       <span class="overline"><span class="lang-ro">Munte & mănăstiri</span><span class="lang-en">Mountains & monasteries</span></span>
       <h2><span class="tno lang-ro">Neamț</span><span class="tno lang-en">Neamț</span><span class="lang-ro">Ținutul Neamțului</span><span class="lang-en">The land of Neamț</span></h2>
-      <p class="lang-ro">Cetăți medievale, mari mănăstiri și muntele sfânt al moldovenilor — Ceahlăul — plus cheile spectaculoase ale Bicazului.</p>
-      <p class="lang-en">Medieval fortresses, great monasteries and the Moldavians' holy mountain — Ceahlău — plus the spectacular Bicaz Gorges.</p>
+      <p class="lang-ro">Cetăți, mănăstiri, muntele sfânt și cheile Bicazului.</p>
+      <p class="lang-en">Fortresses, monasteries, the holy mountain and the Bicaz Gorges.</p>
     </div>
     <div class="checklist">
-      <div class="check"><input type="checkbox" id="cetatea-neamt" data-id="cetatea-neamt"><label class="box" for="cetatea-neamt"></label><div class="lk"><b class="lang-ro">Cetatea Neamțului</b><b class="lang-en">Neamț Citadel</b><small class="lang-ro">Cetate medievală întărită de Ștefan cel Mare, la Târgu Neamț.</small><small class="lang-en">A medieval fortress strengthened by Stephen the Great, at Târgu Neamț.</small><span class="dist lang-ro">Târgu Neamț · ~110 km</span><span class="dist lang-en">Târgu Neamț · ~110 km</span></div></div>
-      <div class="check"><input type="checkbox" id="manastiri-neamt" data-id="manastiri-neamt"><label class="box" for="manastiri-neamt"></label><div class="lk"><b class="lang-ro">Mănăstirile Neamț, Agapia & Văratec</b><b class="lang-en">Neamț, Agapia & Văratec monasteries</b><small class="lang-ro">Un ansamblu de mari mănăstiri istorice, centre de credință și cultură.</small><small class="lang-en">A cluster of great historic monasteries, centres of faith and culture.</small><span class="dist lang-ro">Județul Neamț · ~110 km</span><span class="dist lang-en">Neamț County · ~110 km</span></div></div>
-      <div class="check"><input type="checkbox" id="humulesti" data-id="humulesti"><label class="box" for="humulesti"></label><div class="lk"><b class="lang-ro">Casa memorială Ion Creangă · Humulești</b><b class="lang-en">Ion Creangă Memorial House · Humulești</b><small class="lang-ro">Casa copilăriei lui Ion Creangă, din „Amintiri din copilărie", la Humulești.</small><small class="lang-en">Ion Creangă's childhood home from "Memories of My Boyhood", at Humulești.</small><span class="dist lang-ro">Târgu Neamț · ~110 km</span><span class="dist lang-en">Târgu Neamț · ~110 km</span></div></div>
-      <div class="check"><input type="checkbox" id="ceahlau" data-id="ceahlau"><label class="box" for="ceahlau"></label><div class="lk"><b class="lang-ro">Masivul Ceahlău</b><b class="lang-en">Ceahlău Massif</b><small class="lang-ro">Muntele emblematic al Moldovei, cu vârful Toaca și traseele parcului național.</small><small class="lang-en">Moldavia's emblematic mountain, with the Toaca peak and national-park trails.</small><span class="dist lang-ro">Județul Neamț · ~140 km</span><span class="dist lang-en">Neamț County · ~140 km</span></div></div>
-      <div class="check"><input type="checkbox" id="bicaz" data-id="bicaz"><label class="box" for="bicaz"></label><div class="lk"><b class="lang-ro">Cheile Bicazului & Lacul Roșu</b><b class="lang-en">Bicaz Gorges & Red Lake</b><small class="lang-ro">Chei spectaculoase săpate în stâncă și lacul de baraj natural Lacul Roșu.</small><small class="lang-en">Spectacular gorges carved in rock and the natural dam lake, Red Lake.</small><span class="dist lang-ro">Județul Neamț · ~180 km</span><span class="dist lang-en">Neamț County · ~180 km</span></div></div>
+      <div class="check"><input type="checkbox" id="cetatea-neamt" data-id="cetatea-neamt"><label class="box" for="cetatea-neamt"></label><a class="lk" href="cetatea-neamt.html"><b class="lang-ro">Cetatea Neamțului</b><b class="lang-en">Neamț Citadel</b><small class="lang-ro">Cetate medievală întărită de Ștefan cel Mare, la Târgu Neamț.</small><small class="lang-en">A medieval fortress strengthened by Stephen the Great, at Târgu Neamț.</small><span class="dist lang-ro">Târgu Neamț · ~110 km</span><span class="dist lang-en">Târgu Neamț · ~110 km</span><span class="go lang-ro">· Deschide pagina →</span><span class="go lang-en">· Open the page →</span></a></div>
+      <div class="check"><input type="checkbox" id="manastiri-neamt" data-id="manastiri-neamt"><label class="box" for="manastiri-neamt"></label><a class="lk" href="manastiri-neamt.html"><b class="lang-ro">Mănăstirile Neamț, Agapia & Văratec</b><b class="lang-en">Neamț, Agapia & Văratec monasteries</b><small class="lang-ro">Un ansamblu de mari mănăstiri istorice, centre de credință și cultură.</small><small class="lang-en">A cluster of great historic monasteries, centres of faith and culture.</small><span class="dist lang-ro">Județul Neamț · ~110 km</span><span class="dist lang-en">Neamț County · ~110 km</span><span class="go lang-ro">· Deschide pagina →</span><span class="go lang-en">· Open the page →</span></a></div>
+      <div class="check"><input type="checkbox" id="humulesti" data-id="humulesti"><label class="box" for="humulesti"></label><a class="lk" href="humulesti-creanga.html"><b class="lang-ro">Casa memorială Ion Creangă · Humulești</b><b class="lang-en">Ion Creangă Memorial House · Humulești</b><small class="lang-ro">Casa copilăriei lui Ion Creangă, din „Amintiri din copilărie".</small><small class="lang-en">Ion Creangă's childhood home from "Memories of My Boyhood".</small><span class="dist lang-ro">Târgu Neamț · ~110 km</span><span class="dist lang-en">Târgu Neamț · ~110 km</span><span class="go lang-ro">· Deschide pagina →</span><span class="go lang-en">· Open the page →</span></a></div>
+      <div class="check"><input type="checkbox" id="ceahlau" data-id="ceahlau"><label class="box" for="ceahlau"></label><a class="lk" href="ceahlau.html"><b class="lang-ro">Masivul Ceahlău</b><b class="lang-en">Ceahlău Massif</b><small class="lang-ro">Muntele emblematic al Moldovei, cu vârful Toaca.</small><small class="lang-en">Moldavia's emblematic mountain, with the Toaca peak.</small><span class="dist lang-ro">Județul Neamț · ~140 km</span><span class="dist lang-en">Neamț County · ~140 km</span><span class="go lang-ro">· Deschide pagina →</span><span class="go lang-en">· Open the page →</span></a></div>
+      <div class="check"><input type="checkbox" id="bicaz" data-id="bicaz"><label class="box" for="bicaz"></label><a class="lk" href="cheile-bicazului.html"><b class="lang-ro">Cheile Bicazului & Lacul Roșu</b><b class="lang-en">Bicaz Gorges & Red Lake</b><small class="lang-ro">Chei spectaculoase și lacul de baraj natural Lacul Roșu.</small><small class="lang-en">Spectacular gorges and the natural dam lake, Red Lake.</small><span class="dist lang-ro">Județul Neamț · ~180 km</span><span class="dist lang-en">Neamț County · ~180 km</span><span class="go lang-ro">· Deschide pagina →</span><span class="go lang-en">· Open the page →</span></a></div>
     </div>
     <div class="reward"><span class="stars">✦ ✦ ✦ ✦ ✦</span><b class="lang-ro">Impresionant! Ai cucerit ținutul Neamțului.</b><b class="lang-en">Impressive! You've conquered the land of Neamț.</b><small class="lang-ro">Cetăți, mănăstiri și muntele sfânt — de la Creangă la Ceahlău. ⛰️</small><small class="lang-en">Fortresses, monasteries and the holy mountain — from Creangă to Ceahlău. ⛰️</small></div>
   </div>
@@ -204,13 +204,13 @@ footer a{color:var(--gold-2)}
 <section class="endcta">
   <div class="wrap">
     <h2><span class="lang-ro">Ai bifat regiunea?</span><span class="lang-en">Ticked the region?</span></h2>
-    <p class="lang-ro">Întoarce-te în oraș — bucket list-ul Iașului te așteaptă cu palate, muzee, mănăstiri și trasee tematice.</p>
-    <p class="lang-en">Head back into the city — the Iași bucket list awaits with palaces, museums, monasteries and themed routes.</p>
+    <p class="lang-ro">Întoarce-te în oraș — bucket list-ul Iașului te așteaptă.</p>
+    <p class="lang-en">Head back into the city — the Iași bucket list awaits.</p>
     <div class="cta-row">
       <a href="checklist-iasul-tematic.html" class="btn btn-gold"><span class="lang-ro">Bucket list Iași →</span><span class="lang-en">Iași bucket list →</span></a>
       <a href="iasi.html" class="btn btn-outline"><span class="lang-ro">← Toate locurile din Iași</span><span class="lang-en">← All places in Iași</span></a>
     </div>
-    <p class="disclaimer"><span class="lang-ro">Bifele se salvează local, în browserul tău — nu sunt trimise nicăieri. Distanțele sunt aproximative, de la Iași. Verifică programul și accesul fiecărui obiectiv înainte de vizită.</span><span class="lang-en">Ticks are saved locally, in your browser — nothing is sent anywhere. Distances are approximate, from Iași. Check each site's hours and access before visiting.</span></p>
+    <p class="disclaimer"><span class="lang-ro">Bifele se salvează local, în browserul tău. Distanțele sunt aproximative, de la Iași. Verifică programul fiecărui obiectiv înainte de vizită.</span><span class="lang-en">Ticks are saved locally, in your browser. Distances are approximate, from Iași. Check each site's hours before visiting.</span></p>
   </div>
 </section>
 <footer>
@@ -227,39 +227,21 @@ function setLang(l){
 (function(){
   var KEY='iasi-moldova-v1';
   var boxes=[].slice.call(document.querySelectorAll('input[type=checkbox][data-id]'));
-  var bar=document.getElementById('bar');
-  var doneEl=document.getElementById('done');
-  var totalEl=document.getElementById('total');
-  var pctEl=document.getElementById('pct');
-  var pctEnEl=document.getElementById('pcten');
-  var resetBtn=document.getElementById('reset');
-  var progressCard=document.querySelector('.progress');
-  var allDone=document.getElementById('allDone');
-  var rewards=[].slice.call(document.querySelectorAll('.reward'));
+  var bar=document.getElementById('bar'),doneEl=document.getElementById('done'),totalEl=document.getElementById('total'),pctEl=document.getElementById('pct'),pctEnEl=document.getElementById('pcten'),resetBtn=document.getElementById('reset'),progressCard=document.querySelector('.progress'),allDone=document.getElementById('allDone'),rewards=[].slice.call(document.querySelectorAll('.reward'));
   function loadState(){try{return JSON.parse(localStorage.getItem(KEY)||'{}');}catch(e){return {};}}
   function saveState(s){try{localStorage.setItem(KEY,JSON.stringify(s));}catch(e){}}
   function refresh(){
     var done=0;
     boxes.forEach(function(b){var row=b.closest('.check');if(b.checked){done++;row.classList.add('done');}else{row.classList.remove('done');}});
-    var total=boxes.length;
-    var pct=total?Math.round(done/total*100):0;
-    bar.style.width=pct+'%';doneEl.textContent=done;totalEl.textContent=total;pctEl.textContent=pct+'%';
-    if(pctEnEl) pctEnEl.textContent=pct+'%';
+    var total=boxes.length,pct=total?Math.round(done/total*100):0;
+    bar.style.width=pct+'%';doneEl.textContent=done;totalEl.textContent=total;pctEl.textContent=pct+'%';if(pctEnEl)pctEnEl.textContent=pct+'%';
     rewards.forEach(function(rw){var sec=rw.closest('section');var bx=sec.querySelectorAll('input[type=checkbox][data-id]');var all=bx.length>0 && [].every.call(bx,function(b){return b.checked;});rw.classList.toggle('show',all);});
-    var complete=(total>0 && done===total);
-    if(progressCard) progressCard.classList.toggle('complete',complete);
-    if(allDone) allDone.classList.toggle('show',complete);
+    var complete=(total>0&&done===total);if(progressCard)progressCard.classList.toggle('complete',complete);if(allDone)allDone.classList.toggle('show',complete);
   }
   var state=loadState();
-  boxes.forEach(function(b){
-    if(state[b.dataset.id]) b.checked=true;
-    b.addEventListener('change',function(){var s=loadState();if(b.checked)s[b.dataset.id]=1;else delete s[b.dataset.id];saveState(s);refresh();});
-  });
+  boxes.forEach(function(b){if(state[b.dataset.id])b.checked=true;b.addEventListener('change',function(){var s=loadState();if(b.checked)s[b.dataset.id]=1;else delete s[b.dataset.id];saveState(s);refresh();});});
   refresh();
-  resetBtn.addEventListener('click',function(){
-    var msg=document.body.classList.contains('en')?'Reset the list? This clears all your ticks.':'Resetezi lista? Se șterg toate bifele.';
-    if(window.confirm(msg)){localStorage.removeItem(KEY);boxes.forEach(function(b){b.checked=false;});refresh();}
-  });
+  resetBtn.addEventListener('click',function(){var msg=document.body.classList.contains('en')?'Reset the list?':'Resetezi lista?';if(window.confirm(msg)){localStorage.removeItem(KEY);boxes.forEach(function(b){b.checked=false;});refresh();}});
 })();
 </script>
 </body>
