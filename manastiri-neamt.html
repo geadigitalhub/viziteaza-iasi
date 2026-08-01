@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mănăstirile Neamț, Agapia & Văratec · Marea Lavră a Moldovei — istoric & curiozități</title>
+<meta name="description" content="Mănăstirile Neamț, Agapia și Văratec din ținutul Neamțului: Marea Lavră a lui Ștefan cel Mare, frescele lui Nicolae Grigorescu de la Agapia și mormântul Veronicăi Micle de la Văratec. Ghid bilingv RO/EN.">
+<meta name="keywords" content="Mănăstirea Neamț, Mănăstirea Agapia, Mănăstirea Văratec, Nicolae Grigorescu, Veronica Micle, Marea Lavră, ținutul Neamțului, mănăstiri de maici, obiective Neamț">
+<meta name="og:title" content="Mănăstirile Neamț, Agapia & Văratec">
+<meta name="og:description" content="Marea Lavră a Moldovei, frescele lui Grigorescu de la Agapia și mormântul Veronicăi Micle de la Văratec.">
+<meta name="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#141d33;--navy-3:#243459;--royal:#2E4488;
+  --gold:#C9A24B;--gold-2:#E3C778;--cream:#F4ECD8;--cream-2:#EFE4C9;--paper:#FBF6EA;
+  --leaf:#3f7d54;--leaf-2:#5a9c6f;--teal:#3E7C8C;--brick:#A8362E;--man:#6B3A55;--man-2:#95597B;
+  --ink:#1a2033;--muted:#6b7794;--line:rgba(201,162,75,.28);--line-soft:rgba(20,29,51,.1);--r:16px;--maxw:1080px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Jost',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.7;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.1}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px}
+.gold-text{color:var(--gold)}.script{font-style:italic;font-weight:500}
+.lang-en{display:none}
+body.en .lang-ro{display:none}
+body.en .lang-en{display:inline}
+.overline{font-family:'Jost';font-weight:600;letter-spacing:.32em;text-transform:uppercase;font-size:.7rem}
+
+header.nav{position:sticky;top:0;z-index:60;background:rgba(20,29,51,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{display:flex;flex-direction:column;line-height:1}
+.logo b{font-family:'Cormorant Garamond';font-size:1.32rem;color:var(--cream);font-weight:700;letter-spacing:.5px}
+.logo small{letter-spacing:.3em;text-transform:uppercase;font-size:.54rem;color:var(--gold);margin-top:3px}
+.nav-links{display:flex;gap:22px}
+.nav-links a{font-weight:500;font-size:.8rem;letter-spacing:.05em;color:var(--cream);opacity:.8;text-transform:uppercase;transition:.2s}
+.nav-links a:hover{opacity:1;color:var(--gold-2)}
+.langsw{display:flex;border:1px solid var(--line);border-radius:30px;padding:3px}
+.langsw button{border:0;background:transparent;padding:5px 11px;border-radius:24px;cursor:pointer;color:var(--cream);font-family:'Jost';font-weight:600;font-size:.72rem;letter-spacing:.08em;transition:.2s}
+.langsw button.active{background:var(--gold);color:var(--navy)}
+@media(max-width:900px){.nav-links{display:none}}
+
+.hero{position:relative;background:var(--navy);color:var(--cream);padding:70px 0 64px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(680px 420px at 82% 0%,rgba(149,89,123,.5),transparent 62%)}
+.hero::after{content:"";position:absolute;inset:0;opacity:.4;background-image:radial-gradient(rgba(201,162,75,.14) 1px,transparent 1px);background-size:24px 24px;-webkit-mask-image:linear-gradient(180deg,#000,transparent);mask-image:linear-gradient(180deg,#000,transparent)}
+.hero .wrap{position:relative;z-index:2}
+.crumb{font-size:.78rem;color:rgba(244,236,216,.6);margin-bottom:20px}
+.crumb a:hover{color:var(--gold-2)}
+.hero .overline{color:var(--gold-2);display:inline-block;margin-bottom:16px}
+.hero h1{font-size:clamp(2.2rem,5vw,3.6rem);color:var(--cream)}
+.hero h1 .script{color:var(--man-2)}
+.hero p{color:rgba(244,236,216,.78);font-weight:300;font-size:1.1rem;max-width:62ch;margin:20px 0 26px}
+.badges{display:flex;gap:10px;flex-wrap:wrap}
+.badge{border:1px solid var(--line);border-radius:30px;padding:8px 16px;font-size:.76rem;color:var(--cream);display:flex;align-items:center;gap:8px}
+.badge .d{width:7px;height:7px;border-radius:50%;background:var(--man-2)}
+
+.quickbar{background:linear-gradient(120deg,var(--man),var(--man-2));color:#fff}
+.quickbar .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px;padding:20px 26px}
+.qi{display:flex;gap:12px;align-items:center}
+.qi .em{font-size:1.4rem}
+.qi b{display:block;font-size:.92rem;font-weight:600}
+.qi small{font-size:.74rem;opacity:.9}
+
+section{padding:58px 0}
+.sec-head{margin-bottom:30px}
+.sec-head .overline{color:var(--gold);display:block;margin-bottom:10px}
+.sec-head h2{font-size:clamp(1.9rem,3.6vw,2.6rem);color:var(--navy)}
+.sec-head p{color:var(--muted);font-weight:300;margin-top:8px;max-width:64ch}
+.alt{background:var(--cream-2)}
+
+.toc{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px 28px}
+.toc h2{font-size:1.5rem;color:var(--navy);margin-bottom:6px}
+.toc .lead{color:var(--muted);font-weight:300;font-size:.9rem;margin-bottom:16px}
+.toc ol{list-style:none;counter-reset:toc;display:grid;grid-template-columns:1fr 1fr;gap:2px 26px}
+.toc ol li{counter-increment:toc;border-bottom:1px solid var(--line-soft)}
+.toc ol li a{display:flex;gap:12px;align-items:baseline;padding:11px 2px;font-size:.95rem;transition:.2s}
+.toc ol li a:hover{color:var(--man)}
+.toc ol li a::before{content:counter(toc,decimal-leading-zero);font-family:'Cormorant Garamond';font-size:1.05rem;color:var(--gold);font-weight:700;min-width:26px}
+@media(max-width:820px){.toc ol{grid-template-columns:1fr}}
+
+.prose{max-width:760px}
+.prose p{color:var(--ink);font-weight:300;margin-bottom:14px}
+.prose p.lead{font-size:1.1rem;color:var(--navy);font-weight:400}
+
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.vcard{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px 26px;border-top:3px solid var(--man-2)}
+.vcard h3{font-size:1.3rem;color:var(--navy);margin-bottom:2px}
+.vcard .tag{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--man);font-weight:600;margin-bottom:12px;display:block}
+.vcard p{font-size:.9rem;font-weight:300;color:var(--ink)}
+
+.curio-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.curio{background:linear-gradient(120deg,var(--navy),var(--navy-3));color:var(--cream);border-radius:var(--r);padding:26px 28px;position:relative;overflow:hidden}
+.curio::before{content:"";position:absolute;inset:0;opacity:.5;background:radial-gradient(360px 220px at 90% 0%,rgba(149,89,123,.5),transparent 60%)}
+.curio .in{position:relative;z-index:2}
+.curio .lab{font-family:'Jost';font-weight:600;letter-spacing:.18em;text-transform:uppercase;font-size:.72rem;color:var(--gold-2);display:flex;align-items:center;gap:8px;margin-bottom:12px}
+.curio h3{font-size:1.35rem;color:var(--cream);margin-bottom:10px}
+.curio p{color:rgba(244,236,216,.85);font-weight:300;margin-bottom:10px;font-size:.94rem}
+.curio p:last-child{margin-bottom:0}
+.curio .src{font-size:.76rem;color:rgba(244,236,216,.6);font-style:italic}
+
+.lbox{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px 28px}
+.lbox h3{font-size:1.35rem;color:var(--navy);margin-bottom:14px}
+.lbox ul{list-style:none}
+.lbox ul li{position:relative;padding:8px 0 8px 26px;font-size:.92rem;border-bottom:1px solid var(--line-soft);font-weight:300}
+.lbox ul li:last-child{border-bottom:0}
+.lbox ul li::before{content:"✦";position:absolute;left:0;color:var(--man);font-size:.8rem;top:9px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+
+.callout{background:linear-gradient(120deg,rgba(107,58,85,.1),rgba(149,89,123,.16));border:1px solid var(--man-2);border-radius:var(--r);padding:20px 24px;font-size:.92rem;color:var(--ink);font-weight:300;margin-top:20px}
+.callout b{color:var(--navy);font-weight:600}
+
+#contact{background:var(--navy);color:var(--cream)}
+#contact .sec-head h2{color:var(--cream)}
+#contact .sec-head p{color:rgba(244,236,216,.7)}
+.cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.cc{border:1px solid var(--line);border-radius:var(--r);padding:24px 26px}
+.cc .overline{color:var(--gold-2);display:block;margin-bottom:12px}
+.cc b{color:var(--cream);font-size:1.02rem;display:block;font-weight:500}
+.cc small{color:rgba(244,236,216,.68);font-weight:300;font-size:.86rem;display:block;margin-top:4px}
+.cc a{color:var(--gold-2)}
+.cta-row{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:'Jost';font-weight:600;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;padding:14px 26px;border-radius:2px;cursor:pointer;border:0;transition:.3s}
+.btn-gold{background:linear-gradient(120deg,var(--gold),var(--gold-2));color:var(--navy)}
+.btn-gold:hover{transform:translateY(-2px)}
+.btn-outline{background:transparent;border:1px solid var(--gold);color:var(--gold-2)}
+.btn-outline:hover{background:var(--gold);color:var(--navy)}
+
+.closing{background:var(--cream-2)}
+.closing .box{background:#fff;border:1px solid var(--line);border-left:4px solid var(--man-2);border-radius:var(--r);padding:30px 32px;max-width:820px}
+.closing .box p{font-weight:300;color:var(--ink);margin-bottom:12px}
+.closing .box p:last-child{margin-bottom:0}
+
+footer{background:#0f1728;color:rgba(244,236,216,.6);padding:30px 0;text-align:center;font-size:.82rem;font-weight:300}
+footer a{color:var(--gold-2)}
+.disclaimer{font-size:.78rem;color:var(--muted);font-style:italic;text-align:center;margin-top:24px;font-weight:300}
+@media(max-width:820px){.cards,.cgrid,.two,.curio-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="viziteaza-romania-iasi.html" class="logo"><b>România <span class="gold-text">·</span> Iași</b><small class="lang-ro">Ghid de călătorie</small><small class="lang-en">Travel guide</small></a>
+    <div class="nav-links">
+      <a href="#istoric"><span class="lang-ro">Istoric</span><span class="lang-en">History</span></a>
+      <a href="#cele-trei"><span class="lang-ro">Cele trei</span><span class="lang-en">The three</span></a>
+      <a href="#curiozitati"><span class="lang-ro">Curiozități</span><span class="lang-en">Curiosities</span></a>
+      <a href="#acces">Acces</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="langsw">
+      <button data-lang="ro" class="active" onclick="setLang('ro')">RO</button>
+      <button data-lang="en" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="crumb"><a href="viziteaza-romania-iasi.html">România · Iași</a> &nbsp;›&nbsp; <a href="iasi.html">Iași</a> &nbsp;›&nbsp; <a href="checklist-regiunea-moldova.html"><span class="lang-ro">Regiunea Moldova</span><span class="lang-en">Moldavia region</span></a> &nbsp;›&nbsp; <span class="gold-text lang-ro">Mănăstirile Neamțului</span><span class="gold-text lang-en">Neamț monasteries</span></div>
+    <span class="overline">⛪ <span class="lang-ro">Ținutul Neamțului · vetre de credință</span><span class="lang-en">The land of Neamț · centres of faith</span></span>
+    <h1><span class="lang-ro">Mănăstirile</span><span class="lang-en">The</span> <span class="script"><span class="lang-ro">Neamț, Agapia & Văratec</span><span class="lang-en">Neamț, Agapia & Văratec monasteries</span></span></h1>
+    <p class="lang-ro">Trei mari mănăstiri ale ținutului Neamțului: Marea Lavră a lui Ștefan cel Mare și două dintre cele mai mari mănăstiri de maici din România — centre de credință, cultură și artă.</p>
+    <p class="lang-en">Three great monasteries of the land of Neamț: the Great Lavra of Stephen the Great and two of Romania's largest nuns' convents — centres of faith, culture and art.</p>
+    <div class="badges">
+      <span class="badge"><span class="d"></span><span class="lang-ro">Neamț · 1497</span><span class="lang-en">Neamț · 1497</span></span>
+      <span class="badge"><span class="d"></span><span class="lang-ro">Agapia · fresce Grigorescu</span><span class="lang-en">Agapia · Grigorescu frescoes</span></span>
+      <span class="badge"><span class="d"></span><span class="lang-ro">Văratec · ~110 km de Iași</span><span class="lang-en">Văratec · ~110 km from Iași</span></span>
+    </div>
+  </div>
+</section>
+
+<div class="quickbar">
+  <div class="wrap">
+    <div class="qi"><span class="em">📖</span><div><b class="lang-ro">Marea Lavră</b><b class="lang-en">The Great Lavra</b><small class="lang-ro">Mănăstirea Neamț</small><small class="lang-en">Neamț Monastery</small></div></div>
+    <div class="qi"><span class="em">🎨</span><div><b class="lang-ro">Nicolae Grigorescu</b><b class="lang-en">Nicolae Grigorescu</b><small class="lang-ro">Frescele de la Agapia</small><small class="lang-en">The Agapia frescoes</small></div></div>
+    <div class="qi"><span class="em">🕯️</span><div><b class="lang-ro">Veronica Micle</b><b class="lang-en">Veronica Micle</b><small class="lang-ro">Mormântul, la Văratec</small><small class="lang-en">Her grave, at Văratec</small></div></div>
+    <div class="qi"><span class="em">📍</span><div><b class="lang-ro">Județul Neamț</b><b class="lang-en">Neamț County</b><small class="lang-ro">Aproape de Târgu Neamț</small><small class="lang-en">Near Târgu Neamț</small></div></div>
+  </div>
+</div>
+
+<!-- CUPRINS -->
+<section>
+  <div class="wrap">
+    <div class="toc">
+      <h2><span class="lang-ro">Cuprins</span><span class="lang-en">Contents</span></h2>
+      <p class="lead"><span class="lang-ro">Sari direct la ce te interesează.</span><span class="lang-en">Jump straight to what interests you.</span></p>
+      <ol>
+        <li><a href="#istoric"><span class="lang-ro">Marea Lavră a Moldovei</span><span class="lang-en">The Great Lavra of Moldavia</span></a></li>
+        <li><a href="#cele-trei"><span class="lang-ro">Cele trei mănăstiri</span><span class="lang-en">The three monasteries</span></a></li>
+        <li><a href="#curiozitati"><span class="lang-ro">Curiozități: Grigorescu & Veronica Micle</span><span class="lang-en">Curiosities: Grigorescu & Veronica Micle</span></a></li>
+        <li><a href="#acces"><span class="lang-ro">Acces din Iași</span><span class="lang-en">Getting there from Iași</span></a></li>
+        <li><a href="#retine"><span class="lang-ro">De ce merită</span><span class="lang-en">Why it matters</span></a></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ISTORIC -->
+<section id="istoric" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="overline"><span class="lang-ro">Inima monahală a Moldovei</span><span class="lang-en">The monastic heart of Moldavia</span></span>
+      <h2><span class="lang-ro">Marea Lavră a Moldovei</span><span class="lang-en">The Great Lavra of Moldavia</span></h2>
+    </div>
+    <div class="prose">
+      <p class="lead lang-ro">Mănăstirea Neamț este una dintre cele mai vechi și mai importante mănăstiri din România. Biserica actuală, cea mai impunătoare ctitorie a lui Ștefan cel Mare, a fost terminată în 1497, în anul victoriei Moldovei împotriva regelui Ioan Albert.</p>
+      <p class="lead lang-en">Neamț Monastery is one of the oldest and most important monasteries in Romania. Its present church, the most imposing foundation of Stephen the Great, was completed in 1497, the year of Moldavia's victory against King John Albert.</p>
+      <p class="lang-ro">De-a lungul secolelor, mănăstirea a fost un mare centru de cultură — cu una dintre cele mai vechi biblioteci din țară (de peste 600 de ani), cu ateliere de copiere a manuscriselor și de tipar. În vremea Sfântului Paisie Velicicovschi, în secolul al XVIII-lea, așezământul număra aproape o mie de călugări și era numit „Marea Lavră" sau „Ierusalimul Românesc".</p>
+      <p class="lang-en">Over the centuries, the monastery was a great centre of culture — with one of the oldest libraries in the country (over 600 years old), and workshops for copying manuscripts and printing. In the time of Saint Paisius Velichkovsky, in the 18th century, the community numbered nearly a thousand monks and was called the "Great Lavra" or "Romanian Jerusalem".</p>
+      <p class="lang-ro">În apropiere s-au dezvoltat două mari mănăstiri de maici — Agapia și Văratec — care, împreună cu Mănăstirea Neamț, formează una dintre cele mai importante vetre monahale ale țării.</p>
+      <p class="lang-en">Nearby, two great nuns' convents grew — Agapia and Văratec — which, together with Neamț Monastery, form one of the country's most important monastic centres.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CELE TREI -->
+<section id="cele-trei">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="overline"><span class="lang-ro">Trei așezăminte, o vatră</span><span class="lang-en">Three houses, one centre</span></span>
+      <h2><span class="lang-ro">Cele trei mănăstiri</span><span class="lang-en">The three monasteries</span></h2>
+    </div>
+    <div class="cards">
+      <div class="vcard">
+        <span class="tag lang-ro">Din 1497 · Ștefan cel Mare</span><span class="tag lang-en">Since 1497 · Stephen the Great</span>
+        <h3><span class="lang-ro">Mănăstirea Neamț</span><span class="lang-en">Neamț Monastery</span></h3>
+        <p class="lang-ro">„Marea Lavră" a Moldovei — biserica lui Ștefan cel Mare (1497), o bibliotecă veche de peste șase secole și un muzeu al bogatei vieți culturale de aici.</p>
+        <p class="lang-en">The "Great Lavra" of Moldavia — Stephen the Great's church (1497), a library over six centuries old and a museum of its rich cultural life.</p>
+      </div>
+      <div class="vcard">
+        <span class="tag lang-ro">1641–1643 · maici</span><span class="tag lang-en">1641–1643 · nuns</span>
+        <h3><span class="lang-ro">Mănăstirea Agapia</span><span class="lang-en">Agapia Monastery</span></h3>
+        <p class="lang-ro">Una dintre cele mai mari mănăstiri de maici din România, cu un sat de căsuțe monahale în jur — și cu o comoară de pictură rară în interior.</p>
+        <p class="lang-en">One of Romania's largest nuns' convents, with a village of monastic houses around it — and a rare painted treasure inside.</p>
+      </div>
+      <div class="vcard">
+        <span class="tag lang-ro">1781–1785 · maici</span><span class="tag lang-en">1781–1785 · nuns</span>
+        <h3><span class="lang-ro">Mănăstirea Văratec</span><span class="lang-en">Văratec Monastery</span></h3>
+        <p class="lang-ro">Cea mai mare mănăstire de maici din România, întemeiată de maica Olimpiada — un loc de liniște legat pentru totdeauna de un nume din literatura română.</p>
+        <p class="lang-en">The largest nuns' convent in Romania, founded by Mother Olimpiada — a place of quiet forever tied to a name from Romanian literature.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CURIOZITATI -->
+<section id="curiozitati" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="overline"><span class="lang-ro">Două povești care rămân</span><span class="lang-en">Two stories that stay with you</span></span>
+      <h2><span class="lang-ro">Știai că?</span><span class="lang-en">Did you know?</span></h2>
+    </div>
+    <div class="curio-grid">
+      <div class="curio">
+        <div class="in">
+          <span class="lab">🎨 <span class="lang-ro">La Agapia</span><span class="lang-en">At Agapia</span></span>
+          <h3><span class="lang-ro">Grigorescu, la 20 de ani</span><span class="lang-en">Grigorescu, at twenty</span></h3>
+          <p class="lang-ro">Pictura interioară a bisericii de la Agapia a fost realizată, între 1858 și 1861, de Nicolae Grigorescu — cel care avea să devină cel mai mare pictor român. A lucrat aici încă din tinerețe, iar rezultatul e considerat o capodoperă.</p>
+          <p class="lang-en">The interior painting of the church at Agapia was made, between 1858 and 1861, by Nicolae Grigorescu — the man who would become Romania's greatest painter. He worked here in his youth, and the result is considered a masterpiece.</p>
+          <p class="src"><span class="lang-ro">Fapt consemnat în istoria artei românești.</span><span class="lang-en">Recorded in the history of Romanian art.</span></p>
+        </div>
+      </div>
+      <div class="curio">
+        <div class="in">
+          <span class="lab">🕯️ <span class="lang-ro">La Văratec</span><span class="lang-en">At Văratec</span></span>
+          <h3><span class="lang-ro">Muza lui Eminescu</span><span class="lang-en">Eminescu's muse</span></h3>
+          <p class="lang-ro">La Văratec se află mormântul Veronicăi Micle, poeta iubită de Mihai Eminescu. Retrasă aici după moartea poetului, ea s-a stins în august 1889, iar mormântul din curtea bisericii e vizitat și azi.</p>
+          <p class="lang-en">At Văratec lies the grave of Veronica Micle, the poet loved by Mihai Eminescu. Having withdrawn here after the poet's death, she passed away in August 1889, and her grave in the church courtyard is still visited today.</p>
+          <p class="src"><span class="lang-ro">Fapt consemnat în istoria literaturii române.</span><span class="lang-en">Recorded in the history of Romanian literature.</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACCES -->
+<section id="acces">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="overline"><span class="lang-ro">Acces din Iași</span><span class="lang-en">Getting there from Iași</span></span>
+      <h2><span class="lang-ro">Cum ajungi la mănăstiri</span><span class="lang-en">How to reach the monasteries</span></h2>
+    </div>
+    <div class="two">
+      <div class="lbox">
+        <h3><span class="lang-ro">Reperele drumului</span><span class="lang-en">Route markers</span></h3>
+        <ul>
+          <li><span class="lang-ro">Distanță: circa 110–120 km sud-vest de Iași</span><span class="lang-en">Distance: about 110–120 km south-west of Iași</span></li>
+          <li><span class="lang-ro">Cele trei mănăstiri sunt aproape una de alta, în zona Târgu Neamț</span><span class="lang-en">The three monasteries are close together, in the Târgu Neamț area</span></li>
+          <li><span class="lang-ro">Agapia și Văratec sunt la doar câțiva kilometri distanță</span><span class="lang-en">Agapia and Văratec are just a few kilometres apart</span></li>
+        </ul>
+      </div>
+      <div class="lbox">
+        <h3><span class="lang-ro">Sfat de traseu</span><span class="lang-en">Route tip</span></h3>
+        <ul>
+          <li><span class="lang-ro">Se vizitează frumos într-o zi, împreună cu Cetatea Neamțului</span><span class="lang-en">Nicely visited in one day, together with the Neamț Citadel</span></li>
+          <li><span class="lang-ro">Aproape se află și Bojdeuca lui Ion Creangă, la Humulești</span><span class="lang-en">Ion Creangă's cottage at Humulești is also nearby</span></li>
+          <li><span class="lang-ro">Sunt lăcașuri de cult active — ținută decentă și liniște</span><span class="lang-en">These are active places of worship — modest dress and quiet</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout">
+      <span class="lang-ro"><b>Bine de știut:</b> mănăstirile sunt lăcașuri de cult vii, cu program de slujbe. Verifică orele de vizitare și accesul în biserici înainte de a merge.</span>
+      <span class="lang-en"><b>Good to know:</b> these are living places of worship, with a schedule of services. Check visiting hours and church access before you go.</span>
+    </div>
+  </div>
+</section>
+
+<!-- DE CE MERITA -->
+<section id="retine" class="closing">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="overline"><span class="lang-ro">Pe scurt</span><span class="lang-en">In short</span></span>
+      <h2><span class="lang-ro">De ce merită</span><span class="lang-en">Why it's worth it</span></h2>
+    </div>
+    <div class="box">
+      <p class="lang-ro">Puține locuri din România adună atâta istorie, credință și artă la câțiva kilometri unul de altul. La Neamț simți greutatea secolelor și a cărții, la Agapia întâlnești pictura unui geniu tânăr, iar la Văratec, liniștea în care odihnește muza lui Eminescu.</p>
+      <p class="lang-en">Few places in Romania gather so much history, faith and art within a few kilometres of each other. At Neamț you feel the weight of the centuries and of the written word, at Agapia you meet the painting of a young genius, and at Văratec, the quiet where Eminescu's muse rests.</p>
+      <p class="lang-ro">Pentru un vizitator pornit din Iași, cele trei mănăstiri sunt inima spirituală a ținutului Neamțului — o zi despre credință, cultură și povești românești, alături de Cetatea Neamțului și casa lui Creangă.</p>
+      <p class="lang-en">For a visitor setting out from Iași, the three monasteries are the spiritual heart of the land of Neamț — a day about faith, culture and Romanian stories, alongside the Neamț Citadel and Creangă's home.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="overline gold-text"><span class="lang-ro">Planifică vizita</span><span class="lang-en">Plan your visit</span></span>
+      <h2>Contact</h2>
+      <p class="lang-ro">Cele trei mănăstiri sunt lăcașuri de cult active. Pentru program și condiții de vizitare, verifică sursele oficiale de turism ale județului Neamț înainte de deplasare.</p>
+      <p class="lang-en">The three monasteries are active places of worship. For hours and visiting conditions, check the official Neamț County tourism sources before travelling.</p>
+    </div>
+    <div class="cgrid">
+      <div class="cc"><span class="overline"><span class="lang-ro">Mănăstirea Neamț</span><span class="lang-en">Neamț Monastery</span></span><b>📍 Vânători-Neamț</b><small class="lang-ro">Biserica lui Ștefan cel Mare · muzeu & bibliotecă</small><small class="lang-en">Stephen the Great's church · museum & library</small></div>
+      <div class="cc"><span class="overline"><span class="lang-ro">Mănăstirea Agapia</span><span class="lang-en">Agapia Monastery</span></span><b>📍 Agapia</b><small class="lang-ro">Frescele lui Nicolae Grigorescu</small><small class="lang-en">Nicolae Grigorescu's frescoes</small></div>
+      <div class="cc"><span class="overline"><span class="lang-ro">Mănăstirea Văratec</span><span class="lang-en">Văratec Monastery</span></span><b>📍 Văratec</b><small class="lang-ro">Mormântul Veronicăi Micle</small><small class="lang-en">Veronica Micle's grave</small></div>
+    </div>
+    <div class="cta-row">
+      <a href="checklist-regiunea-moldova.html" class="btn btn-gold"><span class="lang-ro">← Checklist Regiunea Moldova</span><span class="lang-en">← Moldavia Region checklist</span></a>
+      <a href="iasi.html" class="btn btn-outline"><span class="lang-ro">Alte locuri din Iași</span><span class="lang-en">More places in Iași</span></a>
+    </div>
+    <p class="disclaimer"><span class="lang-ro">Informațiile istorice provin din surse documentare despre mănăstirile Neamț, Agapia și Văratec (august 2026). Programul de vizitare se poate modifica — verifică datele actuale înainte de deplasare.</span><span class="lang-en">Historical information is drawn from documentary sources on the Neamț, Agapia and Văratec monasteries (August 2026). Visiting hours may change — check current details before travelling.</span></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    © 2026 România · Iași — <span class="lang-ro">Ghid de călătorie · Demo</span><span class="lang-en">Travel guide · Demo</span> · <a href="harta-site.html"><span class="lang-ro">Harta site-ului</span><span class="lang-en">Site map</span></a> · <a href="iasi.html">Iași</a>
+  </div>
+</footer>
+
+<script>
+function setLang(l){
+  document.body.classList.toggle('en', l==='en');
+  document.documentElement.lang=l;
+  document.querySelectorAll('.langsw button').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));
+}
+</script>
+</body>
+</html>
