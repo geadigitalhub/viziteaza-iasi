@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Drumul vinului spre Cotnari — podgoria Moldovei și soiurile ei autohtone: Grasă de Cotnari, Frâncușă, Tămâioasă Românească, Fetească Albă.">
+<title>Drumul vinului spre Cotnari — „vinul regilor și regele vinurilor"</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue:#1f4e79;--blue-deep:#14385a;--gold:#c9992b;--gold-soft:#e5c76b;
+    --wine:#6e1f2e;--wine-deep:#4a1420;--cream:#f7f2e7;--ink:#20242b;--muted:#5a6270;--line:#e3dccb;
+    --shadow:0 10px 40px rgba(60,20,30,.14);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Source Sans 3',sans-serif;color:var(--ink);background:var(--cream);line-height:1.7;font-size:18px}
+  h1,h2,h3,.serif{font-family:'Playfair Display',serif}
+  a{color:var(--wine)}
+  .progress{position:fixed;top:0;left:0;height:4px;width:0;background:linear-gradient(90deg,var(--gold),var(--wine));z-index:100;transition:width .1s}
+  .topbar{position:fixed;top:4px;left:0;right:0;background:rgba(247,242,231,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:90}
+  .topbar .inner{max-width:1100px;margin:0 auto;padding:12px 24px;display:flex;justify-content:space-between;align-items:center}
+  .brand{font-family:'Playfair Display',serif;font-weight:700;color:var(--wine);font-size:20px}
+  .brand span{color:var(--gold)}
+  .serieslink{font-size:13px;color:var(--muted);text-decoration:none;text-transform:uppercase;letter-spacing:1px}
+
+  .hero{min-height:86vh;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden;
+    background:linear-gradient(rgba(40,12,20,.7),rgba(40,12,20,.85)),
+    radial-gradient(circle at 25% 30%,#7a2436,transparent 55%),
+    radial-gradient(circle at 78% 75%,#3d1019,transparent 55%),#4a1420;color:#fff;padding:120px 24px 80px}
+  .hero .kicker{color:var(--gold-soft);text-transform:uppercase;letter-spacing:4px;font-size:13px;font-weight:600;margin-bottom:22px;opacity:0;animation:rise .8s .1s forwards}
+  .hero h1{font-size:clamp(32px,6vw,60px);line-height:1.12;font-weight:800;max-width:860px;opacity:0;animation:rise .9s .25s forwards}
+  .hero p{margin:26px auto 0;max-width:620px;font-size:20px;color:#f2e6e8;font-weight:300;opacity:0;animation:rise .9s .45s forwards}
+  .hero .scroll{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);color:#fff;font-size:12px;letter-spacing:2px;text-transform:uppercase;opacity:.75;animation:bob 2s infinite}
+  @keyframes rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+  @keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
+
+  .wrap{max-width:760px;margin:0 auto;padding:64px 24px}
+  .wrap.wide{max-width:1100px}
+  .lead{font-size:22px;line-height:1.6;color:#33383f}
+  .wrap h2{font-size:32px;color:var(--wine-deep);margin:44px 0 18px;position:relative;padding-left:18px}
+  .wrap h2::before{content:"";position:absolute;left:0;top:8px;bottom:8px;width:5px;border-radius:3px;background:var(--gold)}
+  .wrap p{margin:16px 0}
+  .pull{border-left:4px solid var(--gold);background:#fff;padding:20px 24px;border-radius:0 14px 14px 0;font-family:'Playfair Display',serif;font-size:22px;font-style:italic;color:var(--wine-deep);margin:34px 0;box-shadow:var(--shadow)}
+
+  .section-head{text-align:center;max-width:660px;margin:0 auto 34px}
+  .section-head .tag{color:var(--gold);text-transform:uppercase;letter-spacing:3px;font-size:12px;font-weight:700}
+  .section-head h2{font-size:34px;color:var(--wine-deep);margin-top:6px}
+
+  /* grape flip cards */
+  .grapes{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+  .flip{perspective:1200px;height:260px;cursor:pointer}
+  .flip .in{position:relative;width:100%;height:100%;transition:transform .7s;transform-style:preserve-3d}
+  .flip.on .in{transform:rotateY(180deg)}
+  .flip .f,.flip .b{position:absolute;inset:0;backface-visibility:hidden;border-radius:20px;padding:26px;display:flex;flex-direction:column;box-shadow:var(--shadow)}
+  .flip .f{background:#fff;border:1px solid var(--line);align-items:flex-start}
+  .flip .berry{width:56px;height:56px;border-radius:50%;margin-bottom:16px;box-shadow:inset -6px -6px 12px rgba(0,0,0,.2)}
+  .b1{background:radial-gradient(circle at 35% 30%,#e8d98a,#c9a13a)}
+  .b2{background:radial-gradient(circle at 35% 30%,#f0e4a8,#d8c058)}
+  .b3{background:radial-gradient(circle at 35% 30%,#efe6b0,#c6b24e)}
+  .b4{background:radial-gradient(circle at 35% 30%,#dfe9c0,#9fb45f)}
+  .flip .f h4{font-size:22px;color:var(--wine-deep)}
+  .flip .f .type{font-size:13px;color:var(--muted);margin-top:4px;text-transform:uppercase;letter-spacing:1px}
+  .flip .f .tap{margin-top:auto;font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--gold);font-weight:700}
+  .flip .b{background:linear-gradient(135deg,var(--wine),var(--wine-deep));color:#fff;transform:rotateY(180deg);justify-content:center;font-size:16px}
+  .flip .b strong{color:var(--gold-soft)}
+
+  /* timeline */
+  .timeline{position:relative;max-width:720px;margin:10px auto 0;padding-left:20px}
+  .timeline::before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:3px;background:linear-gradient(var(--gold),var(--wine))}
+  .tl{position:relative;padding:0 0 30px 34px}
+  .tl::before{content:"";position:absolute;left:-1px;top:4px;width:16px;height:16px;border-radius:50%;background:#fff;border:4px solid var(--gold)}
+  .tl .yr{font-family:'Playfair Display',serif;font-weight:700;color:var(--wine);font-size:18px}
+  .tl p{margin:4px 0 0;color:#3a4048;font-size:16px}
+
+  .nextnav{max-width:1100px;margin:0 auto;padding:20px 24px 80px}
+  .nextcard{display:flex;justify-content:space-between;align-items:center;gap:20px;background:linear-gradient(135deg,var(--wine),var(--wine-deep));color:#fff;border-radius:20px;padding:34px 36px;box-shadow:var(--shadow);flex-wrap:wrap}
+  .nextcard .t{font-size:12px;text-transform:uppercase;letter-spacing:2px;color:var(--gold-soft)}
+  .nextcard h3{font-size:26px;margin-top:6px;max-width:520px}
+  .btn{background:var(--gold);color:#231c06;border:none;font-weight:700;padding:14px 26px;border-radius:40px;text-decoration:none;font-size:16px;white-space:nowrap;transition:transform .2s}
+  .btn:hover{transform:scale(1.05)}
+  .btn.ghost{background:transparent;border:2px solid rgba(255,255,255,.5);color:#fff}
+  footer{background:var(--wine-deep);color:#e7d3d7;text-align:center;padding:40px 24px;font-size:14px}
+  .totop{position:fixed;bottom:24px;right:24px;width:48px;height:48px;border-radius:50%;background:var(--wine);color:#fff;border:none;font-size:22px;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s;box-shadow:var(--shadow);z-index:80}
+  .totop.show{opacity:1;pointer-events:auto}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<div class="topbar"><div class="inner">
+  <div class="brand">Moldova<span>·</span>Nord-Est</div>
+  <a class="serieslink" href="index.html">Serie · Iași, capitala culturală a României · 3/5</a>
+</div></div>
+
+<header class="hero">
+  <div>
+    <div class="kicker">Podgoriile Moldovei</div>
+    <h1>Drumul vinului spre Cotnari</h1>
+    <p>Unde se face „vinul regilor și regele vinurilor" — pe coline acoperite de vie cât vezi cu ochii.</p>
+  </div>
+</header>
+
+<article class="wrap">
+  <p class="lead">Coborând din nordul Moldovei, dinspre mănăstirile pictate ale Bucovinei, drumul spre Iași trece prin podișul acoperit de vii. Aici se află una dintre cele mai vechi și mai prestigioase podgorii ale României: Cotnari.</p>
+
+  <h2>O podgorie cu rădăcini de două mii de ani</h2>
+  <p>Cultura viței de vie în zona Cotnariului are o vechime impresionantă — urme ale ei se găsesc încă din Antichitate, pe dealurile podișului moldav. Adevărata înflorire vine, ca atâtea alte lucruri bune din regiune, în timpul lui Ștefan cel Mare.</p>
+  <div class="pull">Se spune că vinul de Cotnari ajungea la curțile Europei, unde era prețuit alături de marile vinuri ale continentului — de aici, supranumele „vinul regilor și regele vinurilor".</div>
+</article>
+
+<section class="wrap wide">
+  <div class="section-head">
+    <div class="tag">Soiuri autohtone</div>
+    <h2>Struguri pe care nu-i găsești nicăieri altundeva</h2>
+    <p style="color:var(--muted)">Cotnari a păstrat aproape exclusiv soiuri locale. Apasă pe fiecare card pentru a afla mai mult.</p>
+  </div>
+  <div class="grapes" id="grapes">
+    <div class="flip" onclick="this.classList.toggle('on')"><div class="in">
+      <div class="f"><div class="berry b1"></div><h4>Grasă de Cotnari</h4><div class="type">Vin dulce, licoros</div><div class="tap">apasă →</div></div>
+      <div class="b">Vedeta incontestabilă, cu o istorie de <strong>peste 7 secole</strong>. Vin licoros, cu note de miere și fructe confiate — cel care a dus faima podgoriei în lume.</div>
+    </div></div>
+    <div class="flip" onclick="this.classList.toggle('on')"><div class="in">
+      <div class="f"><div class="berry b2"></div><h4>Tămâioasă Românească</h4><div class="type">Aromat, floral</div><div class="tap">apasă →</div></div>
+      <div class="b">Parfumul podgoriei: vin cu aromă <strong>intensă, florală și dulce</strong>, cultivat pe aceste meleaguri din vremuri străvechi.</div>
+    </div></div>
+    <div class="flip" onclick="this.classList.toggle('on')"><div class="in">
+      <div class="f"><div class="berry b3"></div><h4>Frâncușă</h4><div class="type">Alb, sec</div><div class="tap">apasă →</div></div>
+      <div class="b">Cel mai vechi soi al locului: vin alb <strong>sec, cu aciditate bună</strong> și prospețime — perechea ideală pentru mâncărurile tradiționale.</div>
+    </div></div>
+    <div class="flip" onclick="this.classList.toggle('on')"><div class="in">
+      <div class="f"><div class="berry b4"></div><h4>Fetească Albă</h4><div class="type">Alb, fin</div><div class="tap">apasă →</div></div>
+      <div class="b">Soi românesc răspândit, care dă vinuri <strong>fine, echilibrate</strong>. Completează tabloul aromelor de la Cotnari.</div>
+    </div></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="section-head">
+    <div class="tag">Cronologie</div>
+    <h2>Vinul, pas cu pas prin istorie</h2>
+  </div>
+  <div class="timeline">
+    <div class="tl"><div class="yr">Antichitate</div><p>Urme ale cultivării viței de vie pe dealurile podișului moldav.</p></div>
+    <div class="tl"><div class="yr">sec. XV</div><p>Primele mențiuni scrise despre viile de la Cotnari, în vremea lui Petru Aron.</p></div>
+    <div class="tl"><div class="yr">Ștefan cel Mare</div><p>Podgoria atinge o dezvoltare fără precedent, ca întindere și calitate.</p></div>
+    <div class="tl"><div class="yr">Astăzi</div><p>Singura podgorie mare din România care a păstrat aproape exclusiv soiuri autohtone.</p></div>
+  </div>
+</section>
+
+<article class="wrap">
+  <h2>Mai mult decât Cotnari</h2>
+  <p>Drumul vinului din Moldova trece și prin alte zone renumite — podgoriile din jurul Iașiului, Huși, Odobești, Panciu, Cotești — care alcătuiesc împreună una dintre cele mai importante regiuni viticole ale țării. O călătorie pe acest drum înseamnă opriri la crame, degustări în beciuri răcoroase și povești spuse de oameni pentru care vinul este o moștenire de familie.</p>
+  <h2>Cum să te bucuri de experiență</h2>
+  <p>Cel mai bun moment este toamna, în perioada culesului, când via e în plină culoare și cramele își deschid larg porțile. Vinurile de Cotnari se potrivesc de minune cu preparatele tradiționale moldovenești — de la brânzeturile de oaie la sarmale și la deserturile cu nucă și miere.</p>
+</article>
+
+<nav class="nextnav">
+  <div class="nextcard">
+    <div>
+      <div class="t">Următorul articol · 4/5</div>
+      <h3>Ii, oale și colinde: tradițiile care țin viu sufletul Moldovei</h3>
+    </div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap">
+      <a class="btn ghost" href="02-manastirile-pictate-bucovina.html">← Înapoi</a>
+      <a class="btn" href="04-traditii-mestesuguri-moldova.html">Citește →</a>
+    </div>
+  </div>
+</nav>
+
+<footer>Serie de blog · Regiunea Moldova, centrul cultural al României · Articolul 3 din 5</footer>
+<button class="totop" id="totop" aria-label="Sus">↑</button>
+
+<script>
+  const prog=document.getElementById('progress'),totop=document.getElementById('totop');
+  addEventListener('scroll',()=>{const h=document.documentElement;prog.style.width=h.scrollTop/(h.scrollHeight-h.clientHeight)*100+'%';totop.classList.toggle('show',h.scrollTop>500)});
+  totop.onclick=()=>scrollTo({top:0,behavior:'smooth'});
+</script>
+</body>
+</html>

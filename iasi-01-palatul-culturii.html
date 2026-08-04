@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Palatul Culturii din Iași — istoria clădirii-simbol, arhitectul Ion D. Berindey, stilul neogotic flamboaiant, cele patru muzee și turnul cu ceas care cântă Hora Unirii.">
+<title>Palatul Culturii din Iași — povestea edificiului-simbol al orașului</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue:#1f4e79;--blue-deep:#14385a;--gold:#c9992b;--gold-soft:#e5c76b;
+    --stone:#6b6152;--cream:#f7f2e7;--ink:#20242b;--muted:#5a6270;--line:#e3dccb;
+    --shadow:0 10px 40px rgba(20,40,70,.12);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Source Sans 3',sans-serif;color:var(--ink);background:var(--cream);line-height:1.7;font-size:18px}
+  h1,h2,h3,.serif{font-family:'Playfair Display',serif}
+  a{color:var(--blue)}
+  .progress{position:fixed;top:0;left:0;height:4px;width:0;background:linear-gradient(90deg,var(--gold),var(--blue));z-index:100;transition:width .1s}
+  .topbar{position:fixed;top:4px;left:0;right:0;background:rgba(247,242,231,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:90}
+  .topbar .inner{max-width:1100px;margin:0 auto;padding:12px 24px;display:flex;justify-content:space-between;align-items:center}
+  .brand{font-family:'Playfair Display',serif;font-weight:700;color:var(--blue);font-size:20px}
+  .brand span{color:var(--gold)}
+  .serieslink{font-size:13px;color:var(--muted);text-decoration:none;text-transform:uppercase;letter-spacing:1px}
+
+  .hero{min-height:88vh;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden;
+    background:linear-gradient(rgba(14,28,48,.72),rgba(14,28,48,.86)),
+    radial-gradient(circle at 22% 28%,#2c5b86,transparent 55%),
+    radial-gradient(circle at 80% 78%,#0c2038,transparent 55%),#0f2138;color:#fff;padding:120px 24px 90px}
+  .hero .kicker{color:var(--gold-soft);text-transform:uppercase;letter-spacing:4px;font-size:13px;font-weight:600;margin-bottom:20px;opacity:0;animation:rise .8s .1s forwards}
+  .hero h1{font-size:clamp(32px,6vw,60px);line-height:1.12;font-weight:800;max-width:900px;opacity:0;animation:rise .9s .25s forwards}
+  .hero p{margin:24px auto 0;max-width:620px;font-size:20px;color:#e8eef5;font-weight:300;opacity:0;animation:rise .9s .45s forwards}
+  /* animated spire */
+  .spire{margin:30px auto 0;width:64px;height:64px;position:relative;opacity:0;animation:rise .9s .6s forwards}
+  .spire .clock{width:64px;height:64px;border-radius:50%;border:3px solid var(--gold-soft);position:relative;background:rgba(255,255,255,.06)}
+  .spire .hand{position:absolute;left:50%;bottom:50%;transform-origin:bottom center;background:var(--gold-soft);border-radius:2px}
+  .spire .h{width:3px;height:18px;animation:spin 12s linear infinite}
+  .spire .m{width:2px;height:26px;animation:spin 2s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .hero .scroll{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);color:#fff;font-size:12px;letter-spacing:2px;text-transform:uppercase;opacity:.75;animation:bob 2s infinite}
+  @keyframes rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+  @keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
+
+  .stats{max-width:1000px;margin:-52px auto 0;padding:0 24px;position:relative;z-index:5;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .stat{background:#fff;border-radius:16px;padding:24px 16px;text-align:center;box-shadow:var(--shadow);border:1px solid var(--line)}
+  .stat .num{font-family:'Playfair Display',serif;font-size:36px;font-weight:800;color:var(--blue);line-height:1}
+  .stat .lbl{font-size:12.5px;color:var(--muted);margin-top:8px;text-transform:uppercase;letter-spacing:.5px}
+
+  .wrap{max-width:760px;margin:0 auto;padding:60px 24px}
+  .wrap.wide{max-width:1060px}
+  .lead{font-size:22px;line-height:1.6;color:#33383f}
+  .wrap h2{font-size:32px;color:var(--blue-deep);margin:44px 0 18px;position:relative;padding-left:18px}
+  .wrap h2::before{content:"";position:absolute;left:0;top:8px;bottom:8px;width:5px;border-radius:3px;background:var(--gold)}
+  .wrap p{margin:16px 0}
+  .pull{border-left:4px solid var(--gold);background:#fff;padding:20px 24px;border-radius:0 14px 14px 0;font-family:'Playfair Display',serif;font-size:22px;font-style:italic;color:var(--blue-deep);margin:34px 0;box-shadow:var(--shadow)}
+
+  .section-head{text-align:center;max-width:660px;margin:0 auto 30px}
+  .section-head .tag{color:var(--gold);text-transform:uppercase;letter-spacing:3px;font-size:12px;font-weight:700}
+  .section-head h2{font-size:34px;color:var(--blue-deep);margin-top:6px}
+
+  /* timeline */
+  .timeline{position:relative;max-width:720px;margin:6px auto 0;padding-left:20px}
+  .timeline::before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:3px;background:linear-gradient(var(--gold),var(--blue))}
+  .tl{position:relative;padding:0 0 28px 34px}
+  .tl::before{content:"";position:absolute;left:-1px;top:4px;width:16px;height:16px;border-radius:50%;background:#fff;border:4px solid var(--gold)}
+  .tl .yr{font-family:'Playfair Display',serif;font-weight:700;color:var(--blue);font-size:18px}
+  .tl p{margin:4px 0 0;color:#3a4048;font-size:16px}
+
+  /* museums tabs */
+  .tabs{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:24px}
+  .tab{border:2px solid var(--line);background:#fff;padding:11px 20px;border-radius:40px;cursor:pointer;font-weight:700;font-size:15px;color:var(--ink);transition:all .25s;display:flex;align-items:center;gap:9px}
+  .tab .e{font-size:18px}
+  .tab.active{background:var(--blue);color:#fff;border-color:transparent}
+  .panel{display:none;background:#fff;border-radius:20px;box-shadow:var(--shadow);border:1px solid var(--line);padding:34px 38px;animation:fade .4s}
+  .panel.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+  .panel h3{font-size:26px;color:var(--blue-deep);margin-bottom:10px}
+  .panel .badge{display:inline-block;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:5px 12px;border-radius:20px;background:var(--gold);color:#231c06;margin-bottom:14px}
+
+  /* fact flip cards */
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:8px}
+  .flip{perspective:1100px;height:190px;cursor:pointer}
+  .flip .in{position:relative;width:100%;height:100%;transition:transform .7s;transform-style:preserve-3d}
+  .flip.on .in{transform:rotateY(180deg)}
+  .flip .f,.flip .b{position:absolute;inset:0;backface-visibility:hidden;border-radius:18px;padding:24px;display:flex;flex-direction:column;justify-content:center;box-shadow:var(--shadow)}
+  .flip .f{background:#fff;border:1px solid var(--line)}
+  .flip .f .big{font-size:36px}
+  .flip .f h4{font-size:19px;color:var(--blue-deep);margin-top:10px}
+  .flip .f .tap{margin-top:auto;font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--muted)}
+  .flip .b{background:linear-gradient(135deg,var(--blue),var(--blue-deep));color:#fff;transform:rotateY(180deg);font-size:15px}
+
+  .nextnav{max-width:1100px;margin:0 auto;padding:20px 24px 80px}
+  .nextcard{display:flex;justify-content:space-between;align-items:center;gap:20px;background:linear-gradient(135deg,var(--blue),var(--blue-deep));color:#fff;border-radius:20px;padding:34px 36px;box-shadow:var(--shadow);flex-wrap:wrap}
+  .nextcard .t{font-size:12px;text-transform:uppercase;letter-spacing:2px;color:var(--gold-soft)}
+  .nextcard h3{font-size:24px;margin-top:6px;max-width:540px}
+  .btn{background:var(--gold);color:#231c06;border:none;font-weight:700;padding:14px 26px;border-radius:40px;text-decoration:none;font-size:16px;white-space:nowrap;transition:transform .2s}
+  .btn:hover{transform:scale(1.05)}
+  .btn.ghost{background:transparent;border:2px solid rgba(255,255,255,.5);color:#fff}
+  footer{background:var(--blue-deep);color:#cdd7e2;text-align:center;padding:40px 24px;font-size:14px}
+  .totop{position:fixed;bottom:24px;right:24px;width:48px;height:48px;border-radius:50%;background:var(--blue);color:#fff;border:none;font-size:22px;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s;box-shadow:var(--shadow);z-index:80}
+  .totop.show{opacity:1;pointer-events:auto}
+  @media(max-width:720px){.stats{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<div class="topbar"><div class="inner">
+  <div class="brand">Iași<span>·</span>Obiective</div>
+  <a class="serieslink" href="index.html">Ghid Iași · Palatul Culturii</a>
+</div></div>
+
+<header class="hero">
+  <div>
+    <div class="kicker">Edificiul-simbol al Iașiului</div>
+    <h1>Palatul Culturii</h1>
+    <p>O catedrală laică a Moldovei, în care patru muzee și un turn cu ceas spun, împreună, povestea orașului.</p>
+    <div class="spire"><div class="clock"><div class="hand h"></div><div class="hand m"></div></div></div>
+  </div>
+</header>
+
+<section class="stats" aria-label="Cifre despre Palatul Culturii">
+  <div class="stat"><div class="num" data-count="1906">0</div><div class="lbl">Început în</div></div>
+  <div class="stat"><div class="num" data-count="1925">0</div><div class="lbl">Inaugurat în</div></div>
+  <div class="stat"><div class="num" data-count="4">0</div><div class="lbl">Muzee naționale</div></div>
+  <div class="stat"><div class="num" data-count="8">0</div><div class="lbl">Clopote în turn</div></div>
+</section>
+
+<article class="wrap">
+  <p class="lead">Dacă există o clădire care întruchipează Iașul, aceasta este Palatul Culturii. Turnul său se vede de departe, iar silueta lui neogotică a devenit imaginea-carte poștală a orașului. Dar, dincolo de fațadă, palatul este o poartă către întreaga istorie a Moldovei.</p>
+
+  <h2>O clădire ridicată pe ruinele curții domnești</h2>
+  <p>Palatul se înalță chiar pe locul vechii curți domnești a Moldovei, acolo unde, secole la rând, s-a scris istoria țării. Construcția actuală a început în 1906, după planurile arhitectului Ion D. Berindey, care s-a inspirat din palatele comunale ale Europei Occidentale.</p>
+  <div class="pull">Berindey a conceput palatul în stil neogotic flamboaiant, îmbinând elemente romantice și neobaroce, heraldică medievală și simboluri naționale românești.</div>
+  <p>Lucrările au fost întrerupte de Primul Război Mondial, când clădirea a fost transformată în spital militar și cazarmă. Inaugurarea oficială a avut loc la 11 octombrie 1925, în prezența familiei regale — regele Ferdinand și regina Maria. Palatul era dotat cu cele mai moderne facilități ale vremii: iluminat electric și încălzire printr-un sistem pneumatic.</p>
+  <p>Cifrele clădirii impresionează și astăzi: deși legenda spune că proiectul inițial prevedea 365 de încăperi, palatul are 298 de camere, o suprafață de aproximativ 36.000 m² și 92 de ferestre pe fațadă.</p>
+
+  <h2>De la Palat de Justiție la Palat al Culturii</h2>
+  <p>La origine, edificiul a fost gândit ca Palat de Justiție și Administrație — de aici și numeroasele săli monumentale și decorația fastuoasă. Abia în 1955 clădirea a primit destinația care i-a dat numele de astăzi, devenind Palat al Culturii și adăpostind unele dintre cele mai importante instituții muzeale ale țării.</p>
+</article>
+
+<section class="wrap">
+  <div class="section-head">
+    <div class="tag">Cronologie</div>
+    <h2>Palatul, pas cu pas</h2>
+  </div>
+  <div class="timeline">
+    <div class="tl"><div class="yr">Ev Mediu</div><p>Pe acest loc se afla curtea domnească a Moldovei, inima puterii voievodale.</p></div>
+    <div class="tl"><div class="yr">1906</div><p>Începe construcția actuală, după planurile lui Ion D. Berindey.</p></div>
+    <div class="tl"><div class="yr">1916–1918</div><p>Lucrările se opresc; clădirea devine spital militar și cazarmă în timpul războiului.</p></div>
+    <div class="tl"><div class="yr">1925</div><p>Inaugurare, în prezența regelui Ferdinand, cu dotări de ultimă generație.</p></div>
+    <div class="tl"><div class="yr">1955</div><p>Devine Palat al Culturii, găzduind marile muzee ieșene.</p></div>
+    <div class="tl"><div class="yr">Azi</div><p>Sediul Complexului Muzeal Național „Moldova", cu patru muzee naționale.</p></div>
+  </div>
+</section>
+
+<section class="wrap wide">
+  <div class="section-head">
+    <div class="tag">Patru muzee sub un acoperiș</div>
+    <h2>Complexul Muzeal Național „Moldova"</h2>
+    <p style="color:var(--muted)">Alege un muzeu pentru a afla ce te așteaptă înăuntru.</p>
+  </div>
+  <div class="tabs" id="tabs">
+    <button class="tab active" data-p="0"><span class="e">🏛️</span>Istorie</button>
+    <button class="tab" data-p="1"><span class="e">🎨</span>Artă</button>
+    <button class="tab" data-p="2"><span class="e">🧵</span>Etnografie</button>
+    <button class="tab" data-p="3"><span class="e">⚙️</span>Știință &amp; Tehnică</button>
+  </div>
+  <div class="panel active" data-p="0">
+    <span class="badge">Muzeul de Istorie a Moldovei</span>
+    <h3>Istoria unei țări, într-un singur loc</h3>
+    <p>De la vestigii arheologice la mărturii ale marilor momente ale Moldovei, muzeul urmărește firul istoriei regiunii. Aici se află și celebra Sală a Voievozilor, cu portrete ale domnitorilor Moldovei.</p>
+  </div>
+  <div class="panel" data-p="1">
+    <span class="badge">Muzeul de Artă</span>
+    <h3>Prima pinacotecă din spațiul românesc</h3>
+    <p>Are la bază Pinacoteca înființată la 26 octombrie 1860 — prima colecție de acest fel din spațiul românesc — și este unul dintre cele mai vechi muzee de artă din România. Adăpostește astăzi circa 10.000 de lucrări de pictură, grafică și sculptură, românești și universale.</p>
+  </div>
+  <div class="panel" data-p="2">
+    <span class="badge">Muzeul Etnografic al Moldovei</span>
+    <h3>Sufletul satului moldovenesc</h3>
+    <p>Port popular, meșteșuguri, unelte și obiceiuri — o incursiune în viața tradițională a regiunii, de la olărit la țesături și ocupații străvechi.</p>
+  </div>
+  <div class="panel" data-p="3">
+    <span class="badge">Muzeul „Ștefan Procopiu"</span>
+    <h3>Când știința devine spectacol</h3>
+    <p>Muzeul Științei și Tehnicii poartă numele fizicianului ieșean Ștefan Procopiu. Aici se află piese rare, printre care o remarcabilă colecție de instrumente și mecanisme — inclusiv orga de lumini și aparate de altădată.</p>
+  </div>
+</section>
+
+<section class="wrap wide">
+  <div class="section-head">
+    <div class="tag">Știai că…</div>
+    <h2>Secretele turnului cu ceas</h2>
+    <p style="color:var(--muted)">Apasă pe fiecare card pentru a descoperi.</p>
+  </div>
+  <div class="grid" id="facts">
+    <div class="flip" onclick="this.classList.toggle('on')"><div class="in">
+      <div class="f"><div class="big">🔔</div><h4>Hora Unirii, din oră în oră</h4><div class="tap">apasă →</div></div>
+      <div class="b">Ceasul cu trei cadrane din turn are 8 clopote care intonează „Hora Unirii" la fiecare oră fixă, amintind de Unirea de la 1859 și de cea din 1918.</div>
+    </div></div>
+    <div class="flip" onclick="this.classList.toggle('on')"><div class="in">
+      <div class="f"><div class="big">🛡️</div><h4>Doi străjeri pictați</h4><div class="tap">apasă →</div></div>
+      <div class="b">Cei doi ostași pictați în frescă, care veghează ceasul, i-ar reprezenta, după arhitect, pe boierii lui Dragoș Vodă, întemeietorul Moldovei.</div>
+    </div></div>
+    <div class="flip" onclick="this.classList.toggle('on')"><div class="in">
+      <div class="f"><div class="big">💡</div><h4>Modern pentru 1925</h4><div class="tap">apasă →</div></div>
+      <div class="b">La inaugurare, palatul avea iluminat electric și încălzire printr-un sistem pneumatic — un lux tehnologic pentru acea vreme.</div>
+    </div></div>
+    <div class="flip" onclick="this.classList.toggle('on')"><div class="in">
+      <div class="f"><div class="big">👑</div><h4>Pe locul curții domnești</h4><div class="tap">apasă →</div></div>
+      <div class="b">Palatul stă chiar pe locul vechii curți domnești a Moldovei — o continuitate a puterii și a istoriei, veche de secole.</div>
+    </div></div>
+  </div>
+</section>
+
+<article class="wrap">
+  <h2>Sfaturi pentru vizită</h2>
+  <p>Palatul Culturii se află în centrul Iașiului, la capătul bulevardului Ștefan cel Mare, aproape de Mănăstirea Trei Ierarhi și de zona istorică. Poți cumpăra bilet pentru un singur muzeu sau un bilet combinat pentru toate patru — recomandat, dacă ai la dispoziție o jumătate de zi. Nu rata priveliștea asupra orașului din exteriorul palatului și, la ora fixă, oprește-te să asculți clopotele.</p>
+  <div class="pull">Un singur edificiu, patru muzee și o mie de povești: Palatul Culturii este cel mai bun loc din care să începi descoperirea Iașiului.</div>
+</article>
+
+<nav class="nextnav">
+  <div class="nextcard">
+    <div>
+      <div class="t">Ghid Iași · următorul obiectiv</div>
+      <h3>Mănăstirea Trei Ierarhi — bijuteria dantelată în piatră</h3>
+    </div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap">
+      <a class="btn ghost" href="05-iasi-capitala-culturala.html">← Înapoi la Iași</a>
+      <a class="btn" href="index.html">Toate articolele →</a>
+    </div>
+  </div>
+</nav>
+
+<footer>Ghid Iași · Obiective de neratat · Palatul Culturii</footer>
+<button class="totop" id="totop" aria-label="Sus">↑</button>
+
+<script>
+  const prog=document.getElementById('progress'),totop=document.getElementById('totop');
+  addEventListener('scroll',()=>{const h=document.documentElement;prog.style.width=h.scrollTop/(h.scrollHeight-h.clientHeight)*100+'%';totop.classList.toggle('show',h.scrollTop>500)});
+  totop.onclick=()=>scrollTo({top:0,behavior:'smooth'});
+  const nums=document.querySelectorAll('.num');
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(!e.isIntersecting)return;const el=e.target,end=+el.dataset.count;let cur=Math.max(0,end-40);const t=setInterval(()=>{cur++;if(cur>=end){cur=end;clearInterval(t)}el.textContent=cur},18);io.unobserve(el)})},{threshold:.6});
+  nums.forEach(n=>io.observe(n));
+  const tabs=document.querySelectorAll('.tab'),panels=document.querySelectorAll('.panel');
+  tabs.forEach(t=>t.onclick=()=>{tabs.forEach(x=>x.classList.remove('active'));panels.forEach(p=>p.classList.remove('active'));t.classList.add('active');document.querySelector('.panel[data-p="'+t.dataset.p+'"]').classList.add('active')});
+</script>
+</body>
+</html>
