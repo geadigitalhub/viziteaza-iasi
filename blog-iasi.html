@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iași — orașul care deschide o țară · România · Iași</title>
+<meta name="description" content="Iași, orașul celor șapte coline: așezarea, istoria de două ori capitală, oamenii și cultura — o poveste care urcă de la oraș spre Moldova și spre întreaga Românie. Date oficiale, recensământ 2021.">
+<meta property="og:title" content="Iași, orașul care deschide o țară">
+<meta property="og:description" content="Povestea orașului celor șapte coline — de două ori capitală, leagăn de cultură — spusă în carduri, cronologie și cifre.">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#141d33;--navy-2:#1b2848;--gold:#C9A24B;--gold-2:#E3C778;--cream:#F4ECD8;--cream-2:#EFE4C9;--paper:#FBF6EA;--ink:#1a2033;--ink-soft:#3a4560;--muted:#6b7794;--line:rgba(201,162,75,.28);--line-soft:rgba(20,29,51,.1)}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:'Jost',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.8;font-weight:300;overflow-x:hidden}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;line-height:1.15;font-weight:600}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:820px;margin:0 auto;padding:0 24px}
+.gold-text{color:var(--gold)}
+/* reveal on scroll */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* progress bar */
+#bar{position:fixed;top:0;left:0;height:3px;width:0;z-index:70;background:linear-gradient(90deg,var(--gold),var(--gold-2))}
+
+nav.site{position:sticky;top:0;z-index:50;background:rgba(20,29,51,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav.site .in{max-width:820px;margin:0 auto;padding:14px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px}
+nav.site .brand{font-family:'Cormorant Garamond';font-weight:700;color:var(--gold-2);font-size:19px}
+nav.site .lk{display:flex;gap:20px;font-size:13px;letter-spacing:.05em}
+nav.site .lk a{color:rgba(244,236,216,.8)}nav.site .lk a:hover,nav.site .lk a.on{color:var(--gold-2)}
+@media(max-width:620px){nav.site .lk{display:none}}
+
+header.hero{background:radial-gradient(1100px 380px at 82% -10%,rgba(46,68,136,.55),transparent 60%),radial-gradient(800px 300px at 0% 10%,rgba(201,162,75,.14),transparent 60%),linear-gradient(180deg,var(--navy-2),var(--navy));color:var(--cream);padding:64px 0 56px;border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+header.hero::after{content:"";position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(2px 2px at 18% 30%,rgba(244,214,138,.85),transparent),radial-gradient(1.5px 1.5px at 72% 22%,rgba(255,255,255,.7),transparent),radial-gradient(1.5px 1.5px at 88% 62%,rgba(244,214,138,.7),transparent),radial-gradient(1.5px 1.5px at 32% 78%,rgba(255,255,255,.5),transparent);animation:twinkle 4s ease-in-out infinite}
+@keyframes twinkle{0%,100%{opacity:.5}50%{opacity:1}}
+header.hero .wrap{position:relative;z-index:2}
+.crumb{font-size:.78rem;color:rgba(244,236,216,.6);margin-bottom:20px}.crumb a:hover{color:var(--gold-2)}
+.eyebrow{font-weight:600;letter-spacing:.3em;text-transform:uppercase;font-size:.72rem;color:var(--gold-2);margin-bottom:16px}
+.crest{width:80px;height:80px;margin-bottom:20px;display:block;filter:drop-shadow(0 8px 20px rgba(0,0,0,.45));animation:float 6s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+header.hero h1{font-size:clamp(2.2rem,5.4vw,3.4rem);color:#fff}
+header.hero h1 em{font-style:italic;background:linear-gradient(90deg,var(--gold-2),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lede{color:rgba(244,236,216,.85);font-size:1.14rem;margin-top:18px;max-width:60ch;font-weight:300}
+.meta{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px}
+.chip{border:1px solid var(--line);border-radius:30px;padding:6px 14px;font-size:.75rem;color:var(--gold-2)}
+
+/* infographic counters */
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:38px 0 6px}
+.statc{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 14px;text-align:center;box-shadow:0 16px 40px -28px rgba(20,29,51,.5)}
+.statc .n{font-family:'Cormorant Garamond';font-weight:700;font-size:2.1rem;color:var(--navy);line-height:1}
+.statc .l{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:8px}
+.statc .n .u{color:var(--gold);font-size:1.1rem}
+@media(max-width:640px){.stats-grid{grid-template-columns:repeat(2,1fr)}}
+
+article{padding:20px 0 10px}
+article h2{font-size:clamp(1.7rem,3.6vw,2.2rem);color:var(--navy);margin:52px 0 6px}
+article h2 .num{display:block;font-family:'Jost';font-weight:600;font-size:.74rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+article p{margin:15px 0;color:var(--ink-soft)}
+article p strong{color:var(--navy);font-weight:600}
+article em{font-style:italic;color:var(--navy)}
+.thread{height:1px;border:0;margin:44px auto;background:linear-gradient(90deg,transparent,var(--gold) 20%,var(--gold-2) 50%,var(--gold) 80%,transparent);opacity:.7}
+blockquote{border-left:3px solid var(--gold);margin:34px 0;padding:6px 0 6px 22px;font-family:'Cormorant Garamond';font-style:italic;font-size:1.4rem;color:var(--navy);line-height:1.5}
+
+/* colline cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;margin:26px 0 6px}
+.card{position:relative;background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px 20px;box-shadow:0 16px 40px -30px rgba(20,29,51,.55);transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s;overflow:hidden}
+.card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(var(--gold),var(--gold-2))}
+.card:hover{transform:translateY(-6px);box-shadow:0 26px 50px -28px rgba(20,29,51,.6)}
+.card .em{font-size:1.9rem}
+.card h3{font-family:'Cormorant Garamond';font-weight:700;font-size:1.3rem;color:var(--navy);margin:10px 0 4px}
+.card p{margin:0;font-size:.9rem;color:var(--muted)}
+.card .go{margin-top:12px;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--gold)}
+a.card:hover .go{color:var(--navy)}
+
+/* timeline */
+.tl{position:relative;margin:30px 0 6px;padding-left:8px}
+.tl::before{content:"";position:absolute;left:14px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--gold),var(--gold-2))}
+.tli{position:relative;padding:0 0 26px 44px}
+.tli::before{content:"";position:absolute;left:7px;top:5px;width:16px;height:16px;border-radius:50%;background:#fff;border:4px solid var(--gold);box-shadow:0 0 0 4px var(--paper)}
+.tli .yr{font-family:'Cormorant Garamond';font-weight:700;color:var(--navy);font-size:1.5rem;line-height:1}
+.tli .ttl{font-weight:600;color:var(--ink);margin:2px 0 2px;font-size:1rem}
+.tli p{margin:0;font-size:.92rem;color:var(--ink-soft)}
+.tli.big::before{border-color:var(--gold-2);width:18px;height:18px;left:6px}
+
+/* firsts strip */
+.firsts{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;margin:24px 0 6px}
+.first{background:linear-gradient(160deg,var(--navy-2),var(--navy));color:var(--cream);border-radius:16px;padding:20px 18px;border:1px solid var(--line);transition:transform .35s}
+.first:hover{transform:translateY(-5px)}
+.first .em{font-size:1.5rem}
+.first b{display:block;font-family:'Cormorant Garamond';font-size:1.5rem;color:var(--gold-2);margin:6px 0 2px}
+.first span{font-size:.84rem;color:rgba(244,236,216,.8)}
+
+/* zoom out */
+.zoom{display:grid;gap:12px;margin:26px 0 6px}
+.zline{display:flex;align-items:center;gap:16px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px 22px;box-shadow:0 14px 36px -30px rgba(20,29,51,.5);transition:transform .35s}
+.zline:hover{transform:translateX(6px)}
+.zline .em{font-size:1.7rem;flex:0 0 auto}
+.zline .zt b{font-family:'Cormorant Garamond';font-size:1.3rem;color:var(--navy)}
+.zline .zt p{margin:2px 0 0;font-size:.9rem;color:var(--muted)}
+.z1{border-left:5px solid var(--gold)}.z2{border-left:5px solid #3f7d54}.z3{border-left:5px solid #A8362E}
+
+.pill-row{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}
+.pill{background:var(--cream-2);border:1px solid var(--line);border-radius:30px;padding:6px 14px;font-size:.82rem;color:var(--navy);cursor:default;transition:transform .3s ease,background .3s,color .3s,border-color .3s;animation:pillFloat 3.6s ease-in-out infinite}
+.pill:hover{transform:translateY(-4px) scale(1.06);background:var(--gold);color:var(--navy);border-color:var(--gold)}
+.pill:nth-child(2){animation-delay:.3s}.pill:nth-child(3){animation-delay:.6s}.pill:nth-child(4){animation-delay:.9s}.pill:nth-child(5){animation-delay:1.2s}.pill:nth-child(6){animation-delay:1.5s}
+@keyframes pillFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+
+.endcta{margin:50px 0 6px;background:radial-gradient(600px 200px at 80% 0%,rgba(201,162,75,.25),transparent 60%),var(--navy);border-radius:22px;padding:44px 32px;text-align:center;color:var(--cream);border:1px solid var(--line)}
+.endcta h3{font-family:'Cormorant Garamond';font-size:1.9rem;color:#fff;margin-bottom:8px;font-weight:700}
+.endcta p{color:rgba(244,236,216,.78);font-size:.98rem;margin-bottom:22px}
+.btn{display:inline-block;padding:14px 32px;border-radius:2px;background:linear-gradient(120deg,var(--gold),var(--gold-2));color:var(--navy);font-family:'Jost';font-weight:600;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;transition:transform .25s}
+.btn:hover{transform:translateY(-2px)}
+.src{margin:34px 0 0;font-size:.8rem;color:var(--muted);line-height:1.6}
+.src a{color:var(--gold)}
+footer{border-top:1px solid var(--line);margin-top:40px;padding:28px 0 54px;text-align:center;color:var(--muted);font-size:.85rem}
+footer a{color:var(--gold)}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+<nav class="site"><div class="in">
+  <a href="viziteaza-romania-iasi.html" class="brand">România · Iași</a>
+  <span class="lk"><a href="viziteaza-romania-iasi.html">Acasă</a><a href="iasi.html">Iași</a><a href="blog.html" class="on">Blog</a><a href="produse.html">Produse</a></span>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div class="crumb"><a href="viziteaza-romania-iasi.html">România · Iași</a> &nbsp;›&nbsp; <a href="blog.html">Blog</a> &nbsp;›&nbsp; <span class="gold-text">Iași</span></div>
+  <div class="eyebrow">Poveste · Iași</div>
+  <svg class="crest" viewBox="0 0 84 84" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Emblemă Iași — orașul celor șapte coline">
+    <circle cx="42" cy="42" r="40" fill="#141d33" stroke="#C9A24B" stroke-width="1.5"/>
+    <polygon points="42,11.5 43.53,15.9 48.18,15.99 44.47,18.8 45.82,23.26 42,20.6 38.18,23.26 39.53,18.8 35.82,15.99 40.47,15.9" fill="#E3C778"/>
+    <path d="M12,60 Q24,50 34,58 Q40,52 48,58 Q58,49 72,59 L72,66 L12,66 Z" fill="#C9A24B" opacity=".35"/>
+    <g fill="#E3C778"><rect x="30" y="46" width="24" height="14"/><rect x="38.5" y="30" width="7" height="30"/><polygon points="38.5,30 42,24 45.5,30"/><rect x="26" y="40" width="4" height="20"/><rect x="54" y="40" width="4" height="20"/></g>
+  </svg>
+  <h1>Iași, orașul care <em>deschide o țară</em></h1>
+  <p class="lede">Stai sus, pe una dintre colinele lui, când soarele coboară peste turnul Palatului Culturii — și înțelegi dintr-odată că orașul acesta nu se termină la marginea lui. De aici, privirea urcă mai departe: spre Moldova, spre toată România. Hai să urcăm împreună.</p>
+  <div class="meta">
+    <span class="chip">Regiunea Moldova</span>
+    <span class="chip">Atestat la 1408</span>
+    <span class="chip">De două ori capitală</span>
+    <span class="chip">Al 3-lea oraș al țării</span>
+  </div>
+</div></header>
+
+<div class="wrap">
+
+  <!-- INFOGRAFIC: cifrele orasului -->
+  <div class="stats-grid reveal">
+    <div class="statc"><div class="n" data-count="7">0</div><div class="l">Coline</div></div>
+    <div class="statc"><div class="n" data-count="1408">0</div><div class="l">Prima atestare</div></div>
+    <div class="statc"><div class="n"><span data-count="2">0</span><span class="u">×</span></div><div class="l">Capitală</div></div>
+    <div class="statc"><div class="n" data-count="271692" data-sep="1">0</div><div class="l">Locuitori · 2021</div></div>
+  </div>
+
+<article>
+
+  <p class="reveal">Iașul este un oraș vizitat deopotrivă de români și de străini, pentru că frumusețile sale culturale și spirituale, vitejia și înțelepciunea oamenilor lui, de-a lungul timpurilor, s-au răspândit în cele patru colțuri ale lumii.</p>
+
+  <p class="reveal">Ieșenii — și toți cei devotați Iașului — participă la dezvoltarea și la menținerea unei evoluții constante, îmbunătățind și conservând ceea ce s-a transmis de-a lungul secolelor.</p>
+
+  <h2 class="reveal"><span class="num">Partea 1</span>Orașul celor șapte coline</h2>
+
+  <p class="reveal">Ca Roma, Iași e clădit pe <strong>șapte coline</strong>. Orașul stă în estul României, în inima <strong>Moldovei</strong>, în bazinul râului <strong>Bahlui</strong>, exact acolo unde podișul întâlnește câmpia deluroasă. De aceea nu e un oraș întins și plat, ci unul <em>vertical</em>: urci spre un belvedere, cobori spre o piață, dai colțul — și te trezești în fața unei biserici de secol XVII.</p>
+
+  <p class="reveal">Colinele au modelat orașul mai mult decât orice hartă. Pe înălțimi s-au ridicat mănăstiri-cetate, iar de sus orașul se dezvăluie în valuri de acoperișuri, turle și verdeață. Iată câteva dintre balcoanele lui:</p>
+
+  <div class="cards reveal">
+    <a class="card" href="copou.html"><div class="em">🌳</div><h3>Copou</h3><p>Cel mai vechi parc public din țară și teiul lui Eminescu, pe colina din nord.</p><div class="go">Vezi pagina →</div></a>
+    <a class="card" href="cetatuia.html"><div class="em">🏰</div><h3>Cetățuia</h3><p>Ansamblu fortificat din 1672, cu una dintre cele mai frumoase panorame.</p><div class="go">Vezi pagina →</div></a>
+    <a class="card" href="golia.html"><div class="em">🗼</div><h3>Turnul Goliei</h3><p>120 de trepte până la un belvedere de 30 m, chiar din centru.</p><div class="go">Vezi pagina →</div></a>
+    <a class="card" href="iasul-panoramic.html"><div class="em">🌇</div><h3>Iașul de sus</h3><p>Dealurile, turnurile și cele mai frumoase apusuri ale orașului.</p><div class="go">Vezi pagina →</div></a>
+  </div>
+
+  <p class="reveal">Iașul e și un oraș de <strong>hotar</strong>: la doar câțiva zeci de kilometri curge Prutul și începe granița cu Republica Moldova. Nu e un hotar care desparte, ci unul care primește — o poartă dinspre răsărit. Clima e pe măsură: răsăriteană, cu ierni geroase și veri calde, dar cu primăveri și toamne lungi, făcute parcă anume pentru plimbări pe sub tei.</p>
+
+  <hr class="thread">
+
+  <h2 class="reveal"><span class="num">Partea 2</span>Un oraș care a fost, de două ori, capitală</h2>
+
+  <p class="reveal">Aici începe partea în care ții cu sufletul la gură. Pentru că Iașul nu a fost niciodată un oraș oarecare — a fost, de două ori, <strong>capitala unei țări</strong>. Urmărește firul:</p>
+
+  <div class="tl reveal">
+    <div class="tli"><div class="yr">1408</div><div class="ttl">Prima mențiune scrisă</div><p>Numele Iașului apare într-un act prin care domnitorul <strong>Alexandru cel Bun</strong> dă privilegii comerciale negustorilor din Liov. Orașul era însă, cu siguranță, mai vechi — un târg viu, la răscruce de drumuri.</p></div>
+    <div class="tli"><div class="yr">~1564</div><div class="ttl">Capitala Moldovei</div><p><strong>Alexandru Lăpușneanu</strong> mută capitala de la Suceava la Iași. Vreme de aproape trei secole, aici se încoronează domnitori, se ridică ctitorii precum Trei Ierarhi și pornesc primele tiparnițe.</p></div>
+    <div class="tli"><div class="yr">1840</div><div class="ttl">Primul teatru național din România</div><p>La Iași se deschide cea mai veche instituție teatrală a țării — un început pentru toată scena românească.</p></div>
+    <div class="tli big"><div class="yr">1859</div><div class="ttl">Unirea — și un sacrificiu</div><p>La Iași se pun bazele Unirii Principatelor, iar <strong>Alexandru Ioan Cuza</strong>, ales domn chiar aici, devine simbolul României moderne. Pentru binele țării, capitala se mută la București — iar Iașul renunță, cu demnitate, la un rang purtat veacuri.</p></div>
+    <div class="tli"><div class="yr">1860</div><div class="ttl">Prima universitate modernă</div><p>Pe temelia Academiei Mihăilene (1835), se întemeiază la Iași cea dintâi universitate modernă a României.</p></div>
+    <div class="tli big"><div class="yr">1916–1918</div><div class="ttl">Din nou capitala României</div><p>Când Bucureștiul e ocupat în Primul Război Mondial, regele, guvernul, parlamentul și armata se refugiază la Iași. Aproape doi ani, un oraș de provincie ține pe umeri întreaga țară — <em>„capitala rezistenței".</em></p></div>
+  </div>
+
+  <p class="reveal">Dincolo de politică, Iașul a fost mereu un oraș al <em>întâietăților</em>. Nu una, nu două — ci un șir întreg de „primele din țară":</p>
+
+  <div class="firsts reveal">
+    <a class="first" href="teatrul-national.html"><div class="em">🎭</div><b>1840</b><span>Primul teatru național din România</span></a>
+    <a class="first" href="universitatea.html"><div class="em">🎓</div><b>1860</b><span>Prima universitate modernă a țării</span></a>
+    <a class="first" href="iasul-literar.html"><div class="em">✒️</div><b>Junimea</b><span>Aici s-a modelat literatura română</span></a>
+    <a class="first" href="bojdeuca-creanga.html"><div class="em">📖</div><b>Prima</b><span>casă memorială din România (1918)</span></a>
+  </div>
+
+  <p class="reveal">Pe străzile lui au trăit și au scris <strong>Eminescu</strong> și <strong>Creangă</strong>; în saloanele „Junimii" s-a plămădit limba și literatura de mai târziu. Nu întâmplător i se spune Iașului <strong>capitala culturală a României</strong>.</p>
+
+  <hr class="thread">
+
+  <h2 class="reveal"><span class="num">Partea 3</span>De la oraș, spre țară</h2>
+
+  <p class="reveal">Astăzi, la recensământul din <strong>2021</strong>, Iașul număra <strong>271.692 de locuitori</strong> — al treilea oraș ca mărime din România. E, mai ales, un mare oraș <strong>studențesc</strong>: universitățile lui adună zeci de mii de tineri din toată țara și din străinătate, iar asta îi dă o energie care nu se oprește nici în vacanțe. Iașul e, în același timp, vechi și tânăr — cu biserici de patru sute de ani și cu terase pline până noaptea târziu.</p>
+
+  <p class="reveal">Cultura rămâne inima orașului: Palatul Culturii cu cele patru muzee ale lui, teatrele, filarmonica, opera — iar toamna, orașul devine capitala literaturii, când <strong>FILIT</strong> aduce scriitori din întreaga lume.</p>
+
+  <div class="pill-row reveal">
+    <span class="pill">Palatul Culturii</span><span class="pill">Copou & Teiul lui Eminescu</span><span class="pill">Trei Ierarhi</span><span class="pill">Golia</span><span class="pill">FILIT</span><span class="pill">Bojdeuca lui Creangă</span>
+  </div>
+
+  <p class="reveal">Dar Iașul nu se cuprinde doar pe sine. E o poartă care se deschide, treaptă cu treaptă, spre tot ce e în jur:</p>
+
+  <div class="zoom reveal">
+    <div class="zline z1"><div class="em">🏛️</div><div class="zt"><b>Iași</b><p>Orașul celor șapte coline — vechea capitală, capitala culturală de azi.</p></div></div>
+    <a class="zline z2" href="checklist-regiunea-moldova.html"><div class="em">🌾</div><div class="zt"><b>Moldova</b><p>Mănăstirile pictate ale Bucovinei, podgoria Cotnari, satele cu tradiții. Iașul e oglinda lor.</p></div></a>
+    <div class="zline z3"><div class="em">🇷🇴</div><div class="zt"><b>România</b><p>Carpații și Dunărea, Delta și Marea Neagră — o țară întreagă, la capătul drumului care urcă din Iași.</p></div></div>
+  </div>
+
+  <blockquote class="reveal">„Iașul nu se vizitează dintr-o privire. Se urcă — treaptă cu treaptă, colină cu colină — și, de sus, se vede toată România."</blockquote>
+
+  <p class="reveal">Am pornit de pe o colină a Iașului și am urcat, încet, până la harta întregii țări. De aici înainte, drumul se poate face în ambele sensuri: în jos, spre fiecare stradă și fiecare muzeu al orașului; în sus, spre regiune și spre țară. Ghidul te așteaptă la ambele capete.</p>
+
+  <div class="endcta reveal">
+    <h3>Descoperă Iașul, loc cu loc</h3>
+    <p>De la portretul orașului la obiectivele cu program, bilete și povești.</p>
+    <a href="iasi.html" class="btn">Deschide ghidul Iași →</a>
+  </div>
+
+  <p class="src">Surse oficiale: populația la <strong>recensământul 2021</strong> (271.692 locuitori, al 3-lea municipiu ca mărime) — Institutul Național de Statistică (INS) / Direcția Județeană de Statistică Iași. Date istorice (prima atestare 1408, mutarea capitalei Moldovei la Iași ~1564, capitală a României 1916–1918, primul teatru național 1840, prima universitate modernă 1860) — conform istoriografiei și instituțiilor de cultură ieșene. Programul și accesul obiectivelor se pot schimba — verifică înainte de vizită.</p>
+
+</article>
+</div>
+
+<footer><div class="wrap">
+  <a href="blog.html">← Înapoi la Blog</a> &nbsp;·&nbsp; © 2026 România · Iași — Ghid de călătorie
+</div></footer>
+
+<script>
+  // progress bar
+  addEventListener('scroll',()=>{const h=document.documentElement;document.getElementById('bar').style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%'});
+  // reveal on scroll
+  const rev=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');rev.unobserve(e.target)}})},{threshold:.14});
+  document.querySelectorAll('.reveal').forEach(el=>rev.observe(el));
+  // count up
+  function ease(t){return 1-Math.pow(1-t,3)}
+  const cnt=new IntersectionObserver((es)=>{es.forEach(e=>{
+    if(!e.isIntersecting)return; const el=e.target; const end=+el.dataset.count; const sep=el.dataset.sep; const dur=1300; let s=null;
+    function step(ts){if(!s)s=ts; const p=Math.min((ts-s)/dur,1); let v=Math.floor(ease(p)*end);
+      el.textContent = sep ? v.toLocaleString('ro-RO') : v; if(p<1)requestAnimationFrame(step); else el.textContent = sep ? end.toLocaleString('ro-RO') : end;}
+    requestAnimationFrame(step); cnt.unobserve(el);
+  })},{threshold:.6});
+  document.querySelectorAll('[data-count]').forEach(el=>cnt.observe(el));
+</script>
+</body>
+</html>
