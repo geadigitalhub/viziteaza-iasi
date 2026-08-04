@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Teatrul Național „Vasile Alecsandri” din Iași — cel mai vechi teatru național din România, clădirea Fellner & Helmer din 1896 și candelabrul de cristal de Veneția.">
+<title>Teatrul Național „Vasile Alecsandri” din Iași — cea mai frumoasă scenă a țării</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue:#1f4e79;--blue-deep:#14385a;--gold:#c9992b;--gold-soft:#e5c76b;
+    --stone:#6b6152;--cream:#f7f2e7;--ink:#20242b;--muted:#5a6270;--line:#e3dccb;
+    --shadow:0 10px 40px rgba(20,40,70,.12);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Source Sans 3',sans-serif;color:var(--ink);background:var(--cream);line-height:1.7;font-size:18px}
+  h1,h2,h3,.serif{font-family:'Playfair Display',serif}
+  a{color:var(--blue)}
+  .progress{position:fixed;top:0;left:0;height:4px;width:0;background:linear-gradient(90deg,var(--gold),var(--blue));z-index:100;transition:width .1s}
+  .topbar{position:fixed;top:4px;left:0;right:0;background:rgba(247,242,231,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:90}
+  .topbar .inner{max-width:1100px;margin:0 auto;padding:12px 24px;display:flex;justify-content:space-between;align-items:center}
+  .brand{font-family:'Playfair Display',serif;font-weight:700;color:var(--blue);font-size:20px}
+  .brand span{color:var(--gold)}
+  .serieslink{font-size:13px;color:var(--muted);text-decoration:none;text-transform:uppercase;letter-spacing:1px}
+  .hero{min-height:82vh;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden;
+    background:linear-gradient(rgba(14,28,48,.72),rgba(14,28,48,.86)),
+    radial-gradient(circle at 22% 28%,#2c5b86,transparent 55%),
+    radial-gradient(circle at 80% 78%,#0c2038,transparent 55%),#0f2138;color:#fff;padding:120px 24px 90px}
+  .hero .kicker{color:var(--gold-soft);text-transform:uppercase;letter-spacing:4px;font-size:13px;font-weight:600;margin-bottom:20px;opacity:0;animation:rise .8s .1s forwards}
+  .hero h1{font-size:clamp(32px,6vw,58px);line-height:1.12;font-weight:800;max-width:900px;opacity:0;animation:rise .9s .25s forwards}
+  .hero p{margin:24px auto 0;max-width:620px;font-size:20px;color:#e8eef5;font-weight:300;opacity:0;animation:rise .9s .45s forwards}
+  .emblem{margin:32px auto 0;width:58px;height:58px;position:relative;opacity:0;animation:rise .9s .6s forwards}
+  .emblem i{position:absolute;inset:0;border:2px solid var(--gold-soft);transform:rotate(45deg);animation:spin 16s linear infinite}
+  .emblem i::after{content:"";position:absolute;inset:11px;border:1px solid var(--gold-soft)}
+  @keyframes spin{to{transform:rotate(405deg)}}
+  @keyframes rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+  .stats{max-width:1000px;margin:-52px auto 0;padding:0 24px;position:relative;z-index:5;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .stat{background:#fff;border-radius:16px;padding:24px 16px;text-align:center;box-shadow:var(--shadow);border:1px solid var(--line)}
+  .stat .num{font-family:'Playfair Display',serif;font-size:34px;font-weight:800;color:var(--blue);line-height:1}
+  .stat .lbl{font-size:12.5px;color:var(--muted);margin-top:8px;text-transform:uppercase;letter-spacing:.5px}
+  .wrap{max-width:760px;margin:0 auto;padding:60px 24px}
+  .wrap.wide{max-width:1060px}
+  .lead{font-size:22px;line-height:1.6;color:#33383f}
+  .wrap h2{font-size:32px;color:var(--blue-deep);margin:44px 0 18px;position:relative;padding-left:18px}
+  .wrap h2::before{content:"";position:absolute;left:0;top:8px;bottom:8px;width:5px;border-radius:3px;background:var(--gold)}
+  .wrap p{margin:16px 0}
+  .pull{border-left:4px solid var(--gold);background:#fff;padding:20px 24px;border-radius:0 14px 14px 0;font-family:'Playfair Display',serif;font-size:22px;font-style:italic;color:var(--blue-deep);margin:34px 0;box-shadow:var(--shadow)}
+  .section-head{text-align:center;max-width:660px;margin:0 auto 30px}
+  .section-head .tag{color:var(--gold);text-transform:uppercase;letter-spacing:3px;font-size:12px;font-weight:700}
+  .section-head h2{font-size:34px;color:var(--blue-deep);margin-top:6px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:8px}
+  .flip{perspective:1100px;height:200px;cursor:pointer}
+  .flip .in{position:relative;width:100%;height:100%;transition:transform .7s;transform-style:preserve-3d}
+  .flip.on .in{transform:rotateY(180deg)}
+  .flip .f,.flip .b{position:absolute;inset:0;backface-visibility:hidden;border-radius:18px;padding:24px;display:flex;flex-direction:column;justify-content:center;box-shadow:var(--shadow)}
+  .flip .f{background:#fff;border:1px solid var(--line)}
+  .flip .f .big{font-size:36px}
+  .flip .f h4{font-size:18px;color:var(--blue-deep);margin-top:10px}
+  .flip .f .tap{margin-top:auto;font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--muted)}
+  .flip .b{background:linear-gradient(135deg,var(--blue),var(--blue-deep));color:#fff;transform:rotateY(180deg);font-size:15px}
+  .nextnav{max-width:1100px;margin:0 auto;padding:20px 24px 80px}
+  .nextcard{display:flex;justify-content:space-between;align-items:center;gap:20px;background:linear-gradient(135deg,var(--blue),var(--blue-deep));color:#fff;border-radius:20px;padding:34px 36px;box-shadow:var(--shadow);flex-wrap:wrap}
+  .nextcard .t{font-size:12px;text-transform:uppercase;letter-spacing:2px;color:var(--gold-soft)}
+  .nextcard h3{font-size:24px;margin-top:6px;max-width:540px}
+  .btn{background:var(--gold);color:#231c06;border:none;font-weight:700;padding:14px 26px;border-radius:40px;text-decoration:none;font-size:16px;white-space:nowrap;transition:transform .2s}
+  .btn:hover{transform:scale(1.05)}
+  .btn.ghost{background:transparent;border:2px solid rgba(255,255,255,.5);color:#fff}
+  footer{background:var(--blue-deep);color:#cdd7e2;text-align:center;padding:40px 24px;font-size:14px}
+  .totop{position:fixed;bottom:24px;right:24px;width:48px;height:48px;border-radius:50%;background:var(--blue);color:#fff;border:none;font-size:22px;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s;box-shadow:var(--shadow);z-index:80}
+  .totop.show{opacity:1;pointer-events:auto}
+  @media(max-width:720px){.stats{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<div class="topbar"><div class="inner">
+  <div class="brand">Iași<span>·</span>Obiective</div>
+  <a class="serieslink" href="index.html">Ghid Iași · Obiective</a>
+</div></div>
+
+<header class="hero">
+  <div>
+    <div class="kicker">Prima scenă națională a României</div>
+    <h1>Teatrul Național „Vasile Alecsandri”</h1>
+    <p>Cel mai vechi teatru național din țară, într-o clădire de o eleganță vieneză.</p>
+    <div class="emblem"><i></i></div>
+  </div>
+</header>
+
+<section class="stats" aria-label="Cifre">
+  <div class="stat"><div class="num" data-count="1840">0</div><div class="lbl">Înființat în</div></div>
+  <div class="stat"><div class="num" data-count="1896">0</div><div class="lbl">Clădirea nouă</div></div>
+  <div class="stat"><div class="num" data-count="2">0</div><div class="lbl">Arhitecți vienezi</div></div>
+  <div class="stat"><div class="num" data-count="109">0</div><div class="lbl">Becuri în candelabru</div></div>
+</section>
+
+<article class="wrap">
+  <p class="lead">Cortina se ridică pe cea mai veche scenă națională a României. Teatrul Național din Iași nu este doar o instituție cu peste 180 de ani de istorie, ci și una dintre cele mai frumoase clădiri ale țării — o bijuterie neoclasică semnată de arhitecți vienezi.</p>
+
+  <h2>De la prima scenă în limba română la un incendiu mistuitor</h2>
+  <p>Teatrul Național a fost înființat în 1840, printre inițiatori numărându-se Vasile Alecsandri, Mihail Kogălniceanu și Costache Negruzzi. A funcționat în sala Teatrului cel Mare de la Copou, distrusă însă de un incendiu devastator în noaptea de 17 spre 18 februarie 1888.</p>
+  <p>Orașul avea nevoie de o scenă pe măsura tradiției sale, iar autoritățile au hotărât ridicarea unei clădiri noi, monumentale, în chiar inima Iașiului.</p>
+
+  <h2>O clădire ridicată de arhitecții marilor teatre europene</h2>
+  <p>Actuala clădire a fost construită între 1894 și 1896, pe locul vechii primării, după planurile celebrilor arhitecți vienezi Ferdinand Fellner și Hermann Helmer, autorii unor teatre din Viena, Praga, Odessa sau Zürich.</p>
+  <div class="pull">La 1 decembrie 1896, primarul Nicolae Gane inaugura clădirea; tot atunci, uzina electrică a teatrului aprindea primele becuri ale Iașiului.</div>
+  <p>Interiorul e o feerie: plafonul pictat, decorul în stil rococo și marele candelabru de cristal de Veneția, cu 109 becuri. În 1956, la 140 de ani de la primul spectacol în limba română, teatrul a primit numele lui Vasile Alecsandri.</p>
+
+</article>
+
+<section class="wrap wide">
+  <div class="section-head">
+    <div class="tag">Știai că…</div>
+    <h2>Feeria de dincolo de cortină</h2>
+    <p style="color:var(--muted)">Apasă pe fiecare card pentru a descoperi.</p>
+  </div>
+  <div class="grid" id="facts">
+    <div class="flip" onclick="this.classList.toggle('on')"><div class="in">
+      <div class="f"><div class="big">💡</div><h4>A adus lumina electrică la Iași</h4><div class="tap">apasă →</div></div>
+      <div class="b">Uzina electrică a teatrului, pornită la inaugurarea din 1896, a marcat începutul iluminatului electric în oraș.</div>
+    </div></div>
+    <div class="flip" onclick="this.classList.toggle('on')"><div class="in">
+      <div class="f"><div class="big">🎭</div><h4>Semnat de arhitecții Europei</h4><div class="tap">apasă →</div></div>
+      <div class="b">Fellner și Helmer au proiectat zeci de teatre europene; cel din Iași e considerat printre cele mai reușite.</div>
+    </div></div>
+    <div class="flip" onclick="this.classList.toggle('on')"><div class="in">
+      <div class="f"><div class="big">✨</div><h4>Un candelabru de cristal de Veneția</h4><div class="tap">apasă →</div></div>
+      <div class="b">Marele candelabru din sală, cu 109 becuri, este împodobit cu cristal venețian.</div>
+    </div></div>
+    <div class="flip" onclick="this.classList.toggle('on')"><div class="in">
+      <div class="f"><div class="big">🖋️</div><h4>Numele unui poet</h4><div class="tap">apasă →</div></div>
+      <div class="b">Din 1956, teatrul poartă numele lui Vasile Alecsandri — poet, dramaturg și unul dintre întemeietorii lui.</div>
+    </div></div>
+  </div>
+</section>
+
+<article class="wrap">
+  <h2>Sfaturi pentru vizită</h2>
+  <p>Cea mai bună cale de a descoperi teatrul este să vezi un spectacol — dar clădirea merită admirată și pe dinafară, în Piața Teatrului, mai ales seara, când e luminată. Verifică programul stagiunii pe site-ul teatrului și, dacă se organizează, alege un tur ghidat al sălii și al foaierelor.</p>
+  <div class="pull">„Cel mai vechi și cel mai frumos lăcaș de acest gen din țară” — așa a rămas cunoscut Teatrul Național din Iași.</div>
+</article>
+
+<nav class="nextnav">
+  <div class="nextcard">
+    <div>
+      <div class="t">Ghid Iași · următorul obiectiv</div>
+      <h3>Universitatea „Alexandru Ioan Cuza” — cea mai veche universitate modernă</h3>
+    </div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap">
+      <a class="btn ghost" href="iasi-02-trei-ierarhi.html">← Trei Ierarhi</a>
+      <a class="btn" href="iasi-04-universitatea.html">Urmează →</a>
+    </div>
+  </div>
+</nav>
+
+<footer>Ghid Iași · Obiective de neratat · Teatrul Național „Vasile Alecsandri”</footer>
+<button class="totop" id="totop" aria-label="Sus">↑</button>
+<script>
+  const prog=document.getElementById('progress'),totop=document.getElementById('totop');
+  addEventListener('scroll',()=>{const h=document.documentElement;prog.style.width=h.scrollTop/(h.scrollHeight-h.clientHeight)*100+'%';totop.classList.toggle('show',h.scrollTop>500)});
+  totop.onclick=()=>scrollTo({top:0,behavior:'smooth'});
+  const nums=document.querySelectorAll('.num');
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(!e.isIntersecting)return;const el=e.target,end=+el.dataset.count;let cur=Math.max(0,end-40);const t=setInterval(()=>{cur++;if(cur>=end){cur=end;clearInterval(t)}el.textContent=cur},18);io.unobserve(el)})},{threshold:.6});
+  nums.forEach(n=>io.observe(n));
+</script>
+</body>
+</html>

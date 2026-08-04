@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ===== SEO ===== -->
+<title>VoyageCalc Premium: cum îți planifici bugetul de vacanță în 6 limbi și 5 valute</title>
+<meta name="description" content="VoyageCalc Premium este calculatorul interactiv de buget de călătorie în 6 limbi și 5 valute, cu export PDF și comparator de destinații. Planifică-ți vacanța cu eleganță, offline și fără conturi.">
+<meta name="keywords" content="calculator buget calatorie, planificator vacanta, travel budget planner, buget travel, calculator vacanta, plan calatorie, voyage calculator, trip budget, VoyageCalc Premium">
+<meta name="author" content="Gea Digital Hub">
+<link rel="canonical" href="https://payhip.com/b/NVH3Z">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="VoyageCalc Premium: planifică-ți bugetul de vacanță cu eleganță">
+<meta property="og:description" content="Calculator interactiv de buget de călătorie · 6 limbi · 5 valute · export PDF · comparator de destinații. Datele rămân pe dispozitivul tău.">
+<meta property="og:image" content="https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1jn9jmgtdlc117gmegde9ua91a.jpg">
+<meta property="og:url" content="https://payhip.com/b/NVH3Z">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --navy-900:#0d1626;
+    --navy-800:#121D33;
+    --navy-700:#1b2a4a;
+    --navy-600:#3F495F;
+    --blue-400:#637DA0;
+    --stone:#BEBBB5;
+    --paper:#f7f6f2;
+    --ink:#e9e6df;
+    --ink-soft:#c3c8d4;
+    --gold-1:#f4d68a;
+    --gold-2:#c9a24b;
+    --gold-3:#a97f2e;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    background:var(--navy-900);
+    color:var(--ink);
+    font-family:'Poppins',sans-serif;
+    font-weight:300;
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:820px;margin:0 auto;padding:0 24px;}
+
+  /* ---- Golden thread divider ---- */
+  .thread{
+    height:2px;border:0;margin:38px auto;
+    background:linear-gradient(90deg,transparent,var(--gold-2) 20%,var(--gold-1) 50%,var(--gold-2) 80%,transparent);
+    opacity:.85;
+  }
+  .thread.short{max-width:180px;margin:26px auto;}
+
+  /* ---- Hero ---- */
+  header.hero{
+    background:
+      radial-gradient(1200px 380px at 80% -10%, rgba(99,125,160,.35), transparent 60%),
+      radial-gradient(900px 300px at 0% 10%, rgba(201,162,75,.14), transparent 60%),
+      linear-gradient(180deg,var(--navy-800),var(--navy-900));
+    border-bottom:1px solid rgba(201,162,75,.28);
+    padding:70px 0 56px;
+    position:relative;overflow:hidden;
+  }
+  header.hero::after{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background-image:
+      radial-gradient(2px 2px at 15% 30%, rgba(244,214,138,.9), transparent),
+      radial-gradient(1.5px 1.5px at 70% 20%, rgba(255,255,255,.7), transparent),
+      radial-gradient(1.5px 1.5px at 88% 60%, rgba(244,214,138,.7), transparent),
+      radial-gradient(2px 2px at 40% 75%, rgba(255,255,255,.55), transparent);
+  }
+  .eyebrow{
+    font-family:'Poppins';font-weight:500;letter-spacing:.32em;text-transform:uppercase;
+    font-size:12px;color:var(--gold-1);margin-bottom:18px;
+  }
+  h1{
+    font-family:'Lora',serif;font-weight:600;color:#fff;
+    font-size:clamp(30px,5vw,46px);line-height:1.18;letter-spacing:.2px;
+  }
+  h1 .accent{
+    background:linear-gradient(90deg,var(--gold-1),var(--gold-2));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    font-style:italic;
+  }
+  .lede{
+    color:var(--ink-soft);font-size:18px;margin-top:20px;max-width:640px;
+    font-style:italic;font-family:'Lora',serif;font-weight:400;
+  }
+  .meta-row{
+    display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;
+    margin-top:26px;font-size:13px;color:var(--stone);letter-spacing:.04em;
+  }
+  .chip{
+    border:1px solid rgba(201,162,75,.4);border-radius:999px;
+    padding:6px 14px;color:var(--gold-1);font-size:12px;letter-spacing:.06em;
+  }
+
+  /* ---- Article ---- */
+  article{padding:52px 0 20px;}
+  h2{
+    font-family:'Lora',serif;font-weight:600;color:#fff;
+    font-size:clamp(23px,3.4vw,30px);margin:46px 0 6px;line-height:1.25;
+  }
+  h2 .num{
+    font-family:'Poppins';font-weight:600;font-size:14px;color:var(--gold-2);
+    display:block;letter-spacing:.28em;margin-bottom:8px;text-transform:uppercase;
+  }
+  h3{font-family:'Poppins';font-weight:600;color:var(--gold-1);font-size:17px;margin:26px 0 6px;}
+  p{margin:14px 0;color:var(--ink);}
+  p.soft{color:var(--ink-soft);}
+  strong{color:#fff;font-weight:500;}
+  em{color:var(--gold-1);}
+
+  ul.features{list-style:none;margin:20px 0;display:grid;gap:12px;}
+  ul.features li{
+    position:relative;padding:14px 18px 14px 48px;
+    background:linear-gradient(180deg,rgba(63,73,95,.28),rgba(18,29,51,.4));
+    border:1px solid rgba(99,125,160,.28);border-radius:12px;color:var(--ink);
+    font-size:15px;
+  }
+  ul.features li::before{
+    content:"✦";position:absolute;left:18px;top:13px;color:var(--gold-2);font-size:15px;
+  }
+  ul.features li b{color:#fff;font-weight:500;}
+
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0;}
+  @media(max-width:620px){.grid2{grid-template-columns:1fr;}}
+  .card{
+    background:linear-gradient(180deg,rgba(63,73,95,.25),rgba(18,29,51,.35));
+    border:1px solid rgba(99,125,160,.28);border-radius:14px;padding:20px 22px;
+  }
+  .card h4{font-family:'Poppins';font-weight:600;color:#fff;font-size:16px;margin-bottom:6px;}
+  .card p{margin:4px 0;font-size:14px;color:var(--ink-soft);}
+
+  blockquote{
+    border-left:3px solid var(--gold-2);margin:28px 0;padding:6px 0 6px 22px;
+    font-family:'Lora',serif;font-style:italic;font-size:19px;color:#fff;line-height:1.6;
+  }
+
+  /* ---- Steps ---- */
+  ol.steps{list-style:none;counter-reset:s;margin:20px 0;display:grid;gap:12px;}
+  ol.steps li{
+    counter-increment:s;position:relative;padding:12px 16px 12px 56px;
+    border-bottom:1px dashed rgba(201,162,75,.22);font-size:15px;color:var(--ink);
+  }
+  ol.steps li::before{
+    content:counter(s);position:absolute;left:14px;top:10px;
+    width:30px;height:30px;border-radius:50%;
+    background:linear-gradient(135deg,var(--gold-1),var(--gold-3));
+    color:var(--navy-900);font-family:'Poppins';font-weight:600;
+    display:flex;align-items:center;justify-content:center;font-size:14px;
+    animation:pulseGold 2.2s ease-in-out infinite;
+  }
+  ol.steps li:nth-child(2)::before{animation-delay:.30s;}
+  ol.steps li:nth-child(3)::before{animation-delay:.60s;}
+  ol.steps li:nth-child(4)::before{animation-delay:.90s;}
+  ol.steps li:nth-child(5)::before{animation-delay:1.20s;}
+  ol.steps li:nth-child(6)::before{animation-delay:1.50s;}
+  @keyframes pulseGold{
+    0%,100%{transform:scale(1);box-shadow:0 0 0 0 rgba(201,162,75,.55);}
+    50%{transform:scale(1.15);box-shadow:0 0 0 9px rgba(201,162,75,0);}
+  }
+
+  /* ---- FAQ ---- */
+  details{
+    border:1px solid rgba(99,125,160,.28);border-radius:12px;
+    padding:14px 18px;margin:12px 0;background:rgba(18,29,51,.35);
+  }
+  details summary{
+    cursor:pointer;font-family:'Poppins';font-weight:500;color:#fff;font-size:16px;
+    list-style:none;display:flex;justify-content:space-between;align-items:center;
+  }
+  details summary::-webkit-details-marker{display:none;}
+  details summary::after{content:"+";color:var(--gold-1);font-size:22px;line-height:1;}
+  details[open] summary::after{content:"–";}
+  details p{margin-top:12px;color:var(--ink-soft);font-size:15px;}
+
+  /* ---- Shared gold animations ---- */
+  @keyframes goldflow{0%{background-position:0% 50%;}100%{background-position:300% 50%;}}
+  @keyframes floaty{0%,100%{transform:translateY(0);}50%{transform:translateY(-7px);}}
+
+  /* ---- Flip cards (Partea 4) ---- */
+  .flip-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:26px 0;}
+  @media(max-width:620px){.flip-grid{grid-template-columns:1fr;}}
+  .flip-card{
+    border-radius:20px;padding:2.5px;
+    background:linear-gradient(120deg,var(--gold-3),var(--gold-1),var(--gold-2),var(--gold-1),var(--gold-3));
+    background-size:300% 300%;
+    animation:goldflow 4s linear infinite, floaty 6s ease-in-out infinite;
+    box-shadow:0 0 20px rgba(201,162,75,.45);
+  }
+  .flip-card:nth-child(2){animation-delay:.4s,.8s;}
+  .flip-card:nth-child(3){animation-delay:.8s,1.6s;}
+  .flip-card:nth-child(4){animation-delay:1.2s,2.4s;}
+  .flip-vp{perspective:1200px;height:188px;border-radius:17px;}
+  .flip-inner{
+    position:relative;width:100%;height:100%;border-radius:17px;
+    transition:transform .8s cubic-bezier(.2,.7,.2,1);transform-style:preserve-3d;
+  }
+  .flip-card:hover .flip-inner{transform:rotateY(180deg);}
+  .flip-front,.flip-back{
+    position:absolute;inset:0;border-radius:16px;
+    backface-visibility:hidden;-webkit-backface-visibility:hidden;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;padding:22px;
+  }
+  .flip-front{background:linear-gradient(180deg,#22345a,#141f39);}
+  .flip-back{
+    transform:rotateY(180deg);
+    background:linear-gradient(180deg,#2a4574,#18274a);
+  }
+  .flip-ico{font-size:30px;margin-bottom:12px;}
+  .flip-front h4{font-family:'Poppins';font-weight:600;color:#fff;font-size:17px;line-height:1.35;}
+  .flip-back p{color:var(--ink);font-size:14.5px;line-height:1.6;margin:0;}
+  .flip-hint{margin-top:10px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-1);}
+
+  /* ---- CTA ---- */
+  .cta{
+    margin:50px 0 10px;border-radius:24px;padding:3.5px;
+    background:linear-gradient(120deg,var(--gold-3),var(--gold-1),var(--gold-2),var(--gold-1),var(--gold-3));
+    background-size:300% 300%;
+    animation:goldflow 3.5s linear infinite, floaty 7s ease-in-out infinite;
+    box-shadow:0 0 40px rgba(201,162,75,.55);
+  }
+  .cta-inner{
+    border-radius:21px;padding:46px 30px;text-align:center;
+    background:
+      radial-gradient(680px 240px at 50% 0%, rgba(99,125,160,.55), transparent 70%),
+      linear-gradient(180deg,#2a4676,#16294d);
+  }
+  .cta h2{margin:6px 0 4px;color:#fff;}
+  .btn{
+    display:inline-block;margin-top:22px;padding:15px 40px;border-radius:999px;
+    background:linear-gradient(135deg,var(--gold-1),var(--gold-2) 55%,var(--gold-3));
+    color:var(--navy-900);font-family:'Poppins';font-weight:600;font-size:16px;
+    text-decoration:none;letter-spacing:.03em;
+    box-shadow:0 10px 30px rgba(201,162,75,.28);
+  }
+  .btn:hover{filter:brightness(1.05);}
+  .cta small{display:block;margin-top:14px;color:var(--ink-soft);font-size:13px;}
+
+  footer{
+    border-top:1px solid rgba(201,162,75,.22);margin-top:50px;
+    padding:30px 0 60px;color:var(--stone);font-size:13px;text-align:center;
+  }
+  footer a{color:var(--gold-1);text-decoration:none;}
+  a.inline{color:var(--gold-1);text-decoration:none;border-bottom:1px solid rgba(201,162,75,.4);}
+</style>
+</head>
+<body>
+
+<nav style="position:sticky;top:0;z-index:50;background:rgba(13,22,38,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(201,162,75,.28);">
+  <div style="max-width:820px;margin:0 auto;padding:13px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px;">
+    <a href="viziteaza-romania-iasi.html" style="font-family:'Lora',serif;font-weight:600;color:#f4d68a;text-decoration:none;font-size:18px;">România · Iași</a>
+    <span style="display:flex;gap:20px;font-family:'Poppins';font-size:13px;letter-spacing:.05em;">
+      <a href="viziteaza-romania-iasi.html" style="color:#c3c8d4;text-decoration:none;">Acasă</a>
+      <a href="iasi.html" style="color:#c3c8d4;text-decoration:none;">Iași</a>
+      <a href="blog.html" style="color:#f4d68a;text-decoration:none;">Blog</a>
+      <a href="produse.html" style="color:#c3c8d4;text-decoration:none;">Produse</a>
+    </span>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Gea Digital Hub · Ghid de călătorie</div>
+    <h1>Planifică-ți bugetul de vacanță cu <span class="accent">eleganță</span>, nu cu socoteli pe un șervețel</h1>
+    <p class="lede">De la primul gând de plecare până la ultima monedă din portofel — VoyageCalc Premium te ajută să vezi clar, să compari cinstit și să decizi împăcat.</p>
+    <div class="meta-row">
+      <span class="chip">6 limbi străine</span>
+      <span class="chip">5 valute</span>
+      <span class="chip">Export PDF</span>
+      <span class="chip">Comparator A vs B</span>
+      <span class="chip">Funcționează offline</span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+<article>
+
+  <p class="soft">Fiecare călătorie frumoasă începe cu o întrebare simplă și, de multe ori, incomodă: <strong>„cât o să mă coste, de fapt?”</strong> Ne facem curaj, deschidem trei taburi, notăm ceva pe telefon, adunăm în minte prețul unui zbor cu prețul unei nopți de cazare… și, undeva pe drum, cifrele ne scapă printre degete. Așa apar surprizele neplăcute: bugetul depășit, stresul din a doua jumătate a vacanței, senzația că „am plătit prea mult”.</p>
+
+  <p>Aici intervine <strong>VoyageCalc Premium</strong> — un instrument digital creat cu grijă pentru fiecare detaliu al călătoriei tale. Nu este o aplicație complicată și nici un abonament lunar. Este un singur fișier, elegant și inteligent, care transformă „habar n-am cât costă” într-un plan clar, pe care îl poți vedea, compara și exporta în PDF.</p>
+
+  <hr class="thread">
+
+  <h2><span class="num">Partea 1</span>Ce este, mai exact, VoyageCalc Premium</h2>
+  <p>VoyageCalc Premium este un <strong>calculator interactiv de buget de călătorie</strong> livrat ca un singur fișier HTML (aprox. 108 KB). Îl deschizi cu dublu-click în orice browser — Chrome, Firefox, Safari sau Edge, pe desktop sau pe telefon — și începe să lucreze pentru tine. Nu ai nevoie de cont, de internet permanent sau de cunoștințe tehnice.</p>
+  <p>Ideea din spatele lui este simplă: un plan de buget serios, făcut frumos și fără efort. Introduci estimările tale pe categorii, apeși un buton, iar VoyageCalc îți returnează un raport clar — total, cost pe persoană, o rezervă pentru imprevizibil și câteva recomandări personalizate.</p>
+
+  <h2><span class="num">Partea 2</span>Ce primești — funcțiile care contează</h2>
+  <ul class="features">
+    <li><b>Calculator interactiv complet</b> — transport, cazare, mâncare, activități, cumpărături, asigurare, transport local și diverse. Toate categoriile reale ale unei călătorii, într-un singur loc.</li>
+    <li><b>Suport pentru 6 limbi străine</b> — engleză, germană, italiană, franceză, spaniolă și română. Alegi limba în care te simți acasă.</li>
+    <li><b>5 valute disponibile</b> — EUR, RON, USD, GBP și CHF. Planifici direct în moneda destinației.</li>
+    <li><b>Comparator A vs B</b> — pui două destinații una lângă alta, categorie cu categorie, și vezi negru pe alb care variantă îți convine.</li>
+    <li><b>5 sloturi salvate local</b> — îți păstrezi mai multe planuri și te întorci la ele oricând, direct pe dispozitivul tău.</li>
+    <li><b>Export PDF elegant</b> — un raport profesional, gata de printat sau de trimis către cine călătorește cu tine.</li>
+    <li><b>Rezervă ajustabilă 0–30%</b> — decizi tu cât pui deoparte pentru neprevăzut, ca vacanța să nu fie la limită.</li>
+    <li><b>Calcul automat pe persoană</b> — împarte totalul la numărul de călători, fără să faci tu împărțirile.</li>
+    <li><b>Ghid de utilizare inclus</b> — un tab dedicat, cu pași clari și sfaturi practice, scris cald, în toate cele 6 limbi.</li>
+  </ul>
+
+  <hr class="thread short">
+
+  <h2><span class="num">Partea 3</span>Pentru cine este</h2>
+  <p class="soft">VoyageCalc Premium nu a fost gândit pentru un singur tip de călător. A fost gândit pentru oameni reali, cu planuri diferite:</p>
+  <div class="grid2">
+    <div class="card">
+      <h4>Familii cu copii</h4>
+      <p>Vezi din timp costul real pe fiecare membru și eviți surprizele scumpe cu cei mici.</p>
+    </div>
+    <div class="card">
+      <h4>Călători solo &amp; cupluri</h4>
+      <p>City break sau aventură lungă — planifici exact cât ai nevoie, fără risipă.</p>
+    </div>
+    <div class="card">
+      <h4>Grupuri de prieteni</h4>
+      <p>Împarți cinstit costurile și fiecare știe de la început cât are de pus.</p>
+    </div>
+    <div class="card">
+      <h4>Călătorii de business</h4>
+      <p>Un raport PDF ordonat pentru decont și pentru comparat opțiuni de deplasare.</p>
+    </div>
+  </div>
+  <p>Se potrivește la fel de bine pentru city break-uri, vacanțe lungi, croaziere sau road trip-uri. Practic, pentru oricine vrea să planifice serios — nu „din burtă”.</p>
+
+  <h2><span class="num">Partea 4</span>De ce VoyageCalc și nu un tabel oarecare</h2>
+  <p>Un tabel gol te poate ajuta, dar te lasă singur cu formulele, cu conversiile valutare și cu întrebarea „am uitat ceva?”. VoyageCalc rezolvă exact aceste fricțiuni <em>(trece cu mouse-ul peste carduri)</em>:</p>
+  <div class="flip-grid">
+    <div class="flip-card"><div class="flip-vp"><div class="flip-inner">
+      <div class="flip-front"><span class="flip-ico">📄</span><h4>Un singur fișier HTML</h4><span class="flip-hint">Detalii →</span></div>
+      <div class="flip-back"><p>Se deschide în orice browser, oricând, fără instalare și fără cont.</p></div>
+    </div></div></div>
+    <div class="flip-card"><div class="flip-vp"><div class="flip-inner">
+      <div class="flip-front"><span class="flip-ico">✈️</span><h4>Funcționează offline</h4><span class="flip-hint">Detalii →</span></div>
+      <div class="flip-back"><p>După descărcare nu îți trebuie internet — nici în avion, nici la munte.</p></div>
+    </div></div></div>
+    <div class="flip-card"><div class="flip-vp"><div class="flip-inner">
+      <div class="flip-front"><span class="flip-ico">🔒</span><h4>Datele rămân la tine</h4><span class="flip-hint">Detalii →</span></div>
+      <div class="flip-back"><p>Zero cloud, zero conturi. Informațiile tale nu pleacă de pe dispozitiv.</p></div>
+    </div></div></div>
+    <div class="flip-card"><div class="flip-vp"><div class="flip-inner">
+      <div class="flip-front"><span class="flip-ico">✨</span><h4>Design elegant</h4><span class="flip-hint">Detalii →</span></div>
+      <div class="flip-back"><p>Gradiente aurii și animații fine — o experiență premium, nu o corvoadă.</p></div>
+    </div></div></div>
+  </div>
+
+  <blockquote>„L-am construit gândindu-ne la oameni reali, nu la statistici. La emoția dinaintea unei plecări, la grija pentru buget, la dorința de a face totul bine.”</blockquote>
+
+  <h2><span class="num">Partea 5</span>Cum îl folosești — în 6 pași</h2>
+  <ol class="steps">
+    <li><b>Descarci</b> fișierul HTML după confirmarea plății.</li>
+    <li><b>Dublu-click</b> — se deschide direct în browserul tău preferat.</li>
+    <li><b>Alegi limba și valuta</b> cu care vrei să lucrezi.</li>
+    <li><b>Completezi</b> cheltuielile estimate pe categorii.</li>
+    <li><b>Apeși „Calculează”</b> și primești raportul cu total, cost pe persoană și sfaturi.</li>
+    <li><b>Exporți PDF-ul</b> când ești mulțumit de plan.</li>
+  </ol>
+
+  <h2><span class="num">Partea 6</span>Un mic exemplu practic</h2>
+  <p class="soft">Să spunem că plănuiești un city break de patru zile pentru două persoane. Introduci zborul, cele trei nopți de cazare, o estimare pentru mâncare pe zi, două-trei activități și un pic pentru cumpărături. Adaugi o rezervă de 15% pentru neprevăzut. Într-un minut ai <strong>totalul, costul pe persoană și un PDF</strong> pe care îl trimiți partenerului de călătorie. Apoi deschizi comparatorul, pui aceeași vacanță în alt oraș și vezi instant unde te încadrezi mai bine în buget. Fără trei taburi și fără calcule în minte.</p>
+
+  <hr class="thread">
+
+  <h2><span class="num">Întrebări frecvente</span>Ce vor să știe cei mai mulți</h2>
+
+  <details open>
+    <summary>Am nevoie de internet ca să-l folosesc?</summary>
+    <p>Nu. După ce descarci fișierul, VoyageCalc funcționează complet offline. Ai nevoie de conexiune doar pentru descărcarea inițială.</p>
+  </details>
+  <details>
+    <summary>Datele mele ajung într-un cloud?</summary>
+    <p>Nu. Nu există conturi și nu se trimite nimic în cloud. Totul rămâne stocat local, pe dispozitivul tău.</p>
+  </details>
+  <details>
+    <summary>Pe ce dispozitive merge?</summary>
+    <p>Pe orice browser modern — Chrome, Firefox, Safari, Edge — atât pe desktop, cât și pe telefon sau tabletă.</p>
+  </details>
+  <details>
+    <summary>Pot compara două destinații?</summary>
+    <p>Da. Comparatorul A vs B îți pune două vacanțe una lângă alta, categorie cu categorie, ca să vezi clar care variantă e mai avantajoasă.</p>
+  </details>
+  <details>
+    <summary>Este pentru uz personal sau și profesional?</summary>
+    <p>Ambele. Produsul digital permite atât utilizarea personală, cât și cea profesională — util și pentru deplasările de business.</p>
+  </details>
+
+  <!-- CTA -->
+  <div class="cta">
+    <div class="cta-inner">
+      <h2 style="margin-top:0;">Începe următoarea călătorie cu un plan clar</h2>
+      <p class="soft" style="max-width:520px;margin:8px auto 0;">Pentru oricine vrea să planifice serios.</p>
+      <a class="btn" href="https://payhip.com/b/NVH3Z" target="_blank" rel="noopener">Cumpără VoyageCalc Premium →</a>
+      <small>Utilizare personală și profesională · Fișierele digitale nu pot fi returnate după descărcare.</small>
+    </div>
+  </div>
+
+</article>
+</div>
+
+<footer>
+  <div class="wrap">
+    <a href="blog.html" style="display:inline-block;margin-bottom:14px;color:#f4d68a;text-decoration:none;border-bottom:1px solid rgba(201,162,75,.4);">← Înapoi la Blog</a><br>
+    Scris de <strong style="color:#fff;">Gea Digital Hub</strong> · © Gea Digital Hub. Toate drepturile rezervate.
+  </div>
+</footer>
+
+</body>
+</html>
+                                                                                                                                                                                           
