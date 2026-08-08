@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Regiunea Moldova din nord-estul României · Orașe vecine & destinații din jurul Iașului — checklist</title>
+<meta name="description" content="Checklist cu destinațiile regiunii Moldova în jurul Iașului: județul Iași, orașe vecine, mănăstirile UNESCO din Bucovina, muntele din Neamț și peste graniță. RO.">
+<meta name="robots" content="noindex, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#141d33;--navy-2:#1b2848;--gold:#C9A24B;--gold-2:#E3C778;--cream:#F4ECD8;--cream-2:#EFE4C9;--paper:#FBF6EA;--leaf:#3f7d54;--teal:#2F6F6D;--amber:#c9902b;--muted:#6b7794;--ink:#1a2033;--line:rgba(201,162,75,.28);--line-soft:rgba(20,29,51,.1);--r:14px}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Jost',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.1}
+a{color:inherit}.wrap{max-width:980px;margin:0 auto;padding:0 22px}
+header{background:var(--navy);color:var(--cream);padding:40px 0 34px;position:relative;overflow:hidden}
+header::before{content:"";position:absolute;inset:0;background:radial-gradient(600px 300px at 85% -10%,rgba(63,125,84,.5),transparent 60%)}
+header .wrap{position:relative;z-index:2}
+.eyebrow{font-weight:600;letter-spacing:.28em;text-transform:uppercase;font-size:.7rem;color:var(--gold-2);margin-bottom:12px}
+header h1{font-size:clamp(1.9rem,4vw,2.8rem);color:#fff}
+header p{color:rgba(244,236,216,.75);font-weight:300;margin-top:10px;font-size:1rem;max-width:72ch}
+header p a{color:var(--gold-2);font-weight:500}
+.bar{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:22px}
+.progress{flex:1;min-width:220px}
+.progress .track{height:9px;border-radius:20px;background:rgba(255,255,255,.12);overflow:hidden}
+.progress .fill{height:100%;border-radius:20px;background:linear-gradient(90deg,var(--teal),var(--gold-2));transition:width .4s}
+.progress .lbl{font-size:.78rem;color:rgba(244,236,216,.8);margin-top:7px;font-weight:500}
+.tools{display:flex;gap:8px;flex-wrap:wrap}
+.tbtn{border:1px solid var(--line);background:transparent;color:var(--cream);font-family:'Jost';font-weight:600;font-size:.74rem;letter-spacing:.06em;padding:9px 14px;border-radius:30px;cursor:pointer;transition:.2s}
+.tbtn:hover{background:var(--gold);color:var(--navy);border-color:var(--gold)}
+.legend{display:flex;gap:16px;flex-wrap:wrap;margin:22px 0 6px;font-size:.8rem;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:7px}
+.dot{width:12px;height:12px;border-radius:50%;display:inline-block}
+.d-devazut{background:#c3c8d4}.d-favorit{background:var(--amber)}.d-vazut{background:var(--leaf)}
+main{padding:14px 0 60px}
+.section{background:#fff;border:1px solid var(--line);border-radius:var(--r);margin-bottom:18px;overflow:hidden}
+.s-head{display:flex;align-items:center;gap:12px;padding:16px 20px;cursor:pointer;background:var(--cream-2);border-bottom:1px solid var(--line-soft)}
+.s-head .num{width:34px;height:34px;flex:0 0 auto;border-radius:8px;background:var(--navy);color:var(--gold-2);display:flex;align-items:center;justify-content:center;font-size:1.05rem}
+.s-head h2{font-size:1.28rem;color:var(--navy);flex:1}
+.s-head .count{font-size:.78rem;color:var(--muted);font-weight:600}
+.s-head .caret{color:var(--gold);transition:.25s;font-size:.9rem}
+.section.collapsed .caret{transform:rotate(-90deg)}
+.section.collapsed .s-body{display:none}
+.s-body{padding:8px 20px 16px}
+.item{display:flex;align-items:center;gap:12px;padding:10px 4px;border-bottom:1px dashed var(--line-soft)}
+.item:last-child{border-bottom:0}
+.badge{flex:0 0 auto;border:0;cursor:pointer;font-family:'Jost';font-weight:700;font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;padding:6px 10px;border-radius:20px;color:#fff;min-width:82px;text-align:center;transition:.2s}
+.b-devazut{background:#9aa3b5}.b-favorit{background:var(--amber)}.b-vazut{background:var(--leaf)}
+.badge:hover{filter:brightness(1.08)}
+.title{flex:1;font-size:.92rem;color:var(--ink);outline:none;padding:3px 5px;border-radius:6px}
+.title:focus{background:var(--cream-2);box-shadow:0 0 0 1px var(--line)}
+.title.done{color:var(--muted)}
+.pin{font-size:.62rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--gold);border:1px solid var(--line);border-radius:20px;padding:3px 8px;flex:0 0 auto;white-space:nowrap}
+.del{flex:0 0 auto;background:transparent;border:0;color:#c98;font-size:1.15rem;cursor:pointer;line-height:1;padding:2px 6px;border-radius:6px;transition:.2s;opacity:.5}
+.del:hover{opacity:1;background:rgba(168,54,46,.1);color:#a8362e}
+.add-row{display:flex;gap:8px;margin-top:12px}
+.add-row input{flex:1;border:1px solid var(--line);border-radius:8px;padding:10px 13px;font-family:'Jost';font-size:.9rem;background:var(--paper)}
+.add-row input:focus{outline:none;border-color:var(--gold)}
+.add-row button{border:0;background:var(--navy);color:var(--cream);font-family:'Jost';font-weight:600;font-size:.82rem;padding:0 18px;border-radius:8px;cursor:pointer;transition:.2s}
+.add-row button:hover{background:var(--gold);color:var(--navy)}
+.add-section{width:100%;border:1px dashed var(--line);background:transparent;color:var(--muted);font-family:'Jost';font-weight:600;font-size:.85rem;padding:14px;border-radius:var(--r);cursor:pointer;transition:.2s}
+.add-section:hover{border-color:var(--gold);color:var(--navy);background:#fff}
+.analiza{background:#fff;border:1px solid var(--line);border-left:4px solid var(--teal);border-radius:var(--r);padding:20px 24px;margin-bottom:20px}
+.analiza h3{color:var(--navy);font-size:1.2rem;margin-bottom:8px}
+.analiza p{color:var(--ink);font-weight:300;font-size:.92rem;margin-bottom:8px}
+.analiza b{color:var(--navy);font-weight:600}
+.note{color:var(--muted);font-size:.82rem;font-weight:300;font-style:italic;margin-top:22px;text-align:center}
+.note a{color:var(--teal);font-weight:500}
+@media print{.tools,.add-row,.add-section,.del{display:none!important}header{background:#fff;color:#000}header h1,header p,.eyebrow{color:#000}.progress .lbl{color:#333}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="eyebrow">România · Iași · Regiunea Moldova</div>
+  <h1>Regiunea Moldova din nord-estul României — orașe vecine & destinații din jurul Iașului</h1>
+  <p>Iașul ca poartă a Moldovei: destinațiile se așază în cercuri concentrice, de la excursii de câteva ore la circuite de weekend. Bifează ce ai văzut, marchează favoritele, adaugă sau editează — se salvează în browser. Înapoi la <a href="iasi.html">ghidul Iași</a>.</p>
+  <div class="bar">
+    <div class="progress"><div class="track"><div class="fill" id="fill"></div></div><div class="lbl" id="plbl"></div></div>
+    <div class="tools">
+      <button class="tbtn" onclick="expandAll(true)">▸ Extinde tot</button>
+      <button class="tbtn" onclick="expandAll(false)">▾ Restrânge tot</button>
+      <button class="tbtn" onclick="exportJSON()">⭳ Exportă</button>
+      <button class="tbtn" onclick="window.print()">⎙ Printează</button>
+      <button class="tbtn" onclick="resetAll()">↺ Resetează</button>
+    </div>
+  </div>
+  <div class="legend">
+    <span><i class="dot d-devazut"></i> De văzut</span>
+    <span><i class="dot d-favorit"></i> Favorit</span>
+    <span><i class="dot d-vazut"></i> Văzut</span>
+    <span style="margin-left:auto">✎ dublu-click pe titlu ca să-l editezi · distanțele sunt orientative, pe șosea, din Iași</span>
+  </div>
+</div></header>
+
+<main><div class="wrap">
+  <div class="analiza">
+    <h3>Pe scurt — cum citești lista</h3>
+    <p>Iași este cel mai important centru cultural al regiunii și un punct de plecare ideal. Am grupat destinațiile pe <b>cercuri de distanță</b>: județul Iași (excursii scurte), orașele vecine (reședințe de județ), apoi marile teme regionale — <b>mănăstirile pictate UNESCO din Bucovina</b>, <b>muntele și mănăstirile din Neamț</b> — și, în final, destinațiile <b>peste graniță</b> (Republica Moldova, Ucraina).</p>
+    <p>Teme dominante: spiritualitate (mănăstiri UNESCO), natură și munte (Ceahlău, Bicaz), podgorii (Cotnari) și orașe istorice. Eticheta <b>„pagină"</b> = obiectivul are deja articol pe site.</p>
+  </div>
+  <div id="app"></div>
+  <p class="note">Distanțele și informațiile sunt orientative, din surse recunoscute (Wikipedia, ghiduri turistice, UNESCO). Verifică programul și accesul înainte de drum. Iulie 2026.</p>
+</div></main>
+
+<script>
+const KEY='regiunea_moldova_v1';
+const STATUSES=['devazut','favorit','vazut'];
+const LABEL={devazut:'De văzut',favorit:'Favorit',vazut:'Văzut'};
+const EMO=['🏛️','🌆','⛪','🏔️','🌍','🍇'];
+
+const DEFAULT=[
+ {t:'🏛️ În județul Iași (excursii scurte, sub ~75 km)', items:[
+   {x:'Palatul „Alexandru Ioan Cuza" de la Ruginoasa — muzeu memorial, stil neogotic',s:'devazut',pin:'pagină'},
+   {x:'Castelul (Palatul) Sturdza de la Miclăușeni — „castelul" neogotic al Moldovei',s:'devazut',pin:'~65 km'},
+   {x:'Podgoria Cotnari — una dintre cele mai vestite podgorii din România (vin alb)',s:'devazut',pin:'~55 km'},
+   {x:'Situl arheologic Cucuteni — cultura Cucuteni, muzeu de sit',s:'devazut',pin:'~60 km'},
+   {x:'Hârlău — curtea domnească și biserica ctitorită de Ștefan cel Mare',s:'devazut',pin:'~75 km'},
+   {x:'Mănăstirea Bârnova — mănăstire în pădure, la sud de Iași',s:'devazut',pin:'~15 km'},
+ ]},
+ {t:'🌆 Orașe vecine (reședințe de județ)', items:[
+   {x:'Vaslui — Podul Înalt, unde Ștefan cel Mare a învins oastea otomană (1475)',s:'devazut',pin:'~70 km'},
+   {x:'Botoșani — oraș istoric; în apropiere, Memorialul „Mihai Eminescu" de la Ipotești',s:'devazut',pin:'~130 km'},
+   {x:'Roman — Catedrala episcopală și cetatea',s:'devazut',pin:'~90 km'},
+   {x:'Bacău — centru urban al Moldovei de mijloc',s:'devazut',pin:'~130 km'},
+   {x:'Piatra Neamț — „Perla Moldovei", telegondolă și priveliști montane',s:'devazut',pin:'~135 km'},
+   {x:'Suceava — Cetatea de Scaun a Moldovei, poarta Bucovinei',s:'devazut',pin:'~150 km'},
+ ]},
+ {t:'⛪ Bucovina — mănăstirile pictate (UNESCO)', items:[
+   {x:'Mănăstirea Voroneț — „albastrul de Voroneț", cea mai faimoasă din Bucovina',s:'devazut',pin:'UNESCO'},
+   {x:'Mănăstirea Sucevița — cetate fortificată, „verdele de Sucevița"',s:'devazut',pin:'UNESCO'},
+   {x:'Mănăstirea Moldovița — frescă exterioară remarcabilă',s:'devazut',pin:'UNESCO'},
+   {x:'Mănăstirea Humor — una dintre primele pictate exterior',s:'devazut',pin:'UNESCO'},
+   {x:'Mănăstirea Arbore — tonuri de verde, sec. XVI',s:'devazut',pin:'UNESCO'},
+   {x:'Mănăstirea Putna — ctitoria lui Ștefan cel Mare (1466) și mormântul său',s:'devazut',pin:'~230 km'},
+   {x:'Probota · Pătrăuți · Sf. Ioan cel Nou (Suceava) — pe lista UNESCO',s:'devazut',pin:'UNESCO'},
+ ]},
+ {t:'🏔️ Neamț — mănăstiri & munte', items:[
+   {x:'Mănăstirea Neamț — una dintre cele mai vechi și importante din Moldova',s:'devazut',pin:'~130 km'},
+   {x:'Mănăstirile Agapia & Văratec — Agapia, cu pictură de Nicolae Grigorescu',s:'devazut',pin:'~140 km'},
+   {x:'Mănăstirile Sihăstria & Secu — vetre isihaste',s:'devazut',pin:'~145 km'},
+   {x:'Cetatea Neamț (Târgu Neamț) — cetate medievală a lui Ștefan cel Mare',s:'devazut',pin:'~130 km'},
+   {x:'Parcul Natural Vânători-Neamț — rezervația de zimbri',s:'devazut',pin:'~135 km'},
+   {x:'Masivul Ceahlău — „muntele sfânt" al Moldovei, parc național',s:'devazut',pin:'~150 km'},
+   {x:'Lacul Izvorul Muntelui (Bicaz) — cel mai mare lac artificial din România',s:'devazut',pin:'~170 km'},
+   {x:'Cheile Bicazului & Lacul Roșu — defileu spectaculos și lacul de baraj natural',s:'devazut',pin:'~200 km'},
+ ]},
+ {t:'🌍 Peste graniță (și nu numai)', items:[
+   {x:'Chișinău, Republica Moldova — capitala, via vama Sculeni',s:'devazut',pin:'~150 km'},
+   {x:'Cramele Cricova / Mileștii Mici (lângă Chișinău) — cele mai mari crame subterane',s:'devazut',pin:'RM'},
+   {x:'Ungheni & Bălți (Republica Moldova)',s:'devazut',pin:'RM'},
+   {x:'Cernăuți, Ucraina — nordul Bucovinei istorice',s:'devazut',pin:'~230 km'},
+ ]},
+ {t:'🍇 Mai departe în Moldova', items:[
+   {x:'Vatra Dornei — stațiune montană și balneară din Bucovina',s:'devazut',pin:'~227 km'},
+   {x:'Podgoriile Vrancei — Odobești, Panciu, Cotești (Focșani)',s:'devazut',pin:'sud'},
+   {x:'Galați & Brăila — Dunărea de Jos',s:'devazut',pin:'sud'},
+ ]},
+];
+
+let data=load();
+function load(){try{const r=localStorage.getItem(KEY);if(r)return JSON.parse(r);}catch(e){}return JSON.parse(JSON.stringify(DEFAULT));}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(data));}catch(e){}render();}
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function render(){
+  const app=document.getElementById('app');app.innerHTML='';
+  let tot=0,vaz=0;
+  data.forEach((sec,si)=>{
+    sec.items.forEach(it=>{tot++;if(it.s==='vazut')vaz++;});
+    const div=document.createElement('div');div.className='section'+(sec.collapsed?' collapsed':'');
+    const done=sec.items.filter(i=>i.s==='vazut').length;
+    let body='';
+    sec.items.forEach((it,ii)=>{
+      body+=`<div class="item">
+        <button class="badge b-${it.s}" onclick="cycle(${si},${ii})">${LABEL[it.s]}</button>
+        <span class="title ${it.s==='vazut'?'done':''}" contenteditable="true" onblur="editT(${si},${ii},this)" spellcheck="false">${esc(it.x)}</span>
+        ${it.pin?`<span class="pin">${esc(it.pin)}</span>`:''}
+        <button class="del" title="Șterge" onclick="delItem(${si},${ii})">×</button>
+      </div>`;
+    });
+    div.innerHTML=`
+      <div class="s-head" onclick="toggle(${si})">
+        <span class="num">${EMO[si]||si+1}</span>
+        <h2 contenteditable="true" onclick="event.stopPropagation()" onblur="editS(${si},this)" spellcheck="false">${esc(sec.t)}</h2>
+        <span class="count">${done}/${sec.items.length}</span>
+        <span class="caret">▾</span>
+      </div>
+      <div class="s-body">${body}
+        <div class="add-row">
+          <input type="text" placeholder="Adaugă o destinație nouă…" onkeydown="if(event.key==='Enter')addItem(${si},this)">
+          <button onclick="addItem(${si},this.previousElementSibling)">Adaugă</button>
+        </div>
+      </div>`;
+    app.appendChild(div);
+  });
+  const addS=document.createElement('button');addS.className='add-section';addS.textContent='+ Adaugă o secțiune nouă';addS.onclick=addSection;
+  app.appendChild(addS);
+  const pct=tot?Math.round(vaz/tot*100):0;
+  document.getElementById('fill').style.width=pct+'%';
+  document.getElementById('plbl').textContent=`${vaz} din ${tot} destinații văzute · ${pct}%`;
+}
+function cycle(si,ii){const it=data[si].items[ii];it.s=STATUSES[(STATUSES.indexOf(it.s)+1)%3];save();}
+function editT(si,ii,el){const v=el.textContent.trim();if(v)data[si].items[ii].x=v;else el.textContent=data[si].items[ii].x;save();}
+function editS(si,el){const v=el.textContent.trim();if(v)data[si].t=v;else el.textContent=data[si].t;save();}
+function delItem(si,ii){if(confirm('Ștergi „'+data[si].items[ii].x+'”?')){data[si].items.splice(ii,1);save();}}
+function addItem(si,input){const v=input.value.trim();if(!v)return;data[si].items.push({x:v,s:'devazut'});input.value='';save();}
+function addSection(){const t=prompt('Numele secțiunii noi:');if(t&&t.trim()){data.push({t:t.trim(),items:[]});save();}}
+function toggle(si){data[si].collapsed=!data[si].collapsed;save();}
+function expandAll(open){data.forEach(s=>s.collapsed=!open);save();}
+function resetAll(){if(confirm('Revii la lista implicită? Modificările se pierd.')){data=JSON.parse(JSON.stringify(DEFAULT));save();}}
+function exportJSON(){const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='regiunea-moldova-checklist.json';a.click();}
+render();
+</script>
+</body>
+</html>
