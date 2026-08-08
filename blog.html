@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog · Jurnal de călătorie · România · Iași</title>
+<meta name="description" content="Jurnal de călătorie: România, regiunile ei, Moldova și Iași — ghiduri, povești și sfaturi practice pentru vacanța ta.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#141d33;--navy-3:#243459;--royal:#2E4488;--gold:#C9A24B;--gold-2:#E3C778;--cream:#F4ECD8;--cream-2:#EFE4C9;--paper:#FBF6EA;--teal:#3E7C8C;--leaf:#3f7d54;--brick:#A8362E;--bronze:#7A5240;--ink:#1a2033;--muted:#6b7794;--line:rgba(201,162,75,.28);--line-soft:rgba(20,29,51,.1);--r:16px;--maxw:1120px}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:'Jost',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.7;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.1}
+a{color:inherit;text-decoration:none}.wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px}
+.gold-text{color:var(--gold)}.script{font-style:italic;font-weight:500}
+.lang-en{display:none}body.en .lang-ro{display:none}body.en .lang-en{display:inline}
+.overline{font-family:'Jost';font-weight:600;letter-spacing:.32em;text-transform:uppercase;font-size:.7rem}
+header.nav{position:sticky;top:0;z-index:60;background:rgba(20,29,51,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{display:flex;flex-direction:column;line-height:1}
+.logo b{font-family:'Cormorant Garamond';font-size:1.32rem;color:var(--cream);font-weight:700;letter-spacing:.5px}
+.logo small{letter-spacing:.3em;text-transform:uppercase;font-size:.54rem;color:var(--gold);margin-top:3px}
+.nav-links{display:flex;gap:26px}
+.nav-links a{font-weight:500;font-size:.8rem;letter-spacing:.05em;color:var(--cream);opacity:.8;text-transform:uppercase;transition:.2s}
+.nav-links a:hover{opacity:1;color:var(--gold-2)}.nav-links a.on{color:var(--gold-2);opacity:1}
+.langsw{display:flex;border:1px solid var(--line);border-radius:30px;padding:3px}
+.langsw button{border:0;background:transparent;padding:5px 11px;border-radius:24px;cursor:pointer;color:var(--cream);font-family:'Jost';font-weight:600;font-size:.72rem;letter-spacing:.08em;transition:.2s}
+.langsw button.active{background:var(--gold);color:var(--navy)}
+@media(max-width:820px){.nav-links{display:none}}
+.hero{position:relative;background:var(--navy);color:var(--cream);padding:66px 0 56px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(680px 420px at 82% 0%,rgba(46,68,136,.85),transparent 62%)}
+.hero::after{content:"";position:absolute;inset:0;opacity:.4;background-image:radial-gradient(rgba(201,162,75,.14) 1px,transparent 1px);background-size:24px 24px;-webkit-mask-image:linear-gradient(180deg,#000,transparent);mask-image:linear-gradient(180deg,#000,transparent)}
+.hero .wrap{position:relative;z-index:2}
+.crumb{font-size:.78rem;color:rgba(244,236,216,.6);margin-bottom:20px}.crumb a:hover{color:var(--gold-2)}
+.hero .overline{color:var(--gold-2);display:inline-block;margin-bottom:16px}
+.hero h1{font-size:clamp(2.6rem,5.6vw,4.2rem);color:var(--cream)}.hero h1 .script{color:var(--gold-2)}
+.hero p{color:rgba(244,236,216,.78);font-weight:300;font-size:1.12rem;max-width:60ch;margin:20px 0 0}
+.cats{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+.cat-pill{border:1px solid var(--line);border-radius:30px;padding:8px 16px;font-size:.78rem;color:var(--cream);transition:.2s}
+.cat-pill:hover{background:var(--gold);color:var(--navy)}
+section{padding:56px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.post{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:.35s;display:flex;flex-direction:column}
+.post:hover{transform:translateY(-6px);box-shadow:0 26px 50px -24px rgba(20,29,51,.4)}
+.post .top{height:150px;position:relative;display:flex;align-items:flex-end;padding:18px;color:#fff}
+.post .top::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(20,29,51,.55))}
+.post .top .cat{position:relative;z-index:2;font-family:'Jost';font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:.64rem;color:#fff;background:rgba(20,29,51,.4);backdrop-filter:blur(4px);padding:5px 11px;border-radius:20px}
+.post .top .em{position:absolute;z-index:2;top:16px;right:18px;font-size:1.9rem}
+.post.t-tool .top{background:linear-gradient(150deg,var(--royal),#141d33)}
+.post.t-ro .top{background:linear-gradient(150deg,#3a74c9,#16223f)}
+.post.t-reg .top{background:linear-gradient(150deg,var(--leaf),#1d3a28)}
+.post.t-ne .top{background:linear-gradient(150deg,var(--bronze),#2f1d15)}
+.post.t-iasi .top{background:linear-gradient(150deg,#2E4488,#141d33)}
+.post.t-obj .top{background:linear-gradient(150deg,var(--brick),#4a1712)}
+.post .in{padding:22px 24px 24px;flex:1;display:flex;flex-direction:column}
+.post h3{font-size:1.4rem;color:var(--navy)}
+.post p{color:var(--muted);font-size:.9rem;font-weight:300;margin:8px 0 16px}
+.post .foot{margin-top:auto;display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line-soft);padding-top:14px}
+.post .read{color:var(--gold);font-weight:600;font-size:.74rem;letter-spacing:.12em;text-transform:uppercase}
+.post .soon{color:var(--muted);font-weight:600;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--line);padding:4px 10px;border-radius:20px}
+a.post{cursor:pointer}
+.roadmap{background:var(--cream-2);border:1px solid var(--line);border-radius:var(--r);padding:28px 30px;margin-top:40px}
+.roadmap h4{font-size:1.3rem;color:var(--navy);margin-bottom:6px}
+.roadmap p{color:var(--muted);font-weight:300;font-size:.92rem}
+.roadmap ol{margin:14px 0 0 0;padding-left:20px;color:var(--ink);font-weight:300}
+.roadmap ol li{margin-bottom:6px}
+.cta{background:var(--navy);color:var(--cream);text-align:center}
+.cta h2{color:var(--cream);font-size:clamp(1.9rem,3.6vw,2.7rem)}.cta h2 .script{color:var(--gold-2)}
+.cta p{color:rgba(244,236,216,.75);font-weight:300;max-width:48ch;margin:16px auto 26px}
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:'Jost';font-weight:600;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;padding:14px 28px;border-radius:2px;cursor:pointer;border:0;transition:.3s}
+.btn-outline{background:transparent;border:1px solid var(--gold);color:var(--gold-2)}.btn-outline:hover{background:var(--gold);color:var(--navy)}
+footer{background:#0f1728;color:rgba(244,236,216,.6);padding:30px 0;text-align:center;font-size:.82rem;font-weight:300}footer a{color:var(--gold-2)}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="viziteaza-romania-iasi.html" class="logo"><b>România <span class="gold-text">·</span> Iași</b><small class="lang-ro">Ghid de călătorie</small><small class="lang-en">Travel guide</small></a>
+    <div class="nav-links">
+      <a href="viziteaza-romania-iasi.html"><span class="lang-ro">Acasă</span><span class="lang-en">Home</span></a>
+      <a href="iasi.html">Iași</a>
+      <a href="blog.html" class="on">Blog</a>
+      <a href="produse.html"><span class="lang-ro">Produse</span><span class="lang-en">Products</span></a>
+    </div>
+    <div class="langsw"><button data-lang="ro" class="active" onclick="setLang('ro')">RO</button><button data-lang="en" onclick="setLang('en')">EN</button></div>
+  </div>
+</header>
+
+<section class="hero"><div class="wrap">
+  <div class="crumb"><a href="viziteaza-romania-iasi.html">România · Iași</a> &nbsp;›&nbsp; <span class="gold-text">Blog</span></div>
+  <span class="overline">✍️ <span class="lang-ro">Jurnal de călătorie</span><span class="lang-en">Travel journal</span></span>
+  <h1><span class="lang-ro">Povești &</span><span class="lang-en">Stories &</span> <span class="script"><span class="lang-ro">ghiduri de călătorie</span><span class="lang-en">travel guides</span></span></h1>
+  <p class="lang-ro">De la o privire de ansamblu asupra României, la regiunile ei, la Moldova și, în inima lor, Iași — plus sfaturi practice și unelte care îți fac vacanța mai ușoară.</p>
+  <p class="lang-en">From a big-picture look at Romania, to its regions, to Moldavia and, at their heart, Iași — plus practical tips and tools that make your holiday easier.</p>
+  <div class="cats">
+    <span class="cat-pill lang-ro">România</span><span class="cat-pill lang-en">Romania</span>
+    <span class="cat-pill lang-ro">Regiuni</span><span class="cat-pill lang-en">Regions</span>
+    <span class="cat-pill lang-ro">Nord-Est & Iași</span><span class="cat-pill lang-en">North-East & Iași</span>
+    <span class="cat-pill lang-ro">Obiective</span><span class="cat-pill lang-en">Attractions</span>
+    <span class="cat-pill lang-ro">Unelte & sfaturi</span><span class="cat-pill lang-en">Tools & tips</span>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="grid">
+
+    <a class="post t-tool" href="blog-voyagecalc-premium.html">
+      <div class="top"><span class="cat lang-ro">Unelte & sfaturi</span><span class="cat lang-en">Tools & tips</span><span class="em">🧮</span></div>
+      <div class="in">
+        <h3 class="lang-ro">VoyageCalc Premium: bugetul de vacanță, cu eleganță</h3>
+        <h3 class="lang-en">VoyageCalc Premium: your holiday budget, done elegantly</h3>
+        <p class="lang-ro">Cum îți planifici bugetul de călătorie în 6 limbi și 5 valute, cu export PDF și comparator de vacanțe.</p>
+        <p class="lang-en">How to plan your travel budget in 6 languages and 5 currencies, with PDF export and a vacation comparator.</p>
+        <div class="foot"><span class="read"><span class="lang-ro">Citește articolul</span><span class="lang-en">Read the article</span> →</span></div>
+      </div>
+    </a>
+
+    <a class="post t-ro" href="blog-romania.html">
+      <div class="top"><span class="cat lang-ro">România</span><span class="cat lang-en">Romania</span><span class="em">🇷🇴</span></div>
+      <div class="in">
+        <h3 class="lang-ro">România, o țară așezată în inima continentului</h3>
+        <h3 class="lang-en">Romania — an introduction for travelers</h3>
+        <p class="lang-ro">Articolul-pilon: poziționare, vecini, relief, climă, faună, oameni și meșteșuguri.</p>
+        <p class="lang-en">The pillar article: position, neighbors, relief, climate, wildlife, people and crafts.</p>
+        <div class="foot"><span class="read"><span class="lang-ro">Citește articolul</span><span class="lang-en">Read the article</span> →</span></div>
+      </div>
+    </a>
+
+    <div class="post t-reg">
+      <div class="top"><span class="cat lang-ro">Regiuni</span><span class="cat lang-en">Regions</span><span class="em">🗺️</span></div>
+      <div class="in">
+        <h3 class="lang-ro">Regiunile României: de la Bucovina la litoral</h3>
+        <h3 class="lang-en">The regions of Romania: from Bucovina to the coast</h3>
+        <p class="lang-ro">O hartă a marilor regiuni, cu porți spre articole despre orașe — București și celelalte.</p>
+        <p class="lang-en">A map of the great regions, with doors to city articles — Bucharest and beyond.</p>
+        <div class="foot"><span class="soon lang-ro">În curând</span><span class="soon lang-en">Soon</span></div>
+      </div>
+    </div>
+
+    <a class="post t-ne" href="moldova-cultural.html">
+      <div class="top"><span class="cat lang-ro">Nord-Est</span><span class="cat lang-en">North-East</span><span class="em">🌻</span></div>
+      <div class="in">
+        <h3 class="lang-ro">Moldova & Nord-Estul: inima culturală</h3>
+        <h3 class="lang-en">Moldavia & the North-East: the cultural heart</h3>
+        <p class="lang-ro">Regiunea din care face parte Iașul — mănăstiri, podgorii, tradiții și drumul spre oraș. O serie de 5 articole.</p>
+        <p class="lang-en">The region Iași belongs to — monasteries, vineyards, traditions and the road to the city. A 5-article series.</p>
+        <div class="foot"><span class="read"><span class="lang-ro">Citește seria</span><span class="lang-en">Read the series</span> →</span></div>
+      </div>
+    </a>
+
+    <a class="post t-iasi" href="blog-iasi.html">
+      <div class="top"><span class="cat lang-ro">Iași</span><span class="cat lang-en">Iași</span><span class="em">🏛️</span></div>
+      <div class="in">
+        <h3 class="lang-ro">Iași, orașul care deschide o țară</h3>
+        <h3 class="lang-en">Iași, the city that opens a country</h3>
+        <p class="lang-ro">Articolul-pilon: colinele, istoria de două ori capitală și drumul de la oraș spre țară.</p>
+        <p class="lang-en">The pillar article: the hills, the twice-capital history and the road from city to country.</p>
+        <div class="foot"><span class="read"><span class="lang-ro">Citește articolul</span><span class="lang-en">Read the article</span> →</span></div>
+      </div>
+    </a>
+
+    <div class="post t-obj">
+      <div class="top"><span class="cat lang-ro">Obiective</span><span class="cat lang-en">Attractions</span><span class="em">👑</span></div>
+      <div class="in">
+        <h3 class="lang-ro">Palatul Culturii: tot ce trebuie să știi</h3>
+        <h3 class="lang-en">The Palace of Culture: all you need to know</h3>
+        <p class="lang-ro">Primul dintr-o serie de articole detaliate pe fiecare obiectiv din Iași.</p>
+        <p class="lang-en">The first in a series of in-depth articles on each Iași attraction.</p>
+        <div class="foot"><span class="soon lang-ro">În curând</span><span class="soon lang-en">Soon</span></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="roadmap">
+    <h4 class="lang-ro">Cum crește blogul</h4><h4 class="lang-en">How the blog grows</h4>
+    <p class="lang-ro">Structura urmează un fir logic, de la general la detaliu — fiecare nivel trimite la paginile site-ului:</p>
+    <p class="lang-en">The structure follows a logical thread, from general to detail — each level links to the site's pages:</p>
+    <ol>
+      <li class="lang-ro"><b>România</b> — prezentare generală (pilon)</li><li class="lang-en"><b>Romania</b> — big-picture overview (pillar)</li>
+      <li class="lang-ro"><b>Regiunile</b> — Bucovina, Transilvania, Moldova… → orașe (București etc.)</li><li class="lang-en"><b>Regions</b> — Bucovina, Transylvania, Moldavia… → cities (Bucharest, etc.)</li>
+      <li class="lang-ro"><b>Nord-Est → Iași</b> — de la regiune la oraș</li><li class="lang-en"><b>North-East → Iași</b> — from region to city</li>
+      <li class="lang-ro"><b>Obiectivele Iașului</b> — un articol pentru fiecare loc</li><li class="lang-en"><b>Iași attractions</b> — one article per place</li>
+      <li class="lang-ro"><b>Unelte & sfaturi</b> — ghiduri practice și produse de călătorie</li><li class="lang-en"><b>Tools & tips</b> — practical guides and travel products</li>
+    </ol>
+  </div>
+</div></section>
+
+<section class="cta"><div class="wrap">
+  <span class="overline gold-text">✦ <span class="lang-ro">Începe călătoria</span><span class="lang-en">Start the journey</span> ✦</span>
+  <h2 style="margin-top:14px"><span class="lang-ro">Descoperă</span><span class="lang-en">Discover</span> <span class="script">Iași</span></h2>
+  <p class="lang-ro">Peste 15 obiective cu program, bilete și povești — ghidul complet al orașului te așteaptă.</p>
+  <p class="lang-en">Over 15 attractions with hours, tickets and stories — the full city guide awaits.</p>
+  <a href="iasi.html" class="btn btn-outline"><span class="lang-ro">Deschide ghidul Iași</span><span class="lang-en">Open the Iași guide</span> →</a>
+</div></section>
+
+<footer><div class="wrap">© 2026 România · Iași — <span class="lang-ro">Ghid de călătorie · Demo</span><span class="lang-en">Travel guide · Demo</span> · <a href="viziteaza-romania-iasi.html"><span class="lang-ro">Acasă</span><span class="lang-en">Home</span></a></div></footer>
+<script>function setLang(l){document.body.classList.toggle('en',l==='en');document.documentElement.lang=l;document.querySelectorAll('.langsw button').forEach(b=>b.classList.toggle('active',b.dataset.lang===l))}</script>
+</body>
+</html>
