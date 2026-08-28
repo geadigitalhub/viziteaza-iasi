@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Iași — orașul care deschide o țară · România · Iași</title>
+<title>Iași — poarta de răsărit a României · România · Iași</title>
 <meta name="description" content="Iași, orașul celor șapte coline: așezarea, istoria de două ori capitală, oamenii și cultura — o poveste care urcă de la oraș spre Moldova și spre întreaga Românie. Date oficiale, recensământ 2021.">
-<meta property="og:title" content="Iași, orașul care deschide o țară">
+<meta property="og:title" content="Iași, poarta de răsărit a României">
 <meta property="og:description" content="Povestea orașului celor șapte coline — de două ori capitală, leagăn de cultură — spusă în carduri, cronologie și cifre.">
 <meta property="og:type" content="article">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -116,6 +116,24 @@ a.card:hover .go{color:var(--navy)}
 .src a{color:var(--gold)}
 footer{border-top:1px solid var(--line);margin-top:40px;padding:28px 0 54px;text-align:center;color:var(--muted);font-size:.85rem}
 footer a{color:var(--gold)}
+
+/* --- linkuri afiliate contextuale --- */
+a.pill{cursor:pointer}
+.aff-inline{color:var(--navy);font-weight:500;border-bottom:1px solid var(--gold);transition:color .25s,border-color .25s}
+.aff-inline:hover{color:var(--gold);border-color:var(--gold-2)}
+.trip{margin:30px 0 8px;background:linear-gradient(158deg,#fff 0%,var(--cream-2) 100%);border:1px solid var(--line);border-radius:18px;padding:24px 24px 20px;box-shadow:0 16px 42px -30px rgba(20,29,51,.55)}
+.trip .th{font-family:'Cormorant Garamond';font-weight:700;font-size:1.5rem;color:var(--navy);line-height:1.15}
+.trip .ts{font-size:.92rem;color:var(--muted);margin:4px 0 16px}
+.trip .opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:11px}
+.trip .opt{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--line);border-radius:13px;padding:13px 15px;transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s,border-color .3s}
+.trip .opt:hover{transform:translateY(-4px);box-shadow:0 16px 34px -24px rgba(20,29,51,.6);border-color:var(--gold)}
+.trip .opt svg{flex:0 0 auto;width:24px;height:24px;stroke:var(--gold);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.trip .opt .tx b{display:block;font-weight:600;font-size:.95rem;color:var(--navy);line-height:1.2}
+.trip .opt .tx span{display:block;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-top:2px}
+.trip .also{margin:15px 0 0;font-size:.9rem;color:var(--ink-soft)}
+.trip .also a{color:var(--gold);font-weight:600;border-bottom:1px solid var(--line)}
+.trip .also a:hover{color:var(--navy)}
+.trip .disc{margin:14px 0 0;padding-top:12px;border-top:1px solid var(--line-soft);font-size:.74rem;color:var(--muted);line-height:1.5}
 </style>
 <!-- Travelpayouts -->
 <script>
@@ -130,6 +148,13 @@ footer a{color:var(--gold)}
 </head>
 <body>
 <div id="bar"></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="ic-plane" viewBox="0 0 24 24"><path d="M3 11l18-8-8 18-2.4-7.6z"/></symbol>
+  <symbol id="ic-transfer" viewBox="0 0 24 24"><path d="M4 13l1.5-4.3A2 2 0 0 1 7.4 7.3h7.2a2 2 0 0 1 1.9 1.4L18 13m-14 0h14m-14 0a1.6 1.6 0 0 0-1.6 1.6V17H5m11-4a1.6 1.6 0 0 1 1.6 1.6V17h-1.6m-9 0h9"/><circle cx="8" cy="17" r="1.3"/><circle cx="16" cy="17" r="1.3"/></symbol>
+  <symbol id="ic-car" viewBox="0 0 24 24"><path d="M5 13l1.6-4.6A2 2 0 0 1 8.5 7h7a2 2 0 0 1 1.9 1.4L19 13m-14 0h14m-14 0a1.7 1.7 0 0 0-1.7 1.7V17H5m11-4a1.7 1.7 0 0 1 1.7 1.7V17h-1.7m-9 0h9"/><circle cx="8.2" cy="17" r="1.3"/><circle cx="15.8" cy="17" r="1.3"/></symbol>
+  <symbol id="ic-bed" viewBox="0 0 24 24"><path d="M3 18v-9m0 5h18m-18 0v4m18-4v4m0-4v-3a2 2 0 0 0-2-2h-7v5"/><circle cx="7" cy="11.5" r="1.4"/></symbol>
+  <symbol id="ic-ticket" viewBox="0 0 24 24"><path d="M4 9a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2 2 2 0 0 0 0 4 2 2 0 0 1-2 2H6a2 2 0 0 1-2-2 2 2 0 0 0 0-4z"/><path d="M14 7v10"/></symbol>
+</defs></svg>
 <nav class="site"><div class="in">
   <a href="viziteaza-romania-iasi.html" class="brand">România · Iași</a>
   <span class="lk"><a href="viziteaza-romania-iasi.html">Acasă</a><a href="iasi.html">Iași</a><a href="blog.html" class="on">Blog</a><a href="produse.html">Produse</a></span>
@@ -144,7 +169,7 @@ footer a{color:var(--gold)}
     <path d="M12,60 Q24,50 34,58 Q40,52 48,58 Q58,49 72,59 L72,66 L12,66 Z" fill="#C9A24B" opacity=".35"/>
     <g fill="#E3C778"><rect x="30" y="46" width="24" height="14"/><rect x="38.5" y="30" width="7" height="30"/><polygon points="38.5,30 42,24 45.5,30"/><rect x="26" y="40" width="4" height="20"/><rect x="54" y="40" width="4" height="20"/></g>
   </svg>
-  <h1>Iași, orașul care <em>deschide o țară</em></h1>
+  <h1>Iași, <em>poarta de răsărit</em> a României</h1>
   <p class="lede">Stai sus, pe una dintre colinele lui, când soarele coboară peste turnul Palatului Culturii — și înțelegi dintr-odată că orașul acesta nu se termină la marginea lui. De aici, privirea urcă mai departe: spre Moldova, spre toată România. Hai să urcăm împreună.</p>
   <div class="meta">
     <span class="chip">Regiunea Moldova</span>
@@ -185,6 +210,18 @@ footer a{color:var(--gold)}
 
   <p class="reveal">Iașul e și un oraș de <strong>hotar</strong>: la doar câțiva zeci de kilometri curge Prutul și începe granița cu Republica Moldova. Nu e un hotar care desparte, ci unul care primește — o poartă dinspre răsărit. Clima e pe măsură: răsăriteană, cu ierni geroase și veri calde, dar cu primăveri și toamne lungi, făcute parcă anume pentru plimbări pe sub tei.</p>
 
+  <div class="trip reveal">
+    <div class="th">Porțile Iașului te așteaptă să ajungi</div>
+    <p class="ts">Porțile orașului celor șapte coline te așteaptă — iar de la aeroport până în centru sunt doar câțiva kilometri.</p>
+    <div class="opts">
+      <a class="opt" href="https://www.aviasales.com/?marker=768932&sub_id=blogiasi_zbor" target="_blank" rel="sponsored noopener"><svg><use href="#ic-plane"/></svg><span class="tx"><b>Zbor spre Iași</b></span></a>
+      <a class="opt" href="https://kiwitaxi.com/?marker=768932&sub_id=blogiasi_transfer" target="_blank" rel="sponsored noopener"><svg><use href="#ic-transfer"/></svg><span class="tx"><b>Transfer de la aeroport</b></span></a>
+      <a class="opt" href="https://www.discovercars.com/?marker=768932&sub_id=blogiasi_masina" target="_blank" rel="sponsored noopener"><svg><use href="#ic-car"/></svg><span class="tx"><b>Mașină de închiriat</b></span></a>
+    </div>
+    <p class="also">Vrei detalii despre zboruri, terminale și cursele directe? Vezi pagina despre <a href="aeroport.html">Aeroportul Internațional Iași →</a></p>
+    <p class="disc">Unele linkuri de mai sus sunt afiliate: dacă rezervi prin ele, prețul tău rămâne același.</p>
+  </div>
+
   <hr class="thread">
 
   <h2 class="reveal"><span class="num">Partea 2</span>Un oraș care a fost, de două ori, capitală</h2>
@@ -193,7 +230,7 @@ footer a{color:var(--gold)}
 
   <div class="tl reveal">
     <div class="tli"><div class="yr">1408</div><div class="ttl">Prima mențiune scrisă</div><p>Numele Iașului apare într-un act prin care domnitorul <strong>Alexandru cel Bun</strong> dă privilegii comerciale negustorilor din Liov. Orașul era însă, cu siguranță, mai vechi — un târg viu, la răscruce de drumuri.</p></div>
-    <div class="tli"><div class="yr">~1564</div><div class="ttl">Capitala Moldovei</div><p><strong>Alexandru Lăpușneanu</strong> mută capitala de la Suceava la Iași. Vreme de aproape trei secole, aici se încoronează domnitori, se ridică ctitorii precum Trei Ierarhi și pornesc primele tiparnițe.</p></div>
+    <div class="tli"><div class="yr">~1564</div><div class="ttl">Capitala Moldovei</div><p><strong>Alexandru Lăpușneanu</strong> mută capitala de la Suceava la Iași. Vreme de aproape trei secole, aici se încoronează domnitori, se ridică ctitorii precum <a class="aff-inline" href="iasi-02-trei-ierarhi.html">Trei Ierarhi</a> și pornesc primele tiparnițe.</p></div>
     <div class="tli"><div class="yr">1840</div><div class="ttl">Primul teatru național din România</div><p>La Iași se deschide cea mai veche instituție teatrală a țării — un început pentru toată scena românească.</p></div>
     <div class="tli big"><div class="yr">1859</div><div class="ttl">Unirea — și un sacrificiu</div><p>La Iași se pun bazele Unirii Principatelor, iar <strong>Alexandru Ioan Cuza</strong>, ales domn chiar aici, devine simbolul României moderne. Pentru binele țării, capitala se mută la București — iar Iașul renunță, cu demnitate, la un rang purtat veacuri.</p></div>
     <div class="tli"><div class="yr">1860</div><div class="ttl">Prima universitate modernă</div><p>Pe temelia Academiei Mihăilene (1835), se întemeiază la Iași cea dintâi universitate modernă a României.</p></div>
@@ -215,18 +252,18 @@ footer a{color:var(--gold)}
 
   <h2 class="reveal"><span class="num">Partea 3</span>De la oraș, spre țară</h2>
 
-  <p class="reveal">Astăzi, la recensământul din <strong>2021</strong>, Iașul număra <strong>271.692 de locuitori</strong> — al treilea oraș ca mărime din România. E, mai ales, un mare oraș <strong>studențesc</strong>: universitățile lui adună zeci de mii de tineri din toată țara și din străinătate, iar asta îi dă o energie care nu se oprește nici în vacanțe. Iașul e, în același timp, vechi și tânăr — cu biserici de patru sute de ani și cu terase pline până noaptea târziu.</p>
+  <p class="reveal">Astăzi, la recensământul din <strong>2021</strong>, Iașul număra <strong>271.692 de locuitori</strong> — al treilea oraș ca mărime din România. E, mai ales, un mare oraș <strong>studențesc</strong>: universitățile lui adună zeci de mii de tineri din toată țara și din străinătate, iar asta îi dă o energie care nu se oprește nici în vacanțe. Iașul e, în același timp, vechi și tânăr — cu biserici de patru sute de ani și cu terase pline până noaptea târziu. Dacă rămâi peste noapte, găsești ușor <a class="aff-inline" href="https://www.booking.com/searchresults.html?ss=Iasi%2C%20Romania&marker=768932&sub_id=blogiasi_cazare" target="_blank" rel="sponsored noopener">cazare în Iași</a>, de la case de oaspeți în centrul vechi la hoteluri lângă Copou.</p>
 
-  <p class="reveal">Cultura rămâne inima orașului: Palatul Culturii cu cele patru muzee ale lui, teatrele, filarmonica, opera — iar toamna, orașul devine capitala literaturii, când <strong>FILIT</strong> aduce scriitori din întreaga lume.</p>
+  <p class="reveal">Cultura rămâne inima orașului: <a class="aff-inline" href="palatul-culturii.html">Palatul Culturii</a> cu cele patru muzee ale lui, teatrele, filarmonica, opera — iar toamna, orașul devine capitala literaturii, când <strong>FILIT</strong> aduce scriitori din întreaga lume. Pentru Palatul Culturii și celelalte obiective poți rezerva din timp <a class="aff-inline" href="https://www.getyourguide.com/s/?q=Iasi&marker=768932&sub_id=blogiasi_tururi" target="_blank" rel="sponsored noopener">bilete și tururi ghidate</a>.</p>
 
   <div class="pill-row reveal">
-    <span class="pill">Palatul Culturii</span><span class="pill">Copou & Teiul lui Eminescu</span><span class="pill">Trei Ierarhi</span><span class="pill">Golia</span><span class="pill">FILIT</span><span class="pill">Bojdeuca lui Creangă</span>
+    <a class="pill" href="palatul-culturii.html">Palatul Culturii</a><a class="pill" href="copou.html">Copou &amp; Teiul lui Eminescu</a><a class="pill" href="iasi-02-trei-ierarhi.html">Trei Ierarhi</a><a class="pill" href="golia.html">Golia</a><span class="pill">FILIT</span><a class="pill" href="bojdeuca-creanga.html">Bojdeuca lui Creangă</a>
   </div>
 
   <p class="reveal">Dar Iașul nu se cuprinde doar pe sine. E o poartă care se deschide, treaptă cu treaptă, spre tot ce e în jur:</p>
 
   <div class="zoom reveal">
-    <div class="zline z1"><div class="em">🏛️</div><div class="zt"><b>Iași</b><p>Orașul celor șapte coline — vechea capitală, capitala culturală de azi.</p></div></div>
+    <a class="zline z1" href="iasi.html"><div class="em">🏛️</div><div class="zt"><b>Iași</b><p>Orașul celor șapte coline — vechea capitală, capitala culturală de azi.</p></div></a>
     <a class="zline z2" href="checklist-regiunea-moldova.html"><div class="em">🌾</div><div class="zt"><b>Moldova</b><p>Mănăstirile pictate ale Bucovinei, podgoria Cotnari, satele cu tradiții. Iașul e oglinda lor.</p></div></a>
     <div class="zline z3"><div class="em">🇷🇴</div><div class="zt"><b>România</b><p>Carpații și Dunărea, Delta și Marea Neagră — o țară întreagă, la capătul drumului care urcă din Iași.</p></div></div>
   </div>
