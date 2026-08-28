@@ -73,6 +73,33 @@ section{padding:62px 0}.sec-head{margin-bottom:32px}
 footer{background:#0f1728;color:rgba(244,236,216,.6);padding:30px 0;text-align:center;font-size:.82rem;font-weight:300}footer a{color:var(--gold-2)}
 .disclaimer{font-size:.78rem;color:var(--muted);font-style:italic;text-align:center;margin-top:24px;font-weight:300}
 @media(max-width:820px){.about-grid,.cgrid,.two{grid-template-columns:1fr}}
+/* --- planifica escapada (Travelpayouts) --- */
+.aff-intro{margin-bottom:26px}
+.aff-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.acard{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px 26px 22px;display:flex;flex-direction:column;transition:.25s}
+.acard:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(20,29,51,.09);border-color:var(--gold)}
+.acard .em{font-size:1.9rem;line-height:1;margin-bottom:12px}
+.acard h3{font-size:1.3rem;color:var(--navy);margin-bottom:6px}
+.acard p{color:var(--muted);font-weight:300;font-size:.88rem;margin-bottom:18px;flex:1;line-height:1.55}
+.acard .btn{align-self:flex-start;padding:11px 20px;border-radius:2px;font-size:.74rem}
+.aff-disc{margin-top:24px;font-size:.78rem;color:var(--muted);font-style:italic;font-weight:300;line-height:1.6}
+.aff-after{margin-top:22px}
+.aff-intro{position:relative;padding-right:180px;max-width:none}
+.escapada-stamp{position:absolute;top:-12px;right:2px;width:156px;height:156px;transform:rotate(-8deg);transition:transform .4s ease;filter:drop-shadow(0 8px 16px rgba(20,29,51,.28))}
+.escapada-stamp:hover{transform:rotate(-3deg) scale(1.06)}
+.escapada-stamp svg{width:100%;height:100%;display:block}
+@media(max-width:900px){.aff-intro{padding-right:150px}.escapada-stamp{width:128px;height:128px}}
+@media(max-width:820px){.aff-intro{padding-right:0;text-align:center}.escapada-stamp{position:static;margin:0 auto 20px;transform:rotate(-4deg);width:150px;height:150px}}
+
+@media(max-width:820px){.aff-grid{grid-template-columns:1fr}}
+/* --- caseta istorica incadrata --- */
+.histframe{position:relative;margin-top:36px;background:linear-gradient(180deg,#fff,#fdf9ef);border:1px solid var(--line);border-radius:var(--r);padding:32px 36px;box-shadow:0 12px 32px -18px rgba(20,29,51,.42)}
+.histframe::before{content:"";position:absolute;inset:9px;border:1px solid var(--line);border-radius:10px;pointer-events:none;opacity:.55}
+.histframe::after{content:"❝";position:absolute;top:12px;right:22px;font-family:'Cormorant Garamond',serif;font-size:3.4rem;color:var(--accent);opacity:.22;line-height:1}
+.histframe .he{display:block;font-family:'Jost';font-weight:600;letter-spacing:.22em;text-transform:uppercase;font-size:.66rem;color:var(--accent);margin-bottom:10px}
+.histframe h3{font-size:1.5rem;color:var(--navy);margin-bottom:12px}
+.histframe p{position:relative;z-index:1;color:var(--ink);font-weight:300;font-style:italic;font-size:1.02rem;line-height:1.78;max-width:72ch}
+.histframe .src{display:block;margin-top:14px;font-size:.74rem;color:var(--muted);font-style:normal;letter-spacing:.04em}
 </style>
 <!-- Travelpayouts -->
 <script>
@@ -89,7 +116,7 @@ footer{background:#0f1728;color:rgba(244,236,216,.6);padding:30px 0;text-align:c
 <header class="nav">
   <div class="wrap nav-inner">
     <a href="viziteaza-romania-iasi.html" class="logo"><b>România <span class="gold-text">·</span> Iași</b><small class="lang-ro">Ghid de călătorie</small><small class="lang-en">Travel guide</small></a>
-    <div class="nav-links"><a href="#despre"><span class="lang-ro">Despre</span><span class="lang-en">About</span></a><a href="#vezi"><span class="lang-ro">Ce vezi</span><span class="lang-en">Highlights</span></a><a href="iasi.html">Iași</a></div>
+    <div class="nav-links"><a href="#despre"><span class="lang-ro">Despre</span><span class="lang-en">About</span></a><a href="#vezi"><span class="lang-ro">Ce vezi</span><span class="lang-en">Highlights</span></a><a href="#planifica"><span class="lang-ro">Planifică</span><span class="lang-en">Plan</span></a><a href="iasi.html">Iași</a></div>
     <div class="langsw"><button data-lang="ro" class="active" onclick="setLang('ro')">RO</button><button data-lang="en" onclick="setLang('en')">EN</button></div>
   </div>
 </header>
@@ -112,13 +139,13 @@ footer{background:#0f1728;color:rgba(244,236,216,.6);padding:30px 0;text-align:c
   <div class="qi"><span class="em">🕐</span><div><b class="lang-ro">Oricând</b><b class="lang-en">Anytime</b><small class="lang-ro">Acces liber, non-stop</small><small class="lang-en">Free access, 24/7</small></div></div>
 </div></div>
 <section id="despre"><div class="wrap">
-  <div class="sec-head"><span class="overline"><span class="lang-ro">Despre</span><span class="lang-en">About</span></span><h2><span class="lang-ro">Inima de plimbare a orașului</span><span class="lang-en">The city's walking heart</span></h2></div>
+  <div class="sec-head"><span class="overline"><span class="lang-ro">Despre</span><span class="lang-en">About</span></span><h2><span class="lang-ro">Plimbarea relaxantă care dezvăluie istorie și cultură</span><span class="lang-en">The relaxing walk that reveals history and culture</span></h2></div>
   <div class="about-grid">
     <div>
       <p class="lang-ro">Bulevardul Ștefan cel Mare și Sfânt este una dintre arterele principale ale Iașului, în centrul orașului. Începe din Piața Unirii și se termină în Piața Ștefan cel Mare și Sfânt, în fața Palatului Culturii. Istoric, făcea parte din „Ulița Mare", care lega Podul Verde (Copou) de Curtea Domnească.</p>
-      <p class="lang-ro">În 2012, Primăria a transformat bulevardul în zonă pietonală, înlocuind asfaltul cu pavaj de piatră cubică. Dintr-o zonă de trafic intens, a devenit un spațiu dedicat plimbării, cu terase și evenimente — traseul ideal pentru a descoperi orașul „pe jos".</p>
+      <p class="lang-ro">În 2012, Primăria a început pietonalizarea bulevardului, înlocuind asfaltul cu pavaj de piatră cubică; zona pietonală a fost apoi extinsă treptat. O bună parte din el a devenit astfel un spațiu dedicat plimbării, cu terase și evenimente — traseul ideal pentru a descoperi orașul „pe jos".</p>
       <p class="lang-en">Ștefan cel Mare și Sfânt Boulevard is one of Iași's main arteries, in the city centre. It begins at Piața Unirii and ends at Piața Ștefan cel Mare și Sfânt, in front of the Palace of Culture. Historically, it was part of the "Great Street" linking the Green Bridge (Copou) with the Princely Court.</p>
-      <p class="lang-en">In 2012, the City Hall turned the boulevard into a pedestrian zone, replacing asphalt with cobblestone paving. From an area of heavy traffic, it became a space for walking, with terraces and events — the ideal route to discover the city on foot.</p>
+      <p class="lang-en">In 2012, the City Hall began pedestrianising the boulevard, replacing asphalt with cobblestone paving; the pedestrian area was then gradually extended. Much of it thus became a space for walking, with terraces and events — the ideal route to discover the city on foot.</p>
     </div>
     <div class="facts">
       <div class="f"><span class="lang-ro">Traseu</span><span class="lang-en">Route</span><b class="lang-ro">Unirii → P. Culturii</b><b class="lang-en">Unirii → Palace</b></div>
@@ -126,6 +153,12 @@ footer{background:#0f1728;color:rgba(244,236,216,.6);padding:30px 0;text-align:c
       <div class="f"><span class="lang-ro">Origine</span><span class="lang-en">Origin</span><b class="lang-ro">Ulița Mare</b><b class="lang-en">The Great Street</b></div>
       <div class="f"><span class="lang-ro">Acces</span><span class="lang-en">Access</span><b class="lang-ro">Liber</b><b class="lang-en">Free</b></div>
     </div>
+  </div>
+  <div class="histframe">
+    <span class="he">Sec. XVII · <span class="lang-ro">File de istorie</span><span class="lang-en">A page of history</span></span>
+    <h3 class="lang-ro">„Ulița Mare" · Ulița a Boierilor</h3><h3 class="lang-en">The "Great Street" · the Boyards' Lane</h3>
+    <p class="lang-ro">În secolul al XVII-lea, bulevardul de azi se numea „Ulița Mare" sau „Ulița a Boierilor": de o parte și de alta se înșiruiau curțile marilor familii boierești, cu atenanse, ogrăzi și grădini întinse. Aceeași axă leagă și astăzi Piața Unirii de Piața Palatului — iar o bună parte din ea a fost pietonalizată din 2012 și extinsă treptat, devenind traseul de plimbare al centrului istoric.</p>
+    <p class="lang-en">In the 17th century, today's boulevard was known as the „Great Street" or the „Boyards' Lane": on either side stretched the courts of the great boyar families, with their outbuildings, yards and sprawling gardens. The same axis still links Union Square to the Palace Square today — and much of it has been pedestrianised since 2012 and gradually extended, becoming the historic centre's promenade.</p>
   </div>
 </div></section>
 <section id="vezi" class="alt"><div class="wrap">
@@ -149,6 +182,62 @@ footer{background:#0f1728;color:rgba(244,236,216,.6);padding:30px 0;text-align:c
       </ul>
     </div>
   </div>
+</div></section>
+<section id="planifica"><div class="wrap">
+  <div class="sec-head aff-intro"><div class="escapada-stamp" title="Escapada Iași"><svg viewBox="0 0 200 200" role="img" aria-label="Escapada Iași">
+      <defs>
+        <radialGradient id="esDome" cx="50%" cy="46%" r="62%"><stop offset="0%" stop-color="#ecca82"/><stop offset="70%" stop-color="#cf9a34"/><stop offset="100%" stop-color="#a9761f"/></radialGradient>
+        <path id="esTop" d="M 28,100 A 72,72 0 0 1 172,100"/>
+        <path id="esBot" d="M 172,102 A 72,72 0 0 1 28,102"/>
+      </defs>
+      <circle cx="100" cy="100" r="93" fill="url(#esDome)" stroke="#141d33" stroke-width="3.5"/>
+      <circle cx="100" cy="100" r="84" fill="none" stroke="#141d33" stroke-width="1.3" opacity=".55"/>
+      <circle cx="100" cy="100" r="88" fill="none" stroke="#141d33" stroke-width="1.1" stroke-dasharray="1.4 6" stroke-linecap="round" opacity=".6"/>
+      <text fill="#141d33" font-family="'Jost',sans-serif" font-weight="600" font-size="12.5" letter-spacing="3.5"><textPath href="#esTop" startOffset="50%" text-anchor="middle">VIZITEAZĂ ROMÂNIA</textPath></text>
+      <text fill="#141d33" font-family="'Jost',sans-serif" font-weight="600" font-size="11" letter-spacing="3.5"><textPath href="#esBot" startOffset="50%" text-anchor="middle">★ 2026 ★</textPath></text>
+      <text x="100" y="93" text-anchor="middle" fill="#141d33" font-family="'Jost',sans-serif" font-weight="600" font-size="10.5" letter-spacing="4">SEJUR</text>
+      <text x="100" y="126" text-anchor="middle" fill="#141d33" font-family="'Cormorant Garamond',serif" font-weight="700" font-size="40" letter-spacing="1">IAȘI</text>
+    </svg></div><span class="overline"><span class="lang-ro">Escapadă la Iași</span><span class="lang-en">Getaway to Iași</span></span><h2><span class="lang-ro">Vino să calci chiar tu pe pavajul lui</span><span class="lang-en">Come walk this boulevard yourself</span></h2>
+    <p class="lang-ro">Fotografiile nu-i fac dreptate: bulevardul se simte cu adevărat abia când te plimbi pe el la lăsarea serii, cu o cafea în mână. Organizează-ți escapada la Iași chiar în weekendul ăsta — totul într-un singur loc.</p>
+    <p class="lang-en">Photos don't do it justice: the boulevard truly comes alive only when you stroll it at dusk, coffee in hand. Plan your Iași getaway this very weekend — everything in one place.</p></div>
+  <div class="aff-grid">
+    <div class="acard"><span class="em">✈️</span><h3 class="lang-ro">Zboruri spre Iași</h3><h3 class="lang-en">Flights to Iași</h3>
+      <p class="lang-ro">Caută zboruri către Aeroportul Iași (IAS) din orice oraș. Bilete dus-întors la cele mai bune prețuri.</p>
+      <p class="lang-en">Search flights to Iași Airport (IAS) from any city. Round-trips at the best fares.</p>
+      <a href="https://www.aviasales.com/?marker=768932&sub_id=bulevard_flight" target="_blank" rel="sponsored noopener" class="btn btn-gold"><span class="lang-ro">Caută zboruri</span><span class="lang-en">Search flights</span></a>
+    </div>
+    <div class="acard"><span class="em">🔑</span><h3 class="lang-ro">Cazare în centru</h3><h3 class="lang-en">Stay in the centre</h3>
+      <p class="lang-ro">Hoteluri și apartamente chiar pe bulevard sau la câțiva pași — te trezești în inima orașului.</p>
+      <p class="lang-en">Hotels and apartments right on the boulevard or steps away — wake up in the heart of the city.</p>
+      <a href="https://search.hotellook.com/?marker=768932&sub_id=bulevard_hotel&destination=Iasi%2C%20Romania" target="_blank" rel="sponsored noopener" class="btn btn-gold"><span class="lang-ro">Vezi hoteluri</span><span class="lang-en">Find hotels</span></a>
+    </div>
+    <div class="acard"><span class="em">🚕</span><h3 class="lang-ro">Transfer de la aeroport</h3><h3 class="lang-en">Airport transfer</h3>
+      <p class="lang-ro">Ajungi în centru fără bătăi de cap: transfer privat de la aeroport, rezervat din timp la preț fix.</p>
+      <p class="lang-en">Reach the centre stress-free: a private airport transfer, booked ahead at a fixed price.</p>
+      <a href="https://kiwitaxi.com/?marker=768932&sub_id=bulevard_transfer" target="_blank" rel="sponsored noopener" class="btn btn-gold"><span class="lang-ro">Rezervă transfer</span><span class="lang-en">Book a transfer</span></a>
+    </div>
+    <div class="acard"><span class="em">🚗</span><h3 class="lang-ro">Închiriere mașină</h3><h3 class="lang-en">Rent a car</h3>
+      <p class="lang-ro">Vrei să explorezi și împrejurimile — Copou, mănăstirile? O mașină închiriată îți dă libertate totală.</p>
+      <p class="lang-en">Want to explore beyond the centre — Copou, the monasteries? A rental car gives you full freedom.</p>
+      <a href="https://www.discovercars.com/?marker=768932&sub_id=bulevard_car" target="_blank" rel="sponsored noopener" class="btn btn-gold"><span class="lang-ro">Închiriază mașină</span><span class="lang-en">Rent a car</span></a>
+    </div>
+    <div class="acard"><span class="em">🎟️</span><h3 class="lang-ro">Tururi & activități</h3><h3 class="lang-en">Tours & activities</h3>
+      <p class="lang-ro">Tururi ghidate, bilete și experiențe în Iași — rezervă din timp, fără cozi la fața locului.</p>
+      <p class="lang-en">Guided tours, tickets and experiences in Iași — book ahead and skip the queues.</p>
+      <a href="https://www.getyourguide.com/?marker=768932&sub_id=bulevard_tours" target="_blank" rel="sponsored noopener" class="btn btn-gold"><span class="lang-ro">Descoperă tururi</span><span class="lang-en">Browse tours</span></a>
+    </div>
+    <div class="acard"><span class="em">🛡️</span><h3 class="lang-ro">Asigurare de călătorie</h3><h3 class="lang-en">Travel insurance</h3>
+      <p class="lang-ro">Liniște pe drum: asigurare medicală și de bagaje pentru escapada ta, de la câțiva lei pe zi.</p>
+      <p class="lang-en">Peace of mind on the road: medical and baggage cover for your trip, from a few lei a day.</p>
+      <a href="https://ektatraveling.com/?marker=768932&sub_id=bulevard_insurance" target="_blank" rel="sponsored noopener" class="btn btn-gold"><span class="lang-ro">Fă-ți asigurare</span><span class="lang-en">Get insured</span></a>
+    </div>
+    <div class="acard"><span class="em">📱</span><h3 class="lang-ro">eSIM — internet la sosire</h3><h3 class="lang-en">eSIM — data on arrival</h3>
+      <p class="lang-ro">Date mobile din secunda în care aterizezi, fără să schimbi cartela. Activezi eSIM-ul înainte de plecare.</p>
+      <p class="lang-en">Mobile data the moment you land, no SIM swapping. Activate your eSIM before you leave.</p>
+      <a href="https://www.airalo.com/?marker=768932&sub_id=bulevard_esim" target="_blank" rel="sponsored noopener" class="btn btn-gold"><span class="lang-ro">Ia un eSIM</span><span class="lang-en">Get an eSIM</span></a>
+    </div>
+  </div>
+  <p class="aff-disc"><span class="lang-ro">Unele linkuri de mai sus sunt linkuri de partener. Dacă rezervi prin ele, este posibil să primim un mic comision, fără niciun cost suplimentar pentru tine.</span><span class="lang-en">Some links above are partner (affiliate) links. If you book through them, we may earn a small commission at no extra cost to you.</span></p>
 </div></section>
 <section id="contact"><div class="wrap">
   <div class="sec-head"><span class="overline gold-text"><span class="lang-ro">Cum ajungi</span><span class="lang-en">How to reach it</span></span><h2><span class="lang-ro">Poziție</span><span class="lang-en">Location</span></h2>
