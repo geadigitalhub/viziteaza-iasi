@@ -15,7 +15,9 @@ body{font-family:'Jost',system-ui,sans-serif;color:var(--ink);background:var(--p
 h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.1}
 a{color:inherit;text-decoration:none}.wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px}
 .gold-text{color:var(--gold)}.script{font-style:italic;font-weight:500}
-.lang-en{display:none}body.en .lang-ro{display:none}body.en .lang-en{display:inline}
+.lang-en{display:none!important}body.en .lang-ro{display:none!important}body.en .lang-en{display:inline!important}
+body.en h1.lang-en,body.en h2.lang-en,body.en h3.lang-en,body.en h4.lang-en,body.en p.lang-en,body.en b.lang-en,body.en .tag.lang-en,body.en li.lang-en{display:block!important}
+.tp{color:var(--accent);font-weight:600;border-bottom:1px solid var(--line)}.tp:hover{color:var(--gold)}
 .overline{font-family:'Jost';font-weight:600;letter-spacing:.32em;text-transform:uppercase;font-size:.7rem}
 header.nav{position:sticky;top:0;z-index:60;background:rgba(20,29,51,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;height:70px}
@@ -175,6 +177,15 @@ footer{background:#0f1728;color:rgba(244,236,216,.6);padding:30px 0;text-align:c
     <p class="note lang-en">Seasonal operators: AnimaWings, HiSky, Sky Express, Corendon, Pegasus, AlbaStar. Palma de Mallorca: Sundays, 7 June – 27 September 2026.</p>
   </div>
   <p class="note"><span class="lang-ro">Destinațiile și frecvențele se schimbă des. Verifică orarul actualizat și zborurile în timp real pe aeroport-iasi.ro.</span><span class="lang-en">Destinations and frequencies change often. Check the updated schedule and live flights on aeroport-iasi.ro.</span></p>
+  <div class="freebar" style="border-left-color:var(--gold);margin-top:24px">
+    <span class="em">✈️</span>
+    <div>
+      <b class="lang-ro">Compară zborurile spre Iași</b><b class="lang-en">Compare flights to Iași</b>
+      <small class="lang-ro">Toate companiile de mai sus, într-o singură căutare — prețuri și date actualizate, ca să prinzi cea mai bună combinație.</small>
+      <small class="lang-en">All the airlines above in one search — up-to-date prices and dates, so you catch the best combination.</small>
+    </div>
+    <a class="btn btn-gold" style="margin-left:auto" href="https://www.aviasales.com/?marker=768932" target="_blank" rel="sponsored nofollow"><span class="lang-ro">Caută zboruri</span><span class="lang-en">Search flights</span></a>
+  </div>
 </div></section>
 <section id="transport"><div class="wrap">
   <div class="sec-head"><span class="overline"><span class="lang-ro">Din aeroport în oraș</span><span class="lang-en">From airport to city</span></span><h2><span class="lang-ro">Cum ajungi în Iași</span><span class="lang-en">Getting into Iași</span></h2></div>
@@ -196,6 +207,19 @@ footer{background:#0f1728;color:rgba(244,236,216,.6);padding:30px 0;text-align:c
       </ul>
     </div>
   </div>
+  <div class="cta-row">
+    <a class="btn btn-gold" href="https://kiwitaxi.com/" target="_blank" rel="sponsored nofollow"><span class="lang-ro">Rezervă un transfer privat</span><span class="lang-en">Book a private transfer</span></a>
+    <a class="btn btn-outline" style="border-color:var(--navy);color:var(--navy)" href="https://www.discovercars.com/" target="_blank" rel="sponsored nofollow"><span class="lang-ro">Închiriază o mașină</span><span class="lang-en">Rent a car</span></a>
+  </div>
+  <div class="freebar" style="border-left-color:var(--gold);margin-top:22px">
+    <span class="em">🏨</span>
+    <div>
+      <b class="lang-ro">Cazare în Iași, aproape de tot</b><b class="lang-en">Where to stay in Iași</b>
+      <small class="lang-ro">Hoteluri și apartamente în centru sau lângă Palas. Iar pentru drum: <a class="tp" href="https://www.airalo.com/" target="_blank" rel="sponsored nofollow">eSIM de călătorie</a>, <a class="tp" href="https://ektatraveling.com/" target="_blank" rel="sponsored nofollow">asigurare</a> și, dacă zborul a întârziat, poți <a class="tp" href="https://compensair.com/" target="_blank" rel="sponsored nofollow">verifica o despăgubire</a>.</small>
+      <small class="lang-en">Hotels and apartments in the centre or near Palas. For the trip: a <a class="tp" href="https://www.airalo.com/" target="_blank" rel="sponsored nofollow">travel eSIM</a>, <a class="tp" href="https://ektatraveling.com/" target="_blank" rel="sponsored nofollow">insurance</a> and, if your flight was delayed, you can <a class="tp" href="https://compensair.com/" target="_blank" rel="sponsored nofollow">check for compensation</a>.</small>
+    </div>
+    <a class="btn btn-gold" style="margin-left:auto" href="https://www.booking.com/city/ro/iasi.html" target="_blank" rel="sponsored nofollow"><span class="lang-ro">Vezi cazare</span><span class="lang-en">See stays</span></a>
+  </div>
 </div></section>
 <section id="contact"><div class="wrap">
   <div class="sec-head"><span class="overline gold-text"><span class="lang-ro">Informații</span><span class="lang-en">Information</span></span><h2>Contact</h2>
@@ -210,6 +234,7 @@ footer{background:#0f1728;color:rgba(244,236,216,.6);padding:30px 0;text-align:c
     <a href="https://www.aeroport-iasi.ro" target="_blank" rel="noopener" class="btn btn-gold"><span class="lang-ro">Zboruri în timp real</span><span class="lang-en">Live flights</span></a>
     <a href="iasi.html" class="btn btn-outline"><span class="lang-ro">← Descoperă Iașul</span><span class="lang-en">← Discover Iași</span></a>
   </div>
+  <p class="disclaimer"><span class="lang-ro">Această pagină conține linkuri de afiliere. Dacă rezervi prin ele, susții acest ghid fără costuri suplimentare — prețul rămâne același.</span><span class="lang-en">This page contains affiliate links. If you book through them, you support this guide at no extra cost — the price stays the same.</span></p>
   <p class="disclaimer"><span class="lang-ro">Companii, destinații și orare conform surselor publice (iulie 2026). Se schimbă frecvent — verifică pe aeroport-iasi.ro înainte de a-ți face planurile.</span><span class="lang-en">Airlines, destinations and schedules per public sources (July 2026). They change often — check aeroport-iasi.ro before planning.</span></p>
 </div></section>
 <footer><div class="wrap">© 2026 România · Iași — <span class="lang-ro">Ghid de călătorie · Demo</span><span class="lang-en">Travel guide · Demo</span> · <a href="iasi.html">Iași</a></div></footer>
