@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fântâna interactivă & Esplanada Teatrului Național Iași · Apă, lumină și muzică</title>
+<meta name="description" content="Fântâna interactivă din fața Teatrului Național „Vasile Alecsandri” din Iași: apă, lumină și muzică pe acordurile lui Enescu, Porumbescu, Hora Unirii și Queen. Esplanada redeschisă în octombrie 2025. RO/EN.">
+<meta name="keywords" content="Fântâna interactivă Iași, Esplanada Teatrului Național, Teatrul Național Vasile Alecsandri, jocuri de apă Iași, parcul teatrului">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#141d33;--navy-3:#243459;--gold:#C9A24B;--gold-2:#E3C778;--cream:#F4ECD8;--cream-2:#EFE4C9;--paper:#FBF6EA;--leaf:#3f7d54;--leaf-2:#5a9c6f;--teal:#3E7C8C;--ink:#1a2033;--muted:#6b7794;--line:rgba(201,162,75,.28);--line-soft:rgba(20,29,51,.1);--r:16px;--maxw:1080px}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:'Jost',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.7;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.1}
+a{color:inherit;text-decoration:none}.wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px}
+.gold-text{color:var(--gold)}.script{font-style:italic;font-weight:500}
+.lang-en{display:none}body.en .lang-ro{display:none}body.en .lang-en{display:inline}
+.overline{font-family:'Jost';font-weight:600;letter-spacing:.32em;text-transform:uppercase;font-size:.7rem}
+header.nav{position:sticky;top:0;z-index:60;background:rgba(20,29,51,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{display:flex;flex-direction:column;line-height:1}
+.logo b{font-family:'Cormorant Garamond';font-size:1.32rem;color:var(--cream);font-weight:700;letter-spacing:.5px}
+.logo small{letter-spacing:.3em;text-transform:uppercase;font-size:.54rem;color:var(--gold);margin-top:3px}
+.nav-links{display:flex;gap:26px}
+.nav-links a{font-weight:500;font-size:.8rem;letter-spacing:.05em;color:var(--cream);opacity:.8;text-transform:uppercase;transition:.2s}
+.nav-links a:hover{opacity:1;color:var(--gold-2)}
+.langsw{display:flex;border:1px solid var(--line);border-radius:30px;padding:3px}
+.langsw button{border:0;background:transparent;padding:5px 11px;border-radius:24px;cursor:pointer;color:var(--cream);font-family:'Jost';font-weight:600;font-size:.72rem;letter-spacing:.08em;transition:.2s}
+.langsw button.active{background:var(--gold);color:var(--navy)}
+@media(max-width:820px){.nav-links{display:none}}
+.hero{position:relative;background:var(--navy);color:var(--cream);padding:70px 0 64px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(680px 420px at 82% 0%,rgba(62,124,140,.55),transparent 62%)}
+.hero::after{content:"";position:absolute;inset:0;opacity:.4;background-image:radial-gradient(rgba(201,162,75,.14) 1px,transparent 1px);background-size:24px 24px;-webkit-mask-image:linear-gradient(180deg,#000,transparent);mask-image:linear-gradient(180deg,#000,transparent)}
+.hero .wrap{position:relative;z-index:2}
+.crumb{font-size:.78rem;color:rgba(244,236,216,.6);margin-bottom:20px}.crumb a:hover{color:var(--gold-2)}
+.hero .overline{color:var(--gold-2);display:inline-block;margin-bottom:16px}
+.hero h1{font-size:clamp(2.4rem,5.4vw,4rem);color:var(--cream)}.hero h1 .script{color:var(--teal)}
+.hero p{color:rgba(244,236,216,.78);font-weight:300;font-size:1.1rem;max-width:58ch;margin:20px 0 26px}
+.badges{display:flex;gap:10px;flex-wrap:wrap}
+.badge{border:1px solid var(--line);border-radius:30px;padding:8px 16px;font-size:.76rem;color:var(--cream);display:flex;align-items:center;gap:8px}
+.badge .d{width:7px;height:7px;border-radius:50%;background:var(--teal)}
+.quickbar{background:linear-gradient(120deg,var(--teal),#5AA3B4);color:#fff}
+.quickbar .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px;padding:20px 26px}
+.qi{display:flex;gap:12px;align-items:center}.qi .em{font-size:1.4rem}
+.qi b{display:block;font-size:.92rem;font-weight:600}.qi small{font-size:.74rem;opacity:.86}
+section{padding:62px 0}.sec-head{margin-bottom:32px}
+.sec-head .overline{color:var(--gold);display:block;margin-bottom:10px}
+.sec-head h2{font-size:clamp(1.9rem,3.6vw,2.6rem);color:var(--navy)}
+.sec-head p{color:var(--muted);font-weight:300;margin-top:8px;max-width:62ch}.alt{background:var(--cream-2)}
+.about-grid{display:grid;grid-template-columns:1.3fr .9fr;gap:34px;align-items:center}
+.about-grid p{color:var(--ink);font-weight:300;margin-bottom:14px}
+.facts{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px 26px}
+.facts .f{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px solid var(--line-soft);font-size:.92rem}
+.facts .f:last-child{border-bottom:0}.facts .f span{color:var(--muted)}
+.facts .f b{color:var(--navy);font-family:'Cormorant Garamond';font-size:1.12rem;text-align:right}
+.hours-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.hcard{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px 28px}
+.hcard h3{font-size:1.35rem;color:var(--navy);margin-bottom:4px}
+.hcard .tag{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);font-weight:600;margin-bottom:16px;display:block}
+.hrow{display:flex;justify-content:space-between;gap:14px;padding:10px 0;border-bottom:1px solid var(--line-soft);font-size:.92rem}
+.hrow:last-child{border-bottom:0}.hrow span:first-child{color:var(--muted)}
+.hrow b{color:var(--navy);font-weight:600;text-align:right}.hrow.closed b{color:#A8362E}
+.note{margin-top:14px;font-size:.82rem;color:var(--muted);font-weight:300;font-style:italic}
+.ptable{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-bottom:18px}
+.ptable .ph{background:var(--navy);color:var(--cream);padding:16px 22px}
+.ptable .ph h4{font-size:1.15rem;color:var(--cream)}
+.ptable .ph small{color:rgba(244,236,216,.7);font-weight:300;font-size:.8rem;display:block;margin-top:2px}
+table{width:100%;border-collapse:collapse}th,td{padding:12px 22px;text-align:left;font-size:.9rem}
+thead th{background:var(--cream-2);color:var(--navy);font-weight:600;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
+thead th:not(:first-child),tbody td:not(:first-child){text-align:right;width:34%}
+tbody tr{border-top:1px solid var(--line-soft)}tbody td:first-child{color:var(--muted)}tbody td b{color:var(--navy);font-weight:600}
+.hi{color:var(--teal);font-weight:700}
+.freebar{background:#fff;border:1px solid var(--line);border-left:4px solid var(--teal);border-radius:var(--r);padding:22px 26px;display:flex;gap:16px;align-items:center;margin-bottom:20px}
+.freebar .em{font-size:1.8rem}.freebar b{color:var(--navy);font-family:'Cormorant Garamond';font-size:1.3rem}
+.freebar small{color:var(--muted);font-weight:300;display:block;font-size:.9rem}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.lbox{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px 28px}
+.lbox h3{font-size:1.35rem;color:var(--navy);margin-bottom:14px}.lbox ul{list-style:none}
+.lbox ul li{position:relative;padding:8px 0 8px 26px;font-size:.9rem;border-bottom:1px solid var(--line-soft);font-weight:300}
+.lbox ul li:last-child{border-bottom:0}.lbox ul li::before{content:"✦";position:absolute;left:0;color:var(--teal);font-size:.8rem;top:9px}
+#contact{background:var(--navy);color:var(--cream)}
+#contact .sec-head h2{color:var(--cream)}#contact .sec-head p{color:rgba(244,236,216,.7)}
+.cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.cc{border:1px solid var(--line);border-radius:var(--r);padding:24px 26px}
+.cc .overline{color:var(--gold-2);display:block;margin-bottom:12px}
+.cc b{color:var(--cream);font-size:1.02rem;display:block;font-weight:500}
+.cc small{color:rgba(244,236,216,.68);font-weight:300;font-size:.86rem;display:block;margin-top:4px}.cc a{color:var(--gold-2)}
+.cta-row{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:'Jost';font-weight:600;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;padding:14px 26px;border-radius:2px;cursor:pointer;border:0;transition:.3s}
+.btn-gold{background:linear-gradient(120deg,var(--gold),var(--gold-2));color:var(--navy)}.btn-gold:hover{transform:translateY(-2px)}
+.btn-outline{background:transparent;border:1px solid var(--gold);color:var(--gold-2)}.btn-outline:hover{background:var(--gold);color:var(--navy)}
+footer{background:#0f1728;color:rgba(244,236,216,.6);padding:30px 0;text-align:center;font-size:.82rem;font-weight:300}footer a{color:var(--gold-2)}
+.disclaimer{font-size:.78rem;color:var(--muted);font-style:italic;text-align:center;margin-top:24px;font-weight:300}
+@media(max-width:820px){.about-grid,.hours-grid,.cgrid,.two{grid-template-columns:1fr}}
+/* --- jeturi de apa in hero --- */
+.jets{position:absolute;left:0;right:0;bottom:0;height:110px;pointer-events:none;opacity:.42;z-index:1}
+.jet{position:absolute;bottom:0;width:2px;background:linear-gradient(to top,rgba(227,199,120,.6),rgba(244,236,216,0));border-radius:2px 2px 0 0;animation:spurt 3.4s ease-in-out infinite}
+@keyframes spurt{0%,100%{height:16px;opacity:.3}50%{height:76px;opacity:.85}}
+@media(prefers-reduced-motion:reduce){.jet{animation:none;height:34px}}
+/* --- cronologie --- */
+.tline{border-left:1px solid var(--line);margin-top:6px}
+.tl{position:relative;padding:0 0 20px 26px}
+.tl:last-child{padding-bottom:0}
+.tl::before{content:"";position:absolute;left:-5px;top:10px;width:9px;height:9px;border-radius:50%;background:var(--gold)}
+.tl.hi::before{background:var(--teal);box-shadow:0 0 0 4px rgba(62,124,140,.18)}
+.tl .when{display:block;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:2px}
+.tl .what{font-size:.92rem;font-weight:300}
+.tl.hi .what{color:var(--navy);font-weight:500}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="viziteaza-romania-iasi.html" class="logo"><b>România <span class="gold-text">·</span> Iași</b><small class="lang-ro">Ghid de călătorie</small><small class="lang-en">Travel guide</small></a>
+    <div class="nav-links">
+      <a href="#despre"><span class="lang-ro">Despre</span><span class="lang-en">About</span></a>
+      <a href="#fantana"><span class="lang-ro">Fântâna</span><span class="lang-en">The fountain</span></a>
+      <a href="#muzica"><span class="lang-ro">Muzica</span><span class="lang-en">Music</span></a>
+      <a href="#vezi"><span class="lang-ro">Ce vezi</span><span class="lang-en">Highlights</span></a>
+      <a href="iasi.html">Iași</a>
+    </div>
+    <div class="langsw"><button data-lang="ro" class="active" onclick="setLang('ro')">RO</button><button data-lang="en" onclick="setLang('en')">EN</button></div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="crumb"><a href="viziteaza-romania-iasi.html">România · Iași</a> &nbsp;›&nbsp; <a href="iasi.html">Iași</a> &nbsp;›&nbsp; <span class="gold-text lang-ro">Fântâna interactivă</span><span class="gold-text lang-en">The interactive fountain</span></div>
+    <span class="overline">💧 <span class="lang-ro">Esplanada Teatrului Național · din 2025</span><span class="lang-en">The National Theatre esplanade · since 2025</span></span>
+    <h1><span class="lang-ro">Fântâna interactivă &</span><span class="lang-en">The interactive fountain &</span> <span class="script"><span class="lang-ro">Esplanada Teatrului Național</span><span class="lang-en">the National Theatre esplanade</span></span></h1>
+    <p class="lang-ro">Apă, lumină și muzică, sincronizate în inima capitalei istorice a României — sub ferestrele celui dintâi Teatru Național din țară, într-un parc readus la viață după patru ani de lucrări.</p>
+    <p class="lang-en">Water, light and music in sync, in the heart of Romania's historic capital — beneath the windows of the country's first National Theatre, in a park brought back to life after four years of works.</p>
+    <div class="badges">
+      <span class="badge"><span class="d"></span><span class="lang-ro">Intrare liberă</span><span class="lang-en">Free entry</span></span>
+      <span class="badge"><span class="d"></span><span class="lang-ro">Apă · lumină · muzică</span><span class="lang-en">Water · light · music</span></span>
+      <span class="badge"><span class="d"></span><span class="lang-ro">Redeschisă 11 oct. 2025</span><span class="lang-en">Reopened 11 Oct. 2025</span></span>
+      <span class="badge"><span class="d"></span>primaria-iasi.ro</span>
+    </div>
+  </div>
+  <div class="jets" id="jets"></div>
+</section>
+
+<div class="quickbar">
+  <div class="wrap">
+    <div class="qi"><span class="em">💧</span><div><b class="lang-ro">Fântâna interactivă</b><b class="lang-en">Interactive fountain</b><small class="lang-ro">Jocuri de apă, lumini și muzică</small><small class="lang-en">Water jets, lights and music</small></div></div>
+    <div class="qi"><span class="em">🎭</span><div><b class="lang-ro">Teatrul Național</b><b class="lang-en">National Theatre</b><small class="lang-ro">Cel dintâi din România</small><small class="lang-en">The first in Romania</small></div></div>
+    <div class="qi"><span class="em">🏛️</span><div><b class="lang-ro">Muzeu subteran</b><b class="lang-en">Underground museum</b><small class="lang-ro">Vestigii sub tavan de sticlă</small><small class="lang-en">Ruins under a glass ceiling</small></div></div>
+    <div class="qi"><span class="em">🌳</span><div><b class="lang-ro">255 de arbori</b><b class="lang-en">255 trees</b><small class="lang-ro">Peste 7.000 m² spații verzi</small><small class="lang-en">Over 7,000 m² of greenery</small></div></div>
+  </div>
+</div>
+
+<section id="despre">
+  <div class="wrap">
+    <div class="sec-head"><span class="overline"><span class="lang-ro">Despre</span><span class="lang-en">About</span></span><h2><span class="lang-ro">Cel mai nou spațiu cultural al Iașului</span><span class="lang-en">Iași's newest cultural space</span></h2></div>
+    <div class="about-grid">
+      <div>
+        <p class="lang-ro">Între clădirea impunătoare a Teatrului Național „Vasile Alecsandri” și Catedrala Mitropolitană se întinde esplanada redeschisă în octombrie 2025 — cel mai mare parc din centrul istoric al Iașului, readus la viață după patru ani de lucrări.</p>
+        <p class="lang-ro">Piesa centrală este fântâna interactivă: un spectacol de apă, lumină și muzică, sincronizate în ritmuri variate. Esplanada face parte din Axa Culturală pe care orașul o construiește între Catedrala Mitropolitană, Teatrul Național și Filarmonică.</p>
+        <p class="lang-en">Between the imposing building of the "Vasile Alecsandri" National Theatre and the Metropolitan Cathedral lies the esplanade reopened in October 2025 — the largest park in Iași's historic centre, brought back to life after four years of works.</p>
+        <p class="lang-en">Its centrepiece is the interactive fountain: a show of water, light and music, synchronised in varied rhythms. The esplanade is part of the Cultural Axis the city is building between the Metropolitan Cathedral, the National Theatre and the Philharmonic.</p>
+      </div>
+      <div class="facts">
+        <div class="f"><span class="lang-ro">Redeschisă</span><span class="lang-en">Reopened</span><b>11.10.2025</b></div>
+        <div class="f"><span class="lang-ro">Suprafață</span><span class="lang-en">Area</span><b>9.700 m²</b></div>
+        <div class="f"><span class="lang-ro">Spații verzi</span><span class="lang-en">Green space</span><b>7.000+ m²</b></div>
+        <div class="f"><span class="lang-ro">Investiție</span><span class="lang-en">Investment</span><b><span class="lang-ro">18,35 mil. lei</span><span class="lang-en">18.35 mil. lei</span></b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="fantana" class="alt">
+  <div class="wrap">
+    <div class="sec-head"><span class="overline"><span class="lang-ro">Cum funcționează</span><span class="lang-en">How it works</span></span><h2><span class="lang-ro">Nu o fântână oarecare</span><span class="lang-en">Not just any fountain</span></h2>
+      <p class="lang-ro">Apa devine, practic, un instrument.</p>
+      <p class="lang-en">The water becomes, in effect, an instrument.</p></div>
+    <div class="hours-grid">
+      <div class="hcard"><span class="tag lang-ro">Fântâna interactivă</span><span class="tag lang-en">Interactive fountain</span><h3 class="lang-ro">Un ansamblu programabil</h3><h3 class="lang-en">A programmable ensemble</h3>
+        <div class="hrow"><span class="lang-ro">Tip</span><span class="lang-en">Type</span><b class="lang-ro">Jocuri de apă</b><b class="lang-en">Water shows</b></div>
+        <div class="hrow"><span class="lang-ro">Sincronizare</span><span class="lang-en">Sync</span><b class="lang-ro">Apă · lumină · sunet</b><b class="lang-en">Water · light · sound</b></div>
+        <div class="hrow"><span class="lang-ro">Acces</span><span class="lang-en">Access</span><b class="lang-ro">Liber</b><b class="lang-en">Free</b></div>
+        <p class="note lang-ro">Nu este o fântână arteziană clasică, cu jet continuu: jeturile își schimbă înălțimea și ritmul după partitura sonoră, iar iluminarea le însoțește cromatic.</p>
+        <p class="note lang-en">Not a classic fountain with a continuous jet: the jets change height and rhythm following the score, while the lighting accompanies them in colour.</p>
+      </div>
+      <div class="hcard"><span class="tag lang-ro">Alte elemente de apă</span><span class="tag lang-en">Other water features</span><h3 class="lang-ro">Fântânile cu cascadă</h3><h3 class="lang-en">The cascade fountains</h3>
+        <div class="hrow"><span class="lang-ro">Tip</span><span class="lang-en">Type</span><b class="lang-ro">Curgere continuă</b><b class="lang-en">Continuous flow</b></div>
+        <div class="hrow"><span class="lang-ro">Rol</span><span class="lang-en">Role</span><b class="lang-ro">Decor & răcorire</b><b class="lang-en">Decor & cooling</b></div>
+        <div class="hrow"><span class="lang-ro">Vara, la umbră</span><span class="lang-en">In summer shade</span><b class="lang-ro">−3…−5 °C</b><b class="lang-en">−3…−5 °C</b></div>
+        <p class="note lang-ro">Jeturile înalte ionizează aerul, iar umbra platanilor maturi coboară temperatura cu 3–5 grade: ansamblul apă–vegetație este un regulator termic real, nu doar decorativ.</p>
+        <p class="note lang-en">The high jets ionise the air, and the shade of the mature plane trees lowers the temperature by 3–5 degrees: the water–vegetation ensemble is a real thermal regulator, not merely decorative.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="muzica">
+  <div class="wrap">
+    <div class="sec-head"><span class="overline"><span class="lang-ro">Repertoriul</span><span class="lang-en">Repertoire</span></span><h2><span class="lang-ro">Pe ce muzică dansează apa</span><span class="lang-en">What music the water dances to</span></h2>
+      <p class="lang-ro">O alegere deliberat mixtă, care leagă patrimoniul muzical românesc de cultura pop internațională.</p>
+      <p class="lang-en">A deliberately mixed selection, linking Romanian musical heritage to international pop culture.</p></div>
+    <div class="ptable">
+      <div class="ph"><h4 class="lang-ro">Fântâna interactivă — repertoriu</h4><h4 class="lang-en">Interactive fountain — repertoire</h4><small class="lang-ro">Piesele pe acordurile cărora evoluează jocurile de apă</small><small class="lang-en">The pieces the water shows are choreographed to</small></div>
+      <table><thead><tr><th class="lang-ro">Compozitor / formație</th><th class="lang-en">Composer / band</th><th class="lang-ro">De ce contează</th><th class="lang-en">Why it matters</th></tr></thead>
+      <tbody>
+        <tr><td><b>George Enescu</b></td><td><span class="lang-ro">Cea mai importantă referință a muzicii culte românești</span><span class="lang-en">The foremost reference of Romanian classical music</span></td></tr>
+        <tr><td><b>Ciprian Porumbescu</b></td><td><span class="lang-ro">Romantism românesc, cu rezonanță locală puternică</span><span class="lang-en">Romanian romanticism, with strong local resonance</span></td></tr>
+        <tr><td><b class="lang-ro">Hora Unirii</b><b class="lang-en">Hora Unirii</b></td><td class="hi"><span class="lang-ro">Încărcătură simbolică aparte la Iași, orașul Unirii</span><span class="lang-en">A special symbolic charge in Iași, the city of the Union</span></td></tr>
+        <tr><td><b>Queen</b></td><td><span class="lang-ro">Deschiderea către publicul larg și tânăr</span><span class="lang-en">The opening towards a broad, younger audience</span></td></tr>
+      </tbody></table>
+    </div>
+    <div class="freebar"><span class="em">💧</span><div><b class="lang-ro">Intrare liberă, oricând</b><b class="lang-en">Free entry, anytime</b><small class="lang-ro">Esplanada este spațiu public pietonal. Cel mai frumos se vede la lăsarea serii, când jocul de lumini apare în toată amploarea.</small><small class="lang-en">The esplanade is a public pedestrian space. It looks best at dusk, when the play of lights comes into its own.</small></div></div>
+    <p class="note"><span class="lang-ro">Orarul reprizelor fântânii nu este comunicat public de administrație. Pentru programul la zi, informează-te din sursele oficiale ale Primăriei Municipiului Iași.</span><span class="lang-en">The schedule of the fountain's shows is not publicly communicated by the administration. For up-to-date timings, please check the official sources of Iași City Hall.</span></p>
+  </div>
+</section>
+
+<section id="vezi" class="alt">
+  <div class="wrap">
+    <div class="sec-head"><span class="overline">Highlights</span><h2><span class="lang-ro">Ce să vezi pe esplanadă</span><span class="lang-en">What to see on the esplanade</span></h2></div>
+    <div class="two">
+      <div class="lbox"><h3 class="lang-ro">În parc</h3><h3 class="lang-en">In the park</h3>
+        <ul>
+          <li><span class="lang-ro">Fântâna interactivă — apă, lumină și muzică sincronizate</span><span class="lang-en">The interactive fountain — water, light and music in sync</span></li>
+          <li><span class="lang-ro">Muzeul subteran — vestigii sub un tavan de sticlă</span><span class="lang-en">The underground museum — ruins under a glass ceiling</span></li>
+          <li><span class="lang-ro">Teatrul de vară în aer liber și gradena circulară</span><span class="lang-en">The open-air summer theatre and circular seating</span></li>
+          <li><span class="lang-ro">Platanii monumentali — 15 declarați monumente ale naturii</span><span class="lang-en">The monumental plane trees — 15 declared natural monuments</span></li>
+          <li><span class="lang-ro">Statuile restaurate și panourile pictorilor amatori</span><span class="lang-en">The restored statues and the amateur painters' panels</span></li>
+        </ul>
+      </div>
+      <div class="lbox"><h3 class="lang-ro">Povestea locului</h3><h3 class="lang-en">The story of the place</h3>
+        <div class="tline">
+          <div class="tl"><span class="when"><span class="lang-ro">Mijlocul sec. XX</span><span class="lang-en">Mid-20th c.</span></span><span class="what"><span class="lang-ro">Esplanada este amenajată și devine cel mai mare parc din centrul istoric.</span><span class="lang-en">The esplanade is laid out and becomes the largest park in the historic centre.</span></span></div>
+          <div class="tl"><span class="when">2013–2015</span><span class="what"><span class="lang-ro">Proiectul unei parcări subterane stârnește proteste civice. În 2015 este abandonat, iar arborii sunt salvați.</span><span class="lang-en">An underground car park project sparks civic protests. Abandoned in 2015; the trees are saved.</span></span></div>
+          <div class="tl"><span class="when">2021</span><span class="what"><span class="lang-ro">Se semnează contractul de modernizare, din bugetul local.</span><span class="lang-en">The modernisation contract is signed, from the local budget.</span></span></div>
+          <div class="tl"><span class="when">2022–2024</span><span class="what"><span class="lang-ro">Sub alei apar vestigii arheologice. Șantierul îngheață aproape doi ani.</span><span class="lang-en">Archaeological remains appear beneath the paths. Works freeze for nearly two years.</span></span></div>
+          <div class="tl hi"><span class="when">11.10.2025</span><span class="what"><span class="lang-ro">Esplanada se redeschide publicului, în prezența a câteva mii de persoane.</span><span class="lang-en">The esplanade reopens to the public, before several thousand people.</span></span></div>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:20px"><a href="copou.html" class="btn btn-outline"><span class="lang-ro">Vezi Parcul Copou</span><span class="lang-en">See Copou Park</span> →</a></div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="sec-head"><span class="overline gold-text"><span class="lang-ro">Cum ajungi</span><span class="lang-en">How to reach it</span></span><h2>Contact</h2>
+      <p class="lang-ro">Esplanada Teatrului Național „Vasile Alecsandri”, centrul istoric al Iașului — lângă Catedrala Mitropolitană.</p>
+      <p class="lang-en">The "Vasile Alecsandri" National Theatre esplanade, Iași's historic centre — next to the Metropolitan Cathedral.</p></div>
+    <div class="cgrid">
+      <div class="cc"><span class="overline"><span class="lang-ro">Locație</span><span class="lang-en">Location</span></span><b>📍 <span class="lang-ro">Esplanada Teatrului Național</span><span class="lang-en">National Theatre esplanade</span></b><small class="lang-ro">Bd. Ștefan cel Mare și Sfânt, tronson pietonal</small><small class="lang-en">Ștefan cel Mare și Sfânt Blvd., pedestrian section</small></div>
+      <div class="cc"><span class="overline"><span class="lang-ro">Acces</span><span class="lang-en">Access</span></span><b class="lang-ro">Liber, zonă pietonală</b><b class="lang-en">Free, pedestrian area</b><small class="lang-ro">Palatul Culturii și Catedrala Mitropolitană, la câțiva pași</small><small class="lang-en">The Palace of Culture and the Cathedral, a few steps away</small></div>
+      <div class="cc"><span class="overline">Online</span><b>🌐 <a href="https://www.primaria-iasi.ro" target="_blank" rel="noopener">primaria-iasi.ro</a></b><small class="lang-ro">Informații oficiale și evenimente</small><small class="lang-en">Official information and events</small></div>
+    </div>
+    <div class="cta-row">
+      <a href="https://www.primaria-iasi.ro" target="_blank" rel="noopener" class="btn btn-gold"><span class="lang-ro">Surse oficiale</span><span class="lang-en">Official sources</span></a>
+      <a href="iasi.html" class="btn btn-outline"><span class="lang-ro">← Alte locuri din Iași</span><span class="lang-en">← More places in Iași</span></a>
+    </div>
+    <p class="disclaimer"><span class="lang-ro">Informații verificate în surse publice de presă și documentare (iulie 2026). Programul reprizelor fântânii nu este comunicat public — se va informa fiecare din sursele oficiale ale Primăriei Municipiului Iași.</span><span class="lang-en">Information verified against public press and documentary sources (July 2026). The fountain's show schedule is not publicly communicated — please check the official sources of Iași City Hall.</span></p>
+  </div>
+</section>
+
+<footer><div class="wrap">© 2026 România · Iași — <span class="lang-ro">Ghid de călătorie · Demo</span><span class="lang-en">Travel guide · Demo</span> · <a href="iasi.html">Iași</a></div></footer>
+<script>
+function setLang(l){document.body.classList.toggle('en',l==='en');document.documentElement.lang=l;document.querySelectorAll('.langsw button').forEach(b=>b.classList.toggle('active',b.dataset.lang===l))}
+(function(){var c=document.getElementById('jets');if(!c)return;var n=30;for(var i=0;i<n;i++){var j=document.createElement('span');j.className='jet';j.style.left=(i/(n-1)*100)+'%';j.style.animationDelay=(Math.random()*3.4).toFixed(2)+'s';j.style.animationDuration=(2.6+Math.random()*1.8).toFixed(2)+'s';c.appendChild(j)}})();
+</script>
+</body>
+</html>
