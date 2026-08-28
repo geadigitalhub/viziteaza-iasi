@@ -104,7 +104,14 @@ footer{background:#0f1728;color:rgba(244,236,216,.6);padding:30px 0;text-align:c
 .acard p{color:var(--muted);font-weight:300;font-size:.88rem;margin-bottom:18px;flex:1;line-height:1.55}
 .acard .btn{align-self:flex-start;padding:11px 20px;border-radius:2px;font-size:.74rem}
 .aff-disc{margin-top:24px;font-size:.78rem;color:var(--muted);font-style:italic;font-weight:300;line-height:1.6}
-@media(max-width:820px){.aff-grid{grid-template-columns:1fr}}
+.aff-after{margin-top:22px}
+/* --- stampila Escapada Iasi --- */
+.aff-intro{position:relative;padding-right:180px}
+.escapada-stamp{position:absolute;top:-12px;right:2px;width:156px;height:156px;transform:rotate(-8deg);transition:transform .4s ease;filter:drop-shadow(0 8px 16px rgba(20,29,51,.28))}
+.escapada-stamp:hover{transform:rotate(-3deg) scale(1.06)}
+.escapada-stamp svg{width:100%;height:100%;display:block}
+@media(max-width:900px){.aff-intro{padding-right:150px}.escapada-stamp{width:128px;height:128px}}
+@media(max-width:820px){.aff-grid{grid-template-columns:1fr}.aff-intro{padding-right:0;text-align:center}.escapada-stamp{position:static;margin:0 auto 20px;transform:rotate(-4deg);width:150px;height:150px}}
 </style>
 <!-- Travelpayouts -->
 <script>
@@ -235,13 +242,25 @@ footer{background:#0f1728;color:rgba(244,236,216,.6);padding:30px 0;text-align:c
         </ul>
       </div>
     </div>
-    <div style="margin-top:20px"><a href="gradina-botanica.html" class="btn btn-outline"><span class="lang-ro">Vezi Grădina Botanică</span><span class="lang-en">See the Botanical Garden</span> →</a></div>
   </div>
 </section>
 
 <section id="planifica">
   <div class="wrap">
-    <div class="sec-head aff-intro"><span class="overline"><span class="lang-ro">Escapadă la Iași</span><span class="lang-en">Getaway to Iași</span></span><h2><span class="lang-ro">Vino să te plimbi pe aleile lui Eminescu</span><span class="lang-en">Come walk Eminescu's alleys yourself</span></h2>
+    <div class="sec-head aff-intro"><div class="escapada-stamp" title="Escapada Iași"><svg viewBox="0 0 200 200" role="img" aria-label="Escapada Iași">
+      <defs>
+        <radialGradient id="esDome" cx="50%" cy="46%" r="62%"><stop offset="0%" stop-color="#5f9f75"/><stop offset="70%" stop-color="#548f66"/><stop offset="100%" stop-color="#47855b"/></radialGradient>
+        <path id="esTop" d="M 28,100 A 72,72 0 0 1 172,100"/>
+        <path id="esBot" d="M 172,102 A 72,72 0 0 1 28,102"/>
+      </defs>
+      <circle cx="100" cy="100" r="93" fill="url(#esDome)" stroke="#E3C778" stroke-width="4"/>
+      <circle cx="100" cy="100" r="84" fill="none" stroke="#E3C778" stroke-width="1.4" opacity=".75"/>
+      <circle cx="100" cy="100" r="88" fill="none" stroke="#F4ECD8" stroke-width="1.1" stroke-dasharray="1.4 6" stroke-linecap="round" opacity=".85"/>
+      <text fill="#F4ECD8" font-family="'Jost',sans-serif" font-weight="600" font-size="12.5" letter-spacing="3.5"><textPath href="#esTop" startOffset="50%" text-anchor="middle">VIZITEAZĂ ROMÂNIA</textPath></text>
+      <text fill="#E3C778" font-family="'Jost',sans-serif" font-weight="600" font-size="11" letter-spacing="3.5"><textPath href="#esBot" startOffset="50%" text-anchor="middle">★ 2026 ★</textPath></text>
+      <text x="100" y="93" text-anchor="middle" fill="#E3C778" font-family="'Jost',sans-serif" font-weight="600" font-size="10.5" letter-spacing="4">SEJUR</text>
+      <text x="100" y="126" text-anchor="middle" fill="#F4ECD8" font-family="'Cormorant Garamond',serif" font-weight="700" font-size="40" letter-spacing="1">IAȘI</text>
+    </svg></div><span class="overline"><span class="lang-ro">Escapadă la Iași</span><span class="lang-en">Getaway to Iași</span></span><h2><span class="lang-ro">Vino să te plimbi pe aleile lui Eminescu</span><span class="lang-en">Come walk Eminescu's alleys yourself</span></h2>
       <p class="lang-ro">Teiul de peste 500 de ani, aleile ruginii de toamnă, muzeul poetului — Copoul se simte cu adevărat abia pe viu. Organizează-ți escapada la Iași chiar în weekendul ăsta, totul dintr-un singur loc.</p>
       <p class="lang-en">The 500-year-old linden, the rust-coloured autumn alleys, the poet's museum — Copou is only truly felt in person. Plan your Iași getaway this very weekend, everything in one place.</p></div>
     <div class="aff-grid">
@@ -281,7 +300,8 @@ footer{background:#0f1728;color:rgba(244,236,216,.6);padding:30px 0;text-align:c
         <a href="https://www.airalo.com/?marker=768932&sub_id=copou_esim" target="_blank" rel="sponsored noopener" class="btn btn-gold"><span class="lang-ro">Ia un eSIM</span><span class="lang-en">Get an eSIM</span></a>
       </div>
     </div>
-    <p class="aff-disc"><span class="lang-ro">Unele linkuri de mai sus sunt linkuri de partener. Dacă rezervi prin ele, este posibil să primim un mic comision, fără niciun cost suplimentar pentru tine — ne ajută să menținem acest ghid gratuit.</span><span class="lang-en">Some links above are partner (affiliate) links. If you book through them, we may earn a small commission at no extra cost to you — it helps keep this guide free.</span></p>
+    <p class="aff-disc"><span class="lang-ro">Unele linkuri de mai sus sunt linkuri de partener. Dacă rezervi prin ele, este posibil să primim un mic comision, fără niciun cost suplimentar pentru tine.</span><span class="lang-en">Some links above are partner (affiliate) links. If you book through them, we may earn a small commission at no extra cost to you.</span></p>
+    <div class="aff-after"><a href="gradina-botanica.html" class="btn btn-gold"><span class="lang-ro">Vezi Grădina Botanică</span><span class="lang-en">See the Botanical Garden</span> →</a></div>
   </div>
 </section>
 
